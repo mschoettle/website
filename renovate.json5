@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    // https://docs.renovatebot.com/presets-default/#separatemultiplemajorreleases
+    ":separateMultipleMajorReleases",
+    // https://docs.renovatebot.com/presets-default/#separatepatchreleases
+    ":separatePatchReleases",
+    // https://docs.renovatebot.com/modules/manager/pre-commit/
+    // https://docs.renovatebot.com/presets-default/#enableprecommit
+    ":enablePreCommit",
+  ],
+  // https://docs.renovatebot.com/configuration-options/#assignees
+  "assignees": ["mschoettle"],
+  // Only rebase existing MRs when the branch is conflicted
+  // This avoids getting spammed by updates to existing MRs
+  // https://docs.renovatebot.com/configuration-options/#rebasewhen
+  "rebaseWhen": "conflicted",
+}
