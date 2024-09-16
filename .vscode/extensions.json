@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "editorconfig.editorconfig",
+      "davidanson.vscode-markdownlint",
+      "tamasfe.even-better-toml",
+      "redhat.vscode-yaml"
+    ]
+  }
