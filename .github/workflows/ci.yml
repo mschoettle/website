@@ -17,6 +17,6 @@ jobs:
         with:
           version: "0.4.10"
       - name: Test
-        run: which python && python --version
+        run: uv python install && which python && python --version
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
