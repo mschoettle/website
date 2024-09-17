@@ -16,7 +16,9 @@ jobs:
         uses: astral-sh/setup-uv@v3.0.0
         with:
           version: "0.4.10"
-      - name: Test
-        run: uv python install && which python && python --version
+      - name: Print the installed version
+        run: echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
+      - name: Install Python
+        run: uv python install
       - name: Run pre-commit
-        uses: pre-commit/action@v3.0.1
+        run: uv run pre-commit run --all-files
