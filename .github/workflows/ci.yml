@@ -17,6 +17,7 @@ jobs:
         id: setup-uv
         with:
           version: "0.4.10"
+          enable-cache: true
       - name: Print the installed version
         run: echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
       - name: Install Python
