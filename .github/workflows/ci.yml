@@ -24,6 +24,8 @@ jobs:
         run: uv python install
       # - name: Run pre-commit
       #   run: uv run pre-commit run --all-files
+      - name: Print python version
+        run: uv python list
       - uses: actions/cache@v4
         with:
           path: ~/.cache/pre-commit
