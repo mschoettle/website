@@ -16,21 +16,14 @@ jobs:
         uses: astral-sh/setup-uv@v3.0.0
         id: setup-uv
         with:
+          # TODO: figure out a way to have this updated by Renovate
           version: "0.4.10"
           enable-cache: true
       - name: Print the installed version
         run: echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
       - name: Install Python
         run: uv python install
-      # - name: Run pre-commit
-      #   run: uv run pre-commit run --all-files
       - name: Print python version
-        run: uv python list && which python
-      # - uses: actions/cache@v4
-        # with:
-          # path: ~/.cache/pre-commit
-          # key: pre-commit-3|${{ hashFiles('.pre-commit-config.yaml') }}
-      # - name: Run pre-commit
-        # run: uv run pre-commit run --show-diff-on-failure --color=always --all-files
-        # shell: bash
-      - uses: pre-commit/action@v3.0.1
+        run: uv python list
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.1
