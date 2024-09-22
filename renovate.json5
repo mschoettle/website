@@ -10,6 +10,17 @@
     // https://docs.renovatebot.com/presets-default/#enableprecommit
     ":enablePreCommit",
   ],
+  // add custom manager for pinning version in GitHub action (e.g., for uv)
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^.github/workflows/[^/]*\\.ya?ml$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.+?) dependency=(?<depName>.+?)( versioning=(?<versioning>.+?))?\\s+.*: ['\"]?(?:(?<currentValue>[^'\"\\s]*))?['\"]?"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
   // https://docs.renovatebot.com/configuration-options/#assignees
   "assignees": ["mschoettle"],
   // Only rebase existing MRs when the branch is conflicted

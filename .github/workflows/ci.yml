@@ -16,7 +16,7 @@ jobs:
         uses: astral-sh/setup-uv@v3.1.1
         id: setup-uv
         with:
-          # TODO: figure out a way to have this updated by Renovate
+          # renovate: datasource=pypi dependency=uv
           version: "0.4.10"
           enable-cache: true
       - name: Print the installed version
