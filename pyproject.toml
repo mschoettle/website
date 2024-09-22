@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Matthias Schoettle's personal website"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "mkdocs-material==9.5.36",
+]
 
 [tool.uv]
 dev-dependencies = [
