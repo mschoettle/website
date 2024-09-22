@@ -1,0 +1,58 @@
+site_name: Matthias Schoettle
+site_description: Personal website of Matthias Schoettle
+site_url: https://mattsch.com
+
+copyright: Copyright &copy; Matthias Schoettle
+repo_url: https://github.com/mschoettle/personal-website
+edit_uri: edit/main/docs
+
+theme:
+  features:
+    - content.action.edit
+    - content.action.view
+  icon:
+    logo: fontawesome/solid/blog
+  language: en
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      name: mschoettle on GitHub
+      link: https://github.com/mschoettle
+    - icon: fontawesome/brands/gitlab
+      name: mschoettle on GitLab
+      link: https://gitlab.com/mschoettle
+    - icon: fontawesome/brands/linkedin
+      name: Connect with Matthias Schoettle on LinkedIn
+      link: https://tbd
+    - icon: fontawesome/brands/twitter
+      name: schoettlem on Twitter
+      link: https://twitter.com/schoettlem
+
+plugins:
+  # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+  - privacy:
+      enabled: !ENV [CI, false]
+  - search
+  - blog:
+      blog_toc: false

@@ -27,3 +27,5 @@ jobs:
         run: uv python list
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
+      - name: Build mkdocs site
+        run: uv run mkdocs build --strict
