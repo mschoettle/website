@@ -13,7 +13,7 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4.1.7
       - name: Install uv
-        uses: astral-sh/setup-uv@v3.0.0
+        uses: astral-sh/setup-uv@v3.1.1
         id: setup-uv
         with:
           # TODO: figure out a way to have this updated by Renovate
