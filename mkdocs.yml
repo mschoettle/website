@@ -1,4 +1,5 @@
-site_name: Matthias Schoettle
+site_name: Matthias Schoettle &ndash; Software Engineer
+site_author: Matthias Schoettle
 site_description: Personal website of Matthias Schoettle
 site_url: https://mattsch.com
 
@@ -56,3 +57,10 @@ plugins:
   - search
   - blog:
       blog_toc: false
+
+# https://www.mkdocs.org/user-guide/configuration/#validation
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
