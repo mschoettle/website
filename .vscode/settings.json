@@ -1,4 +1,5 @@
 {
+  // see: https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration
   "yaml.schemas": {
     "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
   },
