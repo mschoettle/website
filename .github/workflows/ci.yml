@@ -25,5 +25,9 @@ jobs:
         run: uv python install
       - name: Print python version
         run: uv python list
+      - name: Check lockfile is up-to-date
+        run: uv lock --locked
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
+      - name: Build mkdocs site
+        run: uv run mkdocs build --strict
