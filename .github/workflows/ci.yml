@@ -25,7 +25,9 @@ jobs:
         run: uv python install
       - name: Print python version
         run: uv python list
+      - name: Install dependencies
+        run: uv sync --frozen
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
       - name: Build mkdocs site
-        run: uv run --frozen mkdocs build --strict
+        run: uv run mkdocs build --strict
