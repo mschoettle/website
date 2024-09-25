@@ -57,6 +57,12 @@ plugins:
   - search
   - blog:
       blog_toc: false
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      exclude:
+        - index.md
+        - blog/**
 
 # https://www.mkdocs.org/user-guide/configuration/#validation
 validation:
