@@ -21,6 +21,7 @@ indent_style = space
 indent_size = 2
 
 [*.md]
+# Markdown inserts newlines when there are two spaces at the end of a line
 # trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
