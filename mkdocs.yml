@@ -16,8 +16,9 @@ nav:
 
 theme:
   features:
-    - content.action.edit
-    - content.action.view
+    # - content.action.edit
+    # - content.action.view
+    - navigation.expand
     - navigation.indexes
     - navigation.tabs
     - toc.follow
@@ -73,6 +74,10 @@ plugins:
       exclude:
         - index.md
         - blog/**
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
 
 # https://www.mkdocs.org/user-guide/configuration/#validation
 validation:

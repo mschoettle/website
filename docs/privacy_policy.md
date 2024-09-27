@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 # Privacy Policy
 
 ## Who We Are

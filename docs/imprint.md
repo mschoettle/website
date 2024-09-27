@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 # Legal Notice (Imprint)
 
 Responsible for this website:
