@@ -7,12 +7,22 @@ copyright: Copyright &copy; Matthias Schoettle
 repo_url: https://github.com/mschoettle/personal-website
 edit_uri: edit/main/docs
 
+nav:
+  - About Me: index.md
+  - Blog:
+    - blog/index.md
+  - Legal Notice: imprint.md
+  - privacy_policy.md
+
 theme:
   features:
     - content.action.edit
     - content.action.view
+    - navigation.indexes
+    - navigation.tabs
+    - toc.follow
   icon:
-    logo: fontawesome/solid/blog
+    logo: material/book-open-page-variant
   language: en
   name: material
   palette:
