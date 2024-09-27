@@ -16,6 +16,9 @@ nav:
   - Research:
     - research/index.md
     - research/publications.md
+  - Legal:
+    - imprint.md
+    - privacy-policy.md
 
 theme:
   features:
@@ -27,7 +30,7 @@ theme:
     - navigation.tabs
     - toc.follow
   icon:
-    logo: fontawesome/solid/blog
+    logo: material/book-open-page-variant
   language: en
   name: material
   palette:

@@ -1,0 +1,16 @@
+# https://github.com/DavidAnson/markdownlint?tab=readme-ov-file#rules--aliases
+
+line-length: false
+
+ul-indent:
+  indent: 4
+
+# Allow inline HTML to support line breaks and image captions
+MD033: false
+
+# Allow bare URLs since we use magiclink to convert bare URLs automatically to links
+MD034: false
+
+# Allow same heading name if the parent is different
+MD024:
+  siblings_only: true
