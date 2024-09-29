@@ -45,6 +45,9 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
+extra_css:
+  - stylesheets/extra.css
+
 
 extra:
   social:
