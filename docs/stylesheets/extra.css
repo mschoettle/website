@@ -1,0 +1,8 @@
+.md-social {
+    gap: 0.5rem;
+}
+
+.md-social__link svg {
+    max-height: 1rem;
+    vertical-align: -30%;
+}
