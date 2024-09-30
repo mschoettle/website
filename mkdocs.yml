@@ -7,6 +7,16 @@ copyright: Copyright &copy; Matthias Schoettle
 repo_url: https://github.com/mschoettle/personal-website
 edit_uri: edit/main/docs
 
+nav:
+  - About Me: index.md
+  - Blog:
+    - blog/index.md
+  - Projects:
+    - projects/index.md
+  - Research:
+    - research/index.md
+    - research/publications.md
+
 theme:
   features:
     # - content.action.edit
