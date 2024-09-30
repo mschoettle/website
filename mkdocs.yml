@@ -11,8 +11,14 @@ nav:
   - About Me: index.md
   - Blog:
     - blog/index.md
-  - Legal Notice: imprint.md
-  - privacy_policy.md
+  - Projects:
+    - projects/index.md
+  - Research:
+    - research/index.md
+    - research/publications.md
+  - Legal:
+    - imprint.md
+    - privacy_policy.md
 
 theme:
   features:
