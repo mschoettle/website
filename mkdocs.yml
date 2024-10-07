@@ -18,12 +18,13 @@ nav:
     - research/publications.md
   - Legal:
     - imprint.md
-    - privacy_policy.md
+    - privacy-policy.md
 
 theme:
   features:
     # - content.action.edit
     # - content.action.view
+    - content.code.copy
     - navigation.expand
     - navigation.indexes
     - navigation.tabs
@@ -85,8 +86,27 @@ plugins:
         - blog/**
 
 markdown_extensions:
+  # HTML in Markdown
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
   - attr_list
   - md_in_html
+  # admonitions
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+  - admonition
+  - pymdownx.details
+  # content tabs
+  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  # code blocks/highlighting
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
 
 # https://www.mkdocs.org/user-guide/configuration/#validation
 validation:

@@ -3,7 +3,7 @@
 In 2019 I completed a PhD under the supervision of [Jörg Kienzle](https://djeminy.github.io/).
 I was working on [Concern-Oriented Reuse (CORE)](https://djeminy.github.io/portfolio/portfolio-1/), more specifically on bridging the gap between code and models.
 My thesis (["Model-Based Reuse of Framework APIs: Bridging the Gap Between Models
-and Code"](./publications)) aimed at making existing software frameworks reusable at the modelling level while at the same time exploiting the benefits that the higher level of abstraction provides.
+and Code"](./publications.md#paper-19)) aimed at making existing software frameworks reusable at the modelling level while at the same time exploiting the benefits that the higher level of abstraction provides.
 This can also help users reusing those frameworks at the programming level.
 
 During my PhD time, I was also the Lead Software Developer in the Software Engineering Laboratory (SEL) at McGill University (Montréal, Canada).
@@ -15,19 +15,19 @@ I have attended the following conferences and co-located workshops:
 
 * [MODELS 2018](https://modelsconf2018.github.io/) (Copenhagen, Denmark)
 * [MODELS 2015](https://cruise.eecs.uottawa.ca/models2015/) (Ottawa, Canada)
-    * Presented paper in Foundations Track
-    * Tool Demo paper
-    * Participated in Student Research Competition (SRC)
+    * [Presented paper](./publications.md#paper-12) in Foundations Track
+    * [Tool Demo paper](./publications.md#paper-13)
+    * [Participated](./publications.md#paper-11) in Student Research Competition (SRC)
 * [MODELS 2014](https://models2014.webs.upv.es/) (Valencia, Spain)
-    * Paper in Foundations Track (outcome of the MOTB Workshop at Bellairs, see the [opening video of the presentation](https://www.youtube.com/watch?v=MuXBQQIMz8k))
-    * Presented Tool Demo Paper of TouchRAM (see [Demo Teaser](https://www.youtube.com/watch?v=Am9jp2y2Uds))
+    * [Paper](./publications.md#paper-7) in Foundations Track (outcome of the MOTB Workshop at Bellairs, see the [opening video of the presentation](https://www.youtube.com/watch?v=MuXBQQIMz8k))
+    * Presented [Tool Demo Paper](./publications.md#paper-8) of TouchRAM (see [Demo Teaser](https://www.youtube.com/watch?v=Am9jp2y2Uds))
 * [Modularity (formerly AOSD) 2014](https://modularity.info/conference/2014/) (Lugano, Switzerland)
-    * Tool Demo paper and Presentation of TouchRAM
-    * Paper at [FOAL Workshop](https://www.cs.ucf.edu/~leavens/FOAL/index-2014.shtml)
+    * [Tool Demo paper](./publications.md#paper-6) and Presentation of TouchRAM
+    * [Paper](./publications.md#paper-9) at [FOAL Workshop](https://www.cs.ucf.edu/~leavens/FOAL/index-2014.shtml)
 * [MODELS 2013](https://models2013.lcc.uma.es/) (Miami, USA)
-    * Tool Demo paper and Presentation of TouchRAM (see [Demo Teaser](https://www.youtube.com/watch?v=Dxc5LvV3Nsw))
-    * Presented Paper at [GEMOC Workshop](https://gemoc.org/events/gemoc2013.html)
-    * Paper at [CMA Workshop](https://web.archive.org/web/20220119161633/https://cserg0.site.uottawa.ca/cma2013models/)
+    * [Tool Demo paper](./publications.md#paper-3) and Presentation of TouchRAM (see [Demo Teaser](https://www.youtube.com/watch?v=Dxc5LvV3Nsw))
+    * [Presented Paper](./publications.md#paper-5) at [GEMOC Workshop](https://gemoc.org/events/gemoc2013.html)
+    * [Paper](./publications.md#paper-4) at [CMA Workshop](https://web.archive.org/web/20220119161633/https://cserg0.site.uottawa.ca/cma2013models/)
     * Participated in the [Modelling Outside The Box (MOTB) Workshop](https://web.archive.org/web/20210514061615/http://cserg0.site.uottawa.ca/modelingoutsidethebox2013/)
 
 ## Workshops
@@ -37,13 +37,13 @@ I have attended the following workshops:
 * **2018**
     * Participated in the [Unifying Software Reuse Workshop](https://www.bellairs2018.ece.mcgill.ca) at Bellairs Research Institute
 * **2017**
-    * Participated in the [Workshop on Reuse for Domain-Specific Language Development](https://www.cs.mcgill.ca/~joerg/SEL/Language_Reuse_Bellairs_2017.html) at Bellairs Research Institute (see resulting [paper](../publications/#paper-2))
+    * Participated in the [Workshop on Reuse for Domain-Specific Language Development](https://www.cs.mcgill.ca/~joerg/SEL/Language_Reuse_Bellairs_2017.html) at Bellairs Research Institute (see resulting [paper](./publications.md/#paper-18))
     * Participated in the [8th Summer School on Domain Specific Modelling Theory and Practice (DSM-TP)](https://web.archive.org/web/20211204021727/https://msdl.cs.mcgill.ca/conferences/dsm-tp-2017/index_html)
 * **2015**
-    * Participated in the [Concern-Oriented Reuse Workshop](https://www.cs.mcgill.ca/~joerg/SEL/CORE_Bellairs_2015.html) at Bellairs Research Institute (see resulting [paper](../publications/#paper-6))
-    * Presented Concern-Oriented Reuse (CORE) at the [CSER Spring Meeting](https://web.archive.org/web/20201027005607/https://sites.google.com/site/cser2015spring/) (see [slides](/wp-content/papercite-data/pdf/cser-schoettle2015_slides.pdf))
+    * Participated in the [Concern-Oriented Reuse Workshop](https://www.cs.mcgill.ca/~joerg/SEL/CORE_Bellairs_2015.html) at Bellairs Research Institute (see resulting [paper](./publications.md/#paper-16))
+    * Presented Concern-Oriented Reuse (CORE) at the [CSER Spring Meeting](https://web.archive.org/web/20201027005607/https://sites.google.com/site/cser2015spring/) (see [slides](https://mattsch.com/wp-content/papercite-data/pdf/cser-schoettle2015_slides.pdf))
 * **2014**
-    * Participated in the [Modelling Outside the Box (MOTB) Workshop](https://www.cs.mcgill.ca/~joerg/SEL/MOTB_Bellairs_2014.html) at Bellairs Research Institute (see resulting [paper](../publications/#paper-12))
+    * Participated in the [Modelling Outside the Box (MOTB) Workshop](https://www.cs.mcgill.ca/~joerg/SEL/MOTB_Bellairs_2014.html) at Bellairs Research Institute (see resulting [paper](./publications.md/#paper-7))
 * **2013**
     * Participated in the 1st PLOW Workshop: Poster and Demo of TouchRAM
     * Participated in the [CSER Spring Meeting](https://users.encs.concordia.ca/~pcr/cser/index.html)

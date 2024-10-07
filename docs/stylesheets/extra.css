@@ -1,3 +1,4 @@
+/* Make social icons in footer a bit bigger */
 .md-social {
     gap: 0.5rem;
 }
@@ -5,4 +6,14 @@
 .md-social__link svg {
     max-height: 1rem;
     vertical-align: -30%;
+}
+
+/* Highlight selected publication */
+.md-typeset ul li :target {
+    background: /*#f1f1f1*/#ffa7002b;
+}
+
+/* Hide abstract and bibtex citation by default on publications page */
+ul li .admonition.hidden {
+    display: none;
 }
