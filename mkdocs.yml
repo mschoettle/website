@@ -50,10 +50,10 @@ theme:
         name: Switch to light mode
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 extra_javascript:
-  - javascript/extra.js
+  - assets/javascript/extra.js
 
 
 extra:
