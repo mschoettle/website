@@ -1,0 +1,23 @@
+name: Deployment
+
+concurrency:
+  group: staging
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Deploy
+        run: |
+          echo "deploy tests"
