@@ -31,7 +31,9 @@ jobs:
           echo "Adding private key..."
           echo "$SSH_PRIVATE_KEY" | ssh-add -
           echo "Adding SSH host to known hosts..."
+          ls -la ~/
+          pwd
           mkdir ~/.ssh
           ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/ssh_known_hosts 2> /dev/null
           echo "Connecting via SSH and executing commands"
-          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" docker ps
+          ssh -p "$SSH_PORT" -o UserKnownHostsFile=~/.ssh/known_hosts "$SSH_USER@$SSH_HOST" docker ps
