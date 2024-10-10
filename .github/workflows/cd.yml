@@ -30,5 +30,7 @@ jobs:
           eval "$(ssh-agent -s)"
           echo "Adding private key..."
           echo "$SSH_PRIVATE_KEY" | ssh-add -
+          echo "Adding SSH host to known hosts..."
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2> /dev/null
           echo "Connecting via SSH and executing commands"
           ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" docker ps
