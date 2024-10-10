@@ -25,5 +25,7 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
+          echo "Launching SSH agent..."
+          eval "$(ssh-agent -s)"
           ssh-add <(echo "$SSH_PRIVATE_KEY")
           ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" docker ps
