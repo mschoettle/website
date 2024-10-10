@@ -19,5 +19,11 @@ jobs:
     environment: staging
     steps:
       - name: Deploy
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          which ssh
+          ssh-add <(echo "$SSH_PRIVATE_KEY")
+          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" docker ps
