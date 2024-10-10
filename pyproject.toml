@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "mkdocs-git-revision-date-localized-plugin==1.2.9",
-    "mkdocs-material==9.5.38",
+    "mkdocs-material==9.5.40",
 ]
 
 [tool.uv]
