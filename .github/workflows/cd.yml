@@ -7,14 +7,10 @@ concurrency:
 on:
   workflow_run:
     workflows: [CI]
+    branches:
+      - main
     types:
       - completed
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
