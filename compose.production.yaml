@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.website.rule=Host(`schoettle.me`)"
+      - "traefik.http.routers.website.rule=Host(`matthias.schoettle.me`)"
       - "traefik.http.routers.website.tls=true"
       - "traefik.http.routers.website.tls.options=mintls12@file"
       - "traefik.http.routers.website.tls.certresolver=letsencrypt"
