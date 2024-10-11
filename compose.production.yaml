@@ -15,8 +15,3 @@ networks:
   default:
     name: marianet
     external: true
-    # environment:
-      # - SERVER_CONFIG_FILE=/etc/config.toml
-    # volumes:
-      # - ./public:/public
-      # - ./.deploy/config.toml:/etc/config.toml
