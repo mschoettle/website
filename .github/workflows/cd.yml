@@ -34,6 +34,7 @@ jobs:
           ls -la ~/
           pwd
           mkdir ~/.ssh
-          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/ssh_known_hosts 2> /dev/null
+          whoami
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2> /dev/null
           echo "Connecting via SSH and executing commands"
           ssh -p "$SSH_PORT" -o UserKnownHostsFile=~/.ssh/known_hosts "$SSH_USER@$SSH_HOST" docker ps
