@@ -34,4 +34,4 @@ jobs:
           echo "Adding SSH host to known hosts..."
           ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2> /dev/null
           echo "Connecting via SSH and executing commands"
-          ssh -v -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" bash -c "cd website && ls -la && git pull && docker compose build app && docker compose up -d"
+          ssh -v -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "cd website && ls -la && git pull && docker compose build app && docker compose up -d"
