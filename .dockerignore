@@ -1,1 +1,4 @@
 .*
+
+# allow git in build context for git-revision-date-localized plugin
+!.git
