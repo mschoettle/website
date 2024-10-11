@@ -26,6 +26,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         shell: bash
         run: |
+          mkdir ~/.ssh
           echo "Launching SSH agent..."
           eval "$(ssh-agent -s)"
           echo "Adding private key..."
