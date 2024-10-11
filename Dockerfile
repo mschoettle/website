@@ -21,6 +21,8 @@ ENTRYPOINT [ "uv", "run", "mkdocs", "serve" ]
 # build site
 FROM dependencies AS build
 
+ENV CI=true
+
 COPY . .
 
 RUN python -m mkdocs build --strict --site-dir /site
