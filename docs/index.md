@@ -1,4 +1,4 @@
-# Hallo, Hi, Bonjour
+# Hallo, Hi, Bonjour :wave:
 
 I am Matthias, a German living in Montréal, Canada. I am passionate about tech, open source, racquet sports (especially table tennis and squash), and specialty coffee. I like to help others, and so just like with contributing to open source projects, I intend to share information here that are hopefully helpful to someone else.
 
