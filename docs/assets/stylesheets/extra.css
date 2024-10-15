@@ -1,3 +1,10 @@
+/* Make logo bigger and put a border around */
+.md-logo img {
+    border-radius: 100%;
+    height: 2rem !important;
+    outline: .2rem solid #6c91d54d;
+}
+
 /* Make social icons in footer a bit bigger */
 .md-social {
     gap: 0.5rem;
@@ -10,7 +17,7 @@
 
 /* Highlight selected publication */
 .md-typeset ul li :target {
-    background: /*#f1f1f1*/#ffa7002b;
+    background: #ffa7002b;
 }
 
 /* Hide abstract and bibtex citation by default on publications page */

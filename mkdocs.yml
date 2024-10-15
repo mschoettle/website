@@ -1,11 +1,11 @@
-site_name: Matthias Schoettle &ndash; Software Engineer
+site_name: Matthias Schoettle
 site_author: Matthias Schoettle
 site_description: Personal website of Matthias Schoettle
 site_url: https://mattsch.com
 
 copyright: Copyright &copy; Matthias Schoettle
-repo_url: https://github.com/mschoettle/personal-website
-edit_uri: edit/main/docs
+# repo_url: https://github.com/mschoettle/website
+# edit_uri: edit/main/docs
 
 nav:
   - About Me: index.md
@@ -29,8 +29,7 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - toc.follow
-  icon:
-    logo: material/book-open-page-variant
+  logo: assets/images/profile.jpg
   language: en
   name: material
   palette:
