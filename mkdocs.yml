@@ -114,6 +114,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # https://oprypin.github.io/markdown-callouts/
+  - github-callouts
+  - pymdownx.magiclink
 
 # https://www.mkdocs.org/user-guide/configuration/#validation
 validation:
