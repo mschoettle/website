@@ -5,12 +5,17 @@ line-length: false
 ul-indent:
   indent: 4
 
+# Allow same heading name if the parent is different
+MD024:
+  siblings_only: true
+
 # Allow inline HTML to support line breaks and image captions
 MD033: false
 
 # Allow bare URLs since we use magiclink to convert bare URLs automatically to links
 MD034: false
 
-# Allow same heading name if the parent is different
-MD024:
-  siblings_only: true
+# Need to disable in order to support PyMdown Tabbed extension and admonitions
+# See: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
+# See: https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+MD046: false
