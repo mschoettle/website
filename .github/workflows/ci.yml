@@ -17,7 +17,7 @@ jobs:
         id: setup-uv
         with:
           # renovate: datasource=pypi dependency=uv
-          version: "0.4.20"
+          version: "0.4.24"
           enable-cache: false
       - name: Print the installed version
         run: echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
