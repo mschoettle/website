@@ -1,5 +1,5 @@
 # TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.4.20-python3.12-alpine AS dependencies
+FROM ghcr.io/astral-sh/uv:0.4.24-python3.12-alpine AS dependencies
 
 RUN apk add --no-cache git
 
