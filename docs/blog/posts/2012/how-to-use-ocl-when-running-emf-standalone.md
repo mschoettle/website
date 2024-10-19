@@ -65,4 +65,4 @@ This is because starting with _Eclipse Luna_ [OCLInEcore does not re-export UML 
 
 **Update 28.06.2014:** Added missing UML dependency for Eclipse Luna.
 
-**Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](https://mattsch.com/2015/08/18/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars/)).
+**Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).
