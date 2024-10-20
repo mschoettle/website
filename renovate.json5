@@ -30,7 +30,7 @@
   "packageRules": [
     // Combine uv package and uv image
     {
-      "matchPackagePatterns": "uv|ghcr\\.io/astral-sh/uv$",
+      "matchPackagePatterns": "uv$",
       "groupName": "uv",
     },
   ],
