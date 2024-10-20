@@ -27,4 +27,11 @@
   // This avoids getting spammed by updates to existing MRs
   // https://docs.renovatebot.com/configuration-options/#rebasewhen
   "rebaseWhen": "conflicted",
+  "packageRules": [
+    // Combine uv package and uv image
+    {
+      "matchPackagePatterns": "uv|ghcr\\.io/astral-sh/uv$",
+      "groupName": "uv",
+    },
+  ],
 }
