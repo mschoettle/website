@@ -15,9 +15,9 @@ By default the items just show the type name of the element to create.
 Depending on your meta-model it might be necessary to add some more information in order to be able to see which feature the new element gets added (or set) to.
 
 The available items are depending on the current selected element.
-The `collectNewChildDescriptors(Collection, Object)` method is called on the item provider of this element.
-The actions for those menu items are created inside your `ActionBarContributor` class (see `generateCreateChildActions(Collection , ISelection)`), which is located in the editor project.
-The text for this action is determined by `CreateChildCommand.getText()`, which in turn calls `getCreateChildText(Object, Object, Object, Collection )` of the corresponding item provider.
+The `collectNewChildDescriptors(Collection<Object>, Object)` method is called on the item provider of this element.
+The actions for those menu items are created inside your `ActionBarContributor` class (see `generateCreateChildActions(Collection<?>, ISelection)`), which is located in the editor project.
+The text for this action is determined by `CreateChildCommand.getText()`, which in turn calls `getCreateChildText(Object, Object, Object, Collection<?>)` of the corresponding item provider.
 The default case is implemented in `ItemProviderAdapter`.
 
 There seem to be two approaches, depending on what your goal is.
@@ -31,13 +31,13 @@ Also available are the feature text (`{1}`) and the type name of the owner (`{2}
 
 ## Case-specific Approach
 
-If you just need to adjust it for one element, simply overwrite `getCreateChildText(Object, Object, Object, Collection )` in the corresponding item provider and adjust it to your needs.
+If you just need to adjust it for one element, simply overwrite `getCreateChildText(Object, Object, Object, Collection<?>)` in the corresponding item provider and adjust it to your needs.
 Here is an example, that simply adds the features' text in front of the default child text:
 
 ```java
 @Override
 public String getCreateChildText(Object owner, Object feature,
-        Object child, Collection<?> selection) {
+        Object child, Collection&lt;?> selection) {
     StringBuffer result = new StringBuffer();
 
     result.append(getFeatureText(feature));
