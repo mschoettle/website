@@ -4,8 +4,9 @@ date:
   created: 2020-01-06
   updated: 2024-10-22
 categories:
-  - Howto
-  - Raspberry Pi
+#   - Howto
+#   - Raspberry Pi
+  - Self-hosting
 slug: notes-on-setting-up-my-raspberry-pi
 ---
 # Notes on Setting Up My Raspberry Pi
@@ -16,7 +17,7 @@ They are mostly for my _future self_ but might be helpful to others that try to 
 
 <!-- more -->
 
-Basically, the main goal was to use it for [Pi-Hole](https://pi-hole.net/) (network-wide ad blocking on the DNS level), [Gitea](https://gitea.io/) (self-hosted git service), and to set up a private cloud for all our data (using [Nextcloud](https://nextcloud.com/)) instead of having them with one of the cloud providers.
+Basically, the main goal was to use it for [Pi-Hole](https://pi-hole.net/) (network-wide ad blocking on the DNS level), [Gitea](https://about.gitea.com) (self-hosted git service), and to set up a private cloud for all our data (using [Nextcloud](https://nextcloud.com/)) instead of having them with one of the cloud providers.
 So far we used [Boxcryptor](https://www.boxcryptor.com) to encrypt the data and store it in the cloud but it makes it a bit inconvenient for pictures since you can't see a preview (thumbnail).
 Since there is potentially a lot of data I intended to store the data on an external drive.
 The Pi4 has USB3 so I mounted a solid state drive (SSD) using a SATA-to-USB3 enclosure/adapter.
@@ -40,7 +41,7 @@ With this it is possible to plug the card into the RPi and boot it. Then `ssh pi
 
 ## Setting Up Raspbian
 
-Since Raspbian is based on Debian you can follow [any guide on initial server setup for Debian](https://mattsch.com/2021/03/18/set-up-debian/) (or Raspbian).
+Since Raspbian is based on Debian you can follow [any guide on initial server setup for Debian](../2021/set-up-debian.md) (or Raspbian).
 In short, I basically did the following steps:
 
 * Update Raspbian using `apt`
@@ -77,9 +78,9 @@ The steps here assume a single partition.
 Execute `sudo fdisk /dev/<deviceName>` to enter the dialogue-driven program to manage the disk.
 Then, do the following:
 
-1. Create a new empty GPT partition table (press `g`)
-2. Create a new partition (press `n`, and press enter for the following questions, i.e., use the defaults)
-3. Save the changes (press `w`)
+1. Create a new empty GPT partition table (press ++g++)
+2. Create a new partition (press ++n++, and press enter for the following questions, i.e., use the defaults)
+3. Save the changes (press ++w++)
 
 The partition is identified by `/dev/<deviceName>1`.
 
@@ -96,13 +97,18 @@ First, create a directory where the partition should be mounted to.
 Common places are in `/mnt` or `/media` (that's a personal choice): `sudo mkdir /mnt/mydisk`.
 Then, try to mount it manually: `sudo mount /dev/<deviceName>1 /mnt/mydisk`.
 If it succeeded, you can navigate to the folder and start using your disk.
-You can also verify it by executing `mount -l` which gives lists all mounts.
+You can also verify it by executing `mount -l` which outputs a list of all mounts.
 To unmount, use `sudo umount` and add the directory or device name.
 
 ### Automatically mount a disk on boot
 
 To automatically mount a disk on boot, an entry in the [fstab](https://wiki.debian.org/fstab) file is required.
-First, find out the `PARTUUID` of the partition: `sudo blkid`.
+First, find out the `PARTUUID` of the partition:
+
+```shell
+sudo blkid
+```
+
 Then, edit the fstab file (`sudo nano /etc/fstab`) and add the following entry (adjust options as needed):
 
 ```shell
@@ -129,7 +135,7 @@ It's not quite clear to me currently whether this is an issue with the enclosure
 
 It turned out that the speed was actually really slow (~20 MB/s for sequential write).
 I had only tested the enclosure when attached to my Mac.
-Following the [steps to enable quirks mode](https://forums.raspberrypi.com/viewtopic.php?f=28&t=245931) for the disk fixed this issue.
+Following the [steps to enable quirks mode](https://forums.raspberrypi.com/viewtopic.php?f=28&t=245931#p1501426) for the disk fixed this issue.
 While the speeds are now higher (~210 MB/s) they are not as high as they could be with UAS (~430 MB/s).
 But it resolved the problem with MariaDB (and other services requiring the mounted disk).
 

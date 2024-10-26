@@ -4,14 +4,16 @@ date:
   created: 2020-01-14
   updated: 2020-01-14
 categories:
-  - Howto
-  - Nextcloud
+#   - Howto
+#   - Nextcloud
+  - Self-hosting
 slug: migrating-data-to-nextcloud
 ---
 # Migrating Data to Nextcloud
 
 If you need to migrate your data to Nextcloud you probably don't want to upload all your files through the web interface.
-I suggest to first try it on with a small amount of data (for example, one folder) to verify that it works.
+
+I suggest to first try the below instructions with a small amount of data (for example, one folder) to verify that it works.
 Since Nextcloud runs as a container in my case some of the commands are specific to that, but if you don't you can just use the main command that is executed.
 
 As [previously noted](./notes-on-setting-up-my-raspberry-pi.md), my data was "in the cloud" (encrypted at rest) so not already on an external drive (besides my backup of course).
@@ -19,11 +21,16 @@ In general, although it depends on the size of your data, I therefore suggest to
 Unless the server is not physically accessible of course (such as a virtual server somewhere).
 Even then, you can use the same procedure I used.
 
+<!-- more -->
+
+## Copy data to external drive
+
 For the external drive, I formatted it as _ExFat_ so that my Mac can write to it. On the Raspberry Pi, I had to install `exfat-fuse`.
 I tried _FAT32_ as it is supported out-of-the-box by both but it has a limitation on maximum file size.
 I considered using _ext4_ but write support on the Mac supposedly is not stable.
 
-If you are copying the data directly to the Nextcloud destination, skip this step:
+If you are copying the data directly to the Nextcloud destination, skip the first step.
+
 First, copy the data to the external drive using [rsync](https://linux.die.net/man/1/rsync) to synchronize the files:
 
 ```shell

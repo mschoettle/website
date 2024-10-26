@@ -2,7 +2,7 @@
 migrated: true
 date:
   created: 2015-06-19
-  updated: 2015-06-19
+  updated: 2019-10-28
 categories:
   - Git
   - Howto
@@ -14,12 +14,13 @@ I just moved one directory within a Git repository to a directory within another
 For example:
 
 ```shell
-repositoryA
-├── directoryToKeep
-├── otherDirectory
-└── someFile.ext
-repositoryB
-└── someStuff
+.
+├── repositoryA
+│   ├── directoryToKeep
+│   ├── otherDirectory
+│   └── someFile.ext
+└── repositoryB
+    └── someStuff
 ```
 
 <!-- more -->
@@ -29,7 +30,7 @@ If instead, you want to create a repository just for the contents of `directoryT
 
 If you have files tracked by `git-lfs`, please note the update at the bottom first.
 
-Here is how I did it, based on this [blog post](http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/) and [StackOverflow topic](https://stackoverflow.com/questions/1365541/how-to-move-files-from-one-git-repo-to-another-not-a-clone-preserving-history):
+Here is how I did it, based on this [blog post](https://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/) and [StackOverflow topic](https://stackoverflow.com/questions/1365541/how-to-move-files-from-one-git-repo-to-another-not-a-clone-preserving-history):
 
 ## Prepare the source repository
 
@@ -49,8 +50,8 @@ Here is how I did it, based on this [blog post](http://gbayer.com/development/mo
 
     From the [git documentation](https://git-scm.com/docs/git-filter-branch):
 
-    > Only look at the history which touches the given subdirectory.
-    > The result will contain that directory (and only that) as its project root.
+    QUOTE: Only look at the history which touches the given subdirectory.
+    The result will contain that directory (and only that) as its project root.
 
     You might need to add `--prune-empty` to avoid empty commits, in my case it was not necessary.
 
@@ -72,7 +73,7 @@ Here is how I did it, based on this [blog post](http://gbayer.com/development/mo
     ' HEAD
     ```
 
-    If you want to [preserve tags](https://git-scm.com/docs/git-filter-branch#git-filter-branch---tag-name-filterltcommandgt) and update them, you need to add `--tag-name-filter cat`.
+    If you want to [preserve tags](https://git-scm.com/docs/git-filter-branch#Documentation/git-filter-branch.txt---tag-name-filterltcommandgt) and update them, you need to add `--tag-name-filter cat`.
 
     If you get the error "mv: cannot stat ‘.new’: No such file or directory", you need to add the `--prune-empty` option to `filter-branch` to avoid empty commits.
 
@@ -119,10 +120,10 @@ Enter a meaningful commit message and proceed.
 7. Personally, I would just delete the cloned repositories from step 1 and go back to the actual repository.
 8. If everything works, remove `directoryToKeep` from `repositoryA`.
 
-**Update 19.01.2017:** Updated step 2.4 with additional option (Thanks, Paul!)
-
-**Update 18.12.2018:** Updated step 1.5 with additional option to preserve tags (Thanks, Sandip!)
-
-**Update 28.10.2019:** If you have files tracked by `git-lfs`, there are is an additional step you need to perform
-After cloning the repository at the beginning, perform `git lfs fetch --all` ([source](https://stackoverflow.com/a/49366471)).
-As Evan pointed out in the comments, if the directory that should be kept does not have any large files, he performed `git lfs uninstall --local` to get rid of them.
+> UPDATES: **Updates to this blog post**
+>
+> * **19.01.2017:** Updated step 2.4 with additional option (Thanks, Paul!)
+> * **18.12.2018:** Updated step 1.5 with additional option to preserve tags (Thanks, Sandip!)
+> * **28.10.2019:** If you have files tracked by `git-lfs`, there are is an additional step you need to perform
+> After cloning the repository at the beginning, perform `git lfs fetch --all` ([source](https://stackoverflow.com/a/49366471)).
+> As Evan pointed out in the comments, if the directory that should be kept does not have any large files, he performed `git lfs uninstall --local` to get rid of them.

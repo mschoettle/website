@@ -2,11 +2,11 @@
 migrated: true
 date:
   created: 2012-05-31
-  updated: 2012-05-31
+  updated: 2015-08-18
 categories:
   - Eclipse Modeling Framework (EMF)
   - Howto
-  - Java
+#   - Java
 slug: how-to-use-ocl-when-running-emf-standalone
 ---
 # How to use OCL when running EMF standalone
@@ -19,7 +19,7 @@ This description is for the [MDT OCL project](https://eclipse.dev/modeling/mdt/?
 
 !!! note
 
-    See the [update for Eclipse Mars](https://mattsch.com/2015/08/18/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars/).
+    See the [update for Eclipse Mars](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md).
 
 For the sake of completeness this is the code necessary to register a resource factory to be able to load your model files:
 
@@ -61,8 +61,8 @@ EMF itself requires `org.eclipse.emf.ecore` and `org.eclipse.emf.ecore.xmi`.
 If you encounter a `java.lang.NoClassDefFoundError: org/eclipse/uml2/uml/Type` exception during runtime when calling `OCLinEcoreStandaloneSetup.doSetup()`, you need to add a dependency to `org.eclipse.uml2.uml.resources` as well.
 This is because starting with _Eclipse Luna_ [OCLInEcore does not re-export UML anymore](https://www.eclipse.org/forums/index.php/mv/msg/783873/1389274/#msg_1389274 "Eclipse Community Post").
 
-**Update 07.12.2012:** Added missing call to install the OCL standard library and dependencies.
-
-**Update 28.06.2014:** Added missing UML dependency for Eclipse Luna.
-
-**Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).
+> UPDATES: **Updates to this blog post**
+>
+> * **07.12.2012:** Added missing call to install the OCL standard library and dependencies.
+> * **28.06.2014:** Added missing UML dependency for Eclipse Luna.
+> * **Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).

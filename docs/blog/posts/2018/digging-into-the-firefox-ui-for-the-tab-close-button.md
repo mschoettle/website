@@ -22,7 +22,7 @@ So I went back to the last 54.x version, which allowed the installation of this 
 Unfortunately, I could not open its UI.
 I did however find the extension [InspectorWidget](https://web.archive.org/web/20181102004227/https://addons.mozilla.org/en-US/firefox/addon/inspectorwidget/).
 It has a nifty shortcut to open the inspector for the desired element right away.
-Hold `Ctrl+Shift` while clicking on the desired UI element.
+Hold ++ctrl+shift++ while clicking on the desired UI element.
 
 Using the inspector I found out that there was a new CSS rule that set `display: none` for certain elements, one of them being the close button for tabs.
 To find out the initial/default value I used the computed rules, which showed `-moz-box`.

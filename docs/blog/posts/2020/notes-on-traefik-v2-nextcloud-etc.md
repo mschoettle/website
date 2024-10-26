@@ -4,10 +4,11 @@ date:
   created: 2020-01-15
   updated: 2022-12-17
 categories:
-  - Docker
-  - Howto
-  - Nextcloud
-  - Raspberry Pi
+#   - Docker
+#   - Howto
+#   - Nextcloud
+#   - Raspberry Pi
+  - Self-hosting
 slug: notes-on-traefik-v2-nextcloud-etc
 ---
 # Notes on traefik v2, Nextcloud, etc
@@ -32,7 +33,7 @@ Furthermore, the traefik `v2`-specific [Docker 101](https://traefik.io/blog/trae
 The main challenge at the beginning was to realize the difference between _static_ and _dynamic_ configuration.
 For some reason I thought that the static configuration is everything that's configured in the configuration file and the dynamic configuration corresponds to what's configured through Docker (using labels).
 That's only somewhat correct.
-You can also have a dynamic configuration in a file (using the file provider) and there are some options you need to (read: have to) define in the dynamic configuration.
+You can also have a dynamic configuration in a file (using the file provider) and there are some options you need to (read: _have to_) define in the dynamic configuration.
 
 NOTE: In the below snippets I use `yaml` as opposed to `toml`.
 I find it less verbose and easier to read.
@@ -71,9 +72,9 @@ providers:
 If `exposedByDefault` is `true`, Docker containers will automatically be exposed.
 That's where the `defaultRule` comes into play.
 I rather decide which containers should be exposed, therefore it is disabled.
-With this, you should be able to run a container (here _Gitea_) with the following labels (either provided with `docker run` with `--label` or in your `compose.yaml`):
+With this, you should be able to run a container (here _Gitea_) with the following labels (either provided to `docker run` with `--label` or in your `compose.yaml`):
 
-```yaml
+```yaml title="Adding labels to service in compose file"
 labels:
   - "traefik.enable=true"
   # for docker run: replace the ` with \" to avoid command substitution
@@ -162,7 +163,7 @@ tls:
 ```
 
 As you can see above, there is a way to define default [TLS options](https://docs.traefik.io/https/tls/#tls-options).
-Mine is quite strict, but it [mostly works](https://github.com/mschoettle/homebrew-git-curl-openssl).
+Mine is quite strict, and it mostly works (the exception at the time of writing being [`curl` on macOS](https://github.com/mschoettle/homebrew-git-curl-openssl)).
 Some services don't support TLS 1.3 yet so there is an option to explicitly allow TLS 1.2+.
 To reference it you need to append `@file`, i.e., `mintls12@file`.
 
@@ -172,7 +173,7 @@ When the certificates are issued, you can stop the container and run it in detac
 To enable TLS for a container (here Gitea), all you need to add is the label `"traefik.http.routers.gitea.tls=true"`.
 To allow `TLS 1.2`, you need to add the label `"traefik.http.routers.gitea.tls.options=mintls12@file"`:
 
-```yaml
+```yaml title="Enabling TLS termination for a service in the compose file"
 labels:
   - "traefik.http.routers.gitea.tls=true"
   - "traefik.http.routers.gitea.tls.options=mintls12@file"
@@ -205,7 +206,7 @@ http:
 ## Setting up Nextcloud
 
 Getting Nextcloud up and running is actually very easy with the provided [Docker examples](https://github.com/nextcloud/docker/tree/master/.examples).
-I used the `[docker-compose/insecure/mariadb/fpm/](https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/mariadb/fpm/compose.yaml)` version as a base and made the following modifications:
+I used the [`docker-compose/insecure/mariadb/fpm/`](https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/mariadb/fpm/compose.yaml) version as a base and made the following modifications:
 
 * Removed MariaDB and cron services
 * Added user-defined bridge network ([see previous post](./notes-on-docker.md))

@@ -5,8 +5,9 @@ date:
   updated: 2024-10-23
 categories:
   - Docker
-  - Howto
-  - Raspberry Pi
+#   - Howto
+#   - Raspberry Pi
+  - Self-hosting
 slug: notes-on-docker
 ---
 # Notes on Docker
@@ -27,28 +28,28 @@ Here are some notes pertinent to [the setup with my Raspberry Pi](./notes-on-set
 While the _Raspberry Pi 4_ has a 64bit CPU, _Raspbian_ is 32bit.
 The main reason is [backwards compatibility](https://forums.raspberrypi.com/viewtopic.php?t=252369#p1539974) to older Raspberry Pi models.
 This can sometimes be a problem if an image is not provided for ARM 32bit architectures.
-One example is [Gitea](https://gitea.io/) which so far is the only one where I encountered this.
+One example is [Gitea](https://about.gitea.com/products/gitea/) which so far is the only one where I encountered this.
 Fortunately, they provide an `arm32v6` binary in their releases so it was not too difficult to create a `Dockerfile` that downloads the binary.
 There are other Docker images that compile _Gitea_ for the specific ARM architecture but there doesn't seem to be a big advantage in using _ARMv6_ vs. _ARMv7_ (see [differences](http://single-boards.com/armv6-vs-armv7/) and see [comparison benchmark](https://www.mikronauts.com/raspberry-pi/raspberry-pi-2-raspbian-vs-linero-armv6-vs-armv7/)).
 
-My `Dockerfile` is based on the [official one](https://github.com/go-gitea/gitea/blob/master/Dockerfile).
+My `Dockerfile` is based on the [official one](https://github.com/go-gitea/gitea/blob/main/Dockerfile).
 You can find it in my [repository on GitHub](https://github.com/mschoettle/docker/tree/master/gitea).
 The main difference is that instead of compiling Gitea it downloads the binary and corresponding repository for the specific release.
 
 ## Docker and `ufw`
 
-As outlined [previously](./notes-on-setting-up-my-raspberry-pi.md), I use `ufw` as a frontend for `iptables`.
+As outlined [previously](./notes-on-setting-up-my-raspberry-pi.md#setting-up-raspbian), I use `ufw` as a frontend for `iptables`.
 Unfortunately, Docker directly manipulates `iptables` which means that published ports are accessible from the outside even if no _allow_ rule is added with/to `ufw`.
 There is a [workaround](https://github.com/moby/moby/issues/4737) which requires disabling `iptables` manipulation by Docker but [they generally don't recommend turning this setting off](https://docs.docker.com/network/iptables/#prevent-docker-from-manipulating-iptables).
 Someone created [another solution](https://github.com/chaifeng/ufw-docker) which leaves `iptables` manipulation by Docker intact but I haven't tried it out myself.
 
 In my case since I intended to use a reverse proxy, the only ports exposed to the outside are `80` and `443` for the reverse proxy.
-The ports of the containers are [only exposed and not published](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose).
+The ports of the containers are [only exposed and not published](https://docs.docker.com/reference/cli/docker/container/run/#publish).
 Therefore, I just left it as it is and did not use any of the workarounds.
 
 ## Creating a user-defined network
 
-I created a [bridge network](https://docs.docker.com/network/bridge/) which allows the containers within that network to communicate.
+I created a [bridge network](https://docs.docker.com/engine/network/drivers/bridge/) which allows the containers within that network to communicate.
 There are a lot of options.
 I used the following command:
 
@@ -58,7 +59,7 @@ docker network create --driver bridge <networkname>
 
 With `docker network inspect <networkname>` you can then find out the subnet and gateway and use the gateway as the IP address to bind _MariaDB_ to (see above) and subsequently use it as the host to connect to it from clients.
 
-There are [advanced options](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) you can make use of, for example, I used the following command:
+There are [advanced options](https://docs.docker.com/reference/cli/docker/network/create/#bridge-driver-options) you can make use of, for example, I used the following command:
 
 ```shell
 docker network create \
@@ -84,13 +85,13 @@ networks:
 
 ## Running the database on the host
 
-As outlined previously, I have a _MariaDB_ instance running on the host.
+As outlined previously, I have a [_MariaDB_ instance running on the host](./notes-on-setting-up-my-raspberry-pi.md).
 Why is it not running in a container? I did consider it but containers are supposed to be stateless and the [general recommendation is to not run production databases in Docker](https://vsupalov.com/database-in-docker/).
 There is an interesting discussion about this on [Reddit](https://www.reddit.com/r/docker/comments/amo2cc/running_production_databases_in_docker/) as well.
 In the end, it seemed like a risk (which I am not willing to take).
 
 This of course makes it a bit more tricky when you want to connect to the database from within a container.
-By default, this doesn't work unless you use [host networking](https://docs.docker.com/network/host/).
+By default, this doesn't work unless you use [host networking](https://docs.docker.com/engine/network/drivers/host/).
 But this seemed less practical since the network of the container is not isolated from the host.
 
 There are two things to consider.

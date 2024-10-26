@@ -5,7 +5,7 @@ date:
   updated: 2023-06-23
 categories:
   - Django
-  - Howto
+#   - Howto
 slug: django-django_tables2-and-bootstrap-table
 ---
 # Django, django_tables2 and Bootstrap Table
@@ -177,7 +177,7 @@ data = {
 }
 ```
 
-On the template side there are the specific table settings for server-side pagination and some JavaScript to send the correct request when requesting another page or sorting:
+On the template side there are the [specific table settings for server-side pagination](https://bootstrap-table.com/docs/api/table-options/#sidepagination) and some JavaScript to send the correct request when requesting another page or sorting:
 
 ```html
 data-side-pagination="server"
@@ -209,7 +209,7 @@ data-query-params-type=""
 
 #### Server-side searching
 
-Supporting server-side searching is a bit trickier since there is one search field but no builtin way in Django to search directly across several field.
+Supporting [server-side searching](https://bootstrap-table.com/docs/api/table-options/#searchable) is a bit trickier since there is one search field but no builtin way in Django to search directly across several field.
 
 If you are already using the [django-rest-framework](https://www.django-rest-framework.org/) you could directly use the [`SearchFilter`](https://www.django-rest-framework.org/api-guide/filtering/#searchfilter) it provides.
 It is based on [Django admin's search functionality](https://docs.djangoproject.com/en/stable/ref/contrib/admin/#django.contrib.admin.ModelAdmin.search_fields)

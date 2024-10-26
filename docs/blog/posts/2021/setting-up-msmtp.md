@@ -4,7 +4,7 @@ date:
   created: 2021-05-11
   updated: 2021-05-11
 categories:
-  - Howto
+#   - Howto
   - Linux
 slug: setting-up-msmtp
 ---
@@ -15,6 +15,10 @@ It always took a lot of trial and error.
 Most of the times this was due to [an environment problem](https://serverfault.com/a/449652) (or a typo).
 You could [test your cronjob](https://serverfault.com/a/85906) but it would also be nice to be notified whenever something goes wrong (such as your backup script failing).
 
+In this post I explain how to set up `msmtp` so that your system will send you emails.
+
+<!-- more -->
+
 I had actually seen this output in the syslog before but never really cared much about it:
 
 ```output
@@ -24,7 +28,8 @@ I had actually seen this output in the syslog before but never really cared much
 _cron_ sends an email whenever a cronjob has an output, unless of course it cannot send the email.
 
 So I recently set up `msmtp` on my server(s).
-I started with [these instructions](https://wiki.archlinux.org/index.php/Msmtp) but in the end this is how it is working for me:
+I started with [these instructions](https://wiki.archlinux.org/index.php/Msmtp).
+In the end this is how it is working for me:
 
 1. Install `msmtp`:
 
@@ -41,8 +46,8 @@ I started with [these instructions](https://wiki.archlinux.org/index.php/Msmtp) 
     * specify default email in `/etc/aliases`
     * specify `MAILTO=recipient@domain.tld` in the `crontab`
 4. Finally, _cron_ uses `sendmail` to send out emails.
-    For msmtp v1.8.8+ install `msmtp-mta` and set the `set_from_header` [configuration setting](https://marlam.de/msmtp/msmtp.html#Commands-specific-to-sendmail-mode) to `on`.
-    The from address can be set to `something <server@domain.tld>` to customize the name display.
+    For `msmtp v1.8.8+` install `msmtp-mta` and set the `set_from_header` [configuration setting](https://marlam.de/msmtp/msmtp.html#Commands-specific-to-sendmail-mode) to `on`.
+    The from address can be set to `Some Name <server@domain.tld>` to customize the name display.
 
     For older versions, you could just install the `msmtp-mta` package.
     However, you then get a `From` header in the emails as "root (Cron Daemon) <>".

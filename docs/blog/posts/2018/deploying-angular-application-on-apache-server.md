@@ -4,8 +4,9 @@ date:
   created: 2018-09-12
   updated: 2018-09-12
 categories:
-  - Frameworks
-  - Hints
+#   - Frameworks
+#   - Hints
+  - Web Development
 slug: deploying-angular-application-on-apache-server
 ---
 # Deploying Angular application on Apache server

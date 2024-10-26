@@ -3,30 +3,30 @@ migrated: true
 date:
   created: 2011-04-14
   updated: 2011-04-14
-categories:
-  - Java
-  - Struts
+# categories:
+#   - Java
+#   - Struts
 slug: things-discovered-in-struts-2
 ---
 # Things discovered in Struts 2
 
-In this post I write about some things I discovered during the development of a university project where [Struts 2](http://struts.apache.org "Apache Struts project website") is used.
-I note them since I couldn't find them in the [documentation](http://struts.apache.org/2.x/docs/home.html "Apache Struts 2 documentation") and they were discovered through digging through pieces of documentation, the code and the web.
+In this post I write about some things I discovered during the development of a university project where [Struts 2](https://struts.apache.org "Apache Struts project website") is used.
+I note them since I couldn't find them in the [documentation](https://web.archive.org/web/20170717125249/https://struts.apache.org/docs/home.html "Apache Struts 2 documentation") and they were discovered by digging through pieces of documentation, the code, and the web.
 
 <!-- more -->
 
-In general, sometimes more detailed information can be found in the Javadoc of the frameworks classes, e.g. interceptors.
+In general, sometimes more detailed information can be found in the _Javadoc_ of the framework's classes, e.g., interceptors.
 
 ## Skipping validation for a specific method in an action class
 
-If you use the [validation interceptor](http://struts.apache.org/2.x/docs/validation-interceptor.html) some methods are already excluded by default (e.g. back or input) and you could add some more method names (even with a wildcard) to that list.
+If you use the [validation interceptor](https://web.archive.org/web/20170723123346/https://struts.apache.org/docs/interceptors.html) some methods are already excluded by default (e.g., `back` or `input`) and you could add some more method names (even with a wildcard) to that list.
 This will be applied to the interceptor.
 But if you want to specify it in the action class on the method itself then you can use an annotation for that.
 Simply add `@SkipValidation` to the method and it will be skipped by the validation interceptor.
 
-## Using the parameters prepare trick with model driven actions
+## Using the `paramsPrepareParams` trick with model driven actions
 
-In the [documentation of the interceptors](http://struts.apache.org/2.x/docs/interceptors.html#Interceptors-TheDefaultConfiguration) there's a trick (`paramsPrepareParams` trick) explained to call the parameters interceptor twice in order to be able to load something from the database in the prepare method (e.g. using a given ID) and then getting the new parameters set to the loaded object.
+In the [documentation of the interceptors](https://web.archive.org/web/20170723123346/https://struts.apache.org/docs/interceptors.html#Interceptors-ConfiguringInterceptors) there's a trick (`paramsPrepareParams` trick) explained to call the parameters interceptor twice in order to be able to load something from the database in the prepare method (e.g. using a given ID) and then getting the new parameters set to the loaded object.
 
 This approach does not work when using model driven actions.
 When the parameters interceptor is called the first time, the model object doesn't exist on the stack yet.

@@ -4,13 +4,15 @@ date:
   created: 2021-03-18
   updated: 2021-03-18
 categories:
-  - Howto
+#   - Howto
   - Linux
 slug: set-up-debian
 ---
 # Set Up Debian
 
 Here are the steps I use to set up and configure a fresh install of Debian on a server.
+
+<!-- more -->
 
 1. Log in as root: `ssh root@<ip or domain.tld>`
 2. Change the root password:
@@ -37,7 +39,7 @@ Here are the steps I use to set up and configure a fresh install of Debian on a 
     dpkg-reconfigure locales
     ```
 
-6. Install your favourite text editor (here _nano_) and make it the default:
+6. Install your favourite text editor (here `nano`) and make it the default:
 
     ```shell
     apt install nano
@@ -114,10 +116,10 @@ Now, install a firewall (here `ufw`) to only open the ports that you really need
     ufw limit <port>/tcp
     ```
 
+4. Enable `ufw`:
+
     > [!CAUTION]
     > Ensure that your rules are correct, otherwise you will lock yourself out in the next step.
-
-4. Enable `ufw`:
 
     ```shell
     ufw enable

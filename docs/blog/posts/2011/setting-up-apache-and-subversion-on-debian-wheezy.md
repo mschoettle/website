@@ -76,6 +76,8 @@ youruser = rw
 This will give your user read and write permissions for this repository.
 Now you can use it through this URL `https://example.com/svn/yourrepository`.
 
+## Add an SSL certificate
+
 Create a certificate for your site using [Let's Encrypt](https://letsencrypt.org/getting-started/).
 If you just want to test this locally, you can also create a self-signed certificate.
 
@@ -146,7 +148,7 @@ AuthUserFile /home/svn/passwd
 Require valid-user
 ```
 
-You may notice that the _authz_ line is missing.
+You may notice that the `authz` line is missing.
 This has to be done in the `websvn` config file located in `/etc/websvn/config.php`.
 Uncomment this line and add the path to the auth file
 
@@ -154,7 +156,7 @@ Uncomment this line and add the path to the auth file
 $config->useAuthenticationFile('/path/to/authz');
 ```
 
-## **Optional:** Disable to show the complete server token for Apache
+## **Optional:** Don't show the complete server token for Apache
 
 In `/etc/apache2/conf.d/security` change the line
 

@@ -5,7 +5,7 @@ date:
   updated: 2019-12-12
 categories:
   - Eclipse Modeling Framework (EMF)
-  - Java
+#   - Java
 slug: making-emf-models-serialized-in-xmi-available-in-json-with-emfjson
 ---
 # Making EMF models serialized in XMI available in JSON with `emfjson`
@@ -19,7 +19,7 @@ For now class diagrams are supported but more supported will be added in the fut
 
 Re-creating the complete application right away was not feasible for this project.
 Also, we are all about reuse and I had envisioned in the architecture from the beginning to reuse the backend parts when we build another user interface.
-Therefore, the goal was to keep our current backend which makes of the [Eclipse Modeling Framework (EMF)](https://www.eclipse.org/modeling/emf/) and making it available through an API to the web application.
+Therefore, the goal was to keep our current backend which makes of the [Eclipse Modeling Framework (EMF)](https://eclipse.dev/modeling/emf/) and making it available through an API to the web application.
 Fortunately, there is already support for EMF and JSON by [`emfjson`](https://emfjson.github.io/projects/jackson/latest/).
 The main use case however is to replace the XML/XMI serialization/deserialization with JSON.
 

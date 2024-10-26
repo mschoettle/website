@@ -3,9 +3,9 @@ migrated: true
 date:
   created: 2016-01-04
   updated: 2016-01-04
-categories:
-  - Howto
-  - iOS
+# categories:
+#   - Howto
+#   - iOS
 slug: ios-how-to-fix-or-change-voicemail-number
 ---
 # iOS: How to fix/change Voicemail number
@@ -28,4 +28,4 @@ For example, `14381234567`.
 This approach worked on the TELUS network (using Koodo).
 If it doesn't work for you, revert the phone number to the one written down in step 3 and contact your provider.
 
-_Source: [planken.org](http://planken.org/2011/08/iphone-cannot-connect-voicemail)_
+**Source:** [planken.org](http://planken.org/2011/08/iphone-cannot-connect-voicemail)

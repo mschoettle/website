@@ -20,13 +20,19 @@ Adding the missing data from the past was possible thanks to the [Wayback Machin
 
 <!-- more -->
 
-![COVID-19 Montreal Dashboard (Before)](http://localhost/wp-content/uploads/2021/05/dashboard_before.jpg)COVID-19 Montreal Dashboard in September 2020
+<figure markdown="span">
+  ![COVID-19 Montreal Dashboard (Before)](./covid-19-montreal-dashboard/dashboard_before.jpg)
+  <figcaption>COVID-19 Montreal Dashboard in September 2020</figcaption>
+</figure>
 
 Besides getting the data up-to-date we also improved the mini boxes on top and updated some of the charts.
 For example, the map of Montréal boroughs now is coloured based on the 7-day incidence per 100 000 people (the number of new cases in the last 7 days adjusted for population size)
 Due to changes in the pandemic situation, we also added charts for vaccination and variants of concern.
 
-![COVID-19 Montreal Dashboard](http://localhost/wp-content/uploads/2021/05/dashboard_relaunch-1024x644.jpg)COVID-19 Montreal Dashboard after relaunch
+<figure markdown="span">
+  ![COVID-19 Montreal Dashboard](./covid-19-montreal-dashboard/dashboard_relaunch.jpg)
+  <figcaption>COVID-19 Montreal Dashboard after relaunch</figcaption>
+</figure>
 
 A few months before I had started using [pandas](https://pandas.pydata.org/) for a client project.
 Great timing since this was already in use here.

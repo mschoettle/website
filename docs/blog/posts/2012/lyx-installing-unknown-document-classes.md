@@ -2,9 +2,9 @@
 migrated: true
 date:
   created: 2012-05-28
-  updated: 2012-05-28
-categories:
-  - Mac OS
+  updated: 2013-04-05
+# categories:
+#   - Mac OS
 slug: lyx-installing-unknown-document-classes
 ---
 # LyX: Installing unknown document classes
@@ -41,5 +41,7 @@ You can make sure it worked by executing `kpsewhich classname.cls` which will gi
 
 On Windows (using _MikTeX_) this should work quite easy using the _MikTeX Package Manager_.
 
-**Update 28.03.2013:** Fixed path to LaTeX packages (Thanks, Mathias!)<br>
-**Update 05.04.2013:** Updated description with better location for custom document classes.
+> UPDATES: **Updates to this blog post**
+>
+> * **28.03.2013:** Fixed path to LaTeX packages (Thanks, Mathias!)
+> * **05.04.2013:** Updated description with better location for custom document classes.
