@@ -7,6 +7,10 @@ categories:
 #   - Howto
 #   - Raspberry Pi
   - Self-hosting
+tags:
+  - Raspberry Pi
+  - Howto
+  - Setup
 slug: notes-on-setting-up-my-raspberry-pi
 ---
 # Notes on Setting Up My Raspberry Pi
