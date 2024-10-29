@@ -28,4 +28,4 @@ For example, `14381234567`.
 This approach worked on the TELUS network (using Koodo).
 If it doesn't work for you, revert the phone number to the one written down in step 3 and contact your provider.
 
-**Source:** [planken.org](http://planken.org/2011/08/iphone-cannot-connect-voicemail)
+**Source:** [planken.org](https://planken.org/2011/08/iphone-cannot-connect-voicemail)
