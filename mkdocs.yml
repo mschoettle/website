@@ -79,7 +79,18 @@ plugins:
       enabled: !ENV [CI, false]
   - search
   - blog:
-      blog_toc: false
+      categories_allowed:
+        - Django
+        - Docker
+        - Eclipse Modeling Framework (EMF)
+        - Firefox
+        - Git
+        - iOS
+        - Linux
+        - Projects
+        - Self-hosting
+        - Thunderbird
+        - Web Development
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
   - git-revision-date-localized:
       enabled: !ENV [CI, false]

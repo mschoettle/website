@@ -5,7 +5,7 @@ date:
   updated: 2012-02-06
 categories:
   - Thunderbird
-  - Tweaks
+#   - Tweaks
 slug: hide-star-besides-email-addresses-in-thunderbird
 ---
 # Hide star besides email addresses in Thunderbird

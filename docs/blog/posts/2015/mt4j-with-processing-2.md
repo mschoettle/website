@@ -3,8 +3,8 @@ migrated: true
 date:
   created: 2015-08-18
   updated: 2015-08-18
-categories:
-  - Java
+# categories:
+#   - Java
 slug: mt4j-with-processing-2
 ---
 # MT4j with Processing 2

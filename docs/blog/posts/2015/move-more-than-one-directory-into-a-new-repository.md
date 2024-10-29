@@ -5,7 +5,7 @@ date:
   updated: 2015-08-18
 categories:
   - Git
-  - Howto
+#   - Howto
 slug: move-more-than-one-directory-into-a-new-repository
 ---
 # Move more than one directory into a new repository

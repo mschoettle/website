@@ -7,7 +7,7 @@ categories:
   - Docker
 #   - Howto
 #   - Raspberry Pi
-  - Self-hosting
+#   - Self-hosting
 slug: notes-on-docker
 ---
 # Notes on Docker

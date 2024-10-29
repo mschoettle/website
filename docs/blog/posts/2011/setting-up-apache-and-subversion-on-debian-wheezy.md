@@ -4,7 +4,7 @@ date:
   created: 2011-03-21
   updated: 2024-10-17
 categories:
-  - Howto
+#   - Howto
   - Linux
 slug: setting-up-apache-and-subversion-on-debian-wheezy
 ---

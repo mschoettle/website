@@ -5,7 +5,7 @@ date:
   updated: 2019-10-28
 categories:
   - Git
-  - Howto
+#   - Howto
 slug: move-directory-from-one-repository-to-another-preserving-history
 ---
 # Move directory from one repository to another, preserving history
