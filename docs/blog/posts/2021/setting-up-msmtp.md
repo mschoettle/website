@@ -6,6 +6,10 @@ date:
 categories:
 #   - Howto
   - Linux
+tags:
+  - Server
+  - Debian
+  - Automation
 slug: setting-up-msmtp
 ---
 # Setting up `msmtp`

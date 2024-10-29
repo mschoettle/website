@@ -4,10 +4,14 @@ date:
   created: 2020-01-08
   updated: 2024-10-23
 categories:
-  - Docker
+#   - Docker
 #   - Howto
 #   - Raspberry Pi
-#   - Self-hosting
+  - Self-hosting
+tags:
+  - Docker
+  - Raspberry Pi
+  - Howto
 slug: notes-on-docker
 ---
 # Notes on Docker

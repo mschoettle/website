@@ -6,6 +6,12 @@ date:
 categories:
 #   - Howto
   - Linux
+tags:
+  - Debian
+  - Server
+  - Howto
+  - Setup
+  - Hardening
 slug: set-up-debian
 ---
 # Set Up Debian

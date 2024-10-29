@@ -9,6 +9,12 @@ categories:
 #   - Nextcloud
 #   - Raspberry Pi
   - Self-hosting
+tags:
+  - Docker
+  - Howto
+  - Nextcloud
+  - Raspberry Pi
+  - Reverse Proxy
 slug: notes-on-traefik-v2-nextcloud-etc
 ---
 # Notes on traefik v2, Nextcloud, etc

@@ -7,6 +7,11 @@ categories:
 #   - Howto
 #   - Nextcloud
   - Self-hosting
+tags:
+  - Raspberry Pi
+  - Nextcloud
+  - Migration
+  - Howto
 slug: migrating-data-to-nextcloud
 ---
 # Migrating Data to Nextcloud
