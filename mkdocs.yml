@@ -28,7 +28,9 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.tabs
+    - navigation.top
     - toc.follow
+    # - toc.integrate
   logo: assets/images/profile.jpg
   language: en
   name: material

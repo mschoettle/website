@@ -59,7 +59,7 @@ I have been  on the Program Committee for the following conferences/workshops:
 * [MLE 2019](https://gemoc.org/events/mle2019) (co-located with [MODELS 2019](https://modelsconf19.org/))
 * [MOMO 2018](https://2018.programming-conference.org/track/MOMO-2018-papers) (co-located with [<Programming> 2018](https://2018.programming-conference.org/home))
 * [MODELS 2017 Artifact Evaluation](https://models17ae.itu.dk/) (open review on [GitHub](https://github.com/grammarware/models17))
-* [GEMOC 2017](https://gemoc.org/events/gemoc2017.html) (co-located with [MODELS 2017](https://www.cs.utexas.edu/models2017))
+* [GEMOC 2017](https://gemoc.org/events/gemoc2017.html) (co-located with [MODELS 2017](https://web.archive.org/web/20180628044654/https://www.cs.utexas.edu/models2017))
 * [GEMOC 2016](https://gemoc.org/events/gemoc2016.html) (co-located with [MODELS 2016](https://web.archive.org/web/20240303155734/https://models2016.irisa.fr/))
 * [GEMOC 2015](https://gemoc.org/events/gemoc2015.html) (co-located with [MODELS 2015](https://cruise.eecs.uottawa.ca/models2015/)),
 * [MODELS 2014](https://models2014.webs.upv.es/) (co-reviewer)
