@@ -29,6 +29,6 @@ RUN python -m mkdocs build --strict --site-dir /site
 
 
 # production
-FROM joseluisq/static-web-server:2.33.0
+FROM joseluisq/static-web-server:2.33.1
 
 COPY --from=build /site /public
