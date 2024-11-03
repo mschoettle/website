@@ -24,3 +24,8 @@
 ul li .admonition.hidden {
     display: none;
 }
+
+/* Increase space between icon/emoji and title in card grid */
+.grid.cards .twemoji {
+    margin-right: 5px;
+}

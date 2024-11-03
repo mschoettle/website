@@ -1,11 +1,20 @@
 # Projects
 
-A selected list of projects that I created or was involved in.
+A selected list of projects that I created or am/was involved in.
 They include both work projects and personal ones.
 
 ## Software Engineering
 
 <div class="grid cards" markdown>
+
+* :material-heart-pulse:{ .lg .middle } **Opal**
+
+    ---
+
+    A solution providing patients timely access to their medical data.
+    It empowers patients and their caregivers to play an active role in their care.
+
+    [:octicons-arrow-right-24: Opal Website](https://www.opalmedapps.com)
 
 * :simple-django:{ .lg .middle } **Digital Printing Workflow**
 
@@ -19,7 +28,7 @@ They include both work projects and personal ones.
 
     ---
 
-    An interactive study web application built with TypeScript and Angular to allow study participants to provide their feedback in an interactive way.
+    A study web site built with TypeScript and Angular to allow study participants to provide their feedback interactively.
 
     [:octicons-arrow-right-24: Tell me more](#concernification-study)
 
@@ -35,9 +44,74 @@ They include both work projects and personal ones.
 
 ## Personal Projects
 
+<div class="grid cards" markdown>
+
+* :fontawesome-solid-virus-covid:{ .lg .middle } **COVID-19 Montreal Dashboard**
+
+    ---
+
+    A dashboard built with [Plotly Dash](https://dash.plotly.com/) for the epidemiological situation of the corona virus pandemic in Montréal and Québec.
+
+    [:octicons-arrow-right-24: Tell me more](#digital-printing-workflow)
+
+* :simple-python:{ .lg .middle } **SEPAQ Availability Scraper**
+
+    ---
+
+    A scraper for availability of [SEPAQ](https://www.sepaq.com) camp sites that makes it easier to find available camping spots across all SEPAQ parks.
+
+    [:octicons-arrow-right-24: Tell me more](#concernification-study)
+
+* :soccer:{ .lg .middle } **Tippspiel**
+
+    ---
+
+    A web application for users to predict results of football (aka. soccer) matches and compete with each other.
+
+    [:octicons-arrow-right-24: Tell me more](#touchcore)
+
+</div>
+
 ## Archive
 
-## Details
+<div class="grid cards" markdown>
+
+* :simple-django:{ .lg .middle } **Docker Monitor**
+
+    ---
+
+    A simple helper script that allows you to monitor docker containers to ensure they are running and healthy.
+
+    [:octicons-arrow-right-24: Tell me more](#digital-printing-workflow)
+
+* :raised_hand:{ .lg .middle } **Kinect Project**
+
+    ---
+
+    A university project using the Kinect for an experiment to measure how humans perform pointing in 3D.
+
+    [:octicons-arrow-right-24: Tell me more](#concernification-study)
+
+* :fontawesome-brands-wordpress-simple:{ .lg .middle } **Hochseilgarten Nagold**
+
+    ---
+
+    A responsive website set up using Wordpress for a high ropes garden.
+    <!-- It includes a booking calendar to show the schedule. -->
+
+    [:octicons-arrow-right-24: Tell me more](#touchcore)
+
+* :fontawesome-brands-php:{ .lg .middle } **Max Payne Zone**
+
+    ---
+
+    A fan site for the game _Max Payne_ providing news about the game in German.
+
+    [:octicons-arrow-right-24: Tell me more](#touchcore)
+
+</div>
+
+## Project Details
 
 ### Digital Printing Workflow
 
