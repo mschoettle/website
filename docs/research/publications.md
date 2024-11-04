@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD042 -->
+<!-- markdownlint-disable no-empty-links -->
 # Publications
 
 ## 2019

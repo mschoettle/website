@@ -14,7 +14,7 @@ They include both work projects and personal ones.
     A solution providing patients timely access to their medical data.
     It empowers patients and their caregivers to play an active role in their care.
 
-    [:octicons-arrow-right-24: Opal Website](https://www.opalmedapps.com)
+    [:octicons-arrow-right-24: Tell me more](#opal)
 
 * :simple-django:{ .lg .middle } **Digital Printing Workflow**
 
@@ -52,7 +52,7 @@ They include both work projects and personal ones.
 
     A dashboard built with [Plotly Dash](https://dash.plotly.com/) for the epidemiological situation of the corona virus pandemic in Montréal and Québec.
 
-    [:octicons-arrow-right-24: Tell me more](#digital-printing-workflow)
+    [:octicons-arrow-right-24: Tell me more](#covid-19-montreal-dashboard)
 
 * :simple-python:{ .lg .middle } **SEPAQ Availability Scraper**
 
@@ -60,7 +60,7 @@ They include both work projects and personal ones.
 
     A scraper for availability of [SEPAQ](https://www.sepaq.com) camp sites that makes it easier to find available camping spots across all SEPAQ parks.
 
-    [:octicons-arrow-right-24: Tell me more](#concernification-study)
+    [:octicons-arrow-right-24: Tell me more](#sepaq-availability-scraper)
 
 * :soccer:{ .lg .middle } **Tippspiel**
 
@@ -68,7 +68,7 @@ They include both work projects and personal ones.
 
     A web application for users to predict results of football (aka. soccer) matches and compete with each other.
 
-    [:octicons-arrow-right-24: Tell me more](#touchcore)
+    [:octicons-arrow-right-24: Tell me more](#tippspiel)
 
 </div>
 
@@ -82,7 +82,7 @@ They include both work projects and personal ones.
 
     A simple helper script that allows you to monitor docker containers to ensure they are running and healthy.
 
-    [:octicons-arrow-right-24: Tell me more](#digital-printing-workflow)
+    [:octicons-arrow-right-24: Tell me more](#docker-monitor)
 
 * :raised_hand:{ .lg .middle } **Kinect Project**
 
@@ -90,7 +90,7 @@ They include both work projects and personal ones.
 
     A university project using the Kinect for an experiment to measure how humans perform pointing in 3D.
 
-    [:octicons-arrow-right-24: Tell me more](#concernification-study)
+    [:octicons-arrow-right-24: Tell me more](#kinect-project)
 
 * :fontawesome-brands-wordpress-simple:{ .lg .middle } **Hochseilgarten Nagold**
 
@@ -99,7 +99,7 @@ They include both work projects and personal ones.
     A responsive website set up using Wordpress for a high ropes garden.
     <!-- It includes a booking calendar to show the schedule. -->
 
-    [:octicons-arrow-right-24: Tell me more](#touchcore)
+    [:octicons-arrow-right-24: Tell me more](#hochseilgarten-nagold)
 
 * :fontawesome-brands-php:{ .lg .middle } **Max Payne Zone**
 
@@ -107,11 +107,16 @@ They include both work projects and personal ones.
 
     A fan site for the game _Max Payne_ providing news about the game in German.
 
-    [:octicons-arrow-right-24: Tell me more](#touchcore)
+    [:octicons-arrow-right-24: Tell me more](#max-payne-zone)
 
 </div>
 
 ## Project Details
+
+### Opal
+
+Since 2021 I have been working with the [Opal Health Informatics Group](https://www.opalmedapps.com) on the Opal solution.
+As the Software Architect I am overseeing the software architecture and future design of Opal.
 
 ### Digital Printing Workflow
 
@@ -181,3 +186,45 @@ The backend is built with the [Eclipse Modeling Framework (EMF)](https://www.ecl
 
 * Java, OOP, Eclipse Modeling Framework (EMF), XML, Code generation, JUnit, GUI, Git
 * **Project Management:** Bitbucket (Issue Tracker, Pull Requests, Code Reviews, Wiki)
+
+### COVID-19 Montreal Dashboard
+
+Dashboard for the epidemiological situation of the SARS-CoV-2 (coronavirus) pandemic in Montréal and Québec.
+
+I started contributing to this project towards the end of 2020.
+I helped update it to the latest data formats of data provided from official sources, and adding more graphs.
+In addition, I automated the download and update of data every day.
+This helped keep the data up-to-date without any manual intervention.
+
+**More information:**
+
+* [Blog post](../blog/posts/2021/covid-19-montreal-dashboard.md)
+* [Project on GitHub](https://github.com/jeremymoreau/covid19mtl/)
+
+**Technologies:**
+
+* Python, pandas, Plotly, Dash, Git, Bash
+
+### SEPAQ Availability Scraper
+
+TBD
+
+### Tippspiel
+
+TBD
+
+### Docker Monitor
+
+TBD
+
+### Kinect Project
+
+TBD
+
+### Hochseilgarten Nagold
+
+TBD
+
+### Max Payne Zone
+
+TBD
