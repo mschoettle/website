@@ -156,10 +156,30 @@ To allow participant to provide feedback in an interactive way, I built a web ap
 The feedback is collected for evaluating the result of an algorithm I designed, which extracts a concern (feature model and the corresponding API for each feature) of a software framework.
 The framework I mainly used is the _Android SDK_ (specifically the [notifications part](https://developer.android.com/reference/android/app/Notification)).
 
+<figure markdown="span">
+  ![Concernification Study Introduction](../assets/images/concernification_introduction.jpg){ width="500" }
+  <figcaption>Introduction to the Concernification Study with instructions</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Concernification Study Feature Model Feedback](../assets/images/concernification_fm_feedback.jpg){ width="500" }
+  <figcaption>Giving feedback on the feature model of a framework</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Concernification Study Missing Feature](../assets/images/concernification_missing_feature.jpg){ width="500" }
+  <figcaption>Adding a missing feature</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Concernification Study API Feedback](../assets/images/concernification_api_feedback.jpg){ width="500" }
+  <figcaption>Giving feedback on the API of a feature</figcaption>
+</figure>
+
 The diagram part is done using [GoJS](https://gojs.net/latest/index.html), a nice JavaScript Diagram framework.
 The remainder of the UI is done using [Bootstrap](https://getbootstrap.com/) and [jQuery](https://jquery.com/).
 The study data is loaded from JSON files.
-Once a user submits the feedback, an API is called on a Node.js server which stores the data.
+Once a user submits the feedback, an API is called on a Node.js server which then stores the data.
 
 **Technologies:**
 
@@ -169,16 +189,42 @@ Once a user submits the feedback, an API is called on a Node.js server which sto
 
 During my PhD, I was part of a team (as the Lead Software Developer/Software Architect) working on [TouchCORE](https://djeminy.github.io/touchcore/), which is a multitouch-enabled tool for agile concern-oriented software design modeling aimed at developing scalable and reusable software design models.
 
+<figure markdown="span">
+  ![TouchCORE Feature Model](../assets/images/touchcore_feature_model.jpg){ width="500" }
+  <figcaption>Feature Model in TouchCORE</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![TouchCORE Impact Model](../assets/images/touchcore_impact_model.jpg){ width="500" }
+  <figcaption>Impact Model in TouchCORE</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![TouchCORE Class Diagram](../assets/images/touchcore_class_diagram.jpg){ width="500" }
+  <figcaption>Class Diagram in TouchCORE</figcaption>
+</figure>
+
 Besides the main focus being on reuse, the tool also focusses on allowing users to quickly and seamlessly build software design models.
 It provides a touch-based interface allowing the user to use multitouch gestures besides using the traditional keyboard and mouse.
 For example, I designed the sequence diagram editor that allows a user to define the behaviour for the given class diagram in a fast and intuitive way.
+
+<figure markdown="span">
+  ![TouchCORE Sequence Diagram](../assets/images/touchcore_sequence_diagram.jpg){ width="500" }
+  <figcaption>Sequence Diagram in TouchCORE</figcaption>
+</figure>
+
 At the end, the user can generate the code for the design.
 
 The backend is built with the [Eclipse Modeling Framework (EMF)](https://www.eclipse.org/modeling/emf/) and the frontend with [MT4j](https://github.com/mschoettle/mt4j) to provide the touch-based interface.
 
+<figure markdown="span">
+  ![TouchCORE Reusing a concern](../assets/images/touchcore_reuse.jpg){ width="500" }
+  <figcaption>Reusing another concern (a reusable piece of a collection of functionality) in TouchCORE</figcaption>
+</figure>
+
 **Videos:**
 
-* [View Demo Video from my PhD Defence](https://mattsch.com/wp-content/papercite-data/pdf/phd_defence_demo.mov)
+* [View Demo Video from my PhD Defence](../assets/videos/phd_defence_demo.mov)
 * [View Demo Teaser from 2014 on Youtube](https://www.youtube.com/watch?v=Am9jp2y2Uds)
 * [View Demo Teaser from 2013 on Youtube](https://www.youtube.com/watch?v=Dxc5LvV3Nsw)
 
