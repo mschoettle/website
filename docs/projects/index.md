@@ -140,7 +140,7 @@ In this project I used a linter and wrote unit tests from the beginning and have
 It has lead to only a few bugs that made it into production.
 I also used [drone](https://www.drone.io/) as the continuous integration server and for deployment to the staging environment.
 
-**Technologies:**
+**Information:**
 
 * **Backend:** Python, Django, PostgreSQL
 * **Frontend:** CSS, HTML, JavaScript, jQuery, Bootstrap
@@ -181,9 +181,10 @@ The remainder of the UI is done using [Bootstrap](https://getbootstrap.com/) and
 The study data is loaded from JSON files.
 Once a user submits the feedback, an API is called on a Node.js server which then stores the data.
 
-**Technologies:**
+**Information:**
 
-* Angular, TypeScript/JavaScript, Node.js, Express.js, REST, JSON, HTML, CSS, Git
+* **Technologies:** Angular, TypeScript/JavaScript, Node.js, Express.js, REST, JSON, HTML, CSS, Git
+* **[Try it out](https://concernification.mattsch.com/android-notifications2-test)**
 
 ### TouchCORE
 
@@ -222,46 +223,105 @@ The backend is built with the [Eclipse Modeling Framework (EMF)](https://www.ecl
   <figcaption>Reusing another concern (a reusable piece of a collection of functionality) in TouchCORE</figcaption>
 </figure>
 
-**Videos:**
+**Information:**
 
-* [View Demo Video from my PhD Defence](../assets/videos/phd_defence_demo.mov)
-* [View Demo Teaser from 2014 on Youtube](https://www.youtube.com/watch?v=Am9jp2y2Uds)
-* [View Demo Teaser from 2013 on Youtube](https://www.youtube.com/watch?v=Dxc5LvV3Nsw)
-
-**Technologies:**
-
-* Java, OOP, Eclipse Modeling Framework (EMF), XML, Code generation, JUnit, GUI, Git
+* **Technologies:** Java, OOP, Eclipse Modeling Framework (EMF), XML, Code generation, JUnit, GUI, Git
 * **Project Management:** Bitbucket (Issue Tracker, Pull Requests, Code Reviews, Wiki)
+* **Videos:**
+    * [View Demo Video from my PhD Defence](../assets/videos/phd_defence_demo.mov)
+    * [View Demo Teaser from 2014 on Youtube](https://www.youtube.com/watch?v=Am9jp2y2Uds)
+    * [View Demo Teaser from 2013 on Youtube](https://www.youtube.com/watch?v=Dxc5LvV3Nsw)
 
 ### COVID-19 Montreal Dashboard
 
 Dashboard for the epidemiological situation of the SARS-CoV-2 (coronavirus) pandemic in Montréal and Québec.
+
+<figure markdown="span">
+  ![COVID-19 Dashboard](../assets/images/coronavirus_dashboard.jpg){ width="500" }
+</figure>
 
 I started contributing to this project towards the end of 2020.
 I helped update it to the latest data formats of data provided from official sources, and adding more graphs.
 In addition, I automated the download and update of data every day.
 This helped keep the data up-to-date without any manual intervention.
 
-**More information:**
+**Information:**
 
+* **Technologies:** Python, pandas, Plotly, Dash, Git, Bash
 * [Blog post](../blog/posts/2021/covid-19-montreal-dashboard.md)
 * [Project on GitHub](https://github.com/jeremymoreau/covid19mtl/)
-
-**Technologies:**
-
-* Python, pandas, Plotly, Dash, Git, Bash
+* **[View project](https://covid19mtl.ca)**
 
 ### SEPAQ Availability Scraper
 
-TBD
+Scraper for availability of SEPAQ camp sites.
+Makes it easier to find available camping spots across all SEPAQ parks.
+
+It extracts all availability information for specific types of camp sites (_Prêt-à-camper_(1) ).
+The information is then parsed and camping sites with a given minimum availability (number of days) are extracted and the parks with their date ranges output for review.
+{ .annotate }
+
+1. Ready to camp: You only need to bring your food and sleeping bags.
+
+The script can also be adjusted to look at specific camp sites and only look for availability in interested date ranges for those.
+
+**Information:**
+
+* **Technologies:** Python, Web Scraping
+* [Read the blog post](../blog/posts/2021/sepaq-availability-scraper.md)
+* [Project on GitHub](https://github.com/mschoettle/sepaq-availability-scraper)
 
 ### Tippspiel
 
-TBD
+<figure markdown="span">
+  ![Tippspiel Matches](../assets/images/tippspiel_matches.jpg){ width="500" }
+  <figcaption>The match schedule of a tournament with results</figcaption>
+</figure>
+
+<figure markdown="span" class="hidden">
+  ![Tippspiel Matches (responsive)](../assets/images/tippspiel_matches_responsive.jpg){ width="200" }
+  <figcaption>The match schedule of a tournament with results on a small screen</figcaption>
+</figure>
+
+A _Tippspiel_ is a prediction game where the game results of (football) matches are predicted and varying points given based on the actual result.
+Starting in 2006, I have been running a _Tippspiel_ (almost) every two years for each World Cup and European Championship where approximately 50 users participate for fun.
+Besides game results, there are also additional questions (for example, which team will win the World Cup) allowing users to earn bonus points.
+
+<figure markdown="span">
+  ![Tippspiel Tipps](../assets/images/tippspiel_tipp.jpg){ width="500" }
+  <figcaption>Past guesses and making a guess for the next game</figcaption>
+</figure>
+
+<figure markdown="span" class="hidden">
+  ![Tippspiel Tipps (responsive)](../assets/images/tippspiel_tipp_responsive.jpg){ width="200" }
+  <figcaption>Past guesses and making a guess for the next game on a small screen</figcaption>
+</figure>
+
+The frontend is built with HTML5 and CSS3, is responsive(1), and supports Retina screens.
+In the screenshots, you can see how the layout and texts are adjusted for smaller screens and mobile devices while showing the same information.
+{ .annotate }
+
+1. See the additional screenshots in the "slideshow" when you click on a screenshot.
+
+The backend is built with PHP and MySQL running on an Apache server.
+The game data is retrieved from a web service ([OpenLigaDB](https://www.openligadb.de/)) using a REST API and (their older SOAP API) returning JSON.
+A script is executed periodically by a cron job to retrieve new match results and new fixtures (for the knockout phase).
+
+**Information:**
+
+* **Technologies:** PHP, MySQL, SOAP/REST API (XML/JSON), HTML5, CSS3, Apache
+* **[View Project](https://tippspiel.mattsch.com)**
 
 ### Docker Monitor
 
-TBD
+INFO: This project is archived (not actively maintained anymore).
+
+Simple helper script that allows to monitor docker containers to ensure they are running and healthy. The script only outputs anything in the opposite case (non-running or unhealthy). This allows it to be used for cronjobs etc.
+
+**Information:**
+
+* **Technologies:** Python, Docker, Bash
+* [Project on GitHub](https://github.com/mschoettle/docker-monitor)
 
 ### Kinect Project
 

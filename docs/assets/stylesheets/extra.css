@@ -29,3 +29,7 @@ ul li .admonition.hidden {
 .grid.cards .twemoji {
     margin-right: 5px;
 }
+
+.md-typeset figure.hidden {
+    display: none !important;
+}
