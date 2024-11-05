@@ -99,6 +99,8 @@ plugins:
       exclude:
         - index.md
         - blog/**
+  # https://github.com/blueswen/mkdocs-glightbox
+  - glightbox
 
 markdown_extensions:
   # Abbreviations
