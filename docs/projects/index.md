@@ -74,6 +74,9 @@ They include both work projects and personal ones.
 
 ## Archive
 
+Projects in this category are older and mentioned here for completeness sake.
+In case of an open source project it means that the corresponding repository is archived.
+
 <div class="grid cards" markdown>
 
 * :simple-django:{ .lg .middle } **Docker Monitor**
@@ -347,7 +350,24 @@ The Kinect backend and frontend were connected using a socket in order to receiv
 
 ### Hochseilgarten Nagold
 
-TBD
+<figure markdown="span">
+  ![Hochseilgarten Nagold Website](../assets/images/hochseilgarten.jpg){ width=500 }
+  <figcaption>Click the image for more screenshots</figcaption>
+</figure>
+
+![Hochseilgarten Nagold Parcours](../assets/images/hochseilgarten_parcours.jpg){ .hidden }
+
+![Hochseilgarten Nagold Responsive](../assets/images/hochseilgarten_responsive.jpg){ .hidden }
+
+In 2014, I built website for a client with Wordpress and a theme with retina and responsive support.
+A booking calendar and custom forms are used for visitor interaction.
+Custom CSS was used for improved appearance.
+
+In May 2018, with the _General Data Protection Regulation_ (GDPR) (or _Datenschutz-Grundverordnung_ (DSGVO) in German) coming into effect, I customized the website to comply with the regulations and eliminate loading external resources.
+
+**Information:**
+
+* **Technologies:** Wordpress, Plugins, CSS, Photoshop
 
 ### Max Payne Zone
 
