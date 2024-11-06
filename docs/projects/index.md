@@ -371,4 +371,25 @@ In May 2018, with the _General Data Protection Regulation_ (GDPR) (or _Datenschu
 
 ### Max Payne Zone
 
-TBD
+<figure markdown="span">
+    ![Max Payne Zone](../assets/images/maxpaynezone.jpg){ width=500 }
+</figure>
+
+In 2002, I took charge of _Max Payne Zone_ (MPZone) which was one of the biggest [Max Payne](https://www.remedygames.com/games/max-payne/) fan sites and the biggest one for German speakers.
+I updated and improved it maintaining its original design and re-launched it in 2003, in time for the launch of [Max Payne 2](https://www.remedygames.com/games/max-payne-2/).
+
+With a staff of 6 news posters, it provided extensive news coverage of the game and custom modifications (mods), game-related information (such as tips and walkthroughs), and an active discussion forum.
+
+<figure markdown="span">
+    ![Max Payne Zone News](../assets/images/maxpaynezone_2.jpg){ width=500 }
+</figure>
+
+The amazing folks of [Remedy Entertainment](https://www.remedygames.com/) valued the efforts of the fan community and (together with their publisher [Rockstar Games](https://www.rockstargames.com/)) collaborated with us and three other big fan sites.
+We received news updates in advance, exclusive content and gear to be used for competitions.
+As a result, several competitions were held where users could win prizes.
+
+It had a custom content management system (CMS) built in PHP that allowed news posters to post news items.
+
+**Information:**
+
+* **Technologies:** Apache, CSS, HTML, MySQL, PHP (frontend and custom-built backend for content management)
