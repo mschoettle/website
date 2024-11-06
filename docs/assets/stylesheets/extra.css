@@ -30,6 +30,7 @@ ul li .admonition.hidden {
     margin-right: 5px;
 }
 
+/* Hide extra figures so they only show up in the lightbox */
 .md-typeset figure.hidden {
     display: none !important;
 }

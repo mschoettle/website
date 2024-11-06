@@ -325,7 +325,25 @@ Simple helper script that allows to monitor docker containers to ensure they are
 
 ### Kinect Project
 
-TBD
+![3D room](../assets/images/kinect_teaser.jpg){ width=250, align=right }
+
+In 2011, during my graduate degree at university, my team (three in total) did a project using the _Kinect_ to build a _Fitts' Law_ 3D application.
+[Fitts' Law](https://en.wikipedia.org/wiki/Fitts%27s_law) shows how users perform the act of pointing (virtually) to an object on a screen using a pointing device (such as the mouse).
+
+The goal was to build an application that allowed to gather measurements on how humans perform pointing in a three-dimensional space.
+The Kinect and application were installed/running on a screen installed in a hallway that is showing a digital information board.
+A background application was managing the window management to switch from the information screen to the application using a dedicated gesture, and back to the screen after no input is detected by the Kinect for a certain time.
+The user can then play the game, as you can see below, and is then presented with their "performance".
+
+The Kinect backend was written in C++ making use of an (unofficial) Kinect SDK.
+The frontend was done with _Unity_, and written in C#, including its backend to store the results of each player in a SQLite database.
+The Kinect backend and frontend were connected using a socket in order to receive the detected hand gestures and movements.
+
+**Information:**
+
+* **Technologies:** C#, Unity, SQLite, C++, Subversion (SVN)
+* [Video showcasing how a person interacts with the screen and performs the experiment](../assets/videos/kinect_fitts_law.mp4)
+* [Close-up video of the screen showing the game](../assets/videos/kinect_fitts_law_close.mp4)
 
 ### Hochseilgarten Nagold
 
