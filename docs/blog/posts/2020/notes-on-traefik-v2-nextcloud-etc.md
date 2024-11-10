@@ -143,7 +143,8 @@ certificatesResolvers:
 
 TIP: I highly recommend to first try the staging server at the beginning to avoid rate limiting.
 
-With just this, traefik will however not try to request a certificate. This is where the dynamic configuration comes into play.
+With just this, traefik will however not try to request a certificate.
+This is where the dynamic configuration comes into play.
 So, in the `dynamic-conf.yml` there are the [TLS options](https://doc.traefik.io/traefik/https/tls/) defined:
 
 ```yaml title="dynamic-conf.yml"

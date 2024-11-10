@@ -39,4 +39,5 @@ Great timing since this was already in use here.
 So I could focus on wrangling all the different data formats.
 I hadn't used [Plotly/Dash](https://plotly.com/) before but I was able to quickly figure things out and make contributions to the different charts.
 
-The dashboard is available in French, English, Mandarin and Spanish. And it is [open source](https://github.com/jeremymoreau/covid19mtl) so contributions are more than welcome.
+The dashboard is available in French, English, Mandarin and Spanish.
+And it is [open source](https://github.com/jeremymoreau/covid19mtl) so contributions are more than welcome.

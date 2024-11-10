@@ -20,7 +20,10 @@ Generally, I prefer to be contacted directly with bug reports and be able to res
 If a developer doesn't respond, a bad review is then acceptable.
 However, in this case bad reviews could be turned into very good ones, so no complaints in the end :smile:.
 
-Long story short, a new version of Toggle Headers was released. Basically, [Toggle Headers v1.0](https://addons.thunderbird.net/thunderbird/addon/toggle-headers/) restores support for _CompactHeader 2.1.0_ and higher, but at the same time, it still works with older versions. Unfortunately, the new version of _CompactHeader_ contains a bug that prevents toggling between the header modes (_Normal_/_All_) to work properly. I [reported the bug](https://forums.mozillazine.org/viewtopic.php?p=14375693#p14375693) in the referenced support forums, but haven't received a response to date.
+Long story short, a new version of Toggle Headers was released.
+Basically, [Toggle Headers v1.0](https://addons.thunderbird.net/thunderbird/addon/toggle-headers/) restores support for _CompactHeader 2.1.0_ and higher, but at the same time, it still works with older versions.
+Unfortunately, the new version of _CompactHeader_ contains a bug that prevents toggling between the header modes (_Normal_/_All_) to work properly.
+I [reported the bug](https://forums.mozillazine.org/viewtopic.php?p=14375693#p14375693) in the referenced support forums, but haven't received a response to date.
 
 This required a workaround to be integrated into the new version.
 When switching from collapsed header pane and _Normal_ to _All_ headers and then back to _Normal_, the header pane would stay expanded.
