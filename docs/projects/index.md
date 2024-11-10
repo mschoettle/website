@@ -118,8 +118,24 @@ In case of an open source project it means that the corresponding repository is 
 
 ### Opal
 
-Since 2021 I have been working with the [Opal Health Informatics Group](https://www.opalmedapps.com) on the Opal solution.
-As the Software Architect I am overseeing the software architecture and future design of Opal.
+Since 2021 I have been working with the [Opal Health Informatics Group](https://www.opalmedapps.com) on the Opal solution (1).
+As the _Software Architect_ I am overseeing the software architecture and future design of Opal.
+I helped establish various best practices and improvements, such as using containerization, CI/CD, use of code quality tools, "everything as code", dependency management via [Renovate](https://docs.renovatebot.com/), and more.
+{ .annotate }
+
+1. Opal is a patient portal designed to empower patients with their medical information.
+    It consists of the patient portal, and a hospital-facing part to manage the medical data as well as enrich it to make it more useful for patients.
+
+A big part is the question of how many of the legacy components can be migrated to a new component.
+I proposed the [Strangler Fig Migration Pattern](https://martinfowler.com/bliki/StranglerFigApplication.html) instead of doing a "big bang replacement".
+
+I also develop and troubleshoot.
+For example, I designed and implemented support for smart devices.
+This allows a patient to send vital signs to the hospital.
+
+**Information:**
+
+* [Opal Website](https://www.opalmedapps.com/en)
 
 ### Digital Printing Workflow
 
