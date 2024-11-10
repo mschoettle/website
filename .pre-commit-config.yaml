@@ -36,6 +36,6 @@ repos:
       - id: typos
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.14.0
+    rev: v0.15.0
     hooks:
       - id: markdownlint-cli2
