@@ -33,6 +33,7 @@ jobs:
         uses: YannickTeKulve/docker-run-action@0.0.6
         with:
           image: davidanson/markdownlint-cli2-rules:v0.14.0
+          options: -v ${{ github.workspace }}:/workdir
           run: |
             markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Build mkdocs site
