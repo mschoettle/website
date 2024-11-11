@@ -37,7 +37,9 @@ jobs:
           run: |
             pwd
             whoami
+            id
             ls -la .
+            touch test
             markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
