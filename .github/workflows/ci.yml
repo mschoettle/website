@@ -29,5 +29,9 @@ jobs:
         run: uv lock --locked
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
+      - name: Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          config: .github/markdownlint/.markdownlint-cli2.yaml
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
