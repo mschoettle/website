@@ -35,9 +35,9 @@ jobs:
           image: davidanson/markdownlint-cli2-rules:v0.14.0
           options: -v ${{ github.workspace }}:/workdir --user root
           run: |
+            set -euo pipefail
             pwd
             whoami
-            users
             id
             ls -la .
             touch test
