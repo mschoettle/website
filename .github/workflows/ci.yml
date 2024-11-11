@@ -33,7 +33,7 @@ jobs:
         uses: YannickTeKulve/docker-run-action@0.0.6
         with:
           image: davidanson/markdownlint-cli2-rules:v0.14.0
-          options: -v ${{ github.workspace }}:/workdir
+          options: -v ${{ github.workspace }}:/workdir --user root
           run: |
             pwd
             whoami
