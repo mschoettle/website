@@ -35,6 +35,8 @@ jobs:
           image: davidanson/markdownlint-cli2-rules:v0.14.0
           options: -v ${{ github.workspace }}:/workdir
           run: |
+            pwd
+            ls -la .
             markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
