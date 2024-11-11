@@ -37,6 +37,7 @@ jobs:
           run: |
             pwd
             whoami
+            users
             id
             ls -la .
             touch test
