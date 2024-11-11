@@ -30,8 +30,10 @@ jobs:
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.1
       - name: Run markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@v17
+        uses: YannickTeKulve/docker-run-action@0.0.6
         with:
-          config: .github/markdownlint/.markdownlint-cli2.yaml
+          image: davidanson/markdownlint-cli2-rules:v0.14.0
+          run: |
+            markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
