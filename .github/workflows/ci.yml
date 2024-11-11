@@ -36,6 +36,7 @@ jobs:
           options: -v ${{ github.workspace }}:/workdir
           run: |
             pwd
+            whoami
             ls -la .
             markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Build mkdocs site
