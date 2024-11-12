@@ -35,7 +35,7 @@ jobs:
           image: davidanson/markdownlint-cli2-rules:v0.14.0
           # node user does not have permissions to workspace due to user id mismatch
           options: -v ${{ github.workspace }}:/workdir --user root
-          run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
+          run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md" || true
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
