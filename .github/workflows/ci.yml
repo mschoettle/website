@@ -36,8 +36,8 @@ jobs:
           # node user does not have permissions to workspace due to user id mismatch
           # add --user root if a formatter is used that outputs a file
           options: -v ${{ github.workspace }}:/workdir
-          run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
-      - name: Create annotation for build error
-        run: echo "::error file=docs/index.md,line=1::Missing semicolon"
+          run: |
+            markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md" > $GITHUB_STEP_SUMMARY
+            echo $GITHUB_STEP_SUMMARY
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
