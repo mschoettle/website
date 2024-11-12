@@ -44,5 +44,7 @@ jobs:
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           category: markdownlint
+      - name: Check markdownlint results
+        run: cat markdownlint-cli2-sarif.sarif
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
