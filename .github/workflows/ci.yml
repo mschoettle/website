@@ -45,6 +45,7 @@ jobs:
           # Used to differentiate multiple results for one commit
           category: markdownlint
       - name: Check markdownlint results
-        run: cat markdownlint-cli2-sarif.sarif
+        run: |
+          cat markdownlint-cli2-sarif.sarif | grep -q '"results": \[\]'
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
