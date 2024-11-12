@@ -37,5 +37,13 @@ jobs:
           # add --user root if a formatter is used that outputs a file
           options: -v ${{ github.workspace }}:/workdir
           run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: markdownlint-cli2-sarif.sarif
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: markdownlint
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
