@@ -1,4 +1,5 @@
-<!-- markdownlint-disable MD042 -->
+<!-- markdownlint-disable no-empty-links -->
+<!-- markdownlint-disable max-one-sentence-per-line -->
 # Publications
 
 ## 2019
