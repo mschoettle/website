@@ -9,6 +9,10 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      # required for upload-sarif action
+      # https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github#example-workflow-for-sarif-files-generated-outside-of-a-repository
+      security-events: write
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4.2.2
