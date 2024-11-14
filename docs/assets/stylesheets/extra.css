@@ -24,3 +24,13 @@
 ul li .admonition.hidden {
     display: none;
 }
+
+/* Increase space between icon/emoji and title in card grid */
+.grid.cards .twemoji {
+    margin-right: 5px;
+}
+
+/* Hide extra figures so they only show up in the lightbox */
+.md-typeset figure.hidden, .md-typeset .glightbox .hidden {
+    display: none !important;
+}
