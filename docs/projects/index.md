@@ -66,7 +66,7 @@ They include both work projects and personal ones.
 
     ---
 
-    A web application for users to predict results of football (aka. soccer) matches and compete with each other.
+    A web application for users to predict results of football (or soccer :wink:) matches and compete with each other.
 
     [:octicons-arrow-right-24: Tell me more](#tippspiel)
 
@@ -335,7 +335,9 @@ A script is executed periodically by a cron job to retrieve new match results an
 
 INFO: This project is archived (not actively maintained anymore).
 
-Simple helper script that allows to monitor docker containers to ensure they are running and healthy. The script only outputs anything in the opposite case (non-running or unhealthy). This allows it to be used for cronjobs etc.
+Simple helper script that allows to monitor docker containers to ensure they are running and healthy.
+The script only outputs anything in the opposite case (non-running or unhealthy).
+This allows it to be used for cronjobs etc.
 
 **Information:**
 
