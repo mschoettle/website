@@ -15,10 +15,12 @@ nav:
     - projects/index.md
   - Research:
     - research/index.md
-    - research/publications.md
-  - Legal:
+  - Legal Stuff:
     - imprint.md
     - privacy-policy.md
+
+not_in_nav: |
+  research/overview.md
 
 theme:
   features:
