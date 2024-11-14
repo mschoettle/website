@@ -30,7 +30,9 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.tabs
+    - navigation.top
     - toc.follow
+    # - toc.integrate
   logo: assets/images/profile.jpg
   language: en
   name: material
@@ -99,6 +101,8 @@ plugins:
       exclude:
         - index.md
         - blog/**
+  # https://github.com/blueswen/mkdocs-glightbox
+  - glightbox
 
 markdown_extensions:
   # Abbreviations
