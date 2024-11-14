@@ -37,7 +37,8 @@ To enable it, a file called `ssh` needs to be added to the root of the volume on
 See [step 3 of the SSH Pi documentation](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md) for more details.
 Basically `cd` to the root of the volume (most likely `/Volumes/boot`) on your machine and do `touch ssh`.
 
-With this it is possible to plug the card into the RPi and boot it. Then `ssh pi@<IPOfRaspberryPi>` should work.
+With this it is possible to plug the card into the RPi and boot it.
+Then `ssh pi@<IPOfRaspberryPi>` should work.
 
 ## Setting Up Raspbian
 

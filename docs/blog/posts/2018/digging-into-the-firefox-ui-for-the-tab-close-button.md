@@ -9,7 +9,7 @@ slug: digging-into-the-firefox-ui-for-the-tab-close-button
 ---
 # Digging into the Firefox UI for the tab close button
 
-Oops ... last year a new Firefox version broke the ["close button on tab hover" tweak](../2016/firefox-close-tab-button-on-hover.md) and I mentioned I will write a separate blog post on how I found out why and how to fix it.
+Last year a new Firefox version broke the ["close button on tab hover" tweak](../2016/firefox-close-tab-button-on-hover.md) and I mentioned I will write a separate blog post on how I found out why and how to fix it.
 Life happened, but fortunately I wrote down bullet points about what I did.
 
 It seems that with Firefox 54 something in the UI changed which broke the functionality.

@@ -127,7 +127,8 @@ Now, install a firewall (here `ufw`) to only open the ports that you really need
 
 5. Try to log in from another terminal to verify it is still working.
 
-That's pretty much it. You might also want to [set up msmtp](./setting-up-msmtp.md) so that you receive email from your system, cron etc.
+That's pretty much it.
+You might also want to [set up msmtp](./setting-up-msmtp.md) so that you receive email from your system, cron etc.
 There are also the following packages I find useful which I install:
 
 * `htop`: Allows to interactively monitor the system resources and processes.

@@ -1,5 +1,5 @@
 # TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.4.27-python3.12-alpine AS dependencies
+FROM ghcr.io/astral-sh/uv:0.5.1-python3.12-alpine AS dependencies
 
 RUN apk add --no-cache git
 
@@ -29,6 +29,6 @@ RUN python -m mkdocs build --strict --site-dir /site
 
 
 # production
-FROM joseluisq/static-web-server:2.33.0
+FROM joseluisq/static-web-server:2.33.1
 
 COPY --from=build /site /public

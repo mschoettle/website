@@ -15,7 +15,8 @@ Instead of sending large files, it is almost always recommended to reduce the fi
 To do that, there are several ways.
 For example, there is an app called [_PDF Squeezer_](https://apps.apple.com/de/app/pdf-squeezer-4/id1502111349?l=en-GB&mt=12 "PDF Squeezer") in the _Mac App Store_ (in 2013: €3.59 or $3.99, more expensive today).
 
-The same functionality can be achieved using _Quartz filters_ in the _ColorSync Utility_. There is already one called _Reduce File Size_ but it might lead to a blurry PDF.
+The same functionality can be achieved using _Quartz filters_ in the _ColorSync Utility_.
+There is already one called _Reduce File Size_ but it might lead to a blurry PDF.
 You can copy this filter and adjust the settings.
 However, I found custom filters in the [Apple Support Community](https://discussions.apple.com/message/21402148#21402148 "Apple Support Community") that work quite well.
 
