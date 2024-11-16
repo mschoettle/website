@@ -1,0 +1,127 @@
+[advanced]
+
+### URL Redirects
+
+# publications to research index
+[[advanced.redirects]]
+source = "/research/publications"
+destination = "/research/"
+kind = 301
+
+# old legal notice
+[[advanced.redirects]]
+source = "/legal-notice"
+destination = "/imprint/"
+kind = 301
+
+# old privacy policy
+[[advanced.redirects]]
+source = "/privacy-policy-2"
+destination = "/privacy-policy/"
+kind = 301
+
+# image uploads
+[[advanced.redirects]]
+source = "/wp-content/*/*/*/{*}.jpg"
+destination = "/assets/images/$1.jpg"
+kind = 301
+
+# video uploads
+[[advanced.redirects]]
+source = "/wp-content/*/*/*/{*}.{mp4,mov}"
+destination = "/assets/videos/$1.$2"
+kind = 301
+
+# papers
+[[advanced.redirects]]
+source = "/wp-content/papercite-data/pdf/{*}.pdf"
+destination = "/assets/papers/$1.pdf"
+kind = 301
+
+# blog posts
+[[advanced.redirects]]
+source = "/{*}/{*}/{*}/{*}"
+destination = "/blog/$1/$2/$3/$4"
+kind = 301
+
+# blog archive: month not accessible anymore
+[[advanced.redirects]]
+source = "/{*}/{*}/"
+destination = "/blog/archive/$1/"
+kind = 301
+
+# blog categories that don't exist anymore
+[[advanced.redirects]]
+source = "/category/{uncategorized,frameworks,hints,howto,office,tweaks,windows}/"
+destination = "/blog/archive/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/java/"
+destination = "/blog/category/eclipse-modeling-framework-emf/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/frameworks/struts/"
+destination = "/blog/archive/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/windows/windows-7/"
+destination = "/blog/archive/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/distributed-version-control/"
+destination = "/blog/category/git/"
+kind = 301
+
+# blog categories that exist but under a different structure
+[[advanced.redirects]]
+source = "/category/frameworks/django/"
+destination = "/blog/category/django/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/distributed-version-control/git/"
+destination = "/blog/category/git/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/frameworks/emf/"
+destination = "/blog/category/eclipse-modeling-framework-emf/"
+kind = 301
+
+[[advanced.redirects]]
+source = "/category/{raspberry-pi,nextcloud}/"
+destination = "/blog/category/self-hosting/"
+kind = 301
+
+# categories that still exist
+[[advanced.redirects]]
+source = "/category/{*}/"
+destination = "/blog/category/$1/"
+kind = 301
+
+# old blog categories
+[[advanced.redirects]]
+source = "/category/{*}/"
+destination = "/blog/category/$1/"
+kind = 301
+
+# portfolio pages
+[[advanced.redirects]]
+source = "/wp-portfolio/{*}/"
+destination = "/projects/#{$1}"
+kind = 301
+
+# portfolio categories
+[[advanced.redirects]]
+source = "/portfolio-category/development/"
+destination = "/projects/#software-engineering"
+kind = 301
+
+[[advanced.redirects]]
+source = "/portfolio-category/{*}/"
+destination = "/projects/"
+kind = 301
