@@ -39,10 +39,10 @@ destination = "/assets/papers/$1.pdf"
 kind = 301
 
 # blog posts
-[[advanced.redirects]]
-source = "/{*}/{*}/{*}/{*}/"
-destination = "/blog/$1/$2/$3/$4"
-kind = 301
+# [[advanced.redirects]]
+# source = "/{*}/{*}/{*}/{*}/"
+# destination = "/blog/$1/$2/$3/$4"
+# kind = 301
 
 # blog categories that don't exist anymore
 [[advanced.redirects]]
@@ -121,7 +121,7 @@ destination = "/projects/"
 kind = 301
 
 # blog archive: month not accessible anymore
-[[advanced.redirects]]
-source = "/{*}/{*}/"
-destination = "/blog/archive/$1/"
-kind = 301
+# [[advanced.redirects]]
+# source = "/{*}/{*}/"
+# destination = "/blog/archive/$1/"
+# kind = 301
