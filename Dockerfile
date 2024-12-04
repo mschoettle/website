@@ -1,5 +1,5 @@
 # TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.5.1-python3.12-alpine AS dependencies
+FROM ghcr.io/astral-sh/uv:0.5.6-python3.12-alpine AS dependencies
 
 RUN apk add --no-cache git
 
@@ -29,7 +29,7 @@ RUN python -m mkdocs build --strict --site-dir /site
 
 
 # production
-FROM joseluisq/static-web-server:2.33.1
+FROM joseluisq/static-web-server:2.34.0
 
 COPY deploy/sws.toml /config.toml
 
