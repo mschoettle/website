@@ -29,7 +29,7 @@ kind = 301
 # blog categories that don't exist anymore
 [[advanced.redirects]]
 source = "/category/{uncategorized,frameworks,hints,howto,office,tweaks,windows}/"
-destination = "/blog/archive/"
+destination = "/blog/"
 kind = 301
 
 [[advanced.redirects]]
@@ -39,12 +39,12 @@ kind = 301
 
 [[advanced.redirects]]
 source = "/category/frameworks/struts/"
-destination = "/blog/archive/"
+destination = "/blog/"
 kind = 301
 
 [[advanced.redirects]]
 source = "/category/windows/windows-7/"
-destination = "/blog/archive/"
+destination = "/blog/"
 kind = 301
 
 [[advanced.redirects]]
@@ -101,7 +101,7 @@ kind = 301
 
 # COVID-19 Montreal Dashboard
 [[advanced.redirects]]
-source = "/wp-content/uploads/2021/03/{*}"
+source = "/wp-content/uploads/2021/05/{*}"
 destination = "/blog/2021/covid-19-montreal-dashboard/$1"
 kind = 301
 
