@@ -7,7 +7,7 @@ import requests
 
 
 def check_redirect(url: str) -> bool:
-    url = f'http://localhost:8080{url}'
+    url = f'http://localhost{url}'
     print(f'checking URL: {url}')
     response = requests.get(url)
 
