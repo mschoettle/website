@@ -22,6 +22,8 @@ The default case is implemented in `ItemProviderAdapter`.
 
 There seem to be two approaches, depending on what your goal is.
 
+<!-- more -->
+
 ## General Approach
 
 If you want to change the text independent from the element, meaning for all elements, you should change the `_UI_CreateChild_text` key in `plugin.properties`.

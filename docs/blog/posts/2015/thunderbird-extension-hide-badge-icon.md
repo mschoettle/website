@@ -1,8 +1,8 @@
 ---
 migrated: true
 date:
-  created: 2015-11-09
-  updated: 2015-11-09
+  created: 2015-11-10
+  updated: 2015-11-10
 categories:
 #   - Mac OS
   - Thunderbird
