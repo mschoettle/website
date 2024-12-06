@@ -56,8 +56,8 @@ jobs:
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
       - name: Run the production stack
-        run: docker compose -f compose.production.yaml up --build -d
+        run: docker compose up --build -d
       - name: Check
         run: docker ps
       - name: Stop production stack
-        run: docker compose -f compose.production.yaml down
+        run: docker compose down
