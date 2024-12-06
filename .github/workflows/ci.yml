@@ -58,6 +58,6 @@ jobs:
       - name: Run the production stack
         run: docker compose up --build -d
       - name: Check
-        run: docker ps
+        run: uv run --script .github/redirects/check_redirects.py
       - name: Stop production stack
         run: docker compose down
