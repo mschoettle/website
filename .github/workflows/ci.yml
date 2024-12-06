@@ -55,3 +55,9 @@ jobs:
           cat markdownlint-cli2-sarif.sarif | grep -q '"results": \[\]'
       - name: Build mkdocs site
         run: uv run mkdocs build --strict
+      - name: Run the production stack
+        run: docker compose -f compose.production.yaml up --build -d
+      - name: Check
+        run: docker ps
+      - name: Stop production stack
+        run: docker compose -f compose.production.yaml down
