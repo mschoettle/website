@@ -1,7 +1,7 @@
 ---
 migrated: true
 date:
-  created: 2018-07-24
+  created: 2018-07-25
   updated: 2023-05-28
 categories:
   - Firefox

@@ -3,8 +3,8 @@ migrated: true
 date:
   created: 2017-12-08
   updated: 2017-12-08
-# categories:
-#   - Mac OS
+categories:
+  - Mac OS
 slug: airdrop-on-macos-working-unreliably
 ---
 # AirDrop on macOS working unreliably

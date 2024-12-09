@@ -53,5 +53,9 @@ jobs:
       - name: Check markdownlint results
         run: |
           cat markdownlint-cli2-sarif.sarif | grep -q '"results": \[\]'
-      - name: Build mkdocs site
-        run: uv run mkdocs build --strict
+      - name: Run the production stack
+        run: docker compose up --build -d
+      - name: Check
+        run: uv run --script .github/redirects/check_redirects.py
+      - name: Stop production stack
+        run: docker compose down

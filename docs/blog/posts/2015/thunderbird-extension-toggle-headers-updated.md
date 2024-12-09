@@ -1,8 +1,8 @@
 ---
 migrated: true
 date:
-  created: 2015-11-09
-  updated: 2015-11-09
+  created: 2015-11-10
+  updated: 2015-11-10
 categories:
   - Thunderbird
 slug: thunderbird-extension-toggle-headers-updated
