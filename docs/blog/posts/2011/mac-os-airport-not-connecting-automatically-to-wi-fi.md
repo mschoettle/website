@@ -9,6 +9,8 @@ slug: mac-os-airport-not-connecting-automatically-to-wi-fi
 ---
 # Mac OS: Airport not connecting automatically to Wi-Fi
 
+--8<-- "docs/snippets/archive.md"
+
 A few weeks ago I helped a friend with an issue he had on an iMac with the Wi-Fi.
 After a while AirPort stopped from connecting automatically to the Wi-Fi.
 Although this can be caused by various different issues I want to describe the one I found.

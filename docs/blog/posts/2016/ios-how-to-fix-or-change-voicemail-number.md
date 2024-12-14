@@ -10,6 +10,8 @@ slug: ios-how-to-fix-or-change-voicemail-number
 ---
 # iOS: How to fix/change Voicemail number
 
+--8<-- "docs/snippets/archive.md"
+
 Recently, a friend's voice mail button did not work anymore.
 Upon calling the voice mail, an audio error message appeared saying that the voice mail is not available or cannot be reached (something like that).
 

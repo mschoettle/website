@@ -11,6 +11,8 @@ slug: how-to-use-ocl-when-running-emf-standalone
 ---
 # How to use OCL when running EMF standalone
 
+--8<-- "docs/snippets/archive.md"
+
 If you are using the Eclipse Modeling Framework (EMF) standalone, i.e., you are not running it in an Eclipse-based environment, and you want to use OCL, some additional steps have to be performed besides registering your resource factory.
 
 <!-- more -->

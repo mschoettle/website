@@ -10,6 +10,8 @@ slug: thunderbird-extension-hide-badge-icon
 ---
 # Thunderbird Extension: Hide Badge Icon
 
+--8<-- "docs/snippets/archive.md"
+
 About two years ago (a few months after switching to Mac OSX) I noticed that the badge on the Thunderbird app icon is quite distracting for me while I work (it notifies about new and how many emails were received).
 As soon as it pops up I would notice it and felt an urge to immediately check what the new email is about.
 Then of course, the current focus and concentration is lost.

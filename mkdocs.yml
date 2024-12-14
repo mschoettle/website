@@ -21,6 +21,7 @@ nav:
 
 not_in_nav: |
   research/overview.md
+  snippets/archive.md
 
 theme:
   features:

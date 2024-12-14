@@ -9,6 +9,8 @@ slug: mt4j-with-processing-2
 ---
 # MT4j with Processing 2
 
+--8<-- "docs/snippets/archive.md"
+
 In our [TouchCORE](https://djeminy.github.io/touchcore/) project at the [Software Engineering Lab](https://www.cs.mcgill.ca/~joerg/SEL/SEL_Home.html) at McGill University, we use [MT4j](https://www.mt4j.org) (Multitouch for Java) for the multitouch-enabled user interface.
 
 For a long time, we had the problem that we couldn't run it on OSX using Java 7 and newer, because it is based on an older version of [Processing](https://processing.org) (`1.x`), which in turn uses an old version of [JOGL](https://jogamp.org/jogl/www/) (Java Binding for the OpenGL API).

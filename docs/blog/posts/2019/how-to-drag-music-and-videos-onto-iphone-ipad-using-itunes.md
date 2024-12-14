@@ -10,6 +10,8 @@ slug: how-to-drag-music-and-videos-onto-iphone-ipad-using-itunes
 ---
 # How to drag music and videos onto iPhone/iPad using iTunes
 
+--8<-- "docs/snippets/archive.md"
+
 On an iPad I previously simply dragged some videos on to the device in iTunes to copy them onto it.
 For some reason this did not work for my iPhone when I tried to do the same.
 You can of course add the media to the iTunes library and select to sync it on to the device that way.
