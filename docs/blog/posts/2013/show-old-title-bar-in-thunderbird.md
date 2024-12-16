@@ -9,6 +9,8 @@ slug: show-old-title-bar-in-thunderbird
 ---
 # Show old title bar in Thunderbird
 
+--8<-- "docs/snippets/archive.md"
+
 With the latest release of Thunderbird 17, the menu bar and tabs are drawn into the title bar.
 On Windows XP, this then looks like the following:
 

@@ -9,6 +9,8 @@ slug: airdrop-on-macos-working-unreliably
 ---
 # AirDrop on macOS working unreliably
 
+--8<-- "docs/snippets/archive.md"
+
 AirDrop is quite convenient to send files to a colleague or another device without having to send an email or uploading it somewhere.
 At some point (I forgot with which exact OSX version), AirDrop was updated and required Bluetooth.
 Since then, it often occurs that the device I want to share a file with does not appear.

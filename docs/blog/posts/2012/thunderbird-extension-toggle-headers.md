@@ -2,7 +2,7 @@
 migrated: true
 date:
   created: 2012-02-07
-  updated: 2012-02-07
+  updated: 2024-12-14
 categories:
   - Thunderbird
 slug: thunderbird-extension-toggle-headers
@@ -21,3 +21,7 @@ When both are used at the same time the current state of the headers view is tak
 
 * when collapsed and ++h++ is pressed, the headers view will be expanded and all headers shown
 * pressing ++h++ again will switch back to the normal headers view but also collapse the view again (the previous state is remembered)
+
+## Newer blog posts
+
+* [Thunderbird Extension: Toggle Headers Updated](../2015/thunderbird-extension-toggle-headers-updated.md)
