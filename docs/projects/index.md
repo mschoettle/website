@@ -79,7 +79,7 @@ In case of an open source project it means that the corresponding repository is 
 
 <div class="grid cards" markdown>
 
-* :simple-django:{ .lg .middle } **Docker Monitor**
+* :simple-docker:{ .lg .middle } **Docker Monitor**
 
     ---
 
