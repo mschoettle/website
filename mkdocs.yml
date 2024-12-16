@@ -37,6 +37,7 @@ theme:
   logo: assets/images/profile.jpg
   language: en
   name: material
+  custom_dir: overrides
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -157,3 +158,6 @@ validation:
   absolute_links: warn
   unrecognized_links: warn
   anchors: warn
+
+watch:
+  - overrides
