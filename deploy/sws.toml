@@ -121,7 +121,7 @@ kind = 301
 # portfolio pages
 [[advanced.redirects]]
 source = "/wp-portfolio/{*}/"
-destination = "/projects/#{$1}"
+destination = "/projects/#$1"
 kind = 301
 
 # portfolio categories
