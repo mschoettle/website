@@ -5,6 +5,9 @@ date:
   updated: 2021-05-12
 categories:
   - Projects
+tags:
+  - Python
+  - Scraping
 slug: sepaq-availability-scraper
 ---
 # SEPAQ Availability Scraper
