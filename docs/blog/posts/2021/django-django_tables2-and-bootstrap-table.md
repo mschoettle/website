@@ -6,6 +6,11 @@ date:
 categories:
   - Django
 #   - Howto
+tags:
+  - Django
+  - Howto
+  - Python
+  - Bootstrap
 slug: django-django_tables2-and-bootstrap-table
 ---
 # Django, django_tables2 and Bootstrap Table
