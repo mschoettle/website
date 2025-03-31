@@ -28,9 +28,9 @@
   // https://docs.renovatebot.com/configuration-options/#rebasewhen
   "rebaseWhen": "conflicted",
   "packageRules": [
-    // Combine uv package and uv image
+    // Combine uv package, uv image, and uv-pre-commit
     {
-      "matchPackagePatterns": "uv$",
+      "matchPackagePatterns": "uv-pre-commit|uv$",
       "groupName": "uv",
     },
   ],
