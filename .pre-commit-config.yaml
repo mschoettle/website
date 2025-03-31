@@ -30,6 +30,11 @@ repos:
     hooks:
       - id: validate-pyproject
 
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.5.25
+    hooks:
+      - id: uv-lock
+
   - repo: https://github.com/crate-ci/typos
     rev: v1.29.4
     hooks:
