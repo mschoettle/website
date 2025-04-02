@@ -8,6 +8,7 @@ categories:
   - Linux
 slug: setting-up-apache-and-subversion-on-debian-wheezy
 ---
+
 # Setting up Apache and Subversion on Debian Wheezy
 
 --8<-- "docs/snippets/archive.md"
@@ -136,8 +137,8 @@ apt-get install websvn
 
 After, the configuration dialog appears.
 
-* Select Apache2 (deselect the others using space)
-* Type in the location of the folder with your svn repositories
+- Select Apache2 (deselect the others using space)
+- Type in the location of the folder with your svn repositories
 
 To make SSL a requirement for WebSVN edit `/etc/websvn/apache.conf` and uncomment `SSLRequireSSL`.
 And to restrict access only to authenticated users add this:

@@ -8,6 +8,7 @@ date:
 #   - Struts
 slug: things-discovered-in-struts-2
 ---
+
 # Things discovered in Struts 2
 
 --8<-- "docs/snippets/archive.md"

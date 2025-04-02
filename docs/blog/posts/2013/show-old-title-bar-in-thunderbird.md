@@ -7,6 +7,7 @@ categories:
   - Thunderbird
 slug: show-old-title-bar-in-thunderbird
 ---
+
 # Show old title bar in Thunderbird
 
 --8<-- "docs/snippets/archive.md"

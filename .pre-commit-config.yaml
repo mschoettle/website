@@ -51,6 +51,18 @@ repos:
         args: ["--verbose"]
         additional_dependencies: ['json5']
 
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.22
+    hooks:
+      - id: mdformat
+        language: python
+        args: [--number]
+        exclude: ^docs/projects/index.md|docs/research/index.md$
+        additional_dependencies:
+          - mdformat-mkdocs==4.1.2
+          - mdformat-frontmatter==2.0.8
+          - mdformat-gfm-alerts==1.0.1
+
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.17.2
     hooks:

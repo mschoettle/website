@@ -8,6 +8,7 @@ date:
 #   - Windows
 slug: hide-the-network-icon-from-windows-7-explorer
 ---
+
 # Hide the "Network" icon from Windows 7 Explorer
 
 --8<-- "docs/snippets/archive.md"

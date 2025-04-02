@@ -2,6 +2,7 @@
 date:
   created: 2024-12-17
 ---
+
 # Blog Relaunched
 
 For a while I was dredding to create new blog posts because it was too cumbersome for me with using _WordPress_.

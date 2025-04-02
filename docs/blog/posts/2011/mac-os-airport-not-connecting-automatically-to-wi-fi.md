@@ -7,6 +7,7 @@ categories:
   - Mac OS
 slug: mac-os-airport-not-connecting-automatically-to-wi-fi
 ---
+
 # Mac OS: Airport not connecting automatically to Wi-Fi
 
 --8<-- "docs/snippets/archive.md"

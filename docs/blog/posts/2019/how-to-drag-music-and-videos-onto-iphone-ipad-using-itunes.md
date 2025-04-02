@@ -8,6 +8,7 @@ categories:
   - iOS
 slug: how-to-drag-music-and-videos-onto-iphone-ipad-using-itunes
 ---
+
 # How to drag music and videos onto iPhone/iPad using iTunes
 
 --8<-- "docs/snippets/archive.md"

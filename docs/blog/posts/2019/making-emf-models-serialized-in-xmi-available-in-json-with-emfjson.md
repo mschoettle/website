@@ -8,6 +8,7 @@ categories:
 #   - Java
 slug: making-emf-models-serialized-in-xmi-available-in-json-with-emfjson
 ---
+
 # Making EMF models serialized in XMI available in JSON with `emfjson`
 
 --8<-- "docs/snippets/archive.md"

@@ -5,6 +5,7 @@ date:
   updated: 2012-05-19
 slug: postgresql-accepts-any-or-no-password-when-connecting
 ---
+
 # PostgreSQL accepts any or no password when connecting
 
 --8<-- "docs/snippets/archive.md"

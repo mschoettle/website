@@ -2,6 +2,7 @@
 date:
   created: 2025-04-01
 ---
+
 # Stopping VSCode Python Extension from Changing your Terminal Environment
 
 I have tripped over an outdated environment variable a few times when running Python from within `vscode`.
