@@ -50,11 +50,10 @@ Place this file into the `chrome` folder inside your profile's directory.
 Follow the [directions from Mozilla to find out where to find the profile's directory location](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
 If the `chrome` folder does not exist, you need to create it first.
 
-<!-- markdownlint-disable-next-line max-one-sentence-per-line -->
+??? note "Additional step for Firefox before `v113` only"
 
-> ? NOTE: **Additional step for Firefox before `v113` only**
-> In the address bar, open `about:config` and change the following preferences:
-> `browser.tabs.tabClipWidth` to `99`
+    In the address bar, open `about:config` and change the following preferences:
+    `browser.tabs.tabClipWidth` to `99`
 
 New versions of Firefox (`v69+`) don't load the `userChrome.css` on startup by default.
 Make sure that `toolkit.legacyUserProfileCustomizations.stylesheets` is set to `true`.
