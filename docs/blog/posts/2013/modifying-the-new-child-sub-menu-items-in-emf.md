@@ -8,6 +8,7 @@ categories:
 #   - Java
 slug: modifying-the-new-child-sub-menu-items-in-emf
 ---
+
 # Modifying the "New Child" sub-menu items in EMF
 
 --8<-- "docs/snippets/archive.md"

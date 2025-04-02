@@ -9,6 +9,7 @@ categories:
 #   - Java
 slug: how-to-use-ocl-when-running-emf-standalone
 ---
+
 # How to use OCL when running EMF standalone
 
 --8<-- "docs/snippets/archive.md"
@@ -65,6 +66,6 @@ This is because starting with _Eclipse Luna_ [OCLInEcore does not re-export UML 
 
 > UPDATES: **Updates to this blog post**
 >
-> * **07.12.2012:** Added missing call to install the OCL standard library and dependencies.
-> * **28.06.2014:** Added missing UML dependency for Eclipse Luna.
-> * **Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).
+> - **07.12.2012:** Added missing call to install the OCL standard library and dependencies.
+> - **28.06.2014:** Added missing UML dependency for Eclipse Luna.
+> - **Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).

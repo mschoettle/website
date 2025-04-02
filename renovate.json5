@@ -9,17 +9,9 @@
     // https://docs.renovatebot.com/modules/manager/pre-commit/
     // https://docs.renovatebot.com/presets-default/#enableprecommit
     ":enablePreCommit",
-  ],
-  // add custom manager for pinning version in GitHub action (e.g., for uv)
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["^.github/workflows/[^/]*\\.ya?ml$"],
-      "matchStrings": [
-        "# renovate: datasource=(?<datasource>.+?) dependency=(?<depName>.+?)( versioning=(?<versioning>.+?))?\\s+.*: ['\"]?(?:(?<currentValue>[^'\"\\s]*))?['\"]?"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
+    "github>mschoettle/renovate-presets//presets/docker-alpine.json5",
+    "github>mschoettle/renovate-presets//presets/actions-dependency-version.json5",
+    "github>mschoettle/renovate-presets//presets/requires-python.json5",
   ],
   // https://docs.renovatebot.com/configuration-options/#assignees
   "assignees": ["mschoettle"],
@@ -30,7 +22,7 @@
   "packageRules": [
     // Combine uv package, uv image, and uv-pre-commit
     {
-      "matchPackagePatterns": "uv-pre-commit|uv$",
+      "matchPackageNames": ["/uv-pre-commit|uv$/"],
       "groupName": "uv",
     },
   ],

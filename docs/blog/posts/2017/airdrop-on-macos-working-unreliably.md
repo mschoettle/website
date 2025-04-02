@@ -7,6 +7,7 @@ categories:
   - Mac OS
 slug: airdrop-on-macos-working-unreliably
 ---
+
 # AirDrop on macOS working unreliably
 
 --8<-- "docs/snippets/archive.md"

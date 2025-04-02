@@ -5,6 +5,9 @@ line-length: false
 ul-indent:
   indent: 4
 
+ul-style:
+  style: dash
+
 # Allow same heading name if the parent is different
 MD024:
   siblings_only: true

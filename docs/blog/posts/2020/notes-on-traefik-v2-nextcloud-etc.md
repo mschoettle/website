@@ -11,6 +11,7 @@ categories:
   - Self-hosting
 slug: notes-on-traefik-v2-nextcloud-etc
 ---
+
 # Notes on traefik v2, Nextcloud, etc
 
 Now that the [Raspberry Pi is set up](./notes-on-setting-up-my-raspberry-pi.md) and [Docker ready to be used](notes-on-docker.md), _Gitea_ is running nicely.
@@ -209,10 +210,10 @@ http:
 Getting Nextcloud up and running is actually very easy with the provided [Docker examples](https://github.com/nextcloud/docker/tree/master/.examples).
 I used the [`docker-compose/insecure/mariadb/fpm/`](https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/insecure/mariadb/fpm/compose.yaml) version as a base and made the following modifications:
 
-* Removed MariaDB and cron services
-* Added user-defined bridge network ([see previous post](./notes-on-docker.md))
-* Used custom [volume on external drive](./notes-on-setting-up-my-raspberry-pi.md#setting-up-an-external-drive) for Nextcloud app and data
-* Added traefik labels to `web` (`nginx`)
+- Removed MariaDB and cron services
+- Added user-defined bridge network ([see previous post](./notes-on-docker.md))
+- Used custom [volume on external drive](./notes-on-setting-up-my-raspberry-pi.md#setting-up-an-external-drive) for Nextcloud app and data
+- Added traefik labels to `web` (`nginx`)
 
 Because Nextcloud doesn't know the hostname (such as `nextcloud.domain.tld`) due to the use of the reverse proxy there are a few changes to the Nextcloud configuration necessary.
 I had to add/modify the `trusted_proxies` IP, `overwrite.cli.url` and `overwriteprotocol` in the Nextcloud config file (`/path/to/docker-volumes/nextcloud/config/config.php`).
@@ -256,5 +257,5 @@ I am planning to update this at some point.
 
 > UPDATES: **Updates to this blog post**
 >
-> * **24.05.2020:** Updated for traefik `v2.2`, added `TLSv1.2` options
-> * **17.12.2022:** Added information on Nextcloud config file and new environment variable support
+> - **24.05.2020:** Updated for traefik `v2.2`, added `TLSv1.2` options
+> - **17.12.2022:** Added information on Nextcloud config file and new environment variable support

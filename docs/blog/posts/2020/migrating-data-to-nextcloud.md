@@ -9,6 +9,7 @@ categories:
   - Self-hosting
 slug: migrating-data-to-nextcloud
 ---
+
 # Migrating Data to Nextcloud
 
 If you need to migrate your data to Nextcloud you probably don't want to upload all your files through the web interface.

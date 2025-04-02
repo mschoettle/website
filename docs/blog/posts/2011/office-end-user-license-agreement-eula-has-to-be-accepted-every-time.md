@@ -7,6 +7,7 @@ date:
 #   - Office
 slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 ---
+
 # Office End-User License Agreement (EULA) has to be accepted every time
 
 --8<-- "docs/snippets/archive.md"
