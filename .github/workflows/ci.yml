@@ -27,17 +27,12 @@ jobs:
         with:
           # renovate: datasource=pypi dependency=uv
           version: "0.6.11"
-          enable-cache: false
-      - name: Print the installed version
-        run: echo "Installed uv version is $(uv --version)"
-      - name: Install Python
-        run: uv python install
-      - name: Print python version
-        run: uv python list
-      - name: Check lockfile is up-to-date
-        run: uv lock --locked
-      - name: Run pre-commit
-        uses: pre-commit/action@v3.0.1
+      - name: Install pre-commit
+        run: |
+          uv sync --locked --only-dev
+      - uses: mschoettle/pre-commit-action@v4.2.1
+        env:
+          SKIP: markdownlint-cli2
       - name: Run markdownlint
         uses: YannickTeKulve/docker-run-action@0.0.6
         with:
@@ -64,3 +59,9 @@ jobs:
         run: uv run --script .github/redirects/check_redirects.py
       - name: Stop production stack
         run: docker compose down
+
+  deploy:
+    uses: ./.github/workflows/cd.yml
+    if: success() && github.ref == 'refs/heads/main'
+    needs:
+      - lint
