@@ -8,6 +8,7 @@ categories:
   - Thunderbird
 slug: thunderbird-extension-hide-badge-icon
 ---
+
 # Thunderbird Extension: Hide Badge Icon
 
 --8<-- "docs/snippets/archive.md"

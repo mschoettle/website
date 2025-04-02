@@ -7,6 +7,7 @@ categories:
   - Projects
 slug: covid-19-montreal-dashboard
 ---
+
 # COVID-19 Montréal Dashboard
 
 Thanks in particular to the great German podcast [Das Coronavirus-Update from NDR](https://www.ndr.de/nachrichten/info/podcast4684.html) with two fantastic virologists (_Christian Drosten_ and _Sandra Ciesek_) I gained a better understanding of the pandemic and this coronavirus (_SARS-CoV-2_) and learned quite a lot new stuff.

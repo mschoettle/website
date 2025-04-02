@@ -7,6 +7,7 @@ categories:
   - Thunderbird
 slug: thunderbird-extension-toggle-headers-updated
 ---
+
 # Thunderbird Extension: Toggle Headers Updated
 
 My Thunderbird extension [Toggle Headers](../2012/thunderbird-extension-toggle-headers.md) was running smoothly for a long time.

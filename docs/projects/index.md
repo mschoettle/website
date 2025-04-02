@@ -7,7 +7,7 @@ They include both work projects and personal ones.
 
 <div class="grid cards" markdown>
 
-* :material-heart-pulse:{ .lg .middle } **Opal**
+- :material-heart-pulse:{ .lg .middle } **Opal**
 
     ---
 
@@ -16,7 +16,7 @@ They include both work projects and personal ones.
 
     [:octicons-arrow-right-24: Tell me more](#opal)
 
-* :simple-django:{ .lg .middle } **Digital Printing Workflow**
+- :simple-django:{ .lg .middle } **Digital Printing Workflow**
 
     ---
 
@@ -24,7 +24,7 @@ They include both work projects and personal ones.
 
     [:octicons-arrow-right-24: Tell me more](#digital-printing-workflow)
 
-* :student:{ .lg .middle } **Concernification Study**
+- :student:{ .lg .middle } **Concernification Study**
 
     ---
 
@@ -32,7 +32,7 @@ They include both work projects and personal ones.
 
     [:octicons-arrow-right-24: Tell me more](#concernification-study)
 
-* :fontawesome-brands-java:{ .lg .middle } **TouchCORE**
+- :fontawesome-brands-java:{ .lg .middle } **TouchCORE**
 
     ---
 
@@ -46,7 +46,7 @@ They include both work projects and personal ones.
 
 <div class="grid cards" markdown>
 
-* :fontawesome-solid-virus-covid:{ .lg .middle } **COVID-19 Montreal Dashboard**
+- :fontawesome-solid-virus-covid:{ .lg .middle } **COVID-19 Montreal Dashboard**
 
     ---
 
@@ -54,7 +54,7 @@ They include both work projects and personal ones.
 
     [:octicons-arrow-right-24: Tell me more](#covid-19-montreal-dashboard)
 
-* :simple-python:{ .lg .middle } **SEPAQ Availability Scraper**
+- :simple-python:{ .lg .middle } **SEPAQ Availability Scraper**
 
     ---
 
@@ -62,7 +62,7 @@ They include both work projects and personal ones.
 
     [:octicons-arrow-right-24: Tell me more](#sepaq-availability-scraper)
 
-* :soccer:{ .lg .middle } **Tippspiel**
+- :soccer:{ .lg .middle } **Tippspiel**
 
     ---
 
@@ -79,7 +79,7 @@ In case of an open source project it means that the corresponding repository is 
 
 <div class="grid cards" markdown>
 
-* :simple-docker:{ .lg .middle } **Docker Monitor**
+- :simple-docker:{ .lg .middle } **Docker Monitor**
 
     ---
 
@@ -87,7 +87,7 @@ In case of an open source project it means that the corresponding repository is 
 
     [:octicons-arrow-right-24: Tell me more](#docker-monitor)
 
-* :raised_hand:{ .lg .middle } **Kinect Project**
+- :raised_hand:{ .lg .middle } **Kinect Project**
 
     ---
 
@@ -95,7 +95,7 @@ In case of an open source project it means that the corresponding repository is 
 
     [:octicons-arrow-right-24: Tell me more](#kinect-project)
 
-* :fontawesome-brands-wordpress-simple:{ .lg .middle } **Hochseilgarten Nagold**
+- :fontawesome-brands-wordpress-simple:{ .lg .middle } **Hochseilgarten Nagold**
 
     ---
 
@@ -104,7 +104,7 @@ In case of an open source project it means that the corresponding repository is 
 
     [:octicons-arrow-right-24: Tell me more](#hochseilgarten-nagold)
 
-* :fontawesome-brands-php:{ .lg .middle } **Max Payne Zone**
+- :fontawesome-brands-php:{ .lg .middle } **Max Payne Zone**
 
     ---
 
@@ -135,7 +135,7 @@ This allows a patient to send vital signs to the hospital.
 
 **Information:**
 
-* [Opal Website](https://www.opalmedapps.com/en)
+- [Opal Website](https://www.opalmedapps.com/en)
 
 ### Digital Printing Workflow
 
@@ -161,9 +161,9 @@ I also used [drone](https://www.drone.io/) as the continuous integration server 
 
 **Information:**
 
-* **Backend:** Python, Django, PostgreSQL
-* **Frontend:** CSS, HTML, JavaScript, jQuery, Bootstrap
-* **Other:** Docker, Unit Testing, CI/CD, Web/Document Scraping, Data Analysis (pandas), Git, Bash, XML, JSON, Network Printing via JDF/JMF
+- **Backend:** Python, Django, PostgreSQL
+- **Frontend:** CSS, HTML, JavaScript, jQuery, Bootstrap
+- **Other:** Docker, Unit Testing, CI/CD, Web/Document Scraping, Data Analysis (pandas), Git, Bash, XML, JSON, Network Printing via JDF/JMF
 
 ### Concernification Study
 
@@ -202,8 +202,8 @@ Once a user submits the feedback, an API is called on a Node.js server which the
 
 **Information:**
 
-* **Technologies:** Angular, TypeScript/JavaScript, Node.js, Express.js, REST, JSON, HTML, CSS, Git
-* **[Try it out](https://concernification.mattsch.com/android-notifications2-test)**
+- **Technologies:** Angular, TypeScript/JavaScript, Node.js, Express.js, REST, JSON, HTML, CSS, Git
+- **[Try it out](https://concernification.mattsch.com/android-notifications2-test)**
 
 ### TouchCORE
 
@@ -244,12 +244,12 @@ The backend is built with the [Eclipse Modeling Framework (EMF)](https://www.ecl
 
 **Information:**
 
-* **Technologies:** Java, OOP, Eclipse Modeling Framework (EMF), XML, Code generation, JUnit, GUI, Git
-* **Project Management:** Bitbucket (Issue Tracker, Pull Requests, Code Reviews, Wiki)
-* **Videos:**
-    * [View Demo Video from my PhD Defence](../assets/videos/phd_defence_demo.mov)
-    * [View Demo Teaser from 2014 on Youtube](https://www.youtube.com/watch?v=Am9jp2y2Uds)
-    * [View Demo Teaser from 2013 on Youtube](https://www.youtube.com/watch?v=Dxc5LvV3Nsw)
+- **Technologies:** Java, OOP, Eclipse Modeling Framework (EMF), XML, Code generation, JUnit, GUI, Git
+- **Project Management:** Bitbucket (Issue Tracker, Pull Requests, Code Reviews, Wiki)
+- **Videos:**
+    - [View Demo Video from my PhD Defence](../assets/videos/phd_defence_demo.mov)
+    - [View Demo Teaser from 2014 on Youtube](https://www.youtube.com/watch?v=Am9jp2y2Uds)
+    - [View Demo Teaser from 2013 on Youtube](https://www.youtube.com/watch?v=Dxc5LvV3Nsw)
 
 ### COVID-19 Montreal Dashboard
 
@@ -266,10 +266,10 @@ This helped keep the data up-to-date without any manual intervention.
 
 **Information:**
 
-* **Technologies:** Python, pandas, Plotly, Dash, Git, Bash
-* [Blog post](../blog/posts/2021/covid-19-montreal-dashboard.md)
-* [Project on GitHub](https://github.com/jeremymoreau/covid19mtl/)
-* **[View project](https://covid19mtl.ca)**
+- **Technologies:** Python, pandas, Plotly, Dash, Git, Bash
+- [Blog post](../blog/posts/2021/covid-19-montreal-dashboard.md)
+- [Project on GitHub](https://github.com/jeremymoreau/covid19mtl/)
+- **[View project](https://covid19mtl.ca)**
 
 ### SEPAQ Availability Scraper
 
@@ -286,9 +286,9 @@ The script can also be adjusted to look at specific camp sites and only look for
 
 **Information:**
 
-* **Technologies:** Python, Web Scraping
-* [Read the blog post](../blog/posts/2021/sepaq-availability-scraper.md)
-* [Project on GitHub](https://github.com/mschoettle/sepaq-availability-scraper)
+- **Technologies:** Python, Web Scraping
+- [Read the blog post](../blog/posts/2021/sepaq-availability-scraper.md)
+- [Project on GitHub](https://github.com/mschoettle/sepaq-availability-scraper)
 
 ### Tippspiel
 
@@ -328,8 +328,8 @@ A script is executed periodically by a cron job to retrieve new match results an
 
 **Information:**
 
-* **Technologies:** PHP, MySQL, SOAP/REST API (XML/JSON), HTML5, CSS3, Apache
-* **[View Project](https://tippspiel.mattsch.com)**
+- **Technologies:** PHP, MySQL, SOAP/REST API (XML/JSON), HTML5, CSS3, Apache
+- **[View Project](https://tippspiel.mattsch.com)**
 
 ### Docker Monitor
 
@@ -341,8 +341,8 @@ This allows it to be used for cronjobs etc.
 
 **Information:**
 
-* **Technologies:** Python, Docker, Bash
-* [Project on GitHub](https://github.com/mschoettle/docker-monitor)
+- **Technologies:** Python, Docker, Bash
+- [Project on GitHub](https://github.com/mschoettle/docker-monitor)
 
 ### Kinect Project
 
@@ -362,9 +362,9 @@ The Kinect backend and frontend were connected using a socket in order to receiv
 
 **Information:**
 
-* **Technologies:** C#, Unity, SQLite, C++, Subversion (SVN)
-* [Video showcasing how a person interacts with the screen and performs the experiment](../assets/videos/kinect_fitts_law.mp4)
-* [Close-up video of the screen showing the game](../assets/videos/kinect_fitts_law_close.mp4)
+- **Technologies:** C#, Unity, SQLite, C++, Subversion (SVN)
+- [Video showcasing how a person interacts with the screen and performs the experiment](../assets/videos/kinect_fitts_law.mp4)
+- [Close-up video of the screen showing the game](../assets/videos/kinect_fitts_law_close.mp4)
 
 ### Hochseilgarten Nagold
 
@@ -385,7 +385,7 @@ In May 2018, with the _General Data Protection Regulation_ (GDPR) (or _Datenschu
 
 **Information:**
 
-* **Technologies:** Wordpress, Plugins, CSS, Photoshop
+- **Technologies:** Wordpress, Plugins, CSS, Photoshop
 
 ### Max Payne Zone
 
@@ -410,4 +410,4 @@ It had a custom content management system (CMS) built in PHP that allowed news p
 
 **Information:**
 
-* **Technologies:** Apache, CSS, HTML, MySQL, PHP (frontend and custom-built backend for content management)
+- **Technologies:** Apache, CSS, HTML, MySQL, PHP (frontend and custom-built backend for content management)

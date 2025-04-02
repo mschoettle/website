@@ -8,6 +8,7 @@ categories:
   - Linux
 slug: setting-up-msmtp
 ---
+
 # Setting up `msmtp`
 
 For a long time I struggled with setting up cronjobs properly.
@@ -38,19 +39,23 @@ In the end this is how it is working for me:
     ```
 
 2. Create the config file `msmtprc` in `/etc` (you might also need one for each user who wants to send email in `~/.msmtprc`)
-    * I tried to use [`gpg` for password management](https://wiki.archlinux.org/title/Msmtp#Password_management) to avoid storing the password as plain text.
-    However, `gpg` encrypted passwords can not be decrypted with cron/sendmail.
-    If you can, use a dedicated email account for this purpose.
-    * Set `chmod` for those files to `0600`, otherwise `msmtp` will complain (`sendmail: /home/<user>/.msmtprc: contains secrets and therefore must have no more than user read/write permissions`)
+
+    - I tried to use [`gpg` for password management](https://wiki.archlinux.org/title/Msmtp#Password_management) to avoid storing the password as plain text.
+        However, `gpg` encrypted passwords can not be decrypted with cron/sendmail.
+        If you can, use a dedicated email account for this purpose.
+    - Set `chmod` for those files to `0600`, otherwise `msmtp` will complain (`sendmail: /home/<user>/.msmtprc: contains secrets and therefore must have no more than user read/write permissions`)
+
 3. For _cron_ to know where to send email to you need to do one of the following:
-    * specify default email in `/etc/aliases`
-    * specify `MAILTO=recipient@domain.tld` in the `crontab`
+
+    - specify default email in `/etc/aliases`
+    - specify `MAILTO=recipient@domain.tld` in the `crontab`
+
 4. Finally, _cron_ uses `sendmail` to send out emails.
     For `msmtp v1.8.8+` install `msmtp-mta` and set the `set_from_header` [configuration setting](https://marlam.de/msmtp/msmtp.html#Commands-specific-to-sendmail-mode) to `on`.
     The from address can be set to `Some Name <server@domain.tld>` to customize the name display.
 
     For older versions, you could just install the `msmtp-mta` package.
-    However, you then get a `From` header in the emails as "root (Cron Daemon) <>".
+    However, you then get a `From` header in the emails as "root (Cron Daemon) \<>".
     If you want to customize this, create a `sendmail` alias in `/usr/sbin`.
     This is especially handy if you set this up for several servers and want to see which server an email is coming from.
     Follow [these instructions](https://serverfault.com/a/1045006) to properly set it up.

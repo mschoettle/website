@@ -15,7 +15,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 <!-- markdownlint-disable max-one-sentence-per-line -->
 ### 2019
 
-* **Matthias Schöttle** and Jörg Kienzle. [On the Difficulties of Raising the Level of Abstraction and Facilitating Reuse in Software Modelling: The Case for Signature Extension](../assets/papers/mise-schoettle2019.pdf). In _Proceedings of the 11th International Workshop on Modelling in Software Engineering_, MiSE ’19, page 71–77, Piscataway, NJ, USA, 2019. IEEE Press. [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1109/MiSE.2019.00018 "View document on publisher site")
+- **Matthias Schöttle** and Jörg Kienzle. [On the Difficulties of Raising the Level of Abstraction and Facilitating Reuse in Software Modelling: The Case for Signature Extension](../assets/papers/mise-schoettle2019.pdf). In _Proceedings of the 11th International Workshop on Modelling in Software Engineering_, MiSE ’19, page 71–77, Piscataway, NJ, USA, 2019. IEEE Press. [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1109/MiSE.2019.00018 "View document on publisher site")
 { #paper-20 }
 
     !!! abstract hidden
@@ -39,7 +39,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**. [_Model-Based Reuse of Framework APIs: Bridging the Gap Between Models and Code_](../assets/papers/phdthesis_schoettle2019.pdf). PhD thesis, School of Computer Science, McGill University, 2019.
+- **Matthias Schöttle**. [_Model-Based Reuse of Framework APIs: Bridging the Gap Between Models and Code_](../assets/papers/phdthesis_schoettle2019.pdf). PhD thesis, School of Computer Science, McGill University, 2019.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[View Slides\]](../assets/papers/phdthesis_schoettle2019_slides.pdf "View Slides of presentation")
     { #paper-19 }
 
@@ -63,7 +63,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 
 ### 2018
 
-* Benoit Combemale, Jörg Kienzle, Gunter Mussbacher, Olivier Barais, Erwan Bousse, Walter Cazzola, Philippe Collet, Thomas Degueule, Robert Heinrich, Jean-Marc Jézéquel, Manuel Leduc, Tanja Mayerhofer, Sébastien Mosser, **Matthias Schöttle**, Misha Strittmatter, and Andreas Wortmann. [Concern-Oriented Language Development (COLD): Fostering Reuse in Language Engineering](../assets/papers/comlan-combemale2018.pdf). _Computer Languages, Systems & Structures_, 2018.
+- Benoit Combemale, Jörg Kienzle, Gunter Mussbacher, Olivier Barais, Erwan Bousse, Walter Cazzola, Philippe Collet, Thomas Degueule, Robert Heinrich, Jean-Marc Jézéquel, Manuel Leduc, Tanja Mayerhofer, Sébastien Mosser, **Matthias Schöttle**, Misha Strittmatter, and Andreas Wortmann. [Concern-Oriented Language Development (COLD): Fostering Reuse in Language Engineering](../assets/papers/comlan-combemale2018.pdf). _Computer Languages, Systems & Structures_, 2018.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1016/j.cl.2018.05.004 "View document on publisher site")
     { #paper-18 }
 
@@ -91,7 +91,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 
 ### 2016
 
-* Céline Bensoussan, **Matthias Schöttle**, and Jörg Kienzle. [Associations in MDE: A Concern-Oriented, Reusable Solution](../assets/papers/ecmfa-bensoussan2016.pdf). In _Modelling Foundations and Applications – 12th European Conference, ECMFA 2016, Held as Part of STAF 2016, Vienna, Austria, July 6-7, 2016, Proceedings_, page 121–137. Springer International Publishing, 2016.
+- Céline Bensoussan, **Matthias Schöttle**, and Jörg Kienzle. [Associations in MDE: A Concern-Oriented, Reusable Solution](../assets/papers/ecmfa-bensoussan2016.pdf). In _Modelling Foundations and Applications – 12th European Conference, ECMFA 2016, Held as Part of STAF 2016, Vienna, Austria, July 6-7, 2016, Proceedings_, page 121–137. Springer International Publishing, 2016.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1007/978-3-319-42061-5_8 "View document on publisher site")
     { #paper-17 }
 
@@ -114,7 +114,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* Jörg Kienzle, Gunter Mussbacher, Omar Alam, **Matthias Schöttle**, Nicolas Belloir, Philippe Collet, Benoît Combemale, Julien DeAntoni, Jacques Klein, and Bernhard Rumpe. VCU: The Three Dimensions of Reuse. In _Software Reuse: Bridging with Social-Awareness – 15th International Conference, ICSR 2016, Limassol, Cyprus, June 5-7, 2016, Proceedings_, page 122–137. Springer International Publishing, 2016.
+- Jörg Kienzle, Gunter Mussbacher, Omar Alam, **Matthias Schöttle**, Nicolas Belloir, Philippe Collet, Benoît Combemale, Julien DeAntoni, Jacques Klein, and Bernhard Rumpe. VCU: The Three Dimensions of Reuse. In _Software Reuse: Bridging with Social-Awareness – 15th International Conference, ICSR 2016, Limassol, Cyprus, June 5-7, 2016, Proceedings_, page 122–137. Springer International Publishing, 2016.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1007/978-3-319-35122-3_9 "View document on publisher site")
     { #paper-16 }
 
@@ -137,7 +137,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**, Omar Alam, Jörg Kienzle, and Gunter Mussbacher. [On the Modularization Provided by Concern-Oriented Reuse](../assets/papers/momo-schoettle2016.pdf). In _Companion Proceedings of the 15th International Conference on Modularity_, MODULARITY Companion 2016, page 184–189. ACM, 2016.
+- **Matthias Schöttle**, Omar Alam, Jörg Kienzle, and Gunter Mussbacher. [On the Modularization Provided by Concern-Oriented Reuse](../assets/papers/momo-schoettle2016.pdf). In _Companion Proceedings of the 15th International Conference on Modularity_, MODULARITY Companion 2016, page 184–189. ACM, 2016.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1145/2892664.2892697 "View document on publisher site")
     { #paper-15 }
 
@@ -164,7 +164,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 
 ### 2015
 
-* Wisam Al Abed, **Matthias Schöttle**, Abir Ayed, and Jörg Kienzle. _Behavior Modeling – Foundations and Applications: International Workshops, BM-FA 2009-2014, Revised Selected Papers_, chapter [Concern-Oriented Behaviour Modelling with Sequence Diagrams and Protocol Models](../assets/papers/bmfa-alabed2015.pdf), page 250–278. Springer International Publishing, Cham, 2015.
+- Wisam Al Abed, **Matthias Schöttle**, Abir Ayed, and Jörg Kienzle. _Behavior Modeling – Foundations and Applications: International Workshops, BM-FA 2009-2014, Revised Selected Papers_, chapter [Concern-Oriented Behaviour Modelling with Sequence Diagrams and Protocol Models](../assets/papers/bmfa-alabed2015.pdf), page 250–278. Springer International Publishing, Cham, 2015.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1007/978-3-319-21912-7_10 "View document on publisher site")
     { #paper-14 }
 
@@ -191,7 +191,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* Romain Alexandre, Cécile Camillieri, Mustafa Berk Duran, Aldo Navea Pina, **Matthias Schöttle**, Jörg Kienzle, and Gunter Mussbacher. [Support for Evaluation of Impact Models in Reuse Hierarchies with jUCMNav and TouchCORE](../assets/papers/models-demos-alexandre2015.pdf). In _Proceedings of the MoDELS 2015 Demo and Poster Session co-located with ACM/IEEE 18th International Conference on Model Driven Engineering Languages and Systems (MoDELS 2015), Ottawa, Canada, September 30th – October 2nd_. CEUR-WS.org, 2015.
+- Romain Alexandre, Cécile Camillieri, Mustafa Berk Duran, Aldo Navea Pina, **Matthias Schöttle**, Jörg Kienzle, and Gunter Mussbacher. [Support for Evaluation of Impact Models in Reuse Hierarchies with jUCMNav and TouchCORE](../assets/papers/models-demos-alexandre2015.pdf). In _Proceedings of the MoDELS 2015 Demo and Poster Session co-located with ACM/IEEE 18th International Conference on Model Driven Engineering Languages and Systems (MoDELS 2015), Ottawa, Canada, September 30th – October 2nd_. CEUR-WS.org, 2015.
     [\[Abstract\]](#) [\[BibTeX\]](#)
     { #paper-13 }
 
@@ -213,7 +213,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle** and Jörg Kienzle. [Concern-Oriented Interfaces for Model-Based Reuse of APIs](../assets/papers/models-schoettle2015.pdf). In _18th ACM/IEEE International Conference on Model Driven Engineering Languages and Systems, MoDELS 2015, Ottawa, ON, Canada, September 30 – October 2, 2015_, page 286–291. IEEE, 2015. (Acceptance rate: 26%)
+- **Matthias Schöttle** and Jörg Kienzle. [Concern-Oriented Interfaces for Model-Based Reuse of APIs](../assets/papers/models-schoettle2015.pdf). In _18th ACM/IEEE International Conference on Model Driven Engineering Languages and Systems, MoDELS 2015, Ottawa, ON, Canada, September 30 – October 2, 2015_, page 286–291. IEEE, 2015. (Acceptance rate: 26%)
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1109/MODELS.2015.7338259 "View document on publisher site") [\[View Slides\]](../assets/papers/models-schoettle2015_slides.pdf "View Slides of presentation")
     { #paper-12 }
 
@@ -238,7 +238,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**. [Model-Based Reuse of APIs using Concern-Orientation](../assets/papers/models-src-schoettle2015.pdf). In _Proceedings of the ACM Student Research Competition at MODELS 2015 co-located with the ACM/IEEE 18th International Conference MODELS 2015, Ottawa, Canada, September 29, 2015_, page 41–45. CEUR-WS.org, 2015.
+- **Matthias Schöttle**. [Model-Based Reuse of APIs using Concern-Orientation](../assets/papers/models-src-schoettle2015.pdf). In _Proceedings of the ACM Student Research Competition at MODELS 2015 co-located with the ACM/IEEE 18th International Conference MODELS 2015, Ottawa, Canada, September 29, 2015_, page 41–45. CEUR-WS.org, 2015.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[View Poster\]](../assets/papers/models-src-schoettle2015_poster.pdf "View Poster")
     { #paper-11 }
 
@@ -261,7 +261,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**, Nishanth Thimmegowda, Omar Alam, Jörg Kienzle, and Gunter Mussbacher. [Feature Modelling and Traceability for Concern-driven Software Development with TouchCORE](../assets/papers/modularity-demos-schoettle2015.pdf). In _Companion Proceedings of the 14th International Conference on Modularity_, MODULARITY Companion 2015, page 11–14. ACM, 2015.
+- **Matthias Schöttle**, Nishanth Thimmegowda, Omar Alam, Jörg Kienzle, and Gunter Mussbacher. [Feature Modelling and Traceability for Concern-driven Software Development with TouchCORE](../assets/papers/modularity-demos-schoettle2015.pdf). In _Companion Proceedings of the 14th International Conference on Modularity_, MODULARITY Companion 2015, page 11–14. ACM, 2015.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1145/2735386.2735922 "View document on publisher site")
     { #paper-10 }
 
@@ -293,7 +293,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 
 ### 2014
 
-* **Matthias Schöttle**, Omar Alam, Gunter Mussbacher, and Jörg Kienzle. [Specification of Domain-specific Languages Based on Concern Interfaces](../assets/papers/foal-schoettle2014.pdf). In _Proceedings of the 13th Workshop on Foundations of Aspect-Oriented Languages_, FOAL ’14, page 23–28. ACM, 2014.
+- **Matthias Schöttle**, Omar Alam, Gunter Mussbacher, and Jörg Kienzle. [Specification of Domain-specific Languages Based on Concern Interfaces](../assets/papers/foal-schoettle2014.pdf). In _Proceedings of the 13th Workshop on Foundations of Aspect-Oriented Languages_, FOAL ’14, page 23–28. ACM, 2014.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1145/2588548.2588551 "View document on publisher site")
     { #paper-9 }
 
@@ -323,7 +323,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* Nishanth Thimmegowda, Omar Alam, **Matthias Schöttle**, Wisam Al Abed, Thomas Di’Meco, Laura Martellotto, Gunter Mussbacher, and Jörg Kienzle. [Concern-Driven Software Development with jUCMNav and TouchRAM](../assets/papers/models-demos-thimmegowda2014.pdf). In _Proceedings of the Demonstrations Track of the ACM/IEEE 17th International Conference on Model Driven Engineering Languages and Systems (MoDELS 2014), Valencia, Spain, October 1st and 2nd, 2014_. CEUR-WS.org, 2014.
+- Nishanth Thimmegowda, Omar Alam, **Matthias Schöttle**, Wisam Al Abed, Thomas Di’Meco, Laura Martellotto, Gunter Mussbacher, and Jörg Kienzle. [Concern-Driven Software Development with jUCMNav and TouchRAM](../assets/papers/models-demos-thimmegowda2014.pdf). In _Proceedings of the Demonstrations Track of the ACM/IEEE 17th International Conference on Model Driven Engineering Languages and Systems (MoDELS 2014), Valencia, Spain, October 1st and 2nd, 2014_. CEUR-WS.org, 2014.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[View Slides\]](../assets/papers/models-demos-thimmegowda2014_slides.pdf "View Slides of presentation") [\[Watch Demo Teaser\]](https://www.youtube.com/watch?v=Am9jp2y2Uds)
     { #paper-8 }
 
@@ -345,7 +345,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* Gunter Mussbacher, Daniel Amyot, Ruth Breu, Jean-Michel Bruel, Betty H. C. Cheng, Philippe Collet, Benoit Combemale, Robert B. France, Rogardt Heldal, James Hill, Jörg Kienzle, **Matthias Schöttle**, Friedrich Steimann, Dave Stikkolorum, and Jon Whittle. [The Relevance of Model-Driven Engineering Thirty Years from Now](../assets/papers/models-mussbacher2014.pdf). In Juergen Dingel, Wolfram Schulte, Isidro Ramos, Silvia Abrahão, and Emilio Insfran, editors, _Model-Driven Engineering Languages and Systems: 17th International Conference, MODELS 2014, Valencia, Spain, September 28 – October 3, 2014. Proceedings_, page 183–200. Springer International Publishing, 2014. (Acceptance rate: 24%)
+- Gunter Mussbacher, Daniel Amyot, Ruth Breu, Jean-Michel Bruel, Betty H. C. Cheng, Philippe Collet, Benoit Combemale, Robert B. France, Rogardt Heldal, James Hill, Jörg Kienzle, **Matthias Schöttle**, Friedrich Steimann, Dave Stikkolorum, and Jon Whittle. [The Relevance of Model-Driven Engineering Thirty Years from Now](../assets/papers/models-mussbacher2014.pdf). In Juergen Dingel, Wolfram Schulte, Isidro Ramos, Silvia Abrahão, and Emilio Insfran, editors, _Model-Driven Engineering Languages and Systems: 17th International Conference, MODELS 2014, Valencia, Spain, September 28 – October 3, 2014. Proceedings_, page 183–200. Springer International Publishing, 2014. (Acceptance rate: 24%)
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1007/978-3-319-11653-2_12 "View document on publisher site")
     { #paper-7 }
 
@@ -372,7 +372,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**, Omar Alam, Franz-Philippe Garcia, Gunter Mussbacher, and Jörg Kienzle. [TouchRAM: A Multitouch-enabled Software Design Tool Supporting Concern-oriented Reuse](../assets/papers/modularity-demos-schoettle2014.pdf). In _Proceedings of the Companion Publication of the 13th International Conference on Modularity_, MODULARITY ’14, page 25–28. ACM, 2014.
+- **Matthias Schöttle**, Omar Alam, Franz-Philippe Garcia, Gunter Mussbacher, and Jörg Kienzle. [TouchRAM: A Multitouch-enabled Software Design Tool Supporting Concern-oriented Reuse](../assets/papers/modularity-demos-schoettle2014.pdf). In _Proceedings of the Companion Publication of the 13th International Conference on Modularity_, MODULARITY ’14, page 25–28. ACM, 2014.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1145/2584469.2584475 "View document on publisher site") [\[View Slides\]](../assets/papers/modularity-demos-schoettle2014_slides.pdf "Vieew Slides of presentation")
     { #paper-6 }
 
@@ -404,7 +404,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 
 ### 2013
 
-* **Matthias Schöttle** and Jörg Kienzle. [On the Challenges of Composing Multi-View Models](../assets/papers/gemoc-schoettle2013.pdf). _In the GEMOC’13 Workshop co-located with the 16th International Conference on Model Driven Engineering Languages and Systems (MODELS 2013)_, October 2013.
+- **Matthias Schöttle** and Jörg Kienzle. [On the Challenges of Composing Multi-View Models](../assets/papers/gemoc-schoettle2013.pdf). _In the GEMOC’13 Workshop co-located with the 16th International Conference on Model Driven Engineering Languages and Systems (MODELS 2013)_, October 2013.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[View Slides\]](../assets/papers/gemoc-schoettle2013_slides.pdf "View Slides of presentation")
     { #paper-5 }
 
@@ -426,7 +426,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* Omar Alam, **Matthias Schöttle**, and Jörg Kienzle. [Revising the Comparison Criteria for Composition](../assets/papers/cma-alam2013.pdf). In _Proceedings of the Fourth International Comparing Modeling Approaches Workshop 2013 co-located with the ACM/IEEE 16th International Conference on Model Driven Engineering Languages and Systems (MODELS 2013), Miami, Florida, USA, October 1, 2013._. CEUR-WS.org, 2013.
+- Omar Alam, **Matthias Schöttle**, and Jörg Kienzle. [Revising the Comparison Criteria for Composition](../assets/papers/cma-alam2013.pdf). In _Proceedings of the Fourth International Comparing Modeling Approaches Workshop 2013 co-located with the ACM/IEEE 16th International Conference on Model Driven Engineering Languages and Systems (MODELS 2013), Miami, Florida, USA, October 1, 2013._. CEUR-WS.org, 2013.
     [\[Abstract\]](#) [\[BibTeX\]](#)
     { #paper-4 }
 
@@ -448,7 +448,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**, Omar Alam, Abir Ayed, and Jörg Kienzle. [Concern-Oriented Software Design with TouchRAM](../assets/papers/models-demos-schoettle2013.pdf). In _Joint Proceedings of MODELS’13 Invited Talks, Demonstration Session, Poster Session, and ACM Student Research Competition co-located with the 16th International Conference on Model Driven Engineering Languages and Systems (MODELS 2013), Miami, USA, September 29 – October 4, 2013._, page 51–55. CEUR-WS.org, 2013.
+- **Matthias Schöttle**, Omar Alam, Abir Ayed, and Jörg Kienzle. [Concern-Oriented Software Design with TouchRAM](../assets/papers/models-demos-schoettle2013.pdf). In _Joint Proceedings of MODELS’13 Invited Talks, Demonstration Session, Poster Session, and ACM Student Research Competition co-located with the 16th International Conference on Model Driven Engineering Languages and Systems (MODELS 2013), Miami, USA, September 29 – October 4, 2013._, page 51–55. CEUR-WS.org, 2013.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[Watch Demo Teaser\]](https://www.youtube.com/watch?v=Dxc5LvV3Nsw)
     { #paper-3 }
 
@@ -473,7 +473,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
 
 ### 2012
 
-* Wisam Al Abed, Valentin Bonnet, **Matthias Schöttle**, Engin Yildirim, Omar Alam, and Jörg Kienzle. [TouchRAM: A Multitouch-Enabled Tool for Aspect-Oriented Software Design](../assets/papers/sle-alabed2012.pdf). In Krzysztof Czarnecki and Görel Hedin, editors, _Software Language Engineering: 5th International Conference, SLE 2012, Dresden, Germany, September 26-28, 2012, Revised Selected Papers_, page 275–285. Springer Berlin Heidelberg, 2012.
+- Wisam Al Abed, Valentin Bonnet, **Matthias Schöttle**, Engin Yildirim, Omar Alam, and Jörg Kienzle. [TouchRAM: A Multitouch-Enabled Tool for Aspect-Oriented Software Design](../assets/papers/sle-alabed2012.pdf). In Krzysztof Czarnecki and Görel Hedin, editors, _Software Language Engineering: 5th International Conference, SLE 2012, Dresden, Germany, September 26-28, 2012, Revised Selected Papers_, page 275–285. Springer Berlin Heidelberg, 2012.
     [\[Abstract\]](#) [\[BibTeX\]](#) [\[DOI\]](http://dx.doi.org/10.1007/978-3-642-36089-3_16 "View document on publisher site")
     { #paper-2 }
 
@@ -499,7 +499,7 @@ In this role, I helped build [TouchCORE](https://djeminy.github.io/touchcore/), 
         }
         ```
 
-* **Matthias Schöttle**. [Aspect-Oriented Behavior Modeling In Practice](../assets/papers/masterthesis_schoettle2012.pdf). Master’s thesis, Department of Computer Science, Karlsruhe University of Applied Sciences, September 2012. Conducted at the School of Computer Science, McGill University, Montreal, Canada.
+- **Matthias Schöttle**. [Aspect-Oriented Behavior Modeling In Practice](../assets/papers/masterthesis_schoettle2012.pdf). Master’s thesis, Department of Computer Science, Karlsruhe University of Applied Sciences, September 2012. Conducted at the School of Computer Science, McGill University, Montreal, Canada.
     [\[Abstract\]](#) [\[BibTeX\]](#)
     { #paper-1 }
 

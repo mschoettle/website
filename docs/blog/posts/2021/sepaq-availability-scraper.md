@@ -7,6 +7,7 @@ categories:
   - Projects
 slug: sepaq-availability-scraper
 ---
+
 # SEPAQ Availability Scraper
 
 Recently, we were trying to find an available camp site on [SEPAQ](https://www.sepaq.com) during the summer.

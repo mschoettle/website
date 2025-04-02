@@ -9,6 +9,7 @@ categories:
   - Web Development
 slug: deploying-angular-application-on-apache-server
 ---
+
 # Deploying Angular application on Apache server
 
 If you need to deploy an Angular application on a server running Apache, and are making use of [routing for navigation](https://angular.io/guide/router), you can't just upload the built application onto the server and be done with it.

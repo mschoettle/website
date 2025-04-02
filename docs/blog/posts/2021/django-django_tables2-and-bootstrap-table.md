@@ -8,6 +8,7 @@ categories:
 #   - Howto
 slug: django-django_tables2-and-bootstrap-table
 ---
+
 # Django, django_tables2 and Bootstrap Table
 
 I was always intrigued by [Django](https://www.djangoproject.com/).
@@ -216,4 +217,4 @@ It is based on [Django admin's search functionality](https://docs.djangoproject.
 
 > UPDATES: **Updates to this blog post**
 >
-> * **23.06.2023:** Added note about doing it using server-side rendering using `HTMX` or `unpoly`.
+> - **23.06.2023:** Added note about doing it using server-side rendering using `HTMX` or `unpoly`.

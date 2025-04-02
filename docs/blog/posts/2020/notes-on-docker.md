@@ -10,6 +10,7 @@ categories:
 #   - Self-hosting
 slug: notes-on-docker
 ---
+
 # Notes on Docker
 
 I've never really followed the hype around Docker but to be honest also never really taken the time to look into it more.
@@ -133,4 +134,4 @@ This way, irregardless of the host on which a container is run, the timezone mat
 
 > UPDATES: **Updates to this blog post**
 >
-> * **23.10.2024:** Updated default network format in `compose` example to current format.
+> - **23.10.2024:** Updated default network format in `compose` example to current format.

@@ -8,6 +8,7 @@ categories:
   - Mac OS
 slug: reducing-file-size-of-a-pdf-on-mac-os
 ---
+
 # Reducing file size of a PDF on Mac OS
 
 The file size of PDFs can become quite large, especially when scanning documents or documents containing images.
@@ -20,13 +21,13 @@ There is already one called _Reduce File Size_ but it might lead to a blurry PDF
 You can copy this filter and adjust the settings.
 However, I found custom filters in the [Apple Support Community](https://discussions.apple.com/message/21402148#21402148 "Apple Support Community") that work quite well.
 
-* [Download the filters](https://github.com/joshcarr/Apple-Quartz-Filters "Download Quartz filters to reduce file size of PDFs")
-* Move the filters to `~/Library/Filters`
-* Open your PDF with _ColorSync Utility_
-* In the bottom, choose the appropriate filter.
-There are several options starting with "_Reduce to ..._"
-* Click "Apply"
-* If you are satisfied with the result, save the file under a different file name (_File > Save As_).
+- [Download the filters](https://github.com/joshcarr/Apple-Quartz-Filters "Download Quartz filters to reduce file size of PDFs")
+- Move the filters to `~/Library/Filters`
+- Open your PDF with _ColorSync Utility_
+- In the bottom, choose the appropriate filter.
+    There are several options starting with "_Reduce to ..._"
+- Click "Apply"
+- If you are satisfied with the result, save the file under a different file name (_File > Save As_).
 
 Alternatively, you can place them into `/Library/PDF Services/` instead.
 Besides the fact that the filters will be available to all system users, when exporting PDFs in _Preview_, you can select a filter directly in the dropdown under _Quartz Filters_.
@@ -37,5 +38,5 @@ The original creator of the filters to be credited seems to be Jerome Colas acco
 
 > UPDATES: **Updates to this blog post**
 >
-> * **December 2017:** Uploaded the ZIP file to my own server, since the original link became unavailable.
-> * **27.10.2024:** Replaced ZIP file with link to GitHub repository to download filters
+> - **December 2017:** Uploaded the ZIP file to my own server, since the original link became unavailable.
+> - **27.10.2024:** Replaced ZIP file with link to GitHub repository to download filters
