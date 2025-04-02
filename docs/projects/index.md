@@ -129,13 +129,18 @@ I helped establish various best practices and improvements, such as using contai
 A big part is the question of how many of the legacy components can be migrated to a new component.
 I proposed the [Strangler Fig Migration Pattern](https://martinfowler.com/bliki/StranglerFigApplication.html) instead of doing a "big bang replacement".
 
-I also develop and troubleshoot.
+I also develop new features and troubleshoot.
 For example, I designed and implemented support for smart devices.
 This allows a patient to send vital signs to the hospital.
 
+Recently, I lead the effort to open source our code base.
+In March 2025, we [open sourced the Opal solution](https://github.com/opalmedapps).
+
 **Information:**
 
-- [Opal Website](https://www.opalmedapps.com/en)
+- **Website:** https://www.opalmedapps.com/en
+- **GitHub:** https://github.com/opalmedapps
+- **Documentation:** https://docs.opalmedapps.com
 
 ### Digital Printing Workflow
 
