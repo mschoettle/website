@@ -13,6 +13,9 @@ on:
       - completed
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deployment:
     runs-on: ubuntu-latest

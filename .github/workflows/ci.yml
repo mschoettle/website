@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -16,6 +19,8 @@ jobs:
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
       - name: Install uv
         uses: astral-sh/setup-uv@v5.4.1
         id: setup-uv
@@ -24,7 +29,7 @@ jobs:
           version: "0.6.11"
           enable-cache: false
       - name: Print the installed version
-        run: echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
+        run: echo "Installed uv version is $(uv --version)"
       - name: Install Python
         run: uv python install
       - name: Print python version
@@ -52,7 +57,7 @@ jobs:
       # fail if there are markdownlint violations
       - name: Check markdownlint results
         run: |
-          cat markdownlint-cli2-sarif.sarif | grep -q '"results": \[\]'
+          grep -q '"results": \[\]' markdownlint-cli2-sarif.sarif
       - name: Run the production stack
         run: docker compose up --build -d
       - name: Check
