@@ -75,7 +75,6 @@ I have been a Teaching Assistant for the following courses at McGill University:
 ## Awards
 
 <!-- markdownlint-disable-next-line max-one-sentence-per-line -->
-
 I have received the following awards during my studies (M.Sc. and Ph.D.):
 
 - McGill School of Computer Science Graduate Excellence Award (2015)
