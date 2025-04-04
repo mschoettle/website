@@ -2,7 +2,7 @@
 migrated: true
 date:
   created: 2021-03-18
-  updated: 2021-03-18
+  updated: 2024-04-04
 categories:
 #   - Howto
   - Linux
@@ -93,7 +93,7 @@ Now that you have your own user, let's harden the SSH daemon by changing the por
 5. Restart `sshd`:
 
     ```shell
-    sudo systemctl restart ssh
+    sudo systemctl restart sshd
     ```
 
 WARNING: Be careful that you don't lock yourself out.
