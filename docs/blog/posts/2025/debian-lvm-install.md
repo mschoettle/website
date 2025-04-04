@@ -52,10 +52,11 @@ Once you see the first screen of the *Debian* installer, follow these steps:
 Once the system is rebooted you should be able to log in via SSH.
 It seems that root login via SSH is disabled by default, so log in with the user that you chose during the installation.
 
-When you are logged in, you can switch to `root` via `su -` (1)
+When you are logged in, you can switch to `root` via `su -`. (1)
 { .annotate }
 
-1. Don't just use `su` since you will be missing the correct `$PATH`. See this comment explaining it: https://www.reddit.com/r/linuxquestions/comments/pcfjo6/comment/haijm8f/
+1. Don't just use `su` since you will be missing the correct `$PATH`.
+    See this comment explaining it: https://www.reddit.com/r/linuxquestions/comments/pcfjo6/comment/haijm8f/
 
 The filesystem looks something like this at the end:
 
