@@ -34,7 +34,7 @@ jobs:
         env:
           SKIP: markdownlint-cli2
       - name: Run markdownlint
-        uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
+        uses: YannickTeKulve/docker-run-action@480ee820bbd5541024f8efb19467b24886c1f40e
         with:
           image: davidanson/markdownlint-cli2-rules:v0.14.0
           # node user does not have permissions to workspace due to user id mismatch
