@@ -73,6 +73,10 @@ jobs:
         with:
           persist-credentials: false
           lfs: true
+          # fetch the full git history to be able to determine creation dates for pages
+          # see: https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
+          fetch-depth: 0
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3.4.0
         if: github.event_name != 'pull_request'
