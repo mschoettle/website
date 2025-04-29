@@ -31,7 +31,6 @@ jobs:
         run: |
           uv sync --locked --only-dev
       - uses: mschoettle/pre-commit-action@v4.2.3
-        if: '!cancelled()'
         env:
           SKIP: markdownlint-cli2
       - name: Run markdownlint
