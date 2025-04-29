@@ -31,9 +31,11 @@ jobs:
         run: |
           uv sync --locked --only-dev
       - uses: mschoettle/pre-commit-action@v4.2.3
+        if: '!cancelled()'
         env:
           SKIP: markdownlint-cli2
       - name: Run markdownlint
+        if: '!cancelled()'
         env:
           # renovate: datasource=docker depName=davidanson/markdownlint-cli2-rules versioning=semver
           MARKDOWNLINT_CLI2_VERSION: v0.17.2
