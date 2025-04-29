@@ -10,6 +10,7 @@ slug: set-up-debian
 ---
 
 # Set Up Debian
+
 Here are the steps I use to set up and configure a fresh install of Debian on a server.
 
 <!-- more -->
