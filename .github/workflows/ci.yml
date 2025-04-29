@@ -95,6 +95,9 @@ jobs:
         uses: docker/metadata-action@v5.7.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      - run: |
+          which git
+          ls -la .
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v6.16.0
