@@ -34,9 +34,12 @@ jobs:
         env:
           SKIP: markdownlint-cli2
       - name: Run markdownlint
+        env:
+          # renovate: datasource=docker depName=davidanson/markdownlint-cli2-rules versioning=semver
+          MARKDOWNLINT_CLI2_VERSION: v0.17.2
         uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
         with:
-          image: davidanson/markdownlint-cli2-rules:v0.17.2
+          image: davidanson/markdownlint-cli2-rules:${{ env.MARKDOWNLINT_CLI2_VERSION }}
           # node user does not have permissions to workspace due to user id mismatch
           options: -v ${{ github.workspace }}:/workdir --user root
           # don't fail step if there are violations

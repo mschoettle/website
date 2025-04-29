@@ -8,7 +8,7 @@ I like to help others, and so just like with contributing to [open source projec
 
 I enjoy building and improving software, in particular building reusable software.
 With an eye for details and the ability to understand and see the big picture, I am able to provide well-thought-out solutions.
-It also allows me to quickly understand new/unfamiliar code or concepts and connect the dots when debugging and solving problems.Basically, a [1x Engineer](https://1x.engineer/) :smiley:.
+It also allows me to quickly understand new/unfamiliar code or concepts and connect the dots when debugging and solving problems. Basically, a [1x Engineer](https://1x.engineer/) :smiley:.
 
 <!--
 I strive for reusable, clean and maintainable code.
