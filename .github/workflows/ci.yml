@@ -36,7 +36,7 @@ jobs:
       - name: Run markdownlint
         uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
         with:
-          image: davidanson/markdownlint-cli2-rules:v0.14.0
+          image: davidanson/markdownlint-cli2-rules:v0.17.2
           # node user does not have permissions to workspace due to user id mismatch
           options: -v ${{ github.workspace }}:/workdir --user root
           # don't fail step if there are violations
