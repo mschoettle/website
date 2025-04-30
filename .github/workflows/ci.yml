@@ -116,7 +116,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Test image
-        run: docker run --rm ${{ env.TEST_TAG }} --version
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: docker run --rm "$TAGS" --version
 
   deploy:
     uses: ./.github/workflows/cd.yml
