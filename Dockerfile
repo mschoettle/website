@@ -28,9 +28,6 @@ ENV CI=true
 
 COPY . .
 
-RUN ls -la .
-RUN which git
-
 RUN python -m mkdocs build --strict --site-dir /site
 
 
