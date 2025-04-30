@@ -30,7 +30,7 @@ jobs:
         id: setup-uv
         with:
           # renovate: datasource=pypi dependency=uv
-          version: "0.6.17"
+          version: "0.7.2"
       - name: Install pre-commit
         run: |
           uv sync --locked --only-dev
