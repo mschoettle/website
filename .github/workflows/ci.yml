@@ -57,7 +57,8 @@ jobs:
         run: docker compose down
 
   build:
-    runs-on: ubuntu-latest
+    # https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
+    runs-on: ubuntu-24.04-arm
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}
