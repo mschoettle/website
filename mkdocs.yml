@@ -86,6 +86,7 @@ plugins:
   - search
   - blog:
       categories_allowed:
+        - Digital Healthcare
         - Django
         - Docker
         - Eclipse Modeling Framework (EMF)
