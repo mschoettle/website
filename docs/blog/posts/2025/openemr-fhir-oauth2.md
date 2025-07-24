@@ -125,8 +125,8 @@ SCOPES = [
     'system/Patient.read',
 ]
 
-PRIVATE_KEY = '-----BEGIN PRIVATE KEY-----\n...'
-PUBLIC_KEY = '-----BEGIN PUBLIC KEY-----\n...'
+PRIVATE_KEY = '...'
+PUBLIC_KEY = '...'
 
 # current timestamp in epoch format
 now = int(datetime.now().timestamp())
@@ -191,7 +191,7 @@ SCOPES = [
     'system/Patient.read',
 ]
 
-PRIVATE_KEY = '-----BEGIN PRIVATE KEY-----\n...'
+PRIVATE_KEY = '...'
 
 session = OAuth2Session(
     client_id=CLIENT_ID,
