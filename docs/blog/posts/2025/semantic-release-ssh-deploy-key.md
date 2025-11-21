@@ -49,7 +49,25 @@ Then, update your workflow as follows:
 [...]
 ```
 
-And, you need to ensure that `semantic-release/git` plugin will use the SSH protocol.
+??? danger "Could this be abused?"
+
+    Like me, you are probably asking yourself whether someone could abuse the secret.
+    Basically, someone could adjust the workflow in a PR, use of the secret and push something directly to main from the workflow :thinking:
+
+    Definitely.
+
+    As the [GitHub docs state](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys):
+
+        Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository.
+
+    The [`semantic-release` note about pushing to your repository](https://semantic-release.gitbook.io/semantic-release/recipes/ci-configurations/github-actions#pushing-package.json-changes-to-your-repository) applies here.
+
+    Essentially, this should only be done in trusted environments and you really need to be aware of the risks and be willing to accept them.
+
+    At least for situations where someone raises a PR from a fork it is not possible.
+    This is because [secrets are not passed to workflows triggered from forks](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#using-secrets-in-a-workflow).
+
+And, you need to ensure that the `semantic-release/git` plugin will use the SSH protocol.
 Add the SSH repository URL to your `semantic-release` configuration in the [`repositoryUrl` option](https://semantic-release.gitbook.io/semantic-release/usage/configuration#repositoryurl):
 
 ```json title=".releaserc"
@@ -58,7 +76,8 @@ Add the SSH repository URL to your `semantic-release` configuration in the [`rep
 }
 ```
 
-!!! tip Improving the `semantic-release` documentation
+!!! tip "Improving the `semantic-release` documentation"
 
     Part of this was not immediately clear from the `semantic-release` documentation.
-    I raised a PR to improve the SSH key documentation: https://github.com/semantic-release/semantic-release/pull/3950
+    I [raised a PR](https://github.com/semantic-release/semantic-release/pull/3950) to improve the SSH key documentation.
+    Hopefully it will get accepted.
