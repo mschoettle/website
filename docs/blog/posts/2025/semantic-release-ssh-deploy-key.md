@@ -58,7 +58,9 @@ Then, update your workflow as follows:
 
     As the [GitHub docs state](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys):
 
-        Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository.
+    > Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository.
+
+    Unfortunately, GitHub (unlike GitLab) is missing restrictions for secrets to make them only available to protected branches or certain environments.
 
     The [`semantic-release` note about pushing to your repository](https://semantic-release.gitbook.io/semantic-release/recipes/ci-configurations/github-actions#pushing-package.json-changes-to-your-repository) applies here.
 
