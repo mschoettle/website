@@ -11,7 +11,7 @@ dependencies = [
     "mkdocs-material==9.6.23",
 ]
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "pre-commit==4.5.0",
 ]
