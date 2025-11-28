@@ -22,7 +22,7 @@ jobs:
       security-events: write
     steps:
       - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v4.3.1
+        uses: actions/checkout@v6.0.0
         with:
           persist-credentials: false
       - name: Install uv
@@ -41,7 +41,7 @@ jobs:
         if: '!cancelled()'
         env:
           # renovate: datasource=docker depName=davidanson/markdownlint-cli2-rules versioning=semver
-          MARKDOWNLINT_CLI2_VERSION: v0.18.1
+          MARKDOWNLINT_CLI2_VERSION: v0.19.1
         uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
         with:
           image: davidanson/markdownlint-cli2-rules:${{ env.MARKDOWNLINT_CLI2_VERSION }}
@@ -66,7 +66,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4.3.1
+      - uses: actions/checkout@v6.0.0
         with:
           persist-credentials: false
           lfs: true
@@ -89,7 +89,7 @@ jobs:
           call: check
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@v5.9.0
+        uses: docker/metadata-action@v5.10.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: Build Docker image

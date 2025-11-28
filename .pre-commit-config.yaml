@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -52,15 +52,15 @@ repos:
         additional_dependencies: ['json5']
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.22
+    rev: 1.0.0
     hooks:
       - id: mdformat
         language: python
         args: [--number]
         exclude: ^docs/projects/index.md|docs/research/index.md|docs/research/overview.md$
         additional_dependencies:
-          - mdformat-mkdocs==4.3.0
-          - mdformat-frontmatter==2.0.8
+          - mdformat-mkdocs==5.0.0
+          - mdformat-front-matters==1.1.0
           - mdformat-gfm-alerts==2.0.0
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
