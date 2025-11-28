@@ -41,7 +41,7 @@ repos:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.3
+    rev: 0.35.0
     hooks:
       - id: check-github-workflows
         args: ["--verbose"]
@@ -59,24 +59,24 @@ repos:
         args: [--number]
         exclude: ^docs/projects/index.md|docs/research/index.md|docs/research/overview.md$
         additional_dependencies:
-          - mdformat-mkdocs==5.0.0
+          - mdformat-mkdocs==5.0.1
           - mdformat-front-matters==1.1.0
           - mdformat-gfm-alerts==2.0.0
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.18.1
+    rev: v0.19.1
     hooks:
       - id: markdownlint-cli2
 
   # zizmor detects security vulnerabilities in GitHub Actions workflows.
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.11.0
+    rev: v1.17.0
     hooks:
       - id: zizmor
 
   # actionlint for verifying correct syntax in GitHub Actions workflows.
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: v1.7.9
     hooks:
       - id: actionlint
         language: golang
