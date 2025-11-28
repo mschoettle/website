@@ -4,6 +4,8 @@
     "config:recommended",
     // https://docs.renovatebot.com/presets-default/#separatemultiplemajorreleases
     ":separateMultipleMajorReleases",
+    // https://docs.renovatebot.com/presets-default/#maintainlockfilesweekly
+    ":maintainLockFilesWeekly",
     // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
     "customManagers:githubActionsVersions",
     "github>mschoettle/renovate-presets//presets/docker-alpine.json5",
@@ -17,6 +19,8 @@
   // This avoids getting spammed by updates to existing MRs
   // https://docs.renovatebot.com/configuration-options/#rebasewhen
   "rebaseWhen": "conflicted",
+  // https://docs.renovatebot.com/configuration-options/#suppressnotifications
+  "suppressNotifications": ["prEditedNotification"],
   "packageRules": [
     // Combine uv package, uv image, and uv-pre-commit
     {
