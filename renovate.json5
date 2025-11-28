@@ -22,6 +22,7 @@
     {
       "matchPackageNames": ["/uv-pre-commit|uv$/"],
       "groupName": "uv",
+      "automerge": true,
     },
   ],
 }
