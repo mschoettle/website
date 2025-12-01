@@ -7,7 +7,10 @@ categories:
   - Eclipse Modeling Framework (EMF)
 slug: how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars
 ---
+
 # How to use OCL when running EMF standalone with Eclipse Mars
+
+--8<-- "docs/snippets/archive.md"
 
 I previously explained on [how to use OCL when running EMF in standalone](../2012/how-to-use-ocl-when-running-emf-standalone.md) (not as an Eclipse application).
 This method works until Eclipse Luna.

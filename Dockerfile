@@ -1,15 +1,18 @@
 # TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.4.27-python3.12-alpine AS dependencies
+FROM ghcr.io/astral-sh/uv:0.9.13-python3.13-alpine AS dependencies
+
+COPY --from=ghcr.io/astral-sh/uv:0.9.13 /uv /uvx /bin/
 
 RUN apk add --no-cache git
 
 WORKDIR /app
 
-COPY pyproject.toml ./
-COPY uv.lock ./
+RUN --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked
 
-RUN uv export --locked --no-dev --output-file requirements.txt
-RUN uv pip install --system -r requirements.txt
+# add venv to search path
+ENV PATH=/app/.venv/bin:$PATH
 
 
 # development server
@@ -29,6 +32,8 @@ RUN python -m mkdocs build --strict --site-dir /site
 
 
 # production
-FROM joseluisq/static-web-server:2.33.0
+FROM joseluisq/static-web-server:2.39.0
+
+COPY deploy/sws.toml /config.toml
 
 COPY --from=build /site /public

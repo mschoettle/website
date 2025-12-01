@@ -8,7 +8,10 @@ date:
 #   - Struts
 slug: things-discovered-in-struts-2
 ---
+
 # Things discovered in Struts 2
+
+--8<-- "docs/snippets/archive.md"
 
 In this post I write about some things I discovered during the development of a university project where [Struts 2](https://struts.apache.org "Apache Struts project website") is used.
 I note them since I couldn't find them in the [documentation](https://web.archive.org/web/20170717125249/https://struts.apache.org/docs/home.html "Apache Struts 2 documentation") and they were discovered by digging through pieces of documentation, the code, and the web.

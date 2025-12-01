@@ -1,12 +1,13 @@
 ---
 migrated: true
 date:
-  created: 2012-02-06
-  updated: 2012-02-06
+  created: 2012-02-07
+  updated: 2024-12-14
 categories:
   - Thunderbird
 slug: thunderbird-extension-toggle-headers
 ---
+
 # Thunderbird Extension: Toggle Headers
 
 After updating my Thunderbird to the current version there was one extension not working anymore: [Headers Toggle](https://addons.mozilla.org/thunderbird/addon/headers-toggle/).
@@ -19,5 +20,9 @@ I created a new Thunderbird extension called [Toggle Headers](https://addons.thu
 **Update:** The newest version (`0.3`) of [Toggle Headers](https://addons.thunderbird.net/thunderbird/addon/toggle-headers/)  is compatible with _CompactHeaders_.
 When both are used at the same time the current state of the headers view is taken into account:
 
-* when collapsed and ++h++ is pressed, the headers view will be expanded and all headers shown
-* pressing ++h++ again will switch back to the normal headers view but also collapse the view again (the previous state is remembered)
+- when collapsed and ++h++ is pressed, the headers view will be expanded and all headers shown
+- pressing ++h++ again will switch back to the normal headers view but also collapse the view again (the previous state is remembered)
+
+## Newer blog posts
+
+- [Thunderbird Extension: Toggle Headers Updated](../2015/thunderbird-extension-toggle-headers-updated.md)

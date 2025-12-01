@@ -7,7 +7,10 @@ date:
 #   - Office
 slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 ---
+
 # Office End-User License Agreement (EULA) has to be accepted every time
+
+--8<-- "docs/snippets/archive.md"
 
 Do you have to accept the the End-User License Agreement (EULA) of your Office applications every time you start them even though you've accepted them already?
 

@@ -6,28 +6,133 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      # required for upload-sarif action
+      # https://docs.github.com/en/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github#example-workflow-for-sarif-files-generated-outside-of-a-repository
+      security-events: write
     steps:
       - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.0
+        with:
+          persist-credentials: false
       - name: Install uv
-        uses: astral-sh/setup-uv@v3.2.0
+        uses: astral-sh/setup-uv@v7.1.4
         id: setup-uv
         with:
           # renovate: datasource=pypi dependency=uv
-          version: "0.4.27"
-          enable-cache: false
-      - name: Print the installed version
-        run: echo "Installed uv version is ${{ steps.setup-uv.outputs.uv-version }}"
-      - name: Install Python
-        run: uv python install
-      - name: Print python version
-        run: uv python list
-      - name: Check lockfile is up-to-date
-        run: uv lock --locked
-      - name: Run pre-commit
-        uses: pre-commit/action@v3.0.1
-      - name: Build mkdocs site
-        run: uv run mkdocs build --strict
+          version: "0.9.13"
+      - name: Install pre-commit
+        run: |
+          uv sync --locked --only-dev
+      - uses: mschoettle/pre-commit-action@v4.2.3
+        env:
+          SKIP: markdownlint-cli2
+      - name: Run markdownlint
+        if: '!cancelled()'
+        env:
+          # renovate: datasource=docker depName=davidanson/markdownlint-cli2-rules versioning=semver
+          MARKDOWNLINT_CLI2_VERSION: v0.19.1
+        uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
+        with:
+          image: davidanson/markdownlint-cli2-rules:${{ env.MARKDOWNLINT_CLI2_VERSION }}
+          # node user does not have permissions to workspace due to user id mismatch
+          options: -v ${{ github.workspace }}:/workdir --user root
+          # don't fail step if there are violations
+          run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
+      - name: Run the production stack
+        run: docker compose up --build -d
+      - name: Check
+        run: uv run --script .github/redirects/check_redirects.py
+      - name: Stop production stack
+        run: docker compose down
+
+  build:
+    # https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
+    runs-on: ubuntu-24.04-arm
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v6.0.0
+        with:
+          persist-credentials: false
+          lfs: true
+          # fetch the full git history to be able to determine creation dates for pages
+          # see: https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file#note-when-using-build-environments
+          fetch-depth: 0
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3.6.0
+        if: github.event_name != 'pull_request'
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3.11.1
+      - name: Validate build configuration
+        uses: docker/build-push-action@v6.18.0
+        with:
+          call: check
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5.10.0
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      - name: Build Docker image
+        uses: docker/build-push-action@v6.18.0
+        with:
+          # use path context to make .git available in build
+          # https://github.com/docker/build-push-action?tab=readme-ov-file#git-context
+          context: .
+          platforms: linux/arm64
+          # load image into docker to test it in the next step
+          load: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Test image
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: docker run --rm "${TAGS}" --version
+      - name: Push Docker image
+        uses: docker/build-push-action@v6.18.0
+        with:
+          # use path context to make .git available in build
+          # https://github.com/docker/build-push-action?tab=readme-ov-file#git-context
+          context: .
+          platforms: linux/arm64
+          # only push to the registry when it is not a PR (i.e., main branch)
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          # https://docs.docker.com/build/ci/github-actions/cache/#github-cache
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    uses: ./.github/workflows/cd.yml
+    if: success() && github.ref == 'refs/heads/main'
+    needs:
+      - lint
+      - build
+    secrets:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_PORT: ${{ secrets.SSH_PORT }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

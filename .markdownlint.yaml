@@ -5,6 +5,9 @@ line-length: false
 ul-indent:
   indent: 4
 
+ul-style:
+  style: dash
+
 # Allow same heading name if the parent is different
 MD024:
   siblings_only: true
@@ -19,3 +22,17 @@ MD034: false
 # See: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
 # See: https://squidfunk.github.io/mkdocs-material/reference/admonitions/
 MD046: false
+
+max-one-sentence-per-line:
+  # ignore admonition syntax
+  # see: https://github.com/aepfli/markdownlint-rule-max-one-sentence-per-line/pull/52/files#r1579994724
+  ignored_words:
+    - "ie"
+    - "i.e"
+    - "eg"
+    - "e.g"
+    - "etc"
+    - "ex"
+    - "!!"
+    - "??"
+    - "vs"

@@ -8,7 +8,10 @@ categories:
 #   - Howto
 slug: move-directory-from-one-repository-to-another-preserving-history
 ---
+
 # Move directory from one repository to another, preserving history
+
+--8<-- "docs/snippets/archive.md"
 
 I just moved one directory within a Git repository to a directory within another repository including its history.
 For example:
@@ -35,7 +38,9 @@ Here is how I did it, based on this [blog post](https://gbayer.com/development/m
 ## Prepare the source repository
 
 1. Clone `repositoryA` (make a copy, don't use your already existing one)
+
 2. `cd` to it
+
 3. Delete the link to the original repository to avoid accidentally making any remote changes
 
     ```shell
@@ -79,8 +84,8 @@ Here is how I did it, based on this [blog post](https://gbayer.com/development/m
 
 You might need to perform the following optional steps:
 
-* There might be old untracked files.
-You can clean up the repository with the following commands:
+- There might be old untracked files.
+    You can clean up the repository with the following commands:
 
     ```shell
     git reset --hard
@@ -89,14 +94,16 @@ You can clean up the repository with the following commands:
     git clean -df
     ```
 
-* If you just want a new repository for `directoryToKeep`, you should be able to just push it.
-Otherwise follow the second step.
-It's also good at this point to make sure that the result is correct, e.g., using `git log`.
+- If you just want a new repository for `directoryToKeep`, you should be able to just push it.
+    Otherwise follow the second step.
+    It's also good at this point to make sure that the result is correct, e.g., using `git log`.
 
 ## Merge into target repository
 
 1. Clone `repository` (make a copy, don't use your already existing one)
+
 2. `cd` into it
+
 3. Create a remote connection to `repositoryA` as a branch in `repositoryB`.
 
     ```shell
@@ -114,16 +121,19 @@ It's also good at this point to make sure that the result is correct, e.g., usin
         Because your branch and `master` don't have a common base, [git 2.9+](https://github.com/git/git/blob/master/Documentation/RelNotes/2.9.0.txt#L58-L68) will refuse to merge them without the `--allow-unrelated-histories` option.
 
 5. It will create a merge commit to merge the current `HEAD` with your branch.
-The editor for the commit message should appear.
-Enter a meaningful commit message and proceed.
+    The editor for the commit message should appear.
+    Enter a meaningful commit message and proceed.
+
 6. Now you're done and can push.
+
 7. Personally, I would just delete the cloned repositories from step 1 and go back to the actual repository.
+
 8. If everything works, remove `directoryToKeep` from `repositoryA`.
 
 > UPDATES: **Updates to this blog post**
 >
-> * **19.01.2017:** Updated step 2.4 with additional option (Thanks, Paul!)
-> * **18.12.2018:** Updated step 1.5 with additional option to preserve tags (Thanks, Sandip!)
-> * **28.10.2019:** If you have files tracked by `git-lfs`, there are is an additional step you need to perform
-> After cloning the repository at the beginning, perform `git lfs fetch --all` ([source](https://stackoverflow.com/a/49366471)).
-> As Evan pointed out in the comments, if the directory that should be kept does not have any large files, he performed `git lfs uninstall --local` to get rid of them.
+> - **19.01.2017:** Updated step 2.4 with additional option (Thanks, Paul!)
+> - **18.12.2018:** Updated step 1.5 with additional option to preserve tags (Thanks, Sandip!)
+> - **28.10.2019:** If you have files tracked by `git-lfs`, there are is an additional step you need to perform
+>     After cloning the repository at the beginning, perform `git lfs fetch --all` ([source](https://stackoverflow.com/a/49366471)).
+>     As Evan pointed out in the comments, if the directory that should be kept does not have any large files, he performed `git lfs uninstall --local` to get rid of them.

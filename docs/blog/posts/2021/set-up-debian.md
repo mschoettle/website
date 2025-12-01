@@ -2,7 +2,7 @@
 migrated: true
 date:
   created: 2021-03-18
-  updated: 2021-03-18
+  updated: 2024-04-04
 categories:
 #   - Howto
   - Linux
@@ -14,6 +14,7 @@ tags:
   - Hardening
 slug: set-up-debian
 ---
+
 # Set Up Debian
 
 Here are the steps I use to set up and configure a fresh install of Debian on a server.
@@ -21,6 +22,7 @@ Here are the steps I use to set up and configure a fresh install of Debian on a 
 <!-- more -->
 
 1. Log in as root: `ssh root@<ip or domain.tld>`
+
 2. Change the root password:
 
     ```shell
@@ -73,6 +75,7 @@ Now, create a user for yourself that you will be using and give this user rights
     ```
 
 4. Now, try to log in from a second terminal using that user
+
 5. Optional (but strongly recommended): Add your public key to log in without a password:
 
     ```shell
@@ -88,12 +91,15 @@ Now that you have your own user, let's harden the SSH daemon by changing the por
     ```
 
 2. Change `Port` to something other than the default `22`
+
 3. Change `PermitRootLogin` to `no`
+
 4. If you want to disable logins by password and only allow key-based authentication, change `PasswordAuthentication` to `no`
+
 5. Restart `sshd`:
 
     ```shell
-    sudo systemctl restart ssh
+    sudo systemctl restart sshd
     ```
 
 WARNING: Be careful that you don't lock yourself out.
@@ -133,13 +139,14 @@ Now, install a firewall (here `ufw`) to only open the ports that you really need
 
 5. Try to log in from another terminal to verify it is still working.
 
-That's pretty much it. You might also want to [set up msmtp](./setting-up-msmtp.md) so that you receive email from your system, cron etc.
+That's pretty much it.
+You might also want to [set up msmtp](./setting-up-msmtp.md) so that you receive email from your system, cron etc.
 There are also the following packages I find useful which I install:
 
-* `htop`: Allows to interactively monitor the system resources and processes.
-* `icdiff`: A nice tool providing side-by-side comparison with color highlighting.
-* `dnsutils`: Essential for diagnosing/testing network stuff.
-For example, it provides _dig_._ntp_: Time synchronization.
-* [`curl`](https://curl.se/)
-* [`ncdu`](https://dev.yorhel.nl/ncdu): Nice tool to find big files.
-* `tree`: A nice tool to show directories in a tree-like format.
+- `htop`: Allows to interactively monitor the system resources and processes.
+- `icdiff`: A nice tool providing side-by-side comparison with color highlighting.
+- `dnsutils`: Essential for diagnosing/testing network stuff.
+    For example, it provides _dig_._ntp_: Time synchronization.
+- [`curl`](https://curl.se/)
+- [`ncdu`](https://dev.yorhel.nl/ncdu): Nice tool to find big files.
+- `tree`: A nice tool to show directories in a tree-like format.

@@ -8,7 +8,10 @@ categories:
 #   - Java
 slug: modifying-the-new-child-sub-menu-items-in-emf
 ---
+
 # Modifying the "New Child" sub-menu items in EMF
+
+--8<-- "docs/snippets/archive.md"
 
 I was just looking into a way to adjust the text of the items in the "New Child" (the same applies to "New Sibling" as well) sub-menu of the generated editor with EMF.
 By default the items just show the type name of the element to create.
@@ -21,6 +24,8 @@ The text for this action is determined by `CreateChildCommand.getText()`, which 
 The default case is implemented in `ItemProviderAdapter`.
 
 There seem to be two approaches, depending on what your goal is.
+
+<!-- more -->
 
 ## General Approach
 

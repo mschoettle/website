@@ -1,13 +1,16 @@
 ---
 migrated: true
 date:
-  created: 2015-08-18
-  updated: 2015-08-18
+  created: 2015-08-19
+  updated: 2015-08-19
 # categories:
 #   - Java
 slug: mt4j-with-processing-2
 ---
+
 # MT4j with Processing 2
+
+--8<-- "docs/snippets/archive.md"
 
 In our [TouchCORE](https://djeminy.github.io/touchcore/) project at the [Software Engineering Lab](https://www.cs.mcgill.ca/~joerg/SEL/SEL_Home.html) at McGill University, we use [MT4j](https://www.mt4j.org) (Multitouch for Java) for the multitouch-enabled user interface.
 

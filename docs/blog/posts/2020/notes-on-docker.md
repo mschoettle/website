@@ -14,6 +14,7 @@ tags:
   - Howto
 slug: notes-on-docker
 ---
+
 # Notes on Docker
 
 I've never really followed the hype around Docker but to be honest also never really taken the time to look into it more.
@@ -90,7 +91,8 @@ networks:
 ## Running the database on the host
 
 As outlined previously, I have a [_MariaDB_ instance running on the host](./notes-on-setting-up-my-raspberry-pi.md).
-Why is it not running in a container? I did consider it but containers are supposed to be stateless and the [general recommendation is to not run production databases in Docker](https://vsupalov.com/database-in-docker/).
+Why is it not running in a container?
+I did consider it but containers are supposed to be stateless and the [general recommendation is to not run production databases in Docker](https://vsupalov.com/database-in-docker/).
 There is an interesting discussion about this on [Reddit](https://www.reddit.com/r/docker/comments/amo2cc/running_production_databases_in_docker/) as well.
 In the end, it seemed like a risk (which I am not willing to take).
 
@@ -107,7 +109,8 @@ _MariaDB_ is then bound to the host IP of that network.
 A disadvantage is that then only Docker containers within that network can access the database.
 So if you have any other application on the host that needs to access the database that doesn't work.
 
-When creating database users, instead of specifying `'user'@'localhost'` you could say `'user'@'172.22.0.%'`. This assumes that your subnet is `172.22.0.0/24`.
+When creating database users, instead of specifying `'user'@'localhost'` you could say `'user'@'172.22.0.%'`.
+This assumes that your subnet is `172.22.0.0/24`.
 This way you don't need to know the specific IP address of a container.
 Also, the IP address of a container is not guaranteed to be the same if you restart your containers.
 To create a database with a user do the following in the SQL console (when running `sudo mysql` from the host):
@@ -122,7 +125,8 @@ FLUSH PRIVILEGES;
 
 If ever you perform a `docker logs <containername>` you most likely will notice that the timezone does not match your host's timezone (unless you happen to live in the _GMT_ timezone :smile:).
 By default, [Docker syncs the time but not timezone](https://stackoverflow.com/q/22800624), so the timezone is `GMT`/`UTC`.
-Some images do support the [setting of an environment variable](https://github.com/docker-library/redis/issues/127) `TZ` specifying the timezone but it is not always the case. If you want to support this for your own image, you need to install the `tzdata` system package.
+Some images do support the [setting of an environment variable](https://github.com/docker-library/redis/issues/127) `TZ` specifying the timezone but it is not always the case.
+If you want to support this for your own image, you need to install the `tzdata` system package.
 However, you can also simply add a bind mount to your volumes:
 
 ```yaml
@@ -134,4 +138,4 @@ This way, irregardless of the host on which a container is run, the timezone mat
 
 > UPDATES: **Updates to this blog post**
 >
-> * **23.10.2024:** Updated default network format in `compose` example to current format.
+> - **23.10.2024:** Updated default network format in `compose` example to current format.

@@ -14,6 +14,7 @@ tags:
   - Howto
 slug: migrating-data-to-nextcloud
 ---
+
 # Migrating Data to Nextcloud
 
 If you need to migrate your data to Nextcloud you probably don't want to upload all your files through the web interface.
@@ -30,7 +31,8 @@ Even then, you can use the same procedure I used.
 
 ## Copy data to external drive
 
-For the external drive, I formatted it as _ExFat_ so that my Mac can write to it. On the Raspberry Pi, I had to install `exfat-fuse`.
+For the external drive, I formatted it as _ExFat_ so that my Mac can write to it.
+On the Raspberry Pi, I had to install `exfat-fuse`.
 I tried _FAT32_ as it is supported out-of-the-box by both but it has a limitation on maximum file size.
 I considered using _ext4_ but write support on the Mac supposedly is not stable.
 

@@ -13,6 +13,7 @@ tags:
   - Setup
 slug: notes-on-setting-up-my-raspberry-pi
 ---
+
 # Notes on Setting Up My Raspberry Pi
 
 I recently purchased a [Raspberry Pi 4 Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) for some projects at home.
@@ -41,22 +42,23 @@ To enable it, a file called `ssh` needs to be added to the root of the volume on
 See [step 3 of the SSH Pi documentation](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md) for more details.
 Basically `cd` to the root of the volume (most likely `/Volumes/boot`) on your machine and do `touch ssh`.
 
-With this it is possible to plug the card into the RPi and boot it. Then `ssh pi@<IPOfRaspberryPi>` should work.
+With this it is possible to plug the card into the RPi and boot it.
+Then `ssh pi@<IPOfRaspberryPi>` should work.
 
 ## Setting Up Raspbian
 
 Since Raspbian is based on Debian you can follow [any guide on initial server setup for Debian](../2021/set-up-debian.md) (or Raspbian).
 In short, I basically did the following steps:
 
-* Update Raspbian using `apt`
-* Run `sudo raspi-config` to:
-    * Change password of user `pi`
-    * Change hostname
-    * Set localisation options (locale, timezone etc.)
-* Create my own user and give him `sudo` rights
-* Harden SSH server config (different port and no root login)
-* Enforce password request when sudoing (for user `pi`, see `/etc/sudo/sudoers.d/010_pi-nopasswd`, change `NOPASSWD` to `PASSWD`)
-* Install [`ufw`](https://wiki.ubuntu.com/UncomplicatedFirewall) and allow SSH on the chosen port
+- Update Raspbian using `apt`
+- Run `sudo raspi-config` to:
+    - Change password of user `pi`
+    - Change hostname
+    - Set localisation options (locale, timezone etc.)
+- Create my own user and give him `sudo` rights
+- Harden SSH server config (different port and no root login)
+- Enforce password request when sudoing (for user `pi`, see `/etc/sudo/sudoers.d/010_pi-nopasswd`, change `NOPASSWD` to `PASSWD`)
+- Install [`ufw`](https://wiki.ubuntu.com/UncomplicatedFirewall) and allow SSH on the chosen port
 
 It's important to test certain changes (firewall, SSH config changes) first by keeping the current terminal session and logging in a second time.
 Otherwise, you might lock yourself out.
@@ -175,6 +177,7 @@ Moving the MariaDB data directory is quite simple:
     ```
 
 3. Change `datadir` under `[mysqld]` in `/etc/mysql/mariadb.conf.d/50-server.conf` to the new location
+
 4. Start the service again:
 
     ```shell
@@ -244,13 +247,13 @@ If you want to change this, add the following line to `/etc/lighttpd/external.co
 server.port := 8080
 ```
 
-OPTIONAL: **Changing the hostname**
-    If you also want to make Pi-Hole available under a different hostname (e.g., through the use of a reverse proxy), there is another change you need to do in order for the automatic redirect to the admin interface to work.
-    Add the following line to `external.conf`:
-
-    ```lighttpd
-    setenv.add-environment = ("virtual_host" => "pihole.domain.tld")
-    ```
+> OPTIONAL: **Changing the hostname**
+> If you also want to make Pi-Hole available under a different hostname (e.g., through the use of a reverse proxy), there is another change you need to do in order for the automatic redirect to the admin interface to work.
+> Add the following line to `external.conf`:
+>
+> ```lighttpd
+> setenv.add-environment = ("virtual_host" => "pihole.domain.tld")
+> ```
 
 Then restart the `lighttpd` service using `systemctl`:
 
@@ -274,6 +277,6 @@ Now a `dig custom.host.name` should return the IP address of your server.
 
 > UPDATES: **Updates to this blog post**
 >
-> * **24.05.2020:** Updated Pi-hole sections with changes introduced in Pi-hole v5.
-> * **22.10.2024:** Improved section ensuring the _MariaDB_ service starts after the disk is mounted:
-Custom unit file so that changes don't get overwritten on package upgrades.
+> - **24.05.2020:** Updated Pi-hole sections with changes introduced in Pi-hole v5.
+> - **22.10.2024:** Improved section ensuring the _MariaDB_ service starts after the disk is mounted:
+>     Custom unit file so that changes don't get overwritten on package upgrades.
