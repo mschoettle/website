@@ -4,8 +4,10 @@ date:
   created: 2013-04-25
   updated: 2017-12-12
 categories:
-#   - Howto
   - Mac OS
+tags:
+  - howto
+  - macos
 slug: reducing-file-size-of-a-pdf-on-mac-os
 ---
 

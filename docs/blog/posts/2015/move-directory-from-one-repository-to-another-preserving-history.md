@@ -5,7 +5,10 @@ date:
   updated: 2019-10-28
 categories:
   - Git
-#   - Howto
+tags:
+  - archived
+  - git
+  - howto
 slug: move-directory-from-one-repository-to-another-preserving-history
 ---
 

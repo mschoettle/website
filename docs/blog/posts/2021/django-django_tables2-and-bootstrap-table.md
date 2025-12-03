@@ -5,12 +5,11 @@ date:
   updated: 2023-06-23
 categories:
   - Django
-#   - Howto
 tags:
-  - Django
-  - Howto
-  - Python
-  - Bootstrap
+  - bootstrap
+  - django
+  - howto
+  - python
 slug: django-django_tables2-and-bootstrap-table
 ---
 

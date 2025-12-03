@@ -4,17 +4,13 @@ date:
   created: 2020-01-16
   updated: 2022-12-17
 categories:
-#   - Docker
-#   - Howto
-#   - Nextcloud
-#   - Raspberry Pi
   - Self-hosting
 tags:
-  - Docker
-  - Howto
-  - Nextcloud
-  - Raspberry Pi
-  - Reverse Proxy
+  - docker
+  - howto
+  - nextcloud
+  - raspberry pi
+  - self hosting
 slug: notes-on-traefik-v2-nextcloud-etc
 ---
 

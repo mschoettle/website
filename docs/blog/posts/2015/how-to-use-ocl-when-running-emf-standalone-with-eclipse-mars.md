@@ -5,6 +5,10 @@ date:
   updated: 2015-08-18
 categories:
   - Eclipse Modeling Framework (EMF)
+tags:
+  - archived
+  - howto
+  - java
 slug: how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars
 ---
 

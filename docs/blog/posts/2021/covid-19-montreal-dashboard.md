@@ -6,11 +6,13 @@ date:
 categories:
   - Projects
 tags:
-  - Python
+  - covid-19
+  - dash
+  - open source
   - pandas
-  - Plotly
-  - Dash
-  - COVID-19
+  - plotly
+  - projects
+  - python
 slug: covid-19-montreal-dashboard
 ---
 

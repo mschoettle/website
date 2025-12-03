@@ -6,8 +6,9 @@ date:
 categories:
   - Projects
 tags:
-  - Python
-  - Scraping
+  - projects
+  - python
+  - scraping
 slug: sepaq-availability-scraper
 ---
 

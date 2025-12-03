@@ -4,14 +4,13 @@ date:
   created: 2020-01-14
   updated: 2020-01-14
 categories:
-#   - Howto
-#   - Nextcloud
   - Self-hosting
 tags:
-  - Raspberry Pi
-  - Nextcloud
-  - Migration
-  - Howto
+  - howto
+  - nextcloud
+  - migration
+  - raspberry pi
+  - self hosting
 slug: migrating-data-to-nextcloud
 ---
 

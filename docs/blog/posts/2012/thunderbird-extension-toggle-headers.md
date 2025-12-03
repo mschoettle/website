@@ -5,6 +5,9 @@ date:
   updated: 2024-12-14
 categories:
   - Thunderbird
+tags:
+  - thunderbird
+  - projects
 slug: thunderbird-extension-toggle-headers
 ---
 
