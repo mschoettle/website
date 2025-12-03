@@ -5,7 +5,10 @@ date:
   updated: 2015-08-18
 categories:
   - Git
-#   - Howto
+tags:
+  - archived
+  - git
+  - howto
 slug: move-more-than-one-directory-into-a-new-repository
 ---
 

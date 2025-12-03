@@ -1,6 +1,9 @@
 ---
 date:
   created: 2024-12-17
+tags:
+  - projects
+  - self hosting
 ---
 
 # Blog Relaunched

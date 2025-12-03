@@ -5,6 +5,9 @@ date:
   updated: 2015-11-10
 categories:
   - Thunderbird
+tags:
+  - projects
+  - thunderbird
 slug: thunderbird-extension-toggle-headers-updated
 ---
 

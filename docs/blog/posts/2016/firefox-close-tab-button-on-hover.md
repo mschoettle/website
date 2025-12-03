@@ -5,9 +5,11 @@ date:
   updated: 2023-05-28
 categories:
   - Firefox
-#   - Howto
+tags:
+  - css
+  - firefox
+  - howto
 slug: firefox-close-tab-button-on-hover
-pin: true
 ---
 
 # Firefox close tab button on hover

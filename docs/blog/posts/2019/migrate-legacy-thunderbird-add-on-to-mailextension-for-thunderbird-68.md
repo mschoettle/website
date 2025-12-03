@@ -5,6 +5,9 @@ date:
   updated: 2019-12-11
 categories:
   - Thunderbird
+tags:
+  - projects
+  - thunderbird
 slug: migrate-legacy-thunderbird-add-on-to-mailextension-for-thunderbird-68
 ---
 

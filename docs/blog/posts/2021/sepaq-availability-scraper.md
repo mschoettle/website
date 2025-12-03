@@ -5,6 +5,10 @@ date:
   updated: 2021-05-12
 categories:
   - Projects
+tags:
+  - projects
+  - python
+  - scraping
 slug: sepaq-availability-scraper
 ---
 

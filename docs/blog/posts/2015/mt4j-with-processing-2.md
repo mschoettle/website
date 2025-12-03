@@ -3,8 +3,10 @@ migrated: true
 date:
   created: 2015-08-19
   updated: 2015-08-19
-# categories:
-#   - Java
+tags:
+  - archived
+  - java
+  - open source
 slug: mt4j-with-processing-2
 ---
 

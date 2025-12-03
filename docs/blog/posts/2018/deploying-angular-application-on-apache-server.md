@@ -4,9 +4,11 @@ date:
   created: 2018-09-12
   updated: 2018-09-12
 categories:
-#   - Frameworks
-#   - Hints
   - Web Development
+tags:
+  - apache
+  - angular
+  - howto
 slug: deploying-angular-application-on-apache-server
 ---
 

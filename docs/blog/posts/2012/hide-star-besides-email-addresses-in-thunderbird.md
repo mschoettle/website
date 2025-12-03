@@ -5,7 +5,11 @@ date:
   updated: 2012-02-07
 categories:
   - Thunderbird
-#   - Tweaks
+tags:
+  - archived
+  - css
+  - thunderbird
+  - tweaks
 slug: hide-star-besides-email-addresses-in-thunderbird
 ---
 

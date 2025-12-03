@@ -5,6 +5,10 @@ date:
   updated: 2023-05-28
 categories:
   - Firefox
+tags:
+  - css
+  - firefox
+  - projects
 slug: digging-into-the-firefox-ui-for-the-tab-close-button
 ---
 

@@ -4,8 +4,12 @@ date:
   created: 2021-05-12
   updated: 2021-05-12
 categories:
-#   - Howto
   - Linux
+tags:
+  - automation
+  - linux/debian
+  - howto
+  - self hosting
 slug: setting-up-msmtp
 ---
 

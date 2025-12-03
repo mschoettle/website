@@ -20,6 +20,7 @@ nav:
     - privacy-policy.md
 
 not_in_nav: |
+  tags.md
   research/overview.md
   snippets/archive.md
 
@@ -99,6 +100,8 @@ plugins:
         - Self-hosting
         - Thunderbird
         - Web Development
+  - tags:
+      tags_hierarchy: true
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
   - git-revision-date-localized:
       enabled: !ENV [CI, false]

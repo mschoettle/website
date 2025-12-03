@@ -4,8 +4,11 @@ date:
   created: 2021-03-18
   updated: 2024-04-04
 categories:
-#   - Howto
   - Linux
+tags:
+  - howto
+  - linux/debian
+  - self hosting
 slug: set-up-debian
 ---
 

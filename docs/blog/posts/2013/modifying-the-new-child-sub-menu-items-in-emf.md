@@ -5,7 +5,10 @@ date:
   updated: 2013-05-02
 categories:
   - Eclipse Modeling Framework (EMF)
-#   - Java
+tags:
+  - archived
+  - java
+  - tips
 slug: modifying-the-new-child-sub-menu-items-in-emf
 ---
 

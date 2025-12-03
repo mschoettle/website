@@ -1,6 +1,8 @@
 ---
 date:
   created: 2025-04-01
+tags:
+  - tips
 ---
 
 # Stopping VSCode Python Extension from Changing your Terminal Environment

@@ -3,9 +3,10 @@ migrated: true
 date:
   created: 2011-04-14
   updated: 2011-04-14
-# categories:
-#   - Java
-#   - Struts
+tags:
+  - archived
+  - java
+  - structs
 slug: things-discovered-in-struts-2
 ---
 

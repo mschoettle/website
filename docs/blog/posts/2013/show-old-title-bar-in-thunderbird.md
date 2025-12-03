@@ -5,6 +5,10 @@ date:
   updated: 2013-05-25
 categories:
   - Thunderbird
+tags:
+  - archived
+  - thunderbird
+  - tweaks
 slug: show-old-title-bar-in-thunderbird
 ---
 

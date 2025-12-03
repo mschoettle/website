@@ -5,6 +5,10 @@ date:
   updated: 2017-12-08
 categories:
   - Mac OS
+tags:
+  - archived
+  - macos
+  - tips
 slug: airdrop-on-macos-working-unreliably
 ---
 

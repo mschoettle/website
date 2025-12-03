@@ -4,9 +4,12 @@ date:
   created: 2020-01-06
   updated: 2024-10-22
 categories:
-#   - Howto
-#   - Raspberry Pi
   - Self-hosting
+tags:
+  - howto
+  - linux
+  - raspberry pi
+  - self hosting
 slug: notes-on-setting-up-my-raspberry-pi
 ---
 
