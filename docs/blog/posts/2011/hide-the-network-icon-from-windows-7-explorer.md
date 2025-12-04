@@ -1,11 +1,11 @@
 ---
-migrated: true
 date:
   created: 2011-03-30
   updated: 2024-10-16
 # categories:
 #   - Tweaks
 #   - Windows
+migrated: true
 slug: hide-the-network-icon-from-windows-7-explorer
 ---
 

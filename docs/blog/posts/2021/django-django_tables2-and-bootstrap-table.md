@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2021-05-28
-  updated: 2023-06-23
 categories:
   - Django
 #   - Howto
+date:
+  created: 2021-05-28
+  updated: 2023-06-23
+migrated: true
 slug: django-django_tables2-and-bootstrap-table
 ---
 

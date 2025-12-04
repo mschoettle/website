@@ -1,10 +1,10 @@
 ---
-migrated: true
+categories:
+  - Thunderbird
 date:
   created: 2019-12-11
   updated: 2019-12-11
-categories:
-  - Thunderbird
+migrated: true
 slug: migrate-legacy-thunderbird-add-on-to-mailextension-for-thunderbird-68
 ---
 

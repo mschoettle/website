@@ -1,10 +1,10 @@
 ---
-migrated: true
+categories:
+  - Thunderbird
 date:
   created: 2013-05-25
   updated: 2013-05-25
-categories:
-  - Thunderbird
+migrated: true
 slug: show-old-title-bar-in-thunderbird
 ---
 

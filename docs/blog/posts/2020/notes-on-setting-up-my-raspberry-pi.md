@@ -1,12 +1,12 @@
 ---
-migrated: true
-date:
-  created: 2020-01-06
-  updated: 2024-10-22
 categories:
 #   - Howto
 #   - Raspberry Pi
   - Self-hosting
+date:
+  created: 2020-01-06
+  updated: 2024-10-22
+migrated: true
 slug: notes-on-setting-up-my-raspberry-pi
 ---
 

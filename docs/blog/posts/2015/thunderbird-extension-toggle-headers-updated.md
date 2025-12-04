@@ -1,10 +1,10 @@
 ---
-migrated: true
+categories:
+  - Thunderbird
 date:
   created: 2015-11-10
   updated: 2015-11-10
-categories:
-  - Thunderbird
+migrated: true
 slug: thunderbird-extension-toggle-headers-updated
 ---
 

@@ -1,10 +1,10 @@
 ---
-migrated: true
 date:
   created: 2012-05-10
   updated: 2012-05-10
 # categories:
 #   - Subversion
+migrated: true
 slug: using-multiple-svn-clients-with-the-svnssh-protocol-and-a-putty-profile
 ---
 

@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2021-03-18
-  updated: 2024-04-04
 categories:
 #   - Howto
   - Linux
+date:
+  created: 2021-03-18
+  updated: 2024-04-04
+migrated: true
 slug: set-up-debian
 ---
 

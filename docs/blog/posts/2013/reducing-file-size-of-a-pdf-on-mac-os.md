@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2013-04-25
-  updated: 2017-12-12
 categories:
 #   - Howto
   - Mac OS
+date:
+  created: 2013-04-25
+  updated: 2017-12-12
+migrated: true
 slug: reducing-file-size-of-a-pdf-on-mac-os
 ---
 
