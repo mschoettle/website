@@ -1,13 +1,13 @@
 ---
-migrated: true
-date:
-  created: 2020-01-08
-  updated: 2024-10-23
 categories:
   - Docker
 #   - Howto
 #   - Raspberry Pi
 #   - Self-hosting
+date:
+  created: 2020-01-08
+  updated: 2024-10-23
+migrated: true
 slug: notes-on-docker
 ---
 

@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2021-05-12
-  updated: 2021-05-12
 categories:
 #   - Howto
   - Linux
+date:
+  created: 2021-05-12
+  updated: 2021-05-12
+migrated: true
 slug: setting-up-msmtp
 ---
 

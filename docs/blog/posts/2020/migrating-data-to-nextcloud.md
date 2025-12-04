@@ -1,12 +1,12 @@
 ---
-migrated: true
-date:
-  created: 2020-01-14
-  updated: 2020-01-14
 categories:
 #   - Howto
 #   - Nextcloud
   - Self-hosting
+date:
+  created: 2020-01-14
+  updated: 2020-01-14
+migrated: true
 slug: migrating-data-to-nextcloud
 ---
 

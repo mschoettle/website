@@ -1,10 +1,10 @@
 ---
-migrated: true
+categories:
+  - Projects
 date:
   created: 2021-05-12
   updated: 2021-05-12
-categories:
-  - Projects
+migrated: true
 slug: sepaq-availability-scraper
 ---
 

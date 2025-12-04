@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2019-11-14
-  updated: 2019-11-14
 categories:
 #   - Hints
   - iOS
+date:
+  created: 2019-11-14
+  updated: 2019-11-14
+migrated: true
 slug: how-to-drag-music-and-videos-onto-iphone-ipad-using-itunes
 ---
 

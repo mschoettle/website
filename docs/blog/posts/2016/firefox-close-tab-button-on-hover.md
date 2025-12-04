@@ -1,13 +1,13 @@
 ---
-migrated: true
-date:
-  created: 2016-01-04
-  updated: 2023-05-28
 categories:
   - Firefox
 #   - Howto
-slug: firefox-close-tab-button-on-hover
+date:
+  created: 2016-01-04
+  updated: 2023-05-28
+migrated: true
 pin: true
+slug: firefox-close-tab-button-on-hover
 ---
 
 # Firefox close tab button on hover

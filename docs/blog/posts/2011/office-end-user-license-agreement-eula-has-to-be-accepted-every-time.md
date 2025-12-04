@@ -1,10 +1,10 @@
 ---
-migrated: true
 date:
   created: 2011-03-30
   updated: 2011-03-30
 # categories:
 #   - Office
+migrated: true
 slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 ---
 

@@ -1,14 +1,14 @@
 ---
-migrated: true
-date:
-  created: 2020-01-16
-  updated: 2022-12-17
 categories:
 #   - Docker
 #   - Howto
 #   - Nextcloud
 #   - Raspberry Pi
   - Self-hosting
+date:
+  created: 2020-01-16
+  updated: 2022-12-17
+migrated: true
 slug: notes-on-traefik-v2-nextcloud-etc
 ---
 

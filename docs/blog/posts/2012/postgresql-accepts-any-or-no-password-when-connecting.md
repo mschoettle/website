@@ -1,8 +1,8 @@
 ---
-migrated: true
 date:
   created: 2012-05-19
   updated: 2012-05-19
+migrated: true
 slug: postgresql-accepts-any-or-no-password-when-connecting
 ---
 

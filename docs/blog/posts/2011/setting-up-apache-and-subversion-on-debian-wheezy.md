@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2011-03-21
-  updated: 2024-10-17
 categories:
 #   - Howto
   - Linux
+date:
+  created: 2011-03-21
+  updated: 2024-10-17
+migrated: true
 slug: setting-up-apache-and-subversion-on-debian-wheezy
 ---
 

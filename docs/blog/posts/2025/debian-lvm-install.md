@@ -1,8 +1,8 @@
 ---
-date:
-  created: 2025-04-04
 categories:
   - Linux
+date:
+  created: 2025-04-04
 ---
 
 # Installing Debian on a Server with Partitions using LVM

@@ -1,11 +1,11 @@
 ---
-migrated: true
-date:
-  created: 2012-02-07
-  updated: 2012-02-07
 categories:
   - Thunderbird
 #   - Tweaks
+date:
+  created: 2012-02-07
+  updated: 2012-02-07
+migrated: true
 slug: hide-star-besides-email-addresses-in-thunderbird
 ---
 
