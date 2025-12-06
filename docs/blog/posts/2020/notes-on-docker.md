@@ -1,6 +1,6 @@
 ---
 categories:
-  - Self-hosting
+  - Docker
 date:
   created: 2020-01-08
   updated: 2024-10-23
@@ -11,7 +11,6 @@ tags:
   - howto
   - raspberry pi
   - self hosting
-  - Docker
 ---
 
 # Notes on Docker
