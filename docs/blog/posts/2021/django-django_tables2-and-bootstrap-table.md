@@ -6,7 +6,7 @@ date:
 categories:
   - Django
 tags:
-  - bootstrap
+  - css
   - django
   - howto
   - python

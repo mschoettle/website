@@ -6,8 +6,7 @@ date:
 categories:
   - Projects
 tags:
-  - covid-19
-  - dash
+  - data processing
   - open source
   - pandas
   - plotly

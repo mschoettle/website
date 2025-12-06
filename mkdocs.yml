@@ -79,6 +79,9 @@ extra:
     - icon: fontawesome/brands/twitter
       name: schoettlem on Twitter
       link: https://twitter.com/schoettlem
+  tags:
+    # add default tag to force material-pound (hash) to be shown in front of all tags
+    default: default
 
 plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/privacy/

@@ -5,7 +5,6 @@ date:
   updated: 2011-03-30
 tags:
   - archived
-  - office
   - tips
 slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 ---

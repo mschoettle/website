@@ -6,7 +6,7 @@ date:
 tags:
   - archived
   - java
-  - structs
+  - windows
 slug: things-discovered-in-struts-2
 ---
 

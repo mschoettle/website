@@ -9,6 +9,7 @@ tags:
   - css
   - firefox
   - howto
+  - tweaks
 slug: firefox-close-tab-button-on-hover
 ---
 

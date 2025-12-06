@@ -6,6 +6,7 @@ date:
 categories:
   - Projects
 tags:
+  - open source
   - projects
   - python
   - scraping

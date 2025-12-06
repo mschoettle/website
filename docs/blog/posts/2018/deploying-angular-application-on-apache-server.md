@@ -7,7 +7,6 @@ categories:
   - Web Development
 tags:
   - apache
-  - angular
   - howto
 slug: deploying-angular-application-on-apache-server
 ---
