@@ -1,12 +1,15 @@
 ---
 categories:
   - Eclipse Modeling Framework (EMF)
-#   - Java
 date:
   created: 2013-05-02
   updated: 2013-05-02
 migrated: true
 slug: modifying-the-new-child-sub-menu-items-in-emf
+tags:
+  - archived
+  - java
+  - tips
 ---
 
 # Modifying the "New Child" sub-menu items in EMF

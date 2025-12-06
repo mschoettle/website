@@ -1,12 +1,15 @@
 ---
 categories:
   - Git
-#   - Howto
 date:
   created: 2015-06-19
   updated: 2019-10-28
 migrated: true
 slug: move-directory-from-one-repository-to-another-preserving-history
+tags:
+  - archived
+  - git
+  - howto
 ---
 
 # Move directory from one repository to another, preserving history

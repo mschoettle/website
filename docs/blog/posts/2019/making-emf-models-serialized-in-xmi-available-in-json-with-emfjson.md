@@ -1,12 +1,14 @@
 ---
 categories:
   - Eclipse Modeling Framework (EMF)
-#   - Java
 date:
   created: 2019-12-12
   updated: 2019-12-12
 migrated: true
 slug: making-emf-models-serialized-in-xmi-available-in-json-with-emfjson
+tags:
+  - archived
+  - java
 ---
 
 # Making EMF models serialized in XMI available in JSON with `emfjson`

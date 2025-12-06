@@ -6,6 +6,10 @@ date:
   updated: 2023-05-28
 migrated: true
 slug: digging-into-the-firefox-ui-for-the-tab-close-button
+tags:
+  - css
+  - firefox
+  - projects
 ---
 
 # Digging into the Firefox UI for the tab close button

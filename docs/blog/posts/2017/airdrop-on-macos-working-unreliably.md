@@ -6,6 +6,10 @@ date:
   updated: 2017-12-08
 migrated: true
 slug: airdrop-on-macos-working-unreliably
+tags:
+  - archived
+  - macos
+  - tips
 ---
 
 # AirDrop on macOS working unreliably

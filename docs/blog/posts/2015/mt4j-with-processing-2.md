@@ -2,10 +2,13 @@
 date:
   created: 2015-08-19
   updated: 2015-08-19
-# categories:
-#   - Java
 migrated: true
 slug: mt4j-with-processing-2
+tags:
+  - archived
+  - java
+  - open source
+  - projects
 ---
 
 # MT4j with Processing 2

@@ -20,6 +20,7 @@ nav:
     - privacy-policy.md
 
 not_in_nav: |
+  tags.md
   research/overview.md
   snippets/archive.md
 
@@ -78,6 +79,9 @@ extra:
     - icon: fontawesome/brands/twitter
       name: schoettlem on Twitter
       link: https://twitter.com/schoettlem
+  tags:
+    # add default tag to force material-pound (hash) to be shown in front of all tags
+    default: default
 
 plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
@@ -99,6 +103,10 @@ plugins:
         - Self-hosting
         - Thunderbird
         - Web Development
+  - tags:
+      tags_hierarchy: true
+      shadow_tags:
+        - archived
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
   - git-revision-date-localized:
       enabled: !ENV [CI, false]

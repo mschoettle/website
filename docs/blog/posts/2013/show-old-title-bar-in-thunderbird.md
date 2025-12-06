@@ -6,6 +6,10 @@ date:
   updated: 2013-05-25
 migrated: true
 slug: show-old-title-bar-in-thunderbird
+tags:
+  - archived
+  - thunderbird
+  - tweaks
 ---
 
 # Show old title bar in Thunderbird

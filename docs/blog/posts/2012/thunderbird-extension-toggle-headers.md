@@ -6,6 +6,9 @@ date:
   updated: 2024-12-14
 migrated: true
 slug: thunderbird-extension-toggle-headers
+tags:
+  - thunderbird
+  - projects
 ---
 
 # Thunderbird Extension: Toggle Headers

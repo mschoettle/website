@@ -1,12 +1,16 @@
 ---
 categories:
   - Thunderbird
-#   - Tweaks
 date:
   created: 2012-02-07
   updated: 2012-02-07
 migrated: true
 slug: hide-star-besides-email-addresses-in-thunderbird
+tags:
+  - archived
+  - css
+  - thunderbird
+  - tweaks
 ---
 
 # Hide star besides email addresses in Thunderbird

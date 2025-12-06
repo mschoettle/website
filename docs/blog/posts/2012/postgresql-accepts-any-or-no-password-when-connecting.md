@@ -4,6 +4,10 @@ date:
   updated: 2012-05-19
 migrated: true
 slug: postgresql-accepts-any-or-no-password-when-connecting
+tags:
+  - archived
+  - postgresql
+  - tweaks
 ---
 
 # PostgreSQL accepts any or no password when connecting

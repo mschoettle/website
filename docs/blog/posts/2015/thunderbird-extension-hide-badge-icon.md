@@ -1,12 +1,16 @@
 ---
 categories:
-#   - Mac OS
   - Thunderbird
 date:
   created: 2015-11-10
   updated: 2015-11-10
 migrated: true
 slug: thunderbird-extension-hide-badge-icon
+tags:
+  - archived
+  - macos
+  - projects
+  - thunderbird
 ---
 
 # Thunderbird Extension: Hide Badge Icon

@@ -6,6 +6,11 @@ date:
   updated: 2021-05-12
 migrated: true
 slug: sepaq-availability-scraper
+tags:
+  - open source
+  - projects
+  - python
+  - scraping
 ---
 
 # SEPAQ Availability Scraper

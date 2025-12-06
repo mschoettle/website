@@ -3,6 +3,9 @@ categories:
   - Linux
 date:
   created: 2025-04-04
+tags:
+  - linux/debian
+  - howto
 ---
 
 # Installing Debian on a Server with Partitions using LVM

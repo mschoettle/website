@@ -2,11 +2,11 @@
 date:
   created: 2011-04-14
   updated: 2011-04-14
-# categories:
-#   - Java
-#   - Struts
 migrated: true
 slug: things-discovered-in-struts-2
+tags:
+  - archived
+  - java
 ---
 
 # Things discovered in Struts 2

@@ -1,12 +1,15 @@
 ---
 categories:
   - Git
-#   - Howto
 date:
   created: 2015-08-18
   updated: 2015-08-18
 migrated: true
 slug: move-more-than-one-directory-into-a-new-repository
+tags:
+  - archived
+  - git
+  - howto
 ---
 
 # Move more than one directory into a new repository

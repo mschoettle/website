@@ -6,6 +6,10 @@ date:
   updated: 2011-03-30
 migrated: true
 slug: mac-os-airport-not-connecting-automatically-to-wi-fi
+tags:
+  - archived
+  - macos
+  - tips
 ---
 
 # Mac OS: Airport not connecting automatically to Wi-Fi

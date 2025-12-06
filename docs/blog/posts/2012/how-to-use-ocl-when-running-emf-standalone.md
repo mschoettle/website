@@ -1,13 +1,15 @@
 ---
 categories:
   - Eclipse Modeling Framework (EMF)
-#   - Howto
-#   - Java
 date:
   created: 2012-05-31
   updated: 2015-08-18
 migrated: true
 slug: how-to-use-ocl-when-running-emf-standalone
+tags:
+  - archived
+  - howto
+  - java
 ---
 
 # How to use OCL when running EMF standalone

@@ -2,10 +2,13 @@
 date:
   created: 2012-05-10
   updated: 2012-05-10
-# categories:
-#   - Subversion
 migrated: true
 slug: using-multiple-svn-clients-with-the-svnssh-protocol-and-a-putty-profile
+tags:
+  - archived
+  - subversion
+  - tips
+  - windows
 ---
 
 # Using multiple SVN clients with the `svn+ssh` protocol and a putty profile

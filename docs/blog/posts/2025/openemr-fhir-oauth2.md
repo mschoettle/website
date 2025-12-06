@@ -3,6 +3,10 @@ categories:
   - Digital Healthcare
 date:
   created: 2025-07-23
+tags:
+  - fhir
+  - howto
+  - python
 ---
 
 # Authenticating as a system user with OpenEMR's FHIR API using OAuth2
