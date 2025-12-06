@@ -105,6 +105,8 @@ plugins:
         - Web Development
   - tags:
       tags_hierarchy: true
+      shadow_tags:
+        - archived
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
   - git-revision-date-localized:
       enabled: !ENV [CI, false]

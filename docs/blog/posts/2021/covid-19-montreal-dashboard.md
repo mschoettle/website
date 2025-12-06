@@ -7,7 +7,6 @@ date:
 migrated: true
 slug: covid-19-montreal-dashboard
 tags:
-  - data processing
   - open source
   - pandas
   - plotly

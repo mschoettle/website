@@ -7,7 +7,6 @@ slug: things-discovered-in-struts-2
 tags:
   - archived
   - java
-  - windows
 ---
 
 # Things discovered in Struts 2

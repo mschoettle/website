@@ -7,6 +7,7 @@ slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 tags:
   - archived
   - tips
+  - windows
 ---
 
 # Office End-User License Agreement (EULA) has to be accepted every time
