@@ -1,13 +1,13 @@
 ---
-migrated: true
 date:
   created: 2012-05-29
   updated: 2013-04-05
+migrated: true
+slug: lyx-installing-unknown-document-classes
 tags:
   - archived
   - macos
   - tips
-slug: lyx-installing-unknown-document-classes
 ---
 
 # LyX: Installing unknown document classes

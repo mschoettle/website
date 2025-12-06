@@ -1,16 +1,16 @@
 ---
-migrated: true
+categories:
+  - Django
 date:
   created: 2021-05-28
   updated: 2023-06-23
-categories:
-  - Django
+migrated: true
+slug: django-django_tables2-and-bootstrap-table
 tags:
   - css
   - django
   - howto
   - python
-slug: django-django_tables2-and-bootstrap-table
 ---
 
 # Django, django_tables2 and Bootstrap Table

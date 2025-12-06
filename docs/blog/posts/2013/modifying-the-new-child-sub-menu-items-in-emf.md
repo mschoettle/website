@@ -1,15 +1,15 @@
 ---
-migrated: true
+categories:
+  - Eclipse Modeling Framework (EMF)
 date:
   created: 2013-05-02
   updated: 2013-05-02
-categories:
-  - Eclipse Modeling Framework (EMF)
+migrated: true
+slug: modifying-the-new-child-sub-menu-items-in-emf
 tags:
   - archived
   - java
   - tips
-slug: modifying-the-new-child-sub-menu-items-in-emf
 ---
 
 # Modifying the "New Child" sub-menu items in EMF

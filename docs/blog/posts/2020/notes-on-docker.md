@@ -1,16 +1,17 @@
 ---
-migrated: true
+categories:
+  - Self-hosting
 date:
   created: 2020-01-08
   updated: 2024-10-23
-categories:
-  - Self-hosting
+migrated: true
+slug: notes-on-docker
 tags:
   - docker
   - howto
   - raspberry pi
   - self hosting
-slug: notes-on-docker
+  - Docker
 ---
 
 # Notes on Docker

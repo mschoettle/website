@@ -1,8 +1,8 @@
 ---
-date:
-  created: 2025-07-23
 categories:
   - Digital Healthcare
+date:
+  created: 2025-07-23
 tags:
   - fhir
   - howto

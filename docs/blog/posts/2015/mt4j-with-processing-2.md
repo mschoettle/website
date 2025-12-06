@@ -1,14 +1,14 @@
 ---
-migrated: true
 date:
   created: 2015-08-19
   updated: 2015-08-19
+migrated: true
+slug: mt4j-with-processing-2
 tags:
   - archived
   - java
   - open source
   - projects
-slug: mt4j-with-processing-2
 ---
 
 # MT4j with Processing 2

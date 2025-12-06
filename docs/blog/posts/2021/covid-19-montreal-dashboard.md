@@ -1,10 +1,11 @@
 ---
-migrated: true
+categories:
+  - Projects
 date:
   created: 2021-05-17
   updated: 2021-05-17
-categories:
-  - Projects
+migrated: true
+slug: covid-19-montreal-dashboard
 tags:
   - data processing
   - open source
@@ -12,7 +13,6 @@ tags:
   - plotly
   - projects
   - python
-slug: covid-19-montreal-dashboard
 ---
 
 # COVID-19 Montréal Dashboard

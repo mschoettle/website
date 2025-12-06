@@ -1,15 +1,15 @@
 ---
-migrated: true
+categories:
+  - Git
 date:
   created: 2015-06-19
   updated: 2019-10-28
-categories:
-  - Git
+migrated: true
+slug: move-directory-from-one-repository-to-another-preserving-history
 tags:
   - archived
   - git
   - howto
-slug: move-directory-from-one-repository-to-another-preserving-history
 ---
 
 # Move directory from one repository to another, preserving history

@@ -1,15 +1,15 @@
 ---
-migrated: true
+categories:
+  - Git
 date:
   created: 2015-08-18
   updated: 2015-08-18
-categories:
-  - Git
+migrated: true
+slug: move-more-than-one-directory-into-a-new-repository
 tags:
   - archived
   - git
   - howto
-slug: move-more-than-one-directory-into-a-new-repository
 ---
 
 # Move more than one directory into a new repository

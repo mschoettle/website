@@ -1,17 +1,17 @@
 ---
-migrated: true
+categories:
+  - Linux
 date:
   created: 2011-03-21
   updated: 2024-10-17
-categories:
-  - Linux
+migrated: true
+slug: setting-up-apache-and-subversion-on-debian-wheezy
 tags:
   - apache
   - archived
   - howto
   - linux/debian
   - subversion
-slug: setting-up-apache-and-subversion-on-debian-wheezy
 ---
 
 # Setting up Apache and Subversion on Debian Wheezy

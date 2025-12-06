@@ -1,15 +1,15 @@
 ---
-migrated: true
+categories:
+  - Firefox
 date:
   created: 2018-07-25
   updated: 2023-05-28
-categories:
-  - Firefox
+migrated: true
+slug: digging-into-the-firefox-ui-for-the-tab-close-button
 tags:
   - css
   - firefox
   - projects
-slug: digging-into-the-firefox-ui-for-the-tab-close-button
 ---
 
 # Digging into the Firefox UI for the tab close button

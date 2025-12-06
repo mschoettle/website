@@ -1,17 +1,17 @@
 ---
-migrated: true
+categories:
+  - Self-hosting
 date:
   created: 2020-01-14
   updated: 2020-01-14
-categories:
-  - Self-hosting
+migrated: true
+slug: migrating-data-to-nextcloud
 tags:
   - howto
   - nextcloud
   - migration
   - raspberry pi
   - self hosting
-slug: migrating-data-to-nextcloud
 ---
 
 # Migrating Data to Nextcloud

@@ -1,14 +1,14 @@
 ---
-migrated: true
+categories:
+  - Web Development
 date:
   created: 2018-09-12
   updated: 2018-09-12
-categories:
-  - Web Development
+migrated: true
+slug: deploying-angular-application-on-apache-server
 tags:
   - apache
   - howto
-slug: deploying-angular-application-on-apache-server
 ---
 
 # Deploying Angular application on Apache server

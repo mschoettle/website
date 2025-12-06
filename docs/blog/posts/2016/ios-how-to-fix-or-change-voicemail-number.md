@@ -1,14 +1,14 @@
 ---
-migrated: true
 date:
   created: 2016-01-04
   updated: 2016-01-04
+migrated: true
+slug: ios-how-to-fix-or-change-voicemail-number
 tags:
   - archived
   - howto
   - ios
   - tips
-slug: ios-how-to-fix-or-change-voicemail-number
 ---
 
 # iOS: How to fix/change Voicemail number

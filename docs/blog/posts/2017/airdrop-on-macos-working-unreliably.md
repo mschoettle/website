@@ -1,15 +1,15 @@
 ---
-migrated: true
+categories:
+  - Mac OS
 date:
   created: 2017-12-08
   updated: 2017-12-08
-categories:
-  - Mac OS
+migrated: true
+slug: airdrop-on-macos-working-unreliably
 tags:
   - archived
   - macos
   - tips
-slug: airdrop-on-macos-working-unreliably
 ---
 
 # AirDrop on macOS working unreliably

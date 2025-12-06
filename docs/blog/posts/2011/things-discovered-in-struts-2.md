@@ -1,13 +1,13 @@
 ---
-migrated: true
 date:
   created: 2011-04-14
   updated: 2011-04-14
+migrated: true
+slug: things-discovered-in-struts-2
 tags:
   - archived
   - java
   - windows
-slug: things-discovered-in-struts-2
 ---
 
 # Things discovered in Struts 2

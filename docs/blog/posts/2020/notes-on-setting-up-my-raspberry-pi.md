@@ -1,16 +1,16 @@
 ---
-migrated: true
+categories:
+  - Self-hosting
 date:
   created: 2020-01-06
   updated: 2024-10-22
-categories:
-  - Self-hosting
+migrated: true
+slug: notes-on-setting-up-my-raspberry-pi
 tags:
   - howto
   - linux
   - raspberry pi
   - self hosting
-slug: notes-on-setting-up-my-raspberry-pi
 ---
 
 # Notes on Setting Up My Raspberry Pi

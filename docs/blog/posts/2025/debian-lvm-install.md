@@ -1,8 +1,8 @@
 ---
-date:
-  created: 2025-04-04
 categories:
   - Linux
+date:
+  created: 2025-04-04
 tags:
   - linux/debian
   - howto

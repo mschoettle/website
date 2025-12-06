@@ -1,16 +1,16 @@
 ---
-migrated: true
+categories:
+  - Thunderbird
 date:
   created: 2012-02-07
   updated: 2012-02-07
-categories:
-  - Thunderbird
+migrated: true
+slug: hide-star-besides-email-addresses-in-thunderbird
 tags:
   - archived
   - css
   - thunderbird
   - tweaks
-slug: hide-star-besides-email-addresses-in-thunderbird
 ---
 
 # Hide star besides email addresses in Thunderbird

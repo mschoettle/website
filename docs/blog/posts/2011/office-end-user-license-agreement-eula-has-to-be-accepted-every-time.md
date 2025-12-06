@@ -1,12 +1,12 @@
 ---
-migrated: true
 date:
   created: 2011-03-30
   updated: 2011-03-30
+migrated: true
+slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 tags:
   - archived
   - tips
-slug: office-end-user-license-agreement-eula-has-to-be-accepted-every-time
 ---
 
 # Office End-User License Agreement (EULA) has to be accepted every time
