@@ -22,7 +22,6 @@ nav:
 not_in_nav: |
   tags.md
   research/overview.md
-  snippets/archive.md
 
 theme:
   features:

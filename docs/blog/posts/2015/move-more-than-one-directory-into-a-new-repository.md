@@ -14,8 +14,6 @@ tags:
 
 # Move more than one directory into a new repository
 
---8<-- "docs/snippets/archive.md"
-
 I just realized that my previous post on [how to move one directory from one repository](move-directory-from-one-repository-to-another-preserving-history.md) to another really only works for one directory.
 
 Fortunately, there is a very easy solution to that using a nice little tool called [git_filter](https://github.com/slobobaby/git_filter).

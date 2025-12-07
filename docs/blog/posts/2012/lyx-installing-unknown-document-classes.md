@@ -12,8 +12,6 @@ tags:
 
 # LyX: Installing unknown document classes
 
---8<-- "docs/snippets/archive.md"
-
 If you either received a LyX file that uses a document class unknown to your LyX installation or you would like to create a document using one of the options in the settings dialog, you need to install that document class.
 
 This description is for Mac OS based on the latest version of _MacTeX_ (as of May 28th 2012 this is _MacTeX-2011_), but should work with any version.
