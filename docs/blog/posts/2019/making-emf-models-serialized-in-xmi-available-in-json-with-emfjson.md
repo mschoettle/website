@@ -13,8 +13,6 @@ tags:
 
 # Making EMF models serialized in XMI available in JSON with `emfjson`
 
---8<-- "docs/snippets/archive.md"
-
 This summer we had two interns in our team at the _Software Engineering Lab_ who started creating a web application for our [TouchCORE](https://djeminy.github.io/touchcore/) tool.
 I have wanted this for a long time.
 Not only does it allow you to model in your browser, you can also do this collaboratively!

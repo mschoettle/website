@@ -14,8 +14,6 @@ tags:
 
 # Move directory from one repository to another, preserving history
 
---8<-- "docs/snippets/archive.md"
-
 I just moved one directory within a Git repository to a directory within another repository including its history.
 For example:
 

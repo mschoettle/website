@@ -16,8 +16,6 @@ tags:
 
 # Setting up Apache and Subversion on Debian Wheezy
 
---8<-- "docs/snippets/archive.md"
-
 In this post I describe how to set up Apache and Subversion on a Debian server.
 It is assumed that Apache is already installed and running properly on your server.
 This includes PHP if you want to use WebSVN.

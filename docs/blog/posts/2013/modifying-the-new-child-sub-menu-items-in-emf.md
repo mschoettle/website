@@ -14,8 +14,6 @@ tags:
 
 # Modifying the "New Child" sub-menu items in EMF
 
---8<-- "docs/snippets/archive.md"
-
 I was just looking into a way to adjust the text of the items in the "New Child" (the same applies to "New Sibling" as well) sub-menu of the generated editor with EMF.
 By default the items just show the type name of the element to create.
 Depending on your meta-model it might be necessary to add some more information in order to be able to see which feature the new element gets added (or set) to.

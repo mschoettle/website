@@ -12,8 +12,6 @@ tags:
 
 # Office End-User License Agreement (EULA) has to be accepted every time
 
---8<-- "docs/snippets/archive.md"
-
 Do you have to accept the the End-User License Agreement (EULA) of your Office applications every time you start them even though you've accepted them already?
 
 This might be because you are using a restricted user account and thus the change can't be written into the Windows registry.
