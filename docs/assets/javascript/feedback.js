@@ -10,7 +10,7 @@ document$.subscribe(function() {
     var page = document.location.pathname
     var data = ev.submitter.getAttribute("data-md-value")
 
-    console.log(page, data)
+    umami.track('feedback', { url: page, helpfulness: data, referrer: document.referrer })
 
     feedback.firstElementChild.disabled = true
 
