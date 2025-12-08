@@ -1,3 +1,8 @@
+---
+hide:
+  - feedback
+---
+
 # Hallo, Hi, Bonjour :wave:
 
 I am Matthias, a German living in Montréal, Canada.

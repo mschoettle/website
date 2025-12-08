@@ -1,3 +1,8 @@
+---
+hide:
+  - feedback
+---
+
 # Privacy Policy
 
 ## Who We Are
