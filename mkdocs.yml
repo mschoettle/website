@@ -65,6 +65,9 @@ extra_javascript:
 
 
 extra:
+  analytics:
+    provider: custom
+    website_id: b9a5084e-f749-4236-b1dd-3ba6246d3c6c
   social:
     - icon: fontawesome/brands/github
       name: mschoettle on GitHub
