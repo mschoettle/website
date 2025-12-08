@@ -1,17 +1,16 @@
 ---
-migrated: true
 date:
   created: 2011-03-30
   updated: 2024-10-16
-# categories:
-#   - Tweaks
-#   - Windows
+migrated: true
 slug: hide-the-network-icon-from-windows-7-explorer
+tags:
+  - archived
+  - tweaks
+  - windows
 ---
 
 # Hide the "Network" icon from Windows 7 Explorer
-
---8<-- "docs/snippets/archive.md"
 
 If you want to hide the "Network" icon from the sidebar of the Windows Explorer in Windows 7 you can do this by modifying the registry.
 In order to be able to do this you have to be logged in as an Administrator.

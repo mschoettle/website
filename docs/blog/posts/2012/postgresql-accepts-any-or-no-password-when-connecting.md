@@ -1,14 +1,16 @@
 ---
-migrated: true
 date:
   created: 2012-05-19
   updated: 2012-05-19
+migrated: true
 slug: postgresql-accepts-any-or-no-password-when-connecting
+tags:
+  - archived
+  - postgresql
+  - tweaks
 ---
 
 # PostgreSQL accepts any or no password when connecting
-
---8<-- "docs/snippets/archive.md"
 
 When connecting to the database with the `postgres` user I realized it accepts any password or no password even though the user has a password set.
 I don't know if this happens also when using the installer to install _PostgreSQL_.

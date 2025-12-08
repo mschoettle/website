@@ -1,17 +1,18 @@
 ---
-migrated: true
+categories:
+  - Git
 date:
   created: 2015-06-19
   updated: 2019-10-28
-categories:
-  - Git
-#   - Howto
+migrated: true
 slug: move-directory-from-one-repository-to-another-preserving-history
+tags:
+  - archived
+  - git
+  - howto
 ---
 
 # Move directory from one repository to another, preserving history
-
---8<-- "docs/snippets/archive.md"
 
 I just moved one directory within a Git repository to a directory within another repository including its history.
 For example:

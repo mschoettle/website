@@ -1,17 +1,19 @@
 ---
-migrated: true
+categories:
+  - Thunderbird
 date:
   created: 2012-02-07
   updated: 2012-02-07
-categories:
-  - Thunderbird
-#   - Tweaks
+migrated: true
 slug: hide-star-besides-email-addresses-in-thunderbird
+tags:
+  - archived
+  - css
+  - thunderbird
+  - tweaks
 ---
 
 # Hide star besides email addresses in Thunderbird
-
---8<-- "docs/snippets/archive.md"
 
 If you—for some reason—don't like the yellow (for contacts in your address book) or gray (for unknown contacts) star next to email addresses in the message header there's a simple way on how to hide it.
 

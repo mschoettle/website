@@ -1,16 +1,18 @@
 ---
-migrated: true
+categories:
+  - Eclipse Modeling Framework (EMF)
 date:
   created: 2015-08-18
   updated: 2015-08-18
-categories:
-  - Eclipse Modeling Framework (EMF)
+migrated: true
 slug: how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars
+tags:
+  - archived
+  - howto
+  - java
 ---
 
 # How to use OCL when running EMF standalone with Eclipse Mars
-
---8<-- "docs/snippets/archive.md"
 
 I previously explained on [how to use OCL when running EMF in standalone](../2012/how-to-use-ocl-when-running-emf-standalone.md) (not as an Eclipse application).
 This method works until Eclipse Luna.

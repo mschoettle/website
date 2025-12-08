@@ -1,17 +1,18 @@
 ---
-migrated: true
+categories:
+  - Git
 date:
   created: 2015-08-18
   updated: 2015-08-18
-categories:
-  - Git
-#   - Howto
+migrated: true
 slug: move-more-than-one-directory-into-a-new-repository
+tags:
+  - archived
+  - git
+  - howto
 ---
 
 # Move more than one directory into a new repository
-
---8<-- "docs/snippets/archive.md"
 
 I just realized that my previous post on [how to move one directory from one repository](move-directory-from-one-repository-to-another-preserving-history.md) to another really only works for one directory.
 

@@ -1,16 +1,17 @@
 ---
-migrated: true
 date:
   created: 2012-05-10
   updated: 2012-05-10
-# categories:
-#   - Subversion
+migrated: true
 slug: using-multiple-svn-clients-with-the-svnssh-protocol-and-a-putty-profile
+tags:
+  - archived
+  - subversion
+  - tips
+  - windows
 ---
 
 # Using multiple SVN clients with the `svn+ssh` protocol and a putty profile
-
---8<-- "docs/snippets/archive.md"
 
 When trying to access an SVN repository using the `svn+ssh` protocol with _TortoiseSVN_ it might happen that the password prompt shows up endless times.
 One suggested solution is to set up a profile in _putty_ and use a private key for authentication for SSH there.

@@ -1,17 +1,17 @@
 ---
-migrated: true
+categories:
+  - Eclipse Modeling Framework (EMF)
 date:
   created: 2019-12-12
   updated: 2019-12-12
-categories:
-  - Eclipse Modeling Framework (EMF)
-#   - Java
+migrated: true
 slug: making-emf-models-serialized-in-xmi-available-in-json-with-emfjson
+tags:
+  - archived
+  - java
 ---
 
 # Making EMF models serialized in XMI available in JSON with `emfjson`
-
---8<-- "docs/snippets/archive.md"
 
 This summer we had two interns in our team at the _Software Engineering Lab_ who started creating a web application for our [TouchCORE](https://djeminy.github.io/touchcore/) tool.
 I have wanted this for a long time.

@@ -1,3 +1,8 @@
+---
+hide:
+  - feedback
+---
+
 # Legal Notice (Imprint)
 
 Responsible for this website:

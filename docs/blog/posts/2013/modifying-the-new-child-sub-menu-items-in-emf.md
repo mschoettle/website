@@ -1,17 +1,18 @@
 ---
-migrated: true
+categories:
+  - Eclipse Modeling Framework (EMF)
 date:
   created: 2013-05-02
   updated: 2013-05-02
-categories:
-  - Eclipse Modeling Framework (EMF)
-#   - Java
+migrated: true
 slug: modifying-the-new-child-sub-menu-items-in-emf
+tags:
+  - archived
+  - java
+  - tips
 ---
 
 # Modifying the "New Child" sub-menu items in EMF
-
---8<-- "docs/snippets/archive.md"
 
 I was just looking into a way to adjust the text of the items in the "New Child" (the same applies to "New Sibling" as well) sub-menu of the generated editor with EMF.
 By default the items just show the type name of the element to create.

@@ -1,12 +1,16 @@
 ---
-migrated: true
+categories:
+  - Linux
 date:
   created: 2021-05-12
   updated: 2021-05-12
-categories:
-#   - Howto
-  - Linux
+migrated: true
 slug: setting-up-msmtp
+tags:
+  - automation
+  - linux/debian
+  - howto
+  - self hosting
 ---
 
 # Setting up `msmtp`

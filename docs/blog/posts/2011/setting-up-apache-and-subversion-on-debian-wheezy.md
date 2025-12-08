@@ -1,17 +1,20 @@
 ---
-migrated: true
+categories:
+  - Linux
 date:
   created: 2011-03-21
   updated: 2024-10-17
-categories:
-#   - Howto
-  - Linux
+migrated: true
 slug: setting-up-apache-and-subversion-on-debian-wheezy
+tags:
+  - apache
+  - archived
+  - howto
+  - linux/debian
+  - subversion
 ---
 
 # Setting up Apache and Subversion on Debian Wheezy
-
---8<-- "docs/snippets/archive.md"
 
 In this post I describe how to set up Apache and Subversion on a Debian server.
 It is assumed that Apache is already installed and running properly on your server.

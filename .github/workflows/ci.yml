@@ -22,15 +22,15 @@ jobs:
       security-events: write
     steps:
       - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.1
         with:
           persist-credentials: false
       - name: Install uv
-        uses: astral-sh/setup-uv@v6.4.2
+        uses: astral-sh/setup-uv@v7.1.5
         id: setup-uv
         with:
           # renovate: datasource=pypi dependency=uv
-          version: "0.8.2"
+          version: "0.9.16"
       - name: Install pre-commit
         run: |
           uv sync --locked --only-dev
@@ -41,7 +41,7 @@ jobs:
         if: '!cancelled()'
         env:
           # renovate: datasource=docker depName=davidanson/markdownlint-cli2-rules versioning=semver
-          MARKDOWNLINT_CLI2_VERSION: v0.18.1
+          MARKDOWNLINT_CLI2_VERSION: v0.20.0
         uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
         with:
           image: davidanson/markdownlint-cli2-rules:${{ env.MARKDOWNLINT_CLI2_VERSION }}
@@ -66,7 +66,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v6.0.1
         with:
           persist-credentials: false
           lfs: true
@@ -75,21 +75,21 @@ jobs:
           fetch-depth: 0
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3.4.0
+        uses: docker/login-action@v3.6.0
         if: github.event_name != 'pull_request'
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.10.0
+        uses: docker/setup-buildx-action@v3.11.1
       - name: Validate build configuration
         uses: docker/build-push-action@v6.18.0
         with:
           call: check
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@v5.7.0
+        uses: docker/metadata-action@v5.10.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: Build Docker image

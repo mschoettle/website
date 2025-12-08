@@ -1,11 +1,17 @@
 ---
-migrated: true
+categories:
+  - Projects
 date:
   created: 2021-05-17
   updated: 2021-05-17
-categories:
-  - Projects
+migrated: true
 slug: covid-19-montreal-dashboard
+tags:
+  - open source
+  - pandas
+  - plotly
+  - projects
+  - python
 ---
 
 # COVID-19 Montréal Dashboard

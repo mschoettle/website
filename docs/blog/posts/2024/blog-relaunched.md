@@ -1,6 +1,10 @@
 ---
 date:
   created: 2024-12-17
+tags:
+  - migration
+  - projects
+  - self hosting
 ---
 
 # Blog Relaunched

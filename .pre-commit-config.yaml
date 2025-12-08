@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -31,17 +31,17 @@ repos:
       - id: validate-pyproject
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.8.2
+    rev: 0.9.16
     hooks:
       - id: uv-lock
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.32.0
+    rev: v1.40.0
     hooks:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.2
+    rev: 0.35.0
     hooks:
       - id: check-github-workflows
         args: ["--verbose"]
@@ -52,31 +52,31 @@ repos:
         additional_dependencies: ['json5']
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.22
+    rev: 1.0.0
     hooks:
       - id: mdformat
         language: python
-        args: [--number]
+        args: [--number, --sort-front-matter, --strict-front-matter]
         exclude: ^docs/projects/index.md|docs/research/index.md|docs/research/overview.md$
         additional_dependencies:
-          - mdformat-mkdocs==4.3.0
-          - mdformat-frontmatter==2.0.8
-          - mdformat-gfm-alerts==1.0.2
+          - mdformat-mkdocs==5.1.1
+          - mdformat-front-matters==2.0.0
+          - mdformat-gfm-alerts==2.0.0
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.18.1
+    rev: v0.20.0
     hooks:
       - id: markdownlint-cli2
 
   # zizmor detects security vulnerabilities in GitHub Actions workflows.
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.11.0
+    rev: v1.18.0
     hooks:
       - id: zizmor
 
   # actionlint for verifying correct syntax in GitHub Actions workflows.
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: v1.7.9
     hooks:
       - id: actionlint
         language: golang
@@ -84,4 +84,4 @@ repos:
           # actionlint has a shellcheck integration which extracts shell scripts in `run:` steps from GitHub Actions
           # and checks these with shellcheck.
           # see also: https://github.com/rhysd/actionlint/pull/482
-          - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@v0.10.0"
+          - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@v0.11.1"

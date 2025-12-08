@@ -1,16 +1,18 @@
 ---
-migrated: true
+categories:
+  - Thunderbird
 date:
   created: 2013-05-25
   updated: 2013-05-25
-categories:
-  - Thunderbird
+migrated: true
 slug: show-old-title-bar-in-thunderbird
+tags:
+  - archived
+  - thunderbird
+  - tweaks
 ---
 
 # Show old title bar in Thunderbird
-
---8<-- "docs/snippets/archive.md"
 
 With the latest release of Thunderbird 17, the menu bar and tabs are drawn into the title bar.
 On Windows XP, this then looks like the following:
