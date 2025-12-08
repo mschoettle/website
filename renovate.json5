@@ -1,8 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    // https://docs.renovatebot.com/presets-config/#configbest-practices
-    "config:best-practices",
+    // https://docs.renovatebot.com/presets-config/#configrecommended
+    "config:recommended",
+    // https://docs.renovatebot.com/presets-default/#configmigration
+    ":configMigration",
+    // https://docs.renovatebot.com/presets-default/#pinallexceptpeerdependencies
+    ":pinAllExceptPeerDependencies",
     // https://docs.renovatebot.com/presets-schedule/#scheduleweekly
     "schedule:weekly",
     // https://docs.renovatebot.com/presets-default/#separatemultiplemajorreleases
