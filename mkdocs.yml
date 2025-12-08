@@ -62,12 +62,27 @@ extra_css:
 
 extra_javascript:
   - assets/javascript/extra.js
+  - assets/javascript/feedback.js
 
 
 extra:
   analytics:
-    provider: custom
+    provider: umami
     website_id: b9a5084e-f749-4236-b1dd-3ba6246d3c6c
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback! Consider <a href="https://ko-fi.com/mattsch" "title="Buy me a coffee on Ko-Fi">buying me a coffee</a> to <em>say</em> "Thank You!".
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://github.com/mschoettle/website/issues/new?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/brands/github
       name: mschoettle on GitHub
@@ -81,6 +96,9 @@ extra:
     - icon: fontawesome/brands/twitter
       name: schoettlem on Twitter
       link: https://twitter.com/schoettlem
+    - icon: simple/kofi
+      name: Buy me a coffee on Ko-Fi
+      link: https://ko-fi.com/mattsch
   tags:
     # add default tag to force material-pound (hash) to be shown in front of all tags
     default: default
