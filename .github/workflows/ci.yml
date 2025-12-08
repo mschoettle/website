@@ -41,7 +41,7 @@ jobs:
         if: '!cancelled()'
         env:
           # renovate: datasource=docker depName=davidanson/markdownlint-cli2-rules versioning=semver
-          MARKDOWNLINT_CLI2_VERSION: v0.19.1
+          MARKDOWNLINT_CLI2_VERSION: v0.20.0
         uses: YannickTeKulve/docker-run-action@37eb44806428df732c5cc168b96f2b6be8153632
         with:
           image: davidanson/markdownlint-cli2-rules:${{ env.MARKDOWNLINT_CLI2_VERSION }}
