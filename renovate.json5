@@ -28,5 +28,10 @@
       "groupName": "uv",
       "automerge": true,
     },
+    // Combine markdownlint-cli2 image and pre-commit
+    {
+      "matchPackageNames": ["/markdownlint-cli2/"],
+      "groupName": "markdownlint-cli2",
+    },
   ],
 }
