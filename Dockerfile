@@ -1,7 +1,7 @@
 # TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.9.16-python3.13-alpine AS dependencies
+FROM ghcr.io/astral-sh/uv:0.9.17-python3.13-alpine AS dependencies
 
-COPY --from=ghcr.io/astral-sh/uv:0.9.16 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.9.17 /uv /uvx /bin/
 
 RUN apk add --no-cache git pngquant
 
@@ -25,6 +25,10 @@ ENTRYPOINT [ "uv", "run", "mkdocs", "serve" ]
 FROM dependencies AS build
 
 ENV CI=true
+ARG STATS_WEBSITE_ID
+ENV STATS_WEBSITE_ID=${STATS_WEBSITE_ID}
+
+RUN if [[ -z "${STATS_WEBSITE_ID}" ]]; then echo "STATS_WEBSITE_ID missing"; exit 1; fi
 
 COPY . .
 
@@ -34,6 +38,6 @@ RUN python -m mkdocs build --strict --site-dir /site
 # production
 FROM joseluisq/static-web-server:2.40.1
 
-COPY deploy/sws.toml /config.toml
+COPY deploy/sws.toml /sws.toml
 
 COPY --from=build /site /public

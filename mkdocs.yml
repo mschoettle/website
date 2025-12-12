@@ -68,7 +68,7 @@ extra_javascript:
 extra:
   analytics:
     provider: umami
-    website_id: b9a5084e-f749-4236-b1dd-3ba6246d3c6c
+    website_id: !ENV [STATS_WEBSITE_ID, ""]
     feedback:
       title: Was this page helpful?
       ratings:
