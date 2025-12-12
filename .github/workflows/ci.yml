@@ -51,7 +51,7 @@ jobs:
           run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Run the production stack
         run: |
-          docker compose build --build-arg STATS_WEBSITE_ID=test_website_idd
+          docker compose build --build-arg STATS_WEBSITE_ID=test_website_id
           docker compose up -d
       - name: Check stats website ID
         run: |
