@@ -99,6 +99,8 @@ jobs:
           # https://github.com/docker/build-push-action?tab=readme-ov-file#git-context
           context: .
           platforms: linux/arm64
+          build-args:
+            "STATS_WEBSITE_ID=${{ secrets.STATS_WEBSITE_ID }}"
           # load image into docker to test it in the next step
           load: true
           tags: ${{ steps.meta.outputs.tags }}
