@@ -50,7 +50,9 @@ jobs:
           # don't fail step if there are violations
           run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Run the production stack
-        run: docker compose up --build -d
+        run: |
+          docker compose build --build-arg STATS_WEBSITE_ID=not_needed
+          docker compose up -d
       - name: Check
         run: uv run --script .github/redirects/check_redirects.py
       - name: Stop production stack
