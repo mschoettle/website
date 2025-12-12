@@ -127,6 +127,10 @@ plugins:
       tags_hierarchy: true
       shadow_tags:
         - archived
+  # optimize images
+  # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+  - optimize:
+      enabled: !ENV [CI, false]
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
