@@ -51,9 +51,12 @@ jobs:
           run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Run the production stack
         run: |
-          docker compose build --build-arg STATS_WEBSITE_ID=not_needed
+          docker compose build --build-arg STATS_WEBSITE_ID=test_website_idd
           docker compose up -d
-      - name: Check
+      - name: Check stats website ID
+        run: |
+          curl --silent http://localhost | grep --quiet 'data-website-id="test_website_id"'
+      - name: Check redirects
         run: uv run --script .github/redirects/check_redirects.py
       - name: Stop production stack
         run: docker compose down
