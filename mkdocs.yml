@@ -107,6 +107,8 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
   - privacy:
       enabled: !ENV [CI, false]
+      assets_exclude:
+        - stats.mattsch.com/*
   - search
   - blog:
       categories_allowed:
