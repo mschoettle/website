@@ -3,7 +3,7 @@ FROM ghcr.io/astral-sh/uv:0.9.18-python3.13-alpine AS dependencies
 
 COPY --from=ghcr.io/astral-sh/uv:0.9.18 /uv /uvx /bin/
 
-RUN apk add --no-cache git pngquant
+RUN apk add --no-cache git pngquant cairo
 
 WORKDIR /app
 
