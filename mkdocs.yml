@@ -130,7 +130,7 @@ plugins:
       shadow_tags:
         - archived
   - social:
-      # enabled: !ENV [CI, false]
+      enabled: !ENV [CI, false]
       cards_layout: custom
       cards_layout_options:
         background_color: "#4051b5"
