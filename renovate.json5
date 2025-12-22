@@ -29,6 +29,10 @@
   "rebaseWhen": "conflicted",
   // https://docs.renovatebot.com/configuration-options/#suppressnotifications
   "suppressNotifications": ["prEditedNotification"],
+  // enable automerge for lockfile maintenance
+  "lockFileMaintenance": {
+    "automerge": true,
+  },
   "packageRules": [
     // Combine uv package, uv image, and uv-pre-commit
     {
