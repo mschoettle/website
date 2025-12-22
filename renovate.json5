@@ -35,6 +35,8 @@
       "matchPackageNames": ["/uv-pre-commit|uv$/"],
       "groupName": "uv",
       "automerge": true,
+      // Don't use a schedule
+      "schedule": [],
     },
     // Combine markdownlint-cli2 image and pre-commit
     {

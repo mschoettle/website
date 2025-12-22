@@ -5,7 +5,7 @@ date:
   created: 2016-01-04
   updated: 2023-05-28
 migrated: true
-pin: true
+# pin: true
 slug: firefox-close-tab-button-on-hover
 tags:
   - css

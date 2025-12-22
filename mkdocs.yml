@@ -68,7 +68,7 @@ extra_javascript:
 extra:
   analytics:
     provider: umami
-    website_id: b9a5084e-f749-4236-b1dd-3ba6246d3c6c
+    website_id: !ENV [STATS_WEBSITE_ID, ""]
     feedback:
       title: Was this page helpful?
       ratings:
@@ -107,6 +107,8 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
   - privacy:
       enabled: !ENV [CI, false]
+      assets_exclude:
+        - stats.mattsch.com/*
   - search
   - blog:
       categories_allowed:
@@ -127,7 +129,10 @@ plugins:
       tags_hierarchy: true
       shadow_tags:
         - archived
-  - social:
+  - social
+  # optimize images
+  # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+  - optimize:
       enabled: !ENV [CI, false]
   # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
   - git-revision-date-localized:
