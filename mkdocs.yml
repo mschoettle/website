@@ -129,7 +129,11 @@ plugins:
       tags_hierarchy: true
       shadow_tags:
         - archived
-  - social
+  - social:
+      # enabled: !ENV [CI, false]
+      cards_layout: custom
+      cards_layout_options:
+        background_color: "#4051b5"
   # optimize images
   # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
   - optimize:

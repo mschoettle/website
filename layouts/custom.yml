@@ -1,0 +1,101 @@
+# Docs: https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/#customization
+# Inspired by: https://github.com/squidfunk/mkdocs-material/blob/master/src/plugins/social/templates/default/variant.yml
+
+definitions:
+  # Background color
+  - &background_color >-
+    {{ layout.background_color }}
+
+  # Text color
+  - &color >-
+    white
+
+  # Font family (default: Roboto)
+  - &font_family >-
+    {%- if layout.font_family -%}
+      {{ layout.font_family }}
+    {%- elif config.theme.font is mapping -%}
+      {{ config.theme.font.get("text", "Roboto") }}
+    {%- else -%}
+      Roboto
+    {%- endif -%}
+
+  # Font variant
+  - &font_variant >-
+    {%- if layout.font_variant -%}
+      {{ layout.font_variant }}
+    {%- endif -%}
+
+  # Site description
+  - &site_name >-
+    {{ config.site_name }}
+
+  # Page title
+  - &page_title >-
+    {{ page.meta.get("title", page.title) }}
+
+  # Page description
+  - &page_description >-
+    {{ page.meta.get("description") | x }}
+
+size: { width: 1200, height: 630 }
+layers:
+  # Background color
+  - background:
+      color: *background_color
+  # Circles for fancier background
+  - size: { width: 2400, height: 2400 }
+    offset: { x: -1024, y: 64 }
+    icon:
+      value: material/circle
+      color: "#5c6bc0"
+  - size: { width: 1800, height: 1800 }
+    offset: { x: 512, y: -1024 }
+    icon:
+      value: material/circle
+      color: "#3949ab"
+  # Logo
+  - size: { width: 64, height: 64 }
+    offset: { x: 64, y: 64 }
+    icon:
+      value: fontawesome/solid/code
+      color: white
+  # Site name
+  - size: { width: 768, height: 42 }
+    offset: { x: 160, y: 74 }
+    typography:
+      content: *site_name
+      color: *color
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Bold
+  # Page title
+  - size: { width: 885, height: 256 }
+    offset: { x: 62, y: 192 }
+    typography:
+      content: *page_title
+      overflow: shrink
+      align: start
+      color: *color
+      line:
+        amount: 3
+        height: 1.25
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Bold
+  # Page description
+  - size: { width: 885, height: 64 }
+    offset: { x: 64, y: 512 }
+    typography:
+      content: *page_description
+      align: start
+      color: *color
+      line:
+        amount: 2
+        height: 1.5
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Regular
