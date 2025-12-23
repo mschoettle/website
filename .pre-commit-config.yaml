@@ -61,6 +61,7 @@ repos:
         additional_dependencies:
           - mdformat-mkdocs==5.1.1
           - mdformat-front-matters==2.0.0
+          - mdformat-footnote==0.1.2
           - mdformat-gfm-alerts==2.0.0
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
