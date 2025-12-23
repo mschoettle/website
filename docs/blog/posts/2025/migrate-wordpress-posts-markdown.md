@@ -30,10 +30,11 @@ The process is [documented](https://learn.wordpress.org/lesson/tools-export-and-
 3. Select what you want to export, you can select "All content"
 4. Click "Download Export File"
 
-- wrote a script to automate this process
-- the XML contains a lot of information
-- since I didn't have many pages, focussed on the blog posts and projects
-    - first just the posts (excluding other types of posts)
+Looking at the resulting XML file, I quickly saw that this can be automated to extract the posts and output them in the structure needed and as Markdown.
+The XML file contains a lot of information, pretty much everything that is needed.
+
+I ~~carefully crafted~~hacked together a script and iterated a while to get as much as possible converted.
+At first, I focussed on blog posts, and treated project posts separately after.
 
 [^1]: I used the [Portfolio and Projects plugin](https://wordpress.org/plugins/portfolio-and-projects/) to showcase some of my work.
     The plugin uses a custom post type for projects that are then arranged on a dedicated page.
