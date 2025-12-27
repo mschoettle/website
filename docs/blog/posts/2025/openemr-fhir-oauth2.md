@@ -119,49 +119,51 @@ import jwt
 from oauthlib.oauth2 import BackendApplicationClient
 from requests_oauthlib import OAuth2Session
 
-BASE_URL = 'https://...'
-OAUTH_URL = BASE_URL + '/oauth2/default'
-FHIR_URL = BASE_URL + '/apis/default/fhir'
-TOKEN_ENDPOINT = f'{OAUTH_URL}/token'
+BASE_URL = "https://..."
+OAUTH_URL = BASE_URL + "/oauth2/default"
+FHIR_URL = BASE_URL + "/apis/default/fhir"
+TOKEN_ENDPOINT = f"{OAUTH_URL}/token"
 
-CLIENT_ID = '...'
+CLIENT_ID = "..."
 SCOPES = [
-    'system/Patient.read',
+    "system/Patient.read",
 ]
 
-PRIVATE_KEY = '...'
-PUBLIC_KEY = '...'
+PRIVATE_KEY = "..."
+PUBLIC_KEY = "..."
 
 # current timestamp in epoch format
 now = int(datetime.now().timestamp())
 payload = {
-    'iss': CLIENT_ID,
-    'sub': CLIENT_ID,
-    'aud': TOKEN_ENDPOINT,
-    'exp': now + 5 * 60,
-    'jti': uuid.uuid4().hex,
+    "iss": CLIENT_ID,
+    "sub": CLIENT_ID,
+    "aud": TOKEN_ENDPOINT,
+    "exp": now + 5 * 60,
+    "jti": uuid.uuid4().hex,
 }
 
-encoded = jwt.encode(payload, PRIVATE_KEY, algorithm='RS384', headers={'kid': 'requests-oauthlib-test'})
+encoded = jwt.encode(
+    payload, PRIVATE_KEY, algorithm="RS384", headers={"kid": "requests-oauthlib-test"}
+)
 
 # verify that JWT can be decoded with the public key
-jwt.decode(encoded, PUBLIC_KEY, algorithms=['RS384'], audience=TOKEN_ENDPOINT)
+jwt.decode(encoded, PUBLIC_KEY, algorithms=["RS384"], audience=TOKEN_ENDPOINT)
 
 client = BackendApplicationClient(client_id=CLIENT_ID)
 oauth = OAuth2Session(client=client)
 token = oauth.fetch_token(
     token_url=TOKEN_ENDPOINT,
     client_id=CLIENT_ID,
-    scope=' '.join(SCOPES),
-    client_assertion_type='urn:ietf:params:oauth:client-assertion-type:jwt-bearer',
+    scope=" ".join(SCOPES),
+    client_assertion_type="urn:ietf:params:oauth:client-assertion-type:jwt-bearer",
     client_assertion=encoded,
 )
 
-print(f'Scope: {token["scope"]}')
+print(f"Scope: {token['scope']}")
 
-patients = oauth.get(f'{FHIR_URL}/Patient')
+patients = oauth.get(f"{FHIR_URL}/Patient")
 
-print(f'Patients: {patients.json()["total"]}')
+print(f"Patients: {patients.json()['total']}")
 ```
 
 ### Using `authlib`
@@ -185,17 +187,17 @@ from urllib.parse import urlencode
 from authlib.integrations.requests_client import OAuth2Session
 from authlib.oauth2.rfc7523 import PrivateKeyJWT
 
-BASE_URL = 'https://...'
-OAUTH_URL = BASE_URL + '/oauth2/default'
-FHIR_URL = BASE_URL + '/apis/default/fhir'
-TOKEN_ENDPOINT = f'{OAUTH_URL}/token'
+BASE_URL = "https://..."
+OAUTH_URL = BASE_URL + "/oauth2/default"
+FHIR_URL = BASE_URL + "/apis/default/fhir"
+TOKEN_ENDPOINT = f"{OAUTH_URL}/token"
 
-CLIENT_ID = '...'
+CLIENT_ID = "..."
 SCOPES = [
-    'system/Patient.read',
+    "system/Patient.read",
 ]
 
-PRIVATE_KEY = '...'
+PRIVATE_KEY = "..."
 
 session = OAuth2Session(
     client_id=CLIENT_ID,
@@ -203,12 +205,12 @@ session = OAuth2Session(
     scope=SCOPES,
     token_endpoint_auth_method=PrivateKeyJWT(
         token_endpoint=TOKEN_ENDPOINT,
-        alg='RS384',
+        alg="RS384",
     ),
 )
 token = session.fetch_token(TOKEN_ENDPOINT)
 
-response = session.get(f'{FHIR_URL}/Patient')
+response = session.get(f"{FHIR_URL}/Patient")
 
 print(response)
 print(response.json())
