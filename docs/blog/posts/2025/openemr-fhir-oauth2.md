@@ -33,9 +33,9 @@ The format of the JSON file that is expected is as follows:
 
 ```json
 {
-    "keys": [
-        // the public key from the generator goes here
-    ]
+  "keys": [
+    // the public key from the generator goes here
+  ]
 }
 ```
 

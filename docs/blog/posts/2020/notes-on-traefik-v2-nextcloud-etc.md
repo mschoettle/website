@@ -47,18 +47,18 @@ There are `entryPoints` for `http` and `https` with `http-to-https` redirection 
 ```yaml title="traefik.yml (excerpt)"
 entryPoints:
   http:
-    address: ":80"
+    address: :80
     http:
       redirections:
         entrypoint:
           to: https
   https:
-    address: ":443"
+    address: :443
     http:
       tls:
         certResolver: letsencrypt
         domains:
-          -main: "*.domain.tld"
+          -main: '*.domain.tld'
 ```
 
 Besides the [Docker provider](https://doc.traefik.io/traefik/providers/docker/) there is a [file provider](https://doc.traefik.io/traefik/providers/file/) that I use for a more "static" dynamic configuration (`dynamic-conf.yml`):
@@ -67,9 +67,9 @@ Besides the [Docker provider](https://doc.traefik.io/traefik/providers/docker/) 
 providers:
   docker:
     exposedByDefault: false
-    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.domain.tld`)"
+    defaultRule: Host(`{{ trimPrefix `/` .Name }}.domain.tld`)
   file:
-    filename: "/config/dynamic-conf.yml"
+    filename: /config/dynamic-conf.yml
 ```
 
 If `exposedByDefault` is `true`, Docker containers will automatically be exposed.
@@ -79,11 +79,11 @@ With this, you should be able to run a container (here _Gitea_) with the followi
 
 ```yaml title="Adding labels to service in compose file"
 labels:
-  - "traefik.enable=true"
+  - traefik.enable=true
   # for docker run: replace the ` with \" to avoid command substitution
-  - "traefik.http.routers.gitea.rule=Host(`git.domain.tld`)"
-  - "traefik.http.routers.gitea.tls=true"
-  - "traefik.http.services.gitea.loadbalancer.server.port=3000"
+  - traefik.http.routers.gitea.rule=Host(`git.domain.tld`)
+  - traefik.http.routers.gitea.tls=true
+  - traefik.http.services.gitea.loadbalancer.server.port=3000
 ```
 
 So traefik is run with the following volumes:
@@ -139,7 +139,7 @@ certificatesResolvers:
         provider: manual
         # delayBeforeCheck: 120
       email: someone@example.com
-      storage: "/config/acme.json"
+      storage: /config/acme.json
       # Staging server
       # caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
 ```
@@ -179,8 +179,8 @@ To allow `TLS 1.2`, you need to add the label `"traefik.http.routers.gitea.tls.o
 
 ```yaml title="Enabling TLS termination for a service in the compose file"
 labels:
-  - "traefik.http.routers.gitea.tls=true"
-  - "traefik.http.routers.gitea.tls.options=mintls12@file"
+  - traefik.http.routers.gitea.tls=true
+  - traefik.http.routers.gitea.tls.options=mintls12@file
 ```
 
 ### Add non-container services
@@ -197,14 +197,14 @@ Here is the configuration for Pi-Hole (the same applies for the router):
 http:
   routers:
     pihole:
-        rule: Host(`pihole.domain.tld`)
-        service: pihole
-        tls: {}
+      rule: Host(`pihole.domain.tld`)
+      service: pihole
+      tls: {}
   services:
     pihole:
-        loadBalancer:
-        servers:
-            - url: "http://pi.hole:8080"
+      loadBalancer:
+      servers:
+        - url: http://pi.hole:8080
 ```
 
 ## Setting up Nextcloud
