@@ -2,6 +2,8 @@ services:
   app:
     build:
       context: .
+      args:
+        - STATS_WEBSITE_ID=disabled_locally
     restart: unless-stopped
     ports:
       - "80:80"

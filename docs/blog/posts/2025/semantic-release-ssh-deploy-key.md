@@ -79,7 +79,7 @@ Add the SSH repository URL to your `semantic-release` configuration in the [`rep
 
 ```json title=".releaserc"
 {
-    "repositoryUrl": "git@github.com/owner/repo.git"
+  "repositoryUrl": "git@github.com/owner/repo.git"
 }
 ```
 

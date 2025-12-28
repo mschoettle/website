@@ -31,7 +31,7 @@ The main changes I had to do were:
 
     ```json
     "legacy": {
-        "type": "xul"
+      "type": "xul"
     }
     ```
 
