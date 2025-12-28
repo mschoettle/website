@@ -76,10 +76,7 @@ The following code takes care of getting the columns of the table and building a
 
 ```python
 table: Table = self.get_table()
-table_columns: List[Column] = [
-    column
-    for column in table.columns
-]
+table_columns: List[Column] = [column for column in table.columns]
 columns_tuples = [(column.name, column.header) for column in table_columns]
 columns: OrderedDict[str, str] = OrderedDict(columns_tuples)
 ```
@@ -89,8 +86,7 @@ And the second piece of code takes care of retrieving the data of the table and 
 ```python
 table: Table = self.get_table()
 data = [
-    {column.name: cell for column, cell in row.items()}
-    for row in table.paginated_rows
+    {column.name: cell for column, cell in row.items()} for row in table.paginated_rows
 ]
 ```
 
@@ -117,14 +113,11 @@ class TableViewMixin(SingleTableMixin):
         # ordered dict to retain ordering of columns
         # the dict maps from column name to its header (verbose name)
         table: Table = self.get_table()
-        table_columns: List[Column] = [
-            column
-            for column in table.columns
-        ]
+        table_columns: List[Column] = [column for column in table.columns]
         # retain ordering of columns
         columns_tuples = [(column.name, column.header) for column in table_columns]
         columns: OrderedDict[str, str] = OrderedDict(columns_tuples)
-        context['columns'] = columns
+        context["columns"] = columns
 
         return context
 
@@ -133,7 +126,7 @@ class TableViewMixin(SingleTableMixin):
         # needed in case of additional filtering being done
         response = super().get(self, request, *args, **kwargs)
 
-        if 'json' in request.GET:
+        if "json" in request.GET:
             table: Table = self.get_table()
             data = [
                 {column.name: cell for column, cell in row.items()}
@@ -176,10 +169,7 @@ Basically, for non-fields there needs to be a check that prevents the call to `Q
 To support server-side pagination, the `table_pagination` needs to be set to `True` (or removed since the default is `True`) and the JSON response needs to contain the total number of rows:
 
 ```python
-data = {
-    'total': self.queryset.count(),
-    'rows': rows
-}
+data = {"total": self.queryset.count(), "rows": rows}
 ```
 
 On the template side there are the [specific table settings for server-side pagination](https://bootstrap-table.com/docs/api/table-options/#sidepagination) and some JavaScript to send the correct request when requesting another page or sorting:
