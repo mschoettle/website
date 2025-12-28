@@ -28,10 +28,10 @@ The process is [documented](https://learn.wordpress.org/lesson/tools-export-and-
 
 1. Log in as an admin
 2. Go to Tools > Export
-3. Select what you want to export, you can select "All content"
+3. Select that you want to export "All content"
 4. Click "Download Export File"
 
-Looking at the resulting XML file, I quickly saw that this can be automated to extract the posts and output them in the structure needed and as Markdown.
+Looking at the resulting XML file, I quickly saw that this can be automated to extract the posts and output them in the structure needed in Markdown.
 The XML file contains a lot of information, pretty much everything that is needed.
 
 I ~~carefully crafted~~ hacked together a script and iterated a while to get as much as possible converted.
@@ -57,7 +57,7 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
 
     The type of post is in the `wp:post_type` element in the exported XML.
     By default, the script migrates the post type `post` (blog posts).
-    If you have other kinds of posts that you want to migrate you can adjust the script.
+    If you have other kinds of posts that you want to migrate you can adjust the `MIGRATE_POST_TYPE` constant.
 
     ??? example "migrate_blogposts.py"
 
@@ -119,10 +119,12 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
             markdownify_tags = ["<a", "<p>", "<h3>", "<!-- wp", "<!-- /wp", "<img"]
 
             for line in content.splitlines():
+                # only convert lines if they contain a detected tag, otherwise too much might get swallowed
+                # such as <!-- more -->
                 if any(tag in line for tag in markdownify_tags):
                     line = markdownify(
                         line,
-                        convert=["a", "p", "h3", "img"],
+                        heading_style="ATX",
                         escape_underscores=False,
                         escape_asterisks=False,
                         escape_misc=False,
@@ -337,10 +339,15 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
                 fp.write(formatted)
         ````
 
+    You might notice that there are still some HTML tags that are not converted.
+    I chose to be more conservative and not `markdownify` every line of the post content.
+    This is to avoid losing certain information, such as the `<!-- more -->` indicator.
+    The [`markdownify` package has a bunch of options](https://github.com/matthewwithanm/python-markdownify?tab=readme-ov-file#options) and it would have probably been possible to write a [custom converter](https://github.com/matthewwithanm/python-markdownify?tab=readme-ov-file#creating-custom-converters) instead to handle some special cases.
+
 Writing the script was the easy part.
 What came after was going through each blog post and cleaning it up, making sure it renders correctly.
 This also gave me the opportunity to fix some formatting, typos, and grammar issues.
-And, I made sure to make use of the many [features of `mkdocs-material`](https://squidfunk.github.io/mkdocs-material/reference/).
+And, I made sure to make use of the many [features of `mkdocs-material`](https://squidfunk.github.io/mkdocs-material/reference/) to further improve how everything is presented.
 
 [^1]: I used the [Portfolio and Projects plugin](https://wordpress.org/plugins/portfolio-and-projects/) to showcase some of my work.
     The plugin uses a custom post type for projects that are then arranged on a dedicated page.
