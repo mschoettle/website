@@ -1,7 +1,11 @@
 ---
+categories:
+  - Projects
 date:
   created: 2024-12-17
   updated: 2025-12-23
+links:
+  - blog/posts/2025/migrate-wordpress-posts-markdown.md
 tags:
   - migration
   - open source
@@ -29,8 +33,6 @@ My idea was that it would be easier to update themes and plugins and re-apply th
 In the end, it was still too much manual work, however.
 It's not as easy as merging a dependency update on your repository raised by [Renovate](https://docs.renovatebot.com) (of which I am a huge fan) and automatically re-deploying.
 
-<!-- more -->
-
 A few years ago, I came across the amazing [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 It is a technical documentation theme for [MkDocs](https://www.mkdocs.org/) with many great features.
 Documentation is written in Markdown and can be version controlled in a repository.
@@ -45,4 +47,8 @@ I finally got around to it and migrated my old WordPress site to what is now a s
 
 It is live now :smile:.
 
-In a follow-up post I will write about the process I took to migrate everything and how it is set up.
+Keep reading if you are interested in the details of how it is set up.
+
+<!-- more -->
+
+In a follow-up post I wrote about the process of [migrating Wordpress posts to Markdown](../2025/migrate-wordpress-posts-markdown.md).
