@@ -55,8 +55,8 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
     The migrated blog posts will be in `docs/posts_migrated/` organized by year.
     If you have a lot of posts per year, you might want to structure it further by month.
 
-    The type of post is in the `wp:post_type` in the exported XML.
-    By default, the script migrates the post type `post` which are blog posts.
+    The type of post is in the `wp:post_type` element in the exported XML.
+    By default, the script migrates the post type `post` (blog posts).
     If you have other kinds of posts that you want to migrate you can adjust the script.
 
     ??? example "migrate_blogposts.py"
@@ -85,6 +85,8 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
         from markdownify import markdownify
 
         EXPORT_FILE = "export.xml"
+        # the wp:post_type of posts to migrate
+        MIGRATE_POST_TYPE = "post"
         # write blogposts.json for debugging purposes
         WRITE_JSON = True
         TZ_SOURCE = zoneinfo.ZoneInfo("Europe/Berlin")
@@ -228,7 +230,7 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
         for item in items:
             post_type = item.find("{http://wordpress.org/export/1.2/}post_type").text
             # can check for other types of posts that are of interest as well
-            if post_type == "post":
+            if post_type == MIGRATE_POST_TYPE:
                 title = item.find("title").text
                 link = item.find("link").text
                 published = item.find("pubDate").text
@@ -338,6 +340,7 @@ I have discovered [`mdformat`](https://mdformat.readthedocs.io/en/stable/) since
 Writing the script was the easy part.
 What came after was going through each blog post and cleaning it up, making sure it renders correctly.
 This also gave me the opportunity to fix some formatting, typos, and grammar issues.
+And, I made sure to make use of the many [features of `mkdocs-material`](https://squidfunk.github.io/mkdocs-material/reference/).
 
 [^1]: I used the [Portfolio and Projects plugin](https://wordpress.org/plugins/portfolio-and-projects/) to showcase some of my work.
     The plugin uses a custom post type for projects that are then arranged on a dedicated page.
