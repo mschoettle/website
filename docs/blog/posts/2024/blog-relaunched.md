@@ -63,9 +63,11 @@ The project also uses [pre-commit](https://pre-commit.com/) with the following c
 
 - [`typos`](https://github.com/crate-ci/typos): A fast source code spell checker that also autocorrects typos.
 - [`mdformat`](https://mdformat.readthedocs.io/en/stable/) with extensions: A great Markdown formatter.
-- [`markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2): A Markdown linter. It is also used to enforce [semantic linebreaks](https://sembr.org)[^1].
+- [`markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2): A Markdown linter.
+    It is also used to enforce [semantic linebreaks](https://sembr.org)[^1].
 - [`zizmor`](https://docs.zizmor.sh/): A static analysis tool for GitHub Actions that is very helpful to find various insecure uses.
-- [`actionlint`](https://github.com/rhysd/actionlint) with `shellcheck` integration: Another static analysis tool for GitHub Actions that checks syntax, type checks etc. Using `shellcheck` it also lints scripts in `run:`.
+- [`actionlint`](https://github.com/rhysd/actionlint) with `shellcheck` integration: Another static analysis tool for GitHub Actions that checks syntax, type checks etc.
+    Using `shellcheck` it also lints scripts in `run:`.
 
 !!! tip "Consider using `prek` as a replacement of `pre-commit`"
 
