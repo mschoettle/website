@@ -51,4 +51,107 @@ Keep reading if you are interested in the details of how it is set up.
 
 <!-- more -->
 
+## Setup Details
+
 In a follow-up post I wrote about the process of [migrating Wordpress posts to Markdown](../2025/migrate-wordpress-posts-markdown.md).
+
+### Project
+
+This is the first project where I used [`uv`](https://docs.astral.sh/uv/) from the start and it's been great.
+
+The project also uses [pre-commit](https://pre-commit.com/) with the following code quality tools as [hooks](https://github.com/mschoettle/website/blob/main/.pre-commit-config.yaml):
+
+- [`typos`](https://github.com/crate-ci/typos): A fast source code spell checker that also autocorrects typos.
+- [`mdformat`](https://mdformat.readthedocs.io/en/stable/) with extensions: A great Markdown formatter.
+- [`markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2): A Markdown linter. It is also used to enforce [semantic linebreaks](https://sembr.org)[^1].
+- [`zizmor`](https://docs.zizmor.sh/): A static analysis tool for GitHub Actions that is very helpful to find various insecure uses.
+- [`actionlint`](https://github.com/rhysd/actionlint) with `shellcheck` integration: Another static analysis tool for GitHub Actions that checks syntax, type checks etc. Using `shellcheck` it also lints scripts in `run:`.
+
+!!! tip "Consider using `prek` as a replacement of `pre-commit`"
+
+    I recently came across [`prek`](https://prek.j178.dev/) which is a new alternative for `pre-commit`.
+    I've started using it locally to test and is much faster in installing the hooks.
+    See the [Why prek?](https://prek.j178.dev/#why-prek) section for more information if you need more convincing.
+
+Of course, I use [Renovate](https://docs.renovatebot.com) to update dependencies.
+With some [presets and custom managers](https://github.com/mschoettle/website/blob/main/renovate.json5) it is possible to update all referenced versions across the whole code base.
+
+Finally, I set up CI to ensure that everything that goes into `main` conforms to all the various checks.
+
+### `mkdocs-material`
+
+As mentioned above, I use _Material for MkDocs_.
+The set up with `mkdocs-material` is pretty straightforward and mostly depends on personal preference.
+
+additional plugins:
+
+- privacy
+- tags (recently made available, was part of Insiders before)
+- social (recently made available, was part of Insiders before)
+- optimize (recently made available, was part of Insiders before)
+- git-revision-date-localized (brag about contribution?)
+
+extensions:
+
+- github-callouts? (thought it would be nicer since the syntax is less tricky in plain Markdown but does not support the same types as admonitions)
+
+### Archived posts
+
+Some of the posts from my blog are quite old.
+I started in 2011 and those posts don't reflect what I am doing these days.
+I could have removed them, but I do believe in keeping them for historical reasons (and to avoid old links to cause 404 errors).
+
+Instead, I "archived" old posts that I don't intend on keeping updated anymore.
+At first, I used [snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets) to include into each archived page a dedicated Markdown snippet with the archive note.
+Since adding tags, I moved this into a custom template that looks for the `archived` tag in a page's metadata.
+
+- integrated analytics via Umami (self-hosted)
+
+- added feedback widget with analytics
+
+- unfortunately, no more comments since this gets you locked in to GitHub Discussions
+
+- sitemap override to include correct last modification date (using git plugin or blog metadata)
+
+- robots.txt override
+
+- bibliography of my publications
+
+    - used a plugin (papercite) before but since data does not change much (or at all anymore) it is static now
+    - manually added support for showing abstract and bibtex reference using some custom javascript and css to toggle visibility
+
+- project list
+
+    - also manual in a grid view
+    - unfortunately, no image carousel but used `glighbox` to be able to expand screenshots
+
+- deployment
+
+    - deploy to a staging environment early on in the project
+    - to get the full cycle going (automatic deployment from main)
+    - looked for a simple static webserver and found `static-web-server` written in Rust with great features and secure defaults
+    - at first, deployed by pulling repo on server and rebuilding image
+    - later, when updating my stack, integrated as an image, CI pipeline pushes image and deploy job pulls image and re-creates container (separates production config from repo)
+
+- old sitemap and redirects
+
+    - as part of going through all blog posts, also validated that links still work, lots of them didn't anymore, and needed to resort to archive.org version (fortunately did exist)
+    - there is a Markdown plugin for this: htmlproofer which can ensure that external links still resolve
+    - nowadays, a lot of sites are protected by Cloudflare which refuses requests from script with a 403 status code
+
+- added rewrites from URLs of old website to new ones
+
+    - static-web-server has a redirect feature
+    - there was a small bug leading to infitinite loop redirect with path separators: https://github.com/orgs/static-web-server/discussions/498
+    - was able to contribute (in Rust) and get it fixed: https://github.com/static-web-server/static-web-server/pulls?q=is%3Apr+is%3Aclosed+author%3Amschoettle+milestone%3Av2.34.0
+    - set up a CI job that verifies that redirects won't change in the future
+        - used the old sitemap from Wordpress and created a script that pulls out the URLs
+        - CI job runs the project how it would be deployed and checks that each URL receives a redirect status code
+        - did not include all possible URLs but that would have been good! TODO: XML export includes absolute URLs, pull them out and add them
+    - also good to check what Google shows in its search result for `site:domain.com` or `inurl:domain.com`
+    - also go through site to find patterns of redirects
+
+[^1]: This unfortunately only works in an easy way in the CI pipeline.
+    This is because the semantic linebreak rule comes from an [additional `npm` package](https://www.npmjs.com/package/markdownlint-rule-max-one-sentence-per-line) that needs to be installed.
+    Doing this does not consistently work across all places where `markdownlint` is invoked (pre-commit, editor, etc.).
+    So this extra rule is [only used](https://github.com/mschoettle/website/blob/8b6708e32214a6604185635055e1462ca39f478a/.github/markdownlint/.markdownlint-cli2.yaml) in a [dedicated CI step](https://github.com/mschoettle/website/blob/8b6708e32214a6604185635055e1462ca39f478a/.github/workflows/ci.yml#L52).
