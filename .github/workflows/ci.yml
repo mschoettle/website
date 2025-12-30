@@ -32,10 +32,10 @@ jobs:
         with:
           # renovate: datasource=pypi dependency=uv
           version: "0.9.20"
-      - name: Install pre-commit
-        run: |
-          uv sync --locked --only-dev
-      - uses: mschoettle/pre-commit-action@0ffaba63d7e205c4109d6a3ca4ced5fc4decd04b # v4.2.3
+      - uses: j178/prek-action@91fd7d7cf70ae1dee9f4f44e7dfa5d1073fe6623 # v1.0.11
+        with:
+          # renovate: datasource=pypi dependency=prek
+          prek-version: "0.2.25"
         env:
           SKIP: markdownlint-cli2
       - name: Run markdownlint
@@ -52,7 +52,8 @@ jobs:
           run: markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
       - name: Run the production stack
         run: |
-          docker compose build --build-arg STATS_WEBSITE_ID=test_website_id
+          # speed up build by setting CI=false
+          docker compose build --build-arg STATS_WEBSITE_ID=test_website_id --build-arg CI=false
           docker compose up -d
       - name: Check stats website ID
         run: |
