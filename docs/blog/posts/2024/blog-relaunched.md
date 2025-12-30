@@ -89,15 +89,27 @@ The set up with `mkdocs-material` is pretty straightforward and mostly depends o
 
 Some of the additional plugins I used are:
 
-- [Privacy](https://squidfunk.github.io/mkdocs-material/plugins/privacy/): This is a great plugin that automatically identifies and downloads external assets and downloads them during build to self-host them.
+- [Privacy](https://squidfunk.github.io/mkdocs-material/plugins/privacy/):
+    This is a great plugin that automatically identifies and downloads external assets and downloads them during build to self-host them.
 
-- [Tags](https://squidfunk.github.io/mkdocs-material/plugins/tags/): I only [recently added tags](https://github.com/mschoettle/website/pull/39). I found it better to put blog posts into one category (instead of multiple) and use tags instead. With [`mkdocs-material` v9.7.0](https://github.com/squidfunk/mkdocs-material/releases/tag/9.7.0) there were some tag-related features added that made me finally finish this.
+- [Tags](https://squidfunk.github.io/mkdocs-material/plugins/tags/):
+    I only [recently added tags](https://github.com/mschoettle/website/pull/39).
+    I found it better to put blog posts into one category (instead of multiple) and use tags instead.
+    With [`mkdocs-material` v9.7.0](https://github.com/squidfunk/mkdocs-material/releases/tag/9.7.0) there were some tag-related features added that made me finally finish this.
 
-- [Social](https://squidfunk.github.io/mkdocs-material/plugins/social/): This was only recently made available in the free version. I added the [social plugin with a custom layout](https://github.com/mschoettle/website/pull/172) for nice social cards when sharing a link of my website.
+- [Social](https://squidfunk.github.io/mkdocs-material/plugins/social/):
+    This was only recently made available in the free version.
+    I added the [social plugin with a custom layout](https://github.com/mschoettle/website/pull/172) for nice social cards when sharing a link of my website.
 
-- [Optimize](https://squidfunk.github.io/mkdocs-material/plugins/optimize/): This was also only recently made available in the free version. I added it to optimize some images.
+- [Optimize](https://squidfunk.github.io/mkdocs-material/plugins/optimize/):
+    This was also only recently made available in the free version.
+    I added it to optimize some images.
 
-- [git-revision-date-localized](https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates): I think it's helpful to show when (or how long ago) a page was last modified. I integrated [`git-revision-date-localized`](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin) to do that. What was missing at the time was that the full timestamp is shown when hovering over the element. So I made contributions ([timestamp on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/152), [include timezone on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/175)) to support that :material-party-popper:
+- [git-revision-date-localized](https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates):
+    I think it's helpful to show when (or how long ago) a page was last modified.
+    I integrated [`git-revision-date-localized`](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin) to do that.
+    What was missing at the time was that the full timestamp is shown when hovering over the element.
+    So I made contributions ([timestamp on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/152), [include timezone on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/175)) to support that :material-party-popper:
 
 - github-callouts? (thought it would be nicer since the syntax is less tricky in plain Markdown but does not support the same types as admonitions)
 
