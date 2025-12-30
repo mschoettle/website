@@ -55,6 +55,8 @@ Keep reading if you are interested in the details of how it is set up.
 
 In a follow-up post I wrote about the process of [migrating Wordpress posts to Markdown](../2025/migrate-wordpress-posts-markdown.md).
 
+One of the decisions I made is that I will make the repository behind this website public.
+
 ### Project
 
 This is the first project where I used [`uv`](https://docs.astral.sh/uv/) from the start and it's been great.
@@ -78,22 +80,24 @@ The project also uses [pre-commit](https://pre-commit.com/) with the following c
 Of course, I use [Renovate](https://docs.renovatebot.com) to update dependencies.
 With some [presets and custom managers](https://github.com/mschoettle/website/blob/main/renovate.json5) it is possible to update all referenced versions across the whole code base.
 
-Finally, I set up CI to ensure that everything that goes into `main` conforms to all the various checks.
+Finally, I set up a CI workflow to ensure that everything that goes into `main` conforms to all the various checks.
 
 ### `mkdocs-material`
 
 As mentioned above, I use _Material for MkDocs_.
 The set up with `mkdocs-material` is pretty straightforward and mostly depends on personal preference.
 
-additional plugins:
+Some of the additional plugins I used are:
 
-- privacy
-- tags (recently made available, was part of Insiders before)
-- social (recently made available, was part of Insiders before)
-- optimize (recently made available, was part of Insiders before)
-- git-revision-date-localized (brag about contribution?)
+- [Privacy](https://squidfunk.github.io/mkdocs-material/plugins/privacy/): This is a great plugin that automatically identifies and downloads external assets and downloads them during build to self-host them.
 
-extensions:
+- [Tags](https://squidfunk.github.io/mkdocs-material/plugins/tags/): I only [recently added tags](https://github.com/mschoettle/website/pull/39). I found it better to put blog posts into one category (instead of multiple) and use tags instead. With [`mkdocs-material` v9.7.0](https://github.com/squidfunk/mkdocs-material/releases/tag/9.7.0) there were some tag-related features added that made me finally finish this.
+
+- [Social](https://squidfunk.github.io/mkdocs-material/plugins/social/): This was only recently made available in the free version. I added the [social plugin with a custom layout](https://github.com/mschoettle/website/pull/172) for nice social cards when sharing a link of my website.
+
+- [Optimize](https://squidfunk.github.io/mkdocs-material/plugins/optimize/): This was also only recently made available in the free version. I added it to optimize some images.
+
+- [git-revision-date-localized](https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates): I think it's helpful to show when (or how long ago) a page was last modified. I integrated [`git-revision-date-localized`](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin) to do that. What was missing at the time was that the full timestamp is shown when hovering over the element. So I made contributions ([timestamp on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/152), [include timezone on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/175)) to support that :material-party-popper:
 
 - github-callouts? (thought it would be nicer since the syntax is less tricky in plain Markdown but does not support the same types as admonitions)
 
