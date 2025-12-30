@@ -24,7 +24,8 @@ ENTRYPOINT [ "uv", "run", "mkdocs", "serve" ]
 # build site
 FROM dependencies AS build
 
-ENV CI=true
+ARG CI=true
+ENV CI=${CI}
 ARG STATS_WEBSITE_ID
 ENV STATS_WEBSITE_ID=${STATS_WEBSITE_ID}
 
