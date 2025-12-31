@@ -179,3 +179,5 @@ Since adding tags, I moved this into a custom template that looks for the `archi
     So this extra rule is [only used](https://github.com/mschoettle/website/blob/8b6708e32214a6604185635055e1462ca39f478a/.github/markdownlint/.markdownlint-cli2.yaml) in a [dedicated CI step](https://github.com/mschoettle/website/blob/8b6708e32214a6604185635055e1462ca39f478a/.github/workflows/ci.yml#L52).
 
 [^2]: Unfortunately, the supported types between [GitHub Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) and [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) don't match.
+    Due to that, there is currently a mix of styles in the Markdown files.
+    At some point, I need change this to one consistent way of denoting admonitions.
