@@ -117,6 +117,23 @@ Some of the additional plugins I used are:
     `markdown-callouts` provides a less intrusive syntax.
     The advantage is that it has a [natural fallback for other renderers](https://github.com/oprypin/markdown-callouts#graceful-degradation), and it also has support for GitHub alerts[^2].
 
+- sitemap override to include correct last modification date (using git plugin or blog metadata)
+
+- robots.txt override
+
+### Analytics and feedback widget
+
+TBD
+
+- integrated analytics via Umami (self-hosted)
+- added feedback widget with analytics
+
+### Comments
+
+TBD
+
+- unfortunately, no more comments since this gets you locked in to GitHub Discussions
+
 ### Archived posts
 
 Some of the posts from my blog are quite old.
@@ -127,25 +144,23 @@ Instead, I "archived" old posts that I don't intend on keeping updated anymore.
 At first, I used [snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets) to include into each archived page a dedicated Markdown snippet with the archive note.
 Since adding tags, I moved this into a custom template that looks for the `archived` tag in a page's metadata.
 
-- integrated analytics via Umami (self-hosted)
-
-- added feedback widget with analytics
-
-- unfortunately, no more comments since this gets you locked in to GitHub Discussions
-
-- sitemap override to include correct last modification date (using git plugin or blog metadata)
-
-- robots.txt override
+### Bibliography
 
 - bibliography of my publications
 
     - used a plugin (papercite) before but since data does not change much (or at all anymore) it is static now
     - manually added support for showing abstract and bibtex reference using some custom javascript and css to toggle visibility
 
+### Project list
+
 - project list
 
     - also manual in a grid view
     - unfortunately, no image carousel but used `glighbox` to be able to expand screenshots
+
+### Deployment
+
+#### Hosting static site
 
 - deployment
 
@@ -154,6 +169,8 @@ Since adding tags, I moved this into a custom template that looks for the `archi
     - looked for a simple static webserver and found `static-web-server` written in Rust with great features and secure defaults
     - at first, deployed by pulling repo on server and rebuilding image
     - later, when updating my stack, integrated as an image, CI pipeline pushes image and deploy job pulls image and re-creates container (separates production config from repo)
+
+#### Ensuring old URLs still work/get redirect
 
 - old sitemap and redirects
 
@@ -169,7 +186,8 @@ Since adding tags, I moved this into a custom template that looks for the `archi
     - set up a CI job that verifies that redirects won't change in the future
         - used the old sitemap from Wordpress and created a script that pulls out the URLs
         - CI job runs the project how it would be deployed and checks that each URL receives a redirect status code
-        - did not include all possible URLs but that would have been good! TODO: XML export includes absolute URLs, pull them out and add them
+        - did not include all possible URLs but that would have been good!
+        - TODO: XML export includes absolute URLs, pull them out and add them
     - also good to check what Google shows in its search result for `site:domain.com` or `inurl:domain.com`
     - also go through site to find patterns of redirects
 
