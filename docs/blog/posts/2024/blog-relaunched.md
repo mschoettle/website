@@ -3,7 +3,7 @@ categories:
   - Projects
 date:
   created: 2024-12-17
-  updated: 2025-12-23
+  updated: 2025-12-31
 links:
   - blog/posts/2025/migrate-wordpress-posts-markdown.md
 tags:
@@ -61,7 +61,7 @@ One of the decisions I made is that I will make the repository behind this websi
 
 This is the first project where I used [`uv`](https://docs.astral.sh/uv/) from the start and it's been great.
 
-The project also uses [pre-commit](https://pre-commit.com/) with the following code quality tools as [hooks](https://github.com/mschoettle/website/blob/main/.pre-commit-config.yaml):
+The project also uses ~~[pre-commit](https://pre-commit.com/)~~ [prek](https://prek.j178.dev/) with the following code quality tools as [pre-commit hooks](https://github.com/mschoettle/website/blob/main/.pre-commit-config.yaml):
 
 - [`typos`](https://github.com/crate-ci/typos): A fast source code spell checker that also autocorrects typos.
 - [`mdformat`](https://mdformat.readthedocs.io/en/stable/) with extensions: A great Markdown formatter.
@@ -74,7 +74,7 @@ The project also uses [pre-commit](https://pre-commit.com/) with the following c
 !!! tip "Consider using `prek` as a replacement of `pre-commit`"
 
     I recently came across [`prek`](https://prek.j178.dev/) which is a new alternative for `pre-commit`.
-    I've started using it locally to test and is much faster in installing the hooks.
+    I've started using it and is much faster in installing the hooks.
     See the [Why prek?](https://prek.j178.dev/#why-prek) section for more information if you need more convincing.
 
 Of course, I use [Renovate](https://docs.renovatebot.com) to update dependencies.
@@ -111,7 +111,11 @@ Some of the additional plugins I used are:
     What was missing at the time was that the full timestamp is shown when hovering over the element.
     So I made contributions ([timestamp on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/152), [include timezone on hover](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin/pull/175)) to support that :material-party-popper:
 
-- github-callouts? (thought it would be nicer since the syntax is less tricky in plain Markdown but does not support the same types as admonitions)
+- [markdown-callouts](https://github.com/oprypin/markdown-callouts):
+    One of the great features of `mkdocs-material` in my opinion is [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/), basically call-outs to include side-content or highlight content.
+    However, it only looks nice when rendered, and is harder to read in plain Markdown or other renderers.
+    `markdown-callouts` provides a less intrusive syntax.
+    The advantage is that it has a [natural fallback for other renderers](https://github.com/oprypin/markdown-callouts#graceful-degradation), and it also has support for GitHub alerts[^2].
 
 ### Archived posts
 
@@ -173,3 +177,5 @@ Since adding tags, I moved this into a custom template that looks for the `archi
     This is because the semantic linebreak rule comes from an [additional `npm` package](https://www.npmjs.com/package/markdownlint-rule-max-one-sentence-per-line) that needs to be installed.
     Doing this does not consistently work across all places where `markdownlint` is invoked (pre-commit, editor, etc.).
     So this extra rule is [only used](https://github.com/mschoettle/website/blob/8b6708e32214a6604185635055e1462ca39f478a/.github/markdownlint/.markdownlint-cli2.yaml) in a [dedicated CI step](https://github.com/mschoettle/website/blob/8b6708e32214a6604185635055e1462ca39f478a/.github/workflows/ci.yml#L52).
+
+[^2]: Unfortunately, the supported types between [GitHub Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) and [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) don't match.
