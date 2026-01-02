@@ -27,18 +27,17 @@ source = "/privacy-policy-2/"
 destination = "/privacy-policy/"
 kind = 301
 
+# video mentioned in defence slides
+[[advanced.redirects]]
+source = "/wp-content/papercite-data/pdf/phd_defence_demo.mov"
+destination = "/assets/videos/phd_defence_demo.mov"
+kind = 301
+
 # papers
 [[advanced.redirects]]
 source = "/wp-content/papercite-data/pdf/{*}.pdf"
 destination = "/assets/papers/$1.pdf"
 kind = 301
-
-# video mentioned in defence slides
-[[advanced.redirects]]
-source = "/wp-content/papercite-data/pdf/phd_defence_demo.mov"
-destination = "assets/videos/phd_defence_demo.mov"
-kind = 301
-
 
 # blog categories that don't exist anymore
 [[advanced.redirects]]
