@@ -3,7 +3,7 @@ categories:
   - Projects
 date:
   created: 2024-12-17
-  updated: 2025-12-31
+  updated: 2026-01-03
 links:
   - blog/posts/2025/migrate-wordpress-posts-markdown.md
 tags:
@@ -132,20 +132,38 @@ When looking at access logs I noticed that there are a lot of `404` reported.
 Most of these are coming from a missing `robots.txt`.
 So I added a [simple one](https://github.com/mschoettle/website/blob/47add7eea5c29228d54e5e9bb34240ce9d24e69f/overrides/robots.txt) to start with that allows all user agents and points to the sitemap URL.
 
-### Analytics and feedback widget
+#### Comments
 
-TBD
+With Wordpress it was easy to allow visitors to comment on posts.
+Some of my posts received comments (in particular the [Firefox close button on hover](../2016/firefox-close-tab-button-on-hover.md) one) and it was great to get some interaction.
+Knowing that a post helped someone is rewarding and motivating.
+It also helped to update and improve blog posts using the feedback from commenters.
 
-- integrated analytics via Umami (self-hosted)
-- added feedback widget with analytics
+Given that it is now a static site having comments is not that simple.
+`mkdocs-material` supports [integration with _Giscus_](https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/).
+Giscus is an app for GitHub that makes use of GitHub Discussions.
+The integration looks great and it was tempting to integrate it, however, I did not like that the comment data are stored elsewhere.
+You are basically locked into GitHub Discussions.
+In addition, it requires users to have an account on another platform.
 
-### Comments
+So for now, I decided not to have comments.
 
-TBD
+#### Analytics and feedback widget
 
-- unfortunately, no more comments since this gets you locked in to GitHub Discussions
+It could be helpful to know which posts visitors look at most often and where they are coming from.
+Recently, I [integrated analytics and a feedback widget](https://github.com/mschoettle/website/pull/163).
+I self-hosted [umami](https://umami.is/) which is an open-source analytics platform that preserves visitor privacy[^3].
 
-### Archived posts
+`mkdocs-material` makes it easy to integrate [custom site analytics](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#custom-site-analytics).
+
+It is also easy to add a [custom feedback widget](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#custom-site-feedback) at the end of each post to allow users to report whether the post helped them (or not).
+
+`umami` supports events.
+So when a user uses the feedback widget, an event with the URL of the current page is recorded via the [Umami Events API](https://umami.is/docs/tracker-functions#events).
+
+### Content
+
+#### Archived posts
 
 Some of the posts from my blog are quite old.
 I started in 2011 and those posts don't reflect what I am doing these days.
@@ -155,19 +173,24 @@ Instead, I "archived" old posts that I don't intend on keeping updated anymore.
 At first, I used [snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets) to include into each archived page a dedicated Markdown snippet with the archive note.
 Since adding tags, I moved this into a custom template that looks for the `archived` tag in a page's metadata.
 
-### Bibliography
+#### Bibliography
 
-- bibliography of my publications
+I show all my [publications](../../../research/index.md) and provide the PDF version on my website.
+With Wordpress I used a plugin called _papercite_ that can load a _BibTeX_ (bibliography) file and show the papers.
+It also had a nice way of expanding the abstract and _BibTeX_ entry if someone cites this paper.
 
-    - used a plugin (papercite) before but since data does not change much (or at all anymore) it is static now
-    - manually added support for showing abstract and bibtex reference using some custom javascript and css to toggle visibility
+The list of papers is fairly static so I converted this whole list to Markdown and added hidden sections for the abstract and citation.
+Basically, the hidden sections use admonitions.
+With a little bit of [custom JavaScript](https://github.com/mschoettle/website/blob/5a894f950e555413427b36fb27755b0a24eea8bc/docs/assets/javascript/extra.js) and [CSS](https://github.com/mschoettle/website/blob/5a894f950e555413427b36fb27755b0a24eea8bc/docs/assets/stylesheets/extra.css#L23-L26) it is possible to toggle the visibility of those.
 
-### Project list
+#### Project list
 
-- project list
+I show a [list of professional and personal projects](../../../projects/index.md).
+With WordPress I used the [Portfolio and Projects plugin](https://wordpress.org/plugins/portfolio-and-projects/).
 
-    - also manual in a grid view
-    - unfortunately, no image carousel but used `glighbox` to be able to expand screenshots
+Now, I manually arranged them in Markdown using a [grid](https://squidfunk.github.io/mkdocs-material/reference/grids/).
+Unfortunately, there is no image carousel in `mkdocs-material` so I only kept the most important screenshots.
+Using the [glightbox plugin](https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox) it is at least possible to zoom into images.
 
 ### Deployment
 
@@ -210,3 +233,8 @@ Since adding tags, I moved this into a custom template that looks for the `archi
 [^2]: Unfortunately, the supported types between [GitHub Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) and [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) don't match.
     Due to that, there is currently a mix of styles in the Markdown files.
     At some point, I need change this to one consistent way of denoting admonitions.
+
+[^3]: One small caveat is that it is quite likely that users of my website are using adblockers.
+    Since this is about analytics it is possible that the required tracker script gets filtered out.
+    I followed the how to on [bypassing ad blockers](https://umami.is/docs/bypass-ad-blockers) in the Umami documentation which helps with that.
+    In addition, I made sure that the reverse proxy is collecting access logs so that those can also be analyzed if needed.
