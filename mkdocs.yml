@@ -28,6 +28,7 @@ theme:
     # - content.action.edit
     # - content.action.view
     - content.code.copy
+    - content.footnote.tooltips
     - navigation.expand
     - navigation.indexes
     - navigation.tabs
@@ -151,6 +152,9 @@ markdown_extensions:
   # Abbreviations
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
   - abbr
+  # Footnotes
+  # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
+  - footnotes
   # HTML in Markdown
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - attr_list
