@@ -32,7 +32,7 @@ jobs:
         with:
           # renovate: datasource=pypi dependency=uv
           version: "0.9.26"
-      - uses: j178/prek-action@91fd7d7cf70ae1dee9f4f44e7dfa5d1073fe6623 # v1.0.11
+      - uses: j178/prek-action@9d6a3097e0c1865ecce00cfb89fe80f2ee91b547 # v1.0.12
         with:
           # renovate: datasource=pypi dependency=prek
           prek-version: "0.2.25"
