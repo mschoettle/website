@@ -194,23 +194,70 @@ Using the [glightbox plugin](https://squidfunk.github.io/mkdocs-material/referen
 
 ### Deployment
 
-#### Hosting static site
+It's good to get a production-like deployment set up very early on in the project.
+This is to ensure that the whole cycle works and that there won't be any surprises at the very end before going live.
+Basically, what I wanted is to automatically deploy every time a new commit is pushed to/merged into `main`.
 
-- deployment
+I usually use [`traefik`](https://doc.traefik.io/traefik/) as my reverse proxy to handle TLS termination, certificates with _Let's Encrypt_, and routing to the different containers of the stack.
 
-    - deploy to a staging environment early on in the project
-    - to get the full cycle going (automatic deployment from main)
-    - looked for a simple static webserver and found `static-web-server` written in Rust with great features and secure defaults
-    - at first, deployed by pulling repo on server and rebuilding image
-    - later, when updating my stack, integrated as an image, CI pipeline pushes image and deploy job pulls image and re-creates container (separates production config from repo)
+To host the static site I needed a webserver that can serve the static files.
 
-#### Ensuring old URLs still work/get redirect
+With the _WordPress_ site I was using a web hoster at first.
+Usually, web hosters provide _nginx_ or _Apache 2_ as a webserver with support for PHP etc.
+Then later, as mentioned in the introduction of this article, I switched to my own server where it was running as a container.
+Both of these were served via _Apache 2_.
+I did use _Apache 2_ a lot at the beginning of my journey and know the config quite well.
 
-- old sitemap and redirects
+I use _nginx_ here and there and it was definitely a good option.
+For a lot of people it is the go-to webserver.
+Another interesting option is _Caddy_ which I've been meaning to try out for a while.
 
-    - as part of going through all blog posts, also validated that links still work, lots of them didn't anymore, and needed to resort to archive.org version (fortunately did exist)
-    - there is a Markdown plugin for this: htmlproofer which can ensure that external links still resolve
-    - nowadays, a lot of sites are protected by Cloudflare which refuses requests from script with a 403 status code
+I did want to look around and see if there is any other option out there for a static web server.
+
+This search lead me to [Static Web Server](https://static-web-server.net/), an open source web server written in Rust to serve static files.
+In the Python ecosystem there have been a number of projects in the last few years (such as `pydantic`, `ruff`, and `uv`) that use Rust underneath to improve the performance.
+So this did look interesting.
+The [list of features](https://static-web-server.net/#features) pretty much covered what I was looking for:
+
+- suitable for running as a container
+- configurable via environment variables or a TOML file
+- security headers by default
+- URL rewrites/redirects
+
+So I gave it a quick try and liked how easy it was to run and configure.
+
+At first, I did a very simple deployment that consisted of pulling the repository on the server, rebuilding the image, and re-creating the container.
+This required the production compose file to be part of my website repository.
+Later, when updating my stack, I integrated it directly into the stack by using a container image.
+The CI pipeline builds and pushes the image, the deploy job then triggers the image to be pulled and the container re-created.
+That way, the production configuration is separated from the website repository.
+
+### Ensuring old URLs are still reachable
+
+One of the things I learned a long time ago in my web development journey is that it is important to ensure that old URLs are still reachable.
+For instance, if a search engine has indexed your site, and determines that the indexed URLs are not reachable anymore, it will remove URLs from its index.
+
+On the other hand, it can be quite annoying when one finds a link somewhere only to realize that the site does not exist anymore, or the link leads to a `404`.
+Fortunately, we have the [Internet Archive](https://archive.org) that often has archived a page.
+
+#### Outgoing links in content
+
+As part of going through all blog posts I also validated that outgoing links still work.
+Unfortunately, there were quite a few that did not work anymore.
+Fortunately, most if not all were archived by the _Internet Archive_ and it was possible to replace the link with the archived version.
+
+There is also an [MkDocs plugin called `htmlproofer`](https://github.com/manuzhang/mkdocs-htmlproofer-plugin) that can validate all links automatically during build.
+It is a quite slow process so I would recommend to only enable this in CI.
+Fortunately or unfortunately, a lot of sites are nowadays protected by _CloudFlare_ which refuses requests from scripts by returning a `403` status code.
+Or rather, I believe they return an intermediate page first that requires the user to click a button or confirm that they are human.
+So these URLs need to be excluded.
+
+Since I went through all URLs recently I did not use this plugin.
+Of course, it can always happen that all of a sudden, one of the URLs that still worked is now a dead link.
+
+#### URLs from old website
+
+TBD
 
 - added rewrites from URLs of old website to new ones
 
