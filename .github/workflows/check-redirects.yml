@@ -1,0 +1,43 @@
+name: Check Redirects
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check_redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+      - name: Run the production stack
+        run: |
+          # speed up build by setting CI=false
+          docker compose build --build-arg STATS_WEBSITE_ID=test_website_id --build-arg CI=false
+          docker compose up -d
+      - name: Check stats website ID
+        run: |
+          curl --silent http://localhost | grep --quiet 'data-website-id="test_website_id"'
+      - name: Install uv
+        uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7.3.0
+        id: setup-uv
+        with:
+          # renovate: datasource=pypi dependency=uv
+          version: "0.10.2"
+      - name: Check redirects
+        run: |
+          uv run --script .github/redirects/check_redirects.py
+      - name: Stop production stack
+        run: docker compose down
