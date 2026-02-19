@@ -54,7 +54,8 @@ Below you can find how I set it up (derived from [these instructions](https://wi
 
     `msmtp` recommends one of two methods to store the password: Using an encrypted password file or using the system keyring.
 
-    - **system keyring:** The [msmtp user example](https://marlam.de/msmtp/msmtprc.txt) provides a usage example. I tried to use it by installing `gnome-keyring` but kept getting errors when using `seret-tool store`.
+    - **system keyring:** The [msmtp user example](https://marlam.de/msmtp/msmtprc.txt) provides a usage example.
+        I tried to use it by installing `gnome-keyring` but kept getting errors when using `seret-tool store`.
         My research indicates that this is due to running in headless mode.
         So this does not seem to work.
 
