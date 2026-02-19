@@ -343,7 +343,7 @@ for element in root.iter():
 print(f"Found {len(urls)} old URLs.")
 ```
 
-I combined all these findings to combile one `urls.json`.
+I combined all these findings into one `urls.json`.
 
 ##### Automatically checking redirects
 
