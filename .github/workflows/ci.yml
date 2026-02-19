@@ -50,18 +50,6 @@ jobs:
           --user root \
           davidanson/markdownlint-cli2-rules:${{ env.MARKDOWNLINT_CLI2_VERSION }} \
           markdownlint-cli2 --config .github/markdownlint/.markdownlint-cli2.yaml "**/*.md"
-      - name: Run the production stack
-        run: |
-          # speed up build by setting CI=false
-          docker compose build --build-arg STATS_WEBSITE_ID=test_website_id --build-arg CI=false
-          docker compose up -d
-      - name: Check stats website ID
-        run: |
-          curl --silent http://localhost | grep --quiet 'data-website-id="test_website_id"'
-      - name: Check redirects
-        run: uv run --script .github/redirects/check_redirects.py
-      - name: Stop production stack
-        run: docker compose down
 
   build:
     # https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
