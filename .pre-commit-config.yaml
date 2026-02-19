@@ -26,22 +26,22 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.24.1
+    rev: v0.25
     hooks:
       - id: validate-pyproject
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.10.2
+    rev: 0.10.4
     hooks:
       - id: uv-lock
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.42.1
+    rev: v1.43.5
     hooks:
       - id: typos
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.0
+    rev: 0.36.2
     hooks:
       - id: check-github-workflows
         args: ["--verbose"]
@@ -59,16 +59,16 @@ repos:
         args: [--number, --sort-front-matter, --strict-front-matter]
         exclude: ^docs/projects/index.md|docs/research/index.md|docs/research/overview.md$
         additional_dependencies:
-          - mdformat-mkdocs==5.1.3
+          - mdformat-mkdocs==5.1.4
           - mdformat-front-matters==2.0.0
           - mdformat-footnote==0.1.2
           - mdformat-gfm-alerts==2.0.0
           - mdformat-ruff==0.1.3
-          - ruff==0.14.13
+          - ruff==0.15.1
           - mdformat-config==0.2.1
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.20.0
+    rev: v0.21.0
     hooks:
       - id: markdownlint-cli2
 
@@ -80,7 +80,7 @@ repos:
 
   # actionlint for verifying correct syntax in GitHub Actions workflows.
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.10
+    rev: v1.7.11
     hooks:
       - id: actionlint
         language: golang
