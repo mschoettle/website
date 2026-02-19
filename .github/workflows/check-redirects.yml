@@ -35,7 +35,7 @@ jobs:
         id: setup-uv
         with:
           # renovate: datasource=pypi dependency=uv
-          version: "0.10.2"
+          version: "0.10.4"
       - name: Check redirects
         run: |
           uv run --script .github/redirects/check_redirects.py
