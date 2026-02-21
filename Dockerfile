@@ -37,7 +37,7 @@ RUN python -m mkdocs build --strict --site-dir /site
 
 
 # production
-FROM joseluisq/static-web-server:2.40.1
+FROM joseluisq/static-web-server:2.41.0
 
 COPY deploy/sws.toml /sws.toml
 
