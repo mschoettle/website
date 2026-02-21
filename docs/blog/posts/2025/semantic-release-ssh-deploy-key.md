@@ -41,8 +41,7 @@ Then, add "Deploy Keys" to the bypass list and set this specific bypass permissi
 Now, to make use of this deploy key in your release workflow, you need to check out the repository using the SSH private key.
 
 There are two options: Add the secret to the repository, or add the secret for an environment.
-
-Add the private key as an [environment secret on the repository](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#creating-secrets-for-a-repository).
+You should absolutely use an [environment secret](https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments#environment-secrets).
 
 !!! danger "Protect the deploy key behind an environment"
 
@@ -61,7 +60,7 @@ Add the private key as an [environment secret on the repository](https://docs.gi
     GitLab allows you to make secrets available only to protected branches or certain environments.
     GitHub has [environment secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#creating-secrets-for-an-environment) at least.
 
-    So please, use an environment secret and [protect your environment](https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments).
+    So please, **use an environment secret** and [protect your environment](https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments).
 
     The [`semantic-release` note about pushing to your repository](https://semantic-release.gitbook.io/semantic-release/recipes/ci-configurations/github-actions#pushing-package.json-changes-to-your-repository) applies here as well.
 
@@ -70,6 +69,8 @@ Add the private key as an [environment secret on the repository](https://docs.gi
     At least for situations where someone raises a PR from a fork it is not possible, even with a regular actions secret.
     This is because [secrets are not passed to workflows triggered from forks](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#using-secrets-in-a-workflow).
 
+Add the private key as an [environment secret on the repository](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#creating-secrets-for-an-environment).
+
 Then, update your workflow as follows:
 
 ```yaml title="Release workflow file"
@@ -77,12 +78,13 @@ Then, update your workflow as follows:
 jobs:
   increment-version:
     runs-on: ubuntu-latest
+    # protect the deploy key with an environment secret
     environment: semantic-release
     steps:
       - uses: actions/checkout@v6
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          # Persist credentials so that semantic-release will use them
+          # Persist credentials so that semantic-release can use them
           persist-credentials: true
       - name: Run semantic-release
         run: npx semantic-release
@@ -103,3 +105,7 @@ Add the SSH repository URL to your `semantic-release` configuration in the [`rep
     Part of this was not immediately clear from the `semantic-release` documentation.
     I [raised a PR](https://github.com/semantic-release/semantic-release/pull/3950) to improve the SSH key documentation.
     Hopefully it will get accepted.
+
+!!! note "Updates to this blog post"
+
+    - **19.02.2026:** Added information about using environment secrets to protect the deploy key.
