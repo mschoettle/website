@@ -10,7 +10,7 @@ tags:
   - docker
   - howto
   - raspberry pi
-  - self hosting
+  - self-hosting
 ---
 
 # Notes on Docker

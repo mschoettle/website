@@ -11,7 +11,7 @@ tags:
   - nextcloud
   - migration
   - raspberry pi
-  - self hosting
+  - self-hosting
 ---
 
 # Migrating Data to Nextcloud

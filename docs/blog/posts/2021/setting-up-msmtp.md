@@ -10,7 +10,7 @@ tags:
   - automation
   - linux/debian
   - howto
-  - self hosting
+  - self-hosting
 ---
 
 # Setting up `msmtp`

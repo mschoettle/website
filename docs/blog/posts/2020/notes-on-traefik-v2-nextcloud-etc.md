@@ -11,7 +11,7 @@ tags:
   - howto
   - nextcloud
   - raspberry pi
-  - self hosting
+  - self-hosting
 ---
 
 # Notes on traefik v2, Nextcloud, etc
