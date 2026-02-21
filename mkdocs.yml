@@ -27,6 +27,7 @@ theme:
   features:
     # - content.action.edit
     # - content.action.view
+    - content.code.annotate
     - content.code.copy
     - content.footnote.tooltips
     - navigation.expand
@@ -113,6 +114,7 @@ plugins:
   - search
   - blog:
       categories_allowed:
+        - CI/CD
         - Digital Healthcare
         - Django
         - Docker
