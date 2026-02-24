@@ -33,7 +33,7 @@ It is published as an npm package: https://www.npmjs.com/package/markdownlint-cl
 
 !!! tip "Mentioned in the GitLab documentation"
 
-    As I am getting the latest URLs to the GitLab documentation I noticed that [this formatter is now also mentioned in it](https://docs.gitlab.com/ci/testing/code_quality/#markdownlint-cli2) :smile:
+    As I am getting the latest URLs to the GitLab documentation I noticed that [the code quality formatter is now also mentioned in it](https://docs.gitlab.com/ci/testing/code_quality/#markdownlint-cli2) :smile:
 
 One thing that is a bit tricky is to have a consistent developer experience.
 `markdownlint-cli2` is invoked locally in the IDE via the extension, at commit-time as a pre-commit hook, and in CI.
