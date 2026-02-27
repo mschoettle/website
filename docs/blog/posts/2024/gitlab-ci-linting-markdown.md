@@ -3,7 +3,7 @@ categories:
   - CI/CD
 date:
   created: 2024-10-15
-  updated: 2026-02-20
+  updated: 2026-02-27
 tags:
   - automation
   - gitlab ci
@@ -25,8 +25,8 @@ The [report format is based on the CodeClimate report specification](https://doc
 
 There was unfortunately no support for this yet.
 At first, I [wrote a custom formatter](https://github.com/DavidAnson/markdownlint-cli2#output-formatters) that lived in our private repo.
-But I instead of leaving it buried in a private repo, I wanted to make it available to all our repositories and all `markdownlint-cli2` users.
-I checked if there was appetite for [integrating this into `markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2/issues/92) and ended up [contributing a code quality formatter](https://github.com/DavidAnson/markdownlint-cli2/pull/93).
+But instead of leaving it buried in a private repo, I wanted to make it available to all our own repositories and the `markdownlint-cli2` community.
+I checked if there was [appetite for integrating this into `markdownlint-cli2`](https://github.com/DavidAnson/markdownlint-cli2/issues/92) and ended up [contributing a code quality formatter](https://github.com/DavidAnson/markdownlint-cli2/pull/93).
 It is published as an npm package: https://www.npmjs.com/package/markdownlint-cli2-formatter-codequality.
 
 <!-- more -->
@@ -99,10 +99,41 @@ While it is easy to switch to that image in the CI job, it is tricky to get the 
 The [vscode extension does not support custom rules](https://github.com/DavidAnson/vscode-markdownlint/issues/336).
 
 Due to that, I ended up specifying the custom rule in the GitLab-specific configuration file.
-It's a bit annoying to have your pre-commit checks pass locally only to find out that the linting job in the pipeline fails.
+~~It's a bit annoying to have your pre-commit checks pass locally only to find out that the linting job in the pipeline fails.~~
+As I was writing the [post about updating `additional_dependencies` in pre-commit hooks using Renovate](../2026/renovating-pre-commit-additional-dependencies.md) I realized that `pre-commit` also supports `node` dependencies (`markdownlint-cli2` is a `node` tool).
+So we can apply the same concept as outlined above to our `pre-commit` configuration as well, leaving only the editor without custom rules support.
+
+```yaml title=".pre-commit-config.yaml"
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: <version>
+    hooks:
+      - id: markdownlint-cli2
+        language: node
+        args: [--config, pre-commit.markdownlint-cli2.yaml]
+        additional_dependencies:
+          - markdownlint-rule-max-one-sentence-per-line@<version>
+          - mkdocs-material-linter@<version>
+```
+
+```yaml title="pre-commit.markdownlint-cli2.yaml"
+# https://github.com/DavidAnson/markdownlint-cli2#markdownlint-cli2yaml
+
+# additional configuration to the config in the root of the project
+# that is used when running markdownlint-cli2 via the pre-commit hook
+
+customRules:
+  # Enforce one sentence per line
+  # semantic line breaks (https://sembr.org/)
+  # See: https://github.com/DavidAnson/markdownlint/pull/719
+  - "markdownlint-rule-max-one-sentence-per-line"
+```
 
 !!! question "What if I am using GitHub Actions?"
 
     You can apply the same concept as shown in this post.
     See this [reusable `markdownlint` workflow](https://github.com/opalmedapps/.github/blob/main/.github/workflows/markdownlint.yaml) that creates the dedicated config file on the fly.
-    You might want to use the [`markdownlint-cli2-action`](https://github.com/marketplace/actions/markdownlint-cli2-action) in your CI job which contains a formatter that contains annotations.
+    You might want to use the [`markdownlint-cli2-action`](https://github.com/marketplace/actions/markdownlint-cli2-action) in your CI job which already contains a formatter that contains annotations.
+
+!!! note "Updates to this blog post
+
+    **27.02.2026:** Added details about using additional dependencies in `pre-commit` hooks.
