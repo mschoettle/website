@@ -125,7 +125,7 @@ customRules:
   # Enforce one sentence per line
   # semantic line breaks (https://sembr.org/)
   # See: https://github.com/DavidAnson/markdownlint/pull/719
-  - "markdownlint-rule-max-one-sentence-per-line"
+  - markdownlint-rule-max-one-sentence-per-line
 ```
 
 !!! question "What if I am using GitHub Actions?"
