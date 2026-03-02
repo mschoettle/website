@@ -2,6 +2,10 @@
 date:
   created: 2026-02-22
   updated: 2026-02-24
+tags:
+  - automation
+  - how to
+  - open source
 ---
 
 # Updating pre-commit additional dependencies using Renovate

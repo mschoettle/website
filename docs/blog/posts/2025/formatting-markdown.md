@@ -2,6 +2,10 @@
 date:
   created: 2025-04-11
   updated: 2026-02-22
+tags:
+  - automation
+  - howto
+  - open source
 ---
 
 # Formatting Markdown files with `mdformat`
