@@ -10,7 +10,7 @@ tags:
   - howto
   - linux
   - raspberry pi
-  - self hosting
+  - self-hosting
 ---
 
 # Notes on Setting Up My Raspberry Pi

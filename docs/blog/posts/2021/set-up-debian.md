@@ -9,7 +9,7 @@ slug: set-up-debian
 tags:
   - howto
   - linux/debian
-  - self hosting
+  - self-hosting
 ---
 
 # Set Up Debian

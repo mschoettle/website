@@ -10,7 +10,7 @@ tags:
   - migration
   - open source
   - projects
-  - self hosting
+  - self-hosting
 ---
 
 # Blog Relaunched
