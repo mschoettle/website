@@ -6,6 +6,7 @@ date:
   updated: 2026-02-27
 tags:
   - automation
+  - code quality
   - gitlab ci
 ---
 

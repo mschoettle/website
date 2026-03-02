@@ -4,6 +4,7 @@ date:
   updated: 2026-02-24
 tags:
   - automation
+  - code quality
   - how to
   - open source
 ---
