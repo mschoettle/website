@@ -24,20 +24,20 @@ For example, let's assume you are using [`mdformat` to format your Markdown file
 Here is an example `pre-commit` config that this website uses as of this writing:
 
 ```yaml title=".pre-commit-config.yaml (excerpt)"
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 1.0.0
-    hooks:
-      - id: mdformat
-        language: python
-        args: [--number, --sort-front-matter, --strict-front-matter]
-        additional_dependencies:
-          - mdformat-mkdocs==5.1.4
-          - mdformat-front-matters==2.0.0
-          - mdformat-footnote==0.1.3
-          - mdformat-gfm-alerts==2.0.0
-          - mdformat-ruff==0.1.3
-          - ruff==0.15.4
-          - mdformat-config==0.2.1
+- repo: https://github.com/executablebooks/mdformat
+rev: 1.0.0
+hooks:
+    - id: mdformat
+    language: python
+    args: [--number, --sort-front-matter, --strict-front-matter]
+    additional_dependencies:
+        - mdformat-mkdocs==5.1.4
+        - mdformat-front-matters==2.0.0
+        - mdformat-footnote==0.1.3
+        - mdformat-gfm-alerts==2.0.0
+        - mdformat-ruff==0.1.3
+        - ruff==0.15.4
+        - mdformat-config==0.2.1
 ```
 
 1. Specifying the language is optional but important here as you will see when you keep reading.
@@ -63,14 +63,14 @@ Via the [`pre-commit` config of the `ruff` project](https://github.com/astral-sh
 Basically, there is a Go package for shellcheck.
 
 ```yaml title=".pre-commit-config.yaml (excerpt)"
-  - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.11
-    hooks:
-      - id: actionlint
-        language: golang
-        additional_dependencies:
-        # see also: https://github.com/rhysd/actionlint/pull/482
-          - github.com/wasilibs/go-shellcheck/cmd/shellcheck@v0.11.1
+- repo: https://github.com/rhysd/actionlint
+rev: v1.7.11
+hooks:
+    - id: actionlint
+    language: golang
+    additional_dependencies:
+    # see also: https://github.com/rhysd/actionlint/pull/482
+        - github.com/wasilibs/go-shellcheck/cmd/shellcheck@v0.11.1
 ```
 
 The problem I had is that when `go-shellcheck` got updated I missed it.
