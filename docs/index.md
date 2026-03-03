@@ -5,16 +5,16 @@ hide:
 
 # Hallo, Hi, Bonjour :wave:
 
-I am Matthias, a German living in Montréal, Canada.
-I am passionate about tech, open source, racquet sports (especially table tennis and squash), and specialty coffee.
-I like to help others, and so just like with contributing to [open source projects](https://github.com/mschoettle), I intend to share information here that are hopefully helpful to someone else.
+I am Matthias, a software engineer based in Montréal, originally from Germany.
+I build practical, maintainable software and enjoy turning real-world problems into clear, reusable solutions.
 
-I enjoy building and improving software, in particular building reusable software.
-With an eye for details and the ability to understand and see the big picture, I am able to provide well-thought-out solutions.
-It also allows me to quickly understand new/unfamiliar code or concepts and connect the dots when debugging and solving problems.
-Basically, a [1x Engineer](https://1x.engineer/) :smiley:.
+My work style is hands-on and systems-oriented.
+I care about automation, code quality, and reducing manual work through better tooling and workflows.
+I also care about long-term maintainability, privacy-friendly choices, and security-conscious defaults.
 
-<!--
-I strive for reusable, clean and maintainable code.
-I see myself as a generalist, knowing various technologies and the ability to quickly learn new technologies and concepts.
--->
+Open source is a big part of how I work.
+I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
+
+On this site, you will mostly find practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from projects.
+
+Outside of tech, I am into racquet sports (especially table tennis and squash) and specialty coffee.
