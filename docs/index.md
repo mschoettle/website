@@ -6,7 +6,7 @@ hide:
 # Hallo, Hi, Bonjour :wave:
 
 I am Matthias, a software engineer and architect based in Montréal, originally from Germany.
-I currently work as a software architect at [Opal](projects/index.md#opal), a solution to provide patients with access to their medical data.
+I currently work at [Opal](projects/index.md#opal) on the open-source Opal platform that helps patients access their medical data.
 
 I like building maintainable software and turning real-world problems into reusable solutions.
 
