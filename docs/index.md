@@ -5,16 +5,20 @@ hide:
 
 # Hallo, Hi, Bonjour :wave:
 
-I am Matthias, a German living in Montréal, Canada.
-I am passionate about tech, open source, racquet sports (especially table tennis and squash), and specialty coffee.
-I like to help others, and so just like with contributing to [open source projects](https://github.com/mschoettle), I intend to share information here that are hopefully helpful to someone else.
+I am Matthias, a software engineer and architect based in Montréal, originally from Germany.
+I currently work at [Opal](projects/index.md#opal) on the open-source Opal platform that helps patients access their medical data.
 
-I enjoy building and improving software, in particular building reusable software.
-With an eye for details and the ability to understand and see the big picture, I am able to provide well-thought-out solutions.
-It also allows me to quickly understand new/unfamiliar code or concepts and connect the dots when debugging and solving problems.
-Basically, a [1x Engineer](https://1x.engineer/) :smiley:.
+I like building maintainable software and turning real-world problems into reusable solutions.
 
-<!--
-I strive for reusable, clean and maintainable code.
-I see myself as a generalist, knowing various technologies and the ability to quickly learn new technologies and concepts.
--->
+My style is hands-on and systems-oriented.
+I have a strong bias for action, am comfortable wearing many hats, and stay product-focused from idea to delivery.
+I care a lot about automation, code quality, and long-term maintainability.
+
+Open source is a big part of how I work.
+I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
+
+On this site, you will find practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from real projects.
+
+Outside of tech: table tennis, squash, and great coffee.
+
+<!-- My goal here is simple: publish useful content that helps someone solve a problem faster. -->
