@@ -11,8 +11,8 @@ I currently work at [Opal](projects/index.md#opal) on the open-source Opal platf
 I like building maintainable software and turning real-world problems into reusable solutions.
 
 My style is hands-on and systems-oriented.
+I have a strong bias for action, am comfortable wearing many hats, and stay product-focused from idea to delivery.
 I care a lot about automation, code quality, and long-term maintainability.
-In short: a [1x Engineer](https://1x.engineer).
 
 Open source is a big part of how I work.
 I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
