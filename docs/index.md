@@ -6,13 +6,13 @@ hide:
 # Hallo, Hi, Bonjour :wave:
 
 I am Matthias, a software engineer and architect based in Montréal, originally from Germany.
-I currently work at [Opal](projects/index.md#opal).
+I currently work as a software architect at [Opal](projects/index.md#opal), a solution to provide patients with access to their medical data.
 
 I like building maintainable software and turning real-world problems into reusable solutions.
 
 My style is hands-on and systems-oriented.
 I care a lot about automation, code quality, and long-term maintainability.
-In short, I focus on high-leverage engineering.
+In short: a [1x Engineer](https://1x.engineer).
 
 Open source is a big part of how I work.
 I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
