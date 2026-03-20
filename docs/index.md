@@ -6,18 +6,18 @@ hide:
 # Hallo, Hi, Bonjour :wave:
 
 I am Matthias, a software engineer and architect based in Montréal, originally from Germany.
-I currently work at [Opal](projects/index.md#opal) on the open-source Opal platform that helps patients access their medical data.
+I currently work at [Opal](projects/index.md#opal) on the open-source Opal solution, which helps patients access and manage their medical data.
 
-I like building maintainable software and turning real-world problems into reusable solutions.
+I approach engineering with a systems mindset and a strong bias for action.
+I am comfortable wearing many hats and stay product-focused from idea to delivery.
 
-My style is hands-on and systems-oriented.
-I have a strong bias for action, am comfortable wearing many hats, and stay product-focused from idea to delivery.
-I care a lot about automation, code quality, and long-term maintainability.
+My work focuses on building reliable systems and turning real-world problems into maintainable software and reusable solutions.
+I tend to be hands-on and systems-oriented, with a strong focus on automation, code quality, scalability, and long-term maintainability.
 
 Open source is a big part of how I work.
-I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
+I regularly contribute upstream, share what I learn, and document solutions so others—and my future self—can reuse them.
 
-On this site, you will find practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from real projects.
+On this site, I share practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from real projects.
 
 Outside of tech: table tennis, squash, great coffee, and mastering sourdough bread.
 
