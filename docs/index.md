@@ -1,5 +1,7 @@
 ---
 hide:
+  - navigation
+  - toc
   - feedback
 ---
 
@@ -22,6 +24,34 @@ On this site, I share practical technical write-ups: setup guides, debugging not
 Outside of tech: table tennis, squash, great coffee, and mastering sourdough bread.
 
 <!-- My goal here is simple: publish useful content that helps someone solve a problem faster. -->
+
+<div id="about" class="grid cards" markdown>
+
+- :material-rocket-launch-outline: Bias for action
+
+    I stay hands-on across the stack and move work forward pragmatically, from idea to delivery.
+
+- :octicons-gear-24: Automation
+
+    I improve engineering workflows with CI/CD, dependency updates, formatting, linting, and release tooling.
+
+- :material-open-source-initiative: Open Source
+
+    I contribute upstream regularly, maintain my own projects, and prefer sharing fixes where others can reuse them.
+
+- :material-quality-high: Quality
+
+    I care about reliable software, strong developer experience, and code quality practices that hold up over time.
+
+- :material-puzzle-outline: Reusability
+
+    I look for reusable solutions, documented workflows, and tools that save effort across projects instead of solving things once.
+
+- :material-scale-balance: Maintainability
+
+    I build with long-term maintainability in mind so systems remain understandable, adaptable, and useful in the real world.
+
+</div>
 
 [^1]: **About my last name:** It is actually written _Schöttle_.
     The alternative spelling for `ö` is `oe`.
