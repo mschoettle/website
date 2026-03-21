@@ -21,7 +21,7 @@ I regularly contribute upstream, share what I learn, and document solutions so o
 
 On this site, I share practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from real projects.
 
-Outside of tech: table tennis, squash, great coffee, and mastering sourdough bread.
+When I am not working on tech, you can find me playing table tennis or squash, making and drinking great coffee, and mastering sourdough bread.
 
 <!-- My goal here is simple: publish useful content that helps someone solve a problem faster. -->
 
