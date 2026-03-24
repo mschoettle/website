@@ -31,7 +31,7 @@ jobs:
         id: setup-uv
         with:
           # renovate: datasource=pypi dependency=uv
-          version: "0.10.12"
+          version: "0.11.0"
       - uses: j178/prek-action@79f765515bd648eb4d6bb1b17277b7cb22cb6468 # v2.0.0
         with:
           # renovate: datasource=pypi dependency=prek
