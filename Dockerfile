@@ -1,7 +1,7 @@
 # TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.11.0-python3.13-alpine AS dependencies
+FROM ghcr.io/astral-sh/uv:0.11.1-python3.13-alpine AS dependencies
 
-COPY --from=ghcr.io/astral-sh/uv:0.11.0 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.11.1 /uv /uvx /bin/
 
 RUN apk add --no-cache git pngquant cairo
 
