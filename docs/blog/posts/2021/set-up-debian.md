@@ -147,3 +147,4 @@ There are also the following packages I find useful which I install:
 - [`curl`](https://curl.se/)
 - [`ncdu`](https://dev.yorhel.nl/ncdu): Nice tool to find big files.
 - `tree`: A nice tool to show directories in a tree-like format.
+- `jq`: A command-line JSON processor, very helpful to extract data out of JSON or pretty-print.
