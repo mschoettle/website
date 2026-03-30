@@ -8,7 +8,7 @@
     // https://docs.renovatebot.com/presets-default/#pinallexceptpeerdependencies
     ":pinAllExceptPeerDependencies",
     // https://docs.renovatebot.com/presets-schedule/#scheduleweekly
-    "schedule:weekly",
+    // "schedule:weekly",
     // https://docs.renovatebot.com/presets-default/#separatemultiplemajorreleases
     ":separateMultipleMajorReleases",
     // https://docs.renovatebot.com/presets-default/#maintainlockfilesweekly
