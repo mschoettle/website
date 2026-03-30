@@ -10,9 +10,9 @@ tags:
   - security
 ---
 
-# Harden your GitHub Actions Workflows with `zizmor` and dependency pinning
+# Harden your GitHub Actions Workflows with `zizmor`, dependency pinning, and dependency cooldowns
 
-It's been a crazy week (or weeks?) with [several supply chain attacks](https://ramimac.me/teampcp/).
+It's been a crazy week (or weeks?) for a lot of people with [several supply chain attacks](https://ramimac.me/teampcp/).
 They all seem to have originated from the [compromise of `trivy`](https://www.stepsecurity.io/blog/trivy-compromised-a-second-time---malicious-v0-69-4-release) (ironically, `trivy` is a security scanner).
 I wanted to understand how they initially gained access to the secrets and found that there was an [earlier attack that targeted GitHub Actions pipelines of open source projects](https://www.stepsecurity.io/blog/hackerbot-claw-github-actions-exploitation).
 
@@ -32,6 +32,8 @@ They have published a [security roadmap for GitHub Actions](https://github.blog/
 Until that happens, what can you do right now to harden your GitHub Actions workflows?
 
 <!-- more -->
+
+## Add `zizmor` to your project
 
 Start by running it locally to address the findings:
 
@@ -118,29 +120,94 @@ Whenever you install, you know exactly which version of direct and transitive (v
 Renovate has a [guide on dependency pinning](https://docs.renovatebot.com/dependency-pinning/) that I recommend.
 
 If you are still not convinced, look at what happened with the [`litellm` compromise](https://www.stepsecurity.io/blog/litellm-credential-stealer-hidden-in-pypi-wheel).
-Based on [analysis by futuresearch](https://futuresearch.ai/blog/litellm-hack-were-you-one-of-the-47000/) in the 46 minutes that the two malicious versions were available on PyPI, `litellm` was downloaded over 46000 times!
+Based on [analysis by futuresearch](https://futuresearch.ai/blog/litellm-hack-were-you-one-of-the-47000/), in the 46 minutes that the two malicious versions were available on PyPI, `litellm` was downloaded over 46000 times!
 
 Only [9% out of the over 2000 packages they analyzed](https://futuresearch.ai/blog/litellm-hack-were-you-one-of-the-47000/#:~:text=Version%20pinning%20determines%20exposure) pinned to an exact version.
-88% of dependants would have received a malicious versions if they installed during the attack window.
+88% of dependants would have received a malicious versions if they installed `litellm` during the attack window.
 
-The `trivy` attack is similar but required pinning to a commit SHA hash to be unaffected since version tags were changed by the malicious actor.
+The [`trivy` attack](https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack) is similar.
+In addition, the attacker also force-pushed tags of their actions to malicious versions.
+It required pinning to a commit SHA hash to be unaffected since existing version tags were changed by the malicious actor.
+Another attack with an action happened [last year with `tj-actions/changed-files`](https://unit42.paloaltonetworks.com/github-actions-supply-chain-attack/).
 
-No one likes updating dependencies manually, and thankfully they are fantastic tools like [Renovate](https://docs.renovatebot.com) available to (and free!) to use.
+So pinning to an exact version is not sufficient, and pinning to a commit SHA is definitely something one should do.
 
-## Links
+!!! note
 
-- https://www.chainguard.dev/unchained/how-to-protect-your-organization-from-the-telnyx-pypi-compromise
-- https://ramimac.me/teampcp/#phase-10
-- Dan Lorenc: Tips to make it harder for something like the Aqua breach from happening to you: https://www.linkedin.com/feed/update/urn:li:activity:7441841917555965953/?originTrackingId=YoN03WUMyBcfCsJ6xKJhEQ%3D%3D
-- Dan Lorenc: making actions more secure by default: https://www.linkedin.com/feed/update/urn:li:activity:7441468565012054016/
-- https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack/
-- https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/
-    - Feedback & Suggestions: https://github.com/orgs/community/discussions/190621
-- https://github.com/kahalewai/ai-scs/blob/main/teampcp-supply-chain-attack-infographic-final.svg
-- https://www.stepsecurity.io/blog/hackerbot-claw-github-actions-exploitation#attack-2-project-akriakri---direct-script-injection
-- https://www.stepsecurity.io/blog/teampcp-plants-wav-steganography-credential-stealer-in-telnyx-pypi-package
-- https://www.wiz.io/blog/threes-a-crowd-teampcp-trojanizes-litellm-in-continuation-of-campaign
+    Maintainers should definitely [enable immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases) on their repository/organization to prevent tags from being changed.
+
+No one likes updating dependencies manually, and you don't have to.
+Thankfully, there are fantastic tools like [Renovate](https://docs.renovatebot.com) available to use (and free and open source!).
+
+Renovate provides a helper preset [`helpers:pinGitHubActionDigestsToSemver`](https://docs.renovatebot.com/presets-helpers/#helperspingithubactiondigeststosemver) that can pin an action to a digest (commit hash) of a semantic version.
+It also includes the version in a comment which is very helpful.
+
+Here is an example with `actions/checkout`, probably the most used action:
+
+=== "Before :warning:"
+
+    ```yaml
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.1
+        with:
+          persist-credentials: false
+    ```
+
+=== "After :white_check_mark:"
+
+    ```yaml
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+    ```
+
+When a new version of `actions/checkout` is published, Renovate [will create a PR](https://github.com/mschoettle/website/pull/203) for you with the following diff:
+
+```diff
+     steps:
+       - name: Checkout repository
+-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
++        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+         with:
+           persist-credentials: false
+```
+
+`zizmor` actually has an [`unpinned-uses` rule](https://docs.zizmor.sh/audits/#unpinned-uses) which since version `v1.20.0` ensures you use hash-pinning.
+
+For all other dependencies, Renovate provides the [`:pinAllExceptPeerDependencies`](https://docs.renovatebot.com/presets-default/#pinallexceptpeerdependencies).
+
+## Dependency cooldowns
+
+With all this, it is of course still possible to be trigger happy and merge the Renovate PR to update to a new version right away.
+
+_William Woodruff_, the author of `zizmor`, [made the case for dependency cooldowns](https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns).
+And _Andrew Nesbitt_ followed this up with a [post looking at support for cooldowns in package managers][package-managers-cooldown].
+
+Sticking with using Renovate in this post[^3], we can make use of Renovate's [`minimumReleaseAge` feature](https://docs.renovatebot.com/key-concepts/minimum-release-age/):
+
+```json title="reonvate.json5"
+{
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict"
+}
+```
+
+They provide a [preset specific to npm](https://docs.renovatebot.com/presets-security/#securityminimumreleaseagenpm) that sets `minimumReleaseAge` to 3 days.
+With the above configuration, every dependency needs to have been released at least 7 days before.
+
+!!! note "Lock files"
+
+    Renovate currently does not use this to restrict [transitive dependencies in lock files](https://docs.renovatebot.com/key-concepts/minimum-release-age/#what-happens-to-transitive-dependencies).
+    However, there is an [open issue to use minimum release age for package managers](https://github.com/renovatebot/renovate/issues/41652).
+    To do it manually, refer to the comparison of [support for a cooldown across package managers][package-managers-cooldown].
 
 [^1]: Look through the [audit rules of `zizmor`](https://docs.zizmor.sh/audits/) to get an idea.
 
 [^2]: See a [LinkedIn post by Dan Lorenc](https://www.linkedin.com/feed/update/urn:li:activity:7441468565012054016/) (the CEO of [Chainguard](https://www.chainguard.dev)) on what GitHub would need to do to make actions more secure by default.
+
+[^3]: Dependabot has a cooldown feature which [`zizmor` tells you about](https://docs.zizmor.sh/audits/#dependabot-cooldown).
+
+[package-managers-cooldown]: https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html
