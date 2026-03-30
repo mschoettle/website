@@ -134,7 +134,7 @@ So pinning to an exact version is not sufficient, and pinning to a commit SHA is
 
 !!! note
 
-    Maintainers should definitely [enable immutable releases](https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases) on their repository/organization to prevent tags from being changed.
+    Maintainers should definitely [enable immutable releases][immutable-releases] on their repository/organization to prevent tags from being changed.
 
 No one likes updating dependencies manually, and you don't have to.
 Thankfully, there are fantastic tools like [Renovate](https://docs.renovatebot.com) available to use (and free and open source!).
@@ -204,10 +204,17 @@ With the above configuration, every dependency needs to have been released at le
     However, there is an [open issue to use minimum release age for package managers](https://github.com/renovatebot/renovate/issues/41652).
     To do it manually, refer to the comparison of [support for a cooldown across package managers][package-managers-cooldown].
 
+Doing all this will give you hardened workflows and prevent you from unwillingly installing malicious versions (or at least slow the probability down).
+Finally, if you are a maintainer, please enable [immutable releases][immutable-releases], and use [trusted publishing](https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html).
+
+Do you know if anything else that can be done?
+Please let me know!
+
 [^1]: Look through the [audit rules of `zizmor`](https://docs.zizmor.sh/audits/) to get an idea.
 
 [^2]: See a [LinkedIn post by Dan Lorenc](https://www.linkedin.com/feed/update/urn:li:activity:7441468565012054016/) (the CEO of [Chainguard](https://www.chainguard.dev)) on what GitHub would need to do to make actions more secure by default.
 
 [^3]: Dependabot has a cooldown feature which [`zizmor` tells you about](https://docs.zizmor.sh/audits/#dependabot-cooldown).
 
+[immutable-releases]: https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases
 [package-managers-cooldown]: https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html
