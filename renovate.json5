@@ -29,10 +29,11 @@
   "rebaseWhen": "conflicted",
   // https://docs.renovatebot.com/configuration-options/#suppressnotifications
   "suppressNotifications": ["prEditedNotification"],
-  // enable automerge for lockfile maintenance
-  "lockFileMaintenance": {
-    "automerge": true,
-  },
+  // Add a dependency cooldown
+  // https://docs.renovatebot.com/key-concepts/minimum-release-age/#minimum-release-age
+  // https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
   "packageRules": [
     // Combine uv package, uv image, and uv-pre-commit
     {
