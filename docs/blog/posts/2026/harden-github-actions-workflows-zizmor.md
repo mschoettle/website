@@ -227,7 +227,9 @@ Please let me know.
 - Zizmor
     - [Website][zizmor]
     - [Audit Rules documentation][zizmor-audits]
-- Actionlint: [GitHub Repository][actionlint]
+- Actionlint
+    - [GitHub Repository][actionlint]
+    - [Checks](https://TODO)
 - Post: [Trusted Publishers for All Package Repositories][trusted-publishing]
 - GitHub Blog: [What’s coming to our GitHub Actions 2026 security roadmap][github-security-roadmap]
     - Provide feedback: [What’s coming to our GitHub Actions 2026 security roadmap - Feedback & Suggestions][github-security-roadmap-discussion]
@@ -240,14 +242,14 @@ Please let me know.
 
 [^4]: Renovate also provides a [preset specific to npm](https://docs.renovatebot.com/presets-security/#securityminimumreleaseagenpm) that sets `minimumReleaseAge` to 3 days.
 
-[immutable-releases]: https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases
-[package-managers-cooldown]: https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html
-[dependency-cooldowns]: https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
-[renovate-minimumreleaseage]: https://docs.renovatebot.com/key-concepts/minimum-release-age/
-[zizmor]: https://zizmor.sh
-[zizmor-audits]: https://docs.zizmor.sh
-[trusted-publishing]: https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html
-[github-security-roadmap]: https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/
-[github-security-roadmap-discussion]: https://github.com/orgs/community/discussions/190621
 [actionlint]: https://github.com/rhysd/actionlint
 [actionlint-checks]: https://github.com/rhysd/actionlint/blob/main/docs/checks.md
+[dependency-cooldowns]: https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
+[github-security-roadmap]: https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/
+[github-security-roadmap-discussion]: https://github.com/orgs/community/discussions/190621
+[immutable-releases]: https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases
+[package-managers-cooldown]: https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html
+[renovate-minimumreleaseage]: https://docs.renovatebot.com/key-concepts/minimum-release-age/
+[trusted-publishing]: https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html
+[zizmor]: https://zizmor.sh
+[zizmor-audits]: https://docs.zizmor.sh
