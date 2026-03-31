@@ -249,8 +249,8 @@ Please let me know.
     - [Checks][actionlint-checks]
 - Renovate
     - [Documentation][renovate-docs]
-    - [Should you Pin your JavaScript Dependencies][renovate-dependency-pinning]
-    - [Minimum Release Age][renovate-minimumreleaseage]
+    - Deep Dive: [Should you Pin your JavaScript Dependencies][renovate-dependency-pinning]
+    - Key concept: [Minimum Release Age][renovate-minimumreleaseage]
     - Preset: [`helpers:pinGitHubActionDigestsToSemver`][renovate-preset-pinactions]
     - Preset: [`:pinAllExceptPeerDependencies`][renovate-preset-pinall]
     - Post: [Updating pre-commit additional dependencies using Renovate](./renovating-pre-commit-additional-dependencies.md)
