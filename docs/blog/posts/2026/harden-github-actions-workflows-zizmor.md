@@ -68,7 +68,7 @@ At the same time, `zizmor` should run as a pre-commit hook and in CI as well so 
 
     Or, `zizmor` also provides a handy [GitHub Action](https://docs.zizmor.sh/integrations/#github-actions) that you can integrate into your workflow.
 
-    See the [integrations documentation](https://docs.zizmor.sh/integrations/) for more ways to integrate `zizmor`.
+See the [integrations documentation](https://docs.zizmor.sh/integrations/) for more ways to integrate `zizmor`.
 
 !!! tip "Use `actionlint` in addition to `zizmor`"
 
@@ -81,10 +81,10 @@ At the same time, `zizmor` should run as a pre-commit hook and in CI as well so 
     === "`actionlint-docker`"
 
         ```yaml title=".pre-commit-config.yaml"
-        - repo: https://github.com/rhysd/actionlint
-        rev: <version>
-        hooks:
-            - id: actionlint-docker
+          - repo: https://github.com/rhysd/actionlint
+            rev: <version>
+            hooks:
+              - id: actionlint-docker
         ```
 
         The container image includes `shellcheck` which is run by default.
@@ -92,14 +92,14 @@ At the same time, `zizmor` should run as a pre-commit hook and in CI as well so 
     === "Additional `shellcheck` dependency"
 
         ```yaml title=".pre-commit-config.yaml"
-        - repo: https://github.com/rhysd/actionlint
-        rev: <version>
-        hooks:
-            - id: actionlint
-            language: golang
-            additional_dependencies:
+          - repo: https://github.com/rhysd/actionlint
+            rev: <version>
+            hooks:
+              - id: actionlint
+                language: golang
+                additional_dependencies:
                 # see also: https://github.com/rhysd/actionlint/pull/482
-                - "github.com/wasilibs/go-shellcheck/cmd/shellcheck@<version>"
+                  - github.com/wasilibs/go-shellcheck/cmd/shellcheck@<version>
         ```
 
         See my blog post about [renovating additional hook dependencies](./renovating-pre-commit-additional-dependencies.md) to ensure that the `shellcheck` dependency also receives dependency updates.
@@ -229,7 +229,7 @@ Please let me know.
     - [Audit Rules documentation][zizmor-audits]
 - Actionlint
     - [GitHub Repository][actionlint]
-    - [Checks](https://TODO)
+    - [Checks][actionlint-checks]
 - Post: [Trusted Publishers for All Package Repositories][trusted-publishing]
 - GitHub Blog: [What’s coming to our GitHub Actions 2026 security roadmap][github-security-roadmap]
     - Provide feedback: [What’s coming to our GitHub Actions 2026 security roadmap - Feedback & Suggestions][github-security-roadmap-discussion]
