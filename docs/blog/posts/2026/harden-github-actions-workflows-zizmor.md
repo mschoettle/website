@@ -8,6 +8,7 @@ tags:
   - automation
   - code quality
   - github actions
+  - open source
   - security
 ---
 
@@ -49,10 +50,12 @@ At the same time, `zizmor` should run as a pre-commit hook and in CI as well so 
 
     ```yaml
       - repo: https://github.com/woodruffw/zizmor-pre-commit
-        rev: <version>
+        rev: <version> # (1)!
         hooks:
           - id: zizmor
     ```
+
+    1. A specific version is intentionally left out of all snippets in this blog post if possible so that you don't end up using an outdated version.
 
 === "Github Actions"
 
@@ -98,7 +101,7 @@ See the [integrations documentation](https://docs.zizmor.sh/integrations/) for m
               - id: actionlint
                 language: golang
                 additional_dependencies:
-                # see also: https://github.com/rhysd/actionlint/pull/482
+                  # see also: https://github.com/rhysd/actionlint/pull/482
                   - github.com/wasilibs/go-shellcheck/cmd/shellcheck@<version>
         ```
 
@@ -130,19 +133,20 @@ The [`trivy` attack](https://www.wiz.io/blog/trivy-compromised-teampcp-supply-ch
 In addition, the attacker also force-pushed tags of their actions to malicious versions.
 It required pinning to a commit SHA hash to be unaffected since existing version tags were changed by the malicious actor.
 Another attack with an action happened [last year with `tj-actions/changed-files`](https://unit42.paloaltonetworks.com/github-actions-supply-chain-attack/).
+And, after publishing this article [`axios` got compromised](https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan) (probably one of the most used `npm` dependencies).
 
-So pinning to an exact version is not sufficient.
+So while pinning to an exact version is sufficient for package managers and their lockfiles, it is not sufficient for actions referenced in your GitHub Actions workflows.
 You need to pin to a commit SHA.
 
 !!! note
 
-    Maintainers should [enable immutable releases][immutable-releases] on their repository/organization to prevent tags from being changed.
+    Maintainers should also [enable immutable releases][immutable-releases] on their repository/organization to prevent tags from being changed.
     Unfortunately, this is not enabled by default.
 
 No one likes updating dependencies manually, and you don't have to.
 Thankfully, there are fantastic tools like [Renovate](https://docs.renovatebot.com) available to use (and free and open source!).
 
-Renovate provides a helper preset [`helpers:pinGitHubActionDigestsToSemver`](https://docs.renovatebot.com/presets-helpers/#helperspingithubactiondigeststosemver) that can pin an action to a digest (commit hash) of a semantic version.
+Renovate provides a helper preset [`helpers:pinGitHubActionDigestsToSemver`][renovate-preset-pinactions] that can pin an action to a digest (commit hash) of a semantic version.
 It also includes the version in a comment which is very helpful.
 
 Here is an example with `actions/checkout` (probably the most used action out there?):
@@ -178,9 +182,11 @@ When a new version of `actions/checkout` is published, Renovate [will create a P
            persist-credentials: false
 ```
 
+Besides the diff, you will also see the release notes/changelog right in your PR for this version (if available).
+
 `zizmor` actually has an [`unpinned-uses` rule](https://docs.zizmor.sh/audits/#unpinned-uses) which, since version `v1.20.0`, ensures you use hash-pinning.
 
-For all other dependencies, Renovate provides the [`:pinAllExceptPeerDependencies`](https://docs.renovatebot.com/presets-default/#pinallexceptpeerdependencies).
+For all dependency managers, Renovate provides the [`:pinAllExceptPeerDependencies`][renovate-preset-pinall] preset.
 
 ## Dependency cooldowns
 
@@ -189,14 +195,25 @@ With all this, it is of course still possible to be quick and merge the dependen
 _William Woodruff_, the author of `zizmor`, [made the case for dependency cooldowns][dependency-cooldowns].
 And _Andrew Nesbitt_ followed this up with a [post looking at support for cooldowns in package managers][package-managers-cooldown].
 
-Sticking with the Renovate example of this post[^3], we can make use of Renovate's [`minimumReleaseAge` feature][renovate-minimumreleaseage][^4]:
+Here is how you can force a cooldown with Renovate's [`minimumReleaseAge` feature][renovate-minimumreleaseage][^3], or Dependabot's [`cooldown` feature][dependabot-cooldown][^4]:
 
-```json title="reonvate.json5"
-{
-  "minimumReleaseAge": "7 days",
-  "internalChecksFilter": "strict"
-}
-```
+=== "Cooldown with Renovate"
+
+    ```json title="reonvate.json(5)"
+    {
+      "minimumReleaseAge": "7 days",
+      "internalChecksFilter": "strict"
+    }
+    ```
+
+=== "Cooldown with Dependabot"
+
+    ```yaml title="dependabot.yml"
+    updates:
+      - package-ecosystem: <ecosystem>
+        cooldown:
+          default-days: 7
+    ```
 
 With the above configuration, every dependency needs to have been released at least 7 days before.
 
@@ -215,26 +232,32 @@ Please let me know.
 
 !!! note "Updates to this blog post"
 
-    - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses)
+    - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses) :grinning_face:
     - **31.03.2026:**
         - Added a dedicated references section to show important links from this article more prominently
-        - Small improvements to flow
+        - Small improvements to improve readability
+        - Added example for enabling cooldown with Dependabot
+        - Added reference to latest attack on `axios`
 
 ## References
 
-- Zizmor
+- `zizmor`
     - [Website][zizmor]
     - [Audit Rules documentation][zizmor-audits]
-- Actionlint
+- `actionlint`
     - [GitHub Repository][actionlint]
     - [Checks][actionlint-checks]
 - Renovate
     - [Documentation][renovate-docs]
     - [Should you Pin your JavaScript Dependencies][renovate-dependency-pinning]
     - [Minimum Release Age][renovate-minimumreleaseage]
-- Github Documentation: [Immutable releases][immutable-releases]
+    - Preset: [`helpers:pinGitHubActionDigestsToSemver`][renovate-preset-pinactions]
+    - Preset: [`:pinAllExceptPeerDependencies`][renovate-preset-pinall]
+    - Post: [Updating pre-commit additional dependencies using Renovate](./renovating-pre-commit-additional-dependencies.md)
+- Dependabot: [`cooldown` feature][dependabot-cooldown]
 - Post: [Package Managers Need to Cool Down][package-managers-cooldown]
 - Post: [We should all be using dependency cooldowns][dependency-cooldowns]
+- Github Documentation: [Immutable releases][immutable-releases]
 - Post: [Trusted Publishers for All Package Repositories][trusted-publishing]
 - GitHub Blog: [What’s coming to our GitHub Actions 2026 security roadmap][github-security-roadmap]
     - Provide feedback: [What’s coming to our GitHub Actions 2026 security roadmap - Feedback & Suggestions][github-security-roadmap-discussion]
@@ -243,12 +266,13 @@ Please let me know.
 
 [^2]: See a [LinkedIn post by Dan Lorenc](https://www.linkedin.com/feed/update/urn:li:activity:7441468565012054016/) (the CEO of [Chainguard](https://www.chainguard.dev)) on what GitHub would need to do to make actions more secure by default.
 
-[^3]: Dependabot has a cooldown feature which [`zizmor` tells you about](https://docs.zizmor.sh/audits/#dependabot-cooldown).
+[^3]: Renovate also provides a [preset specific to npm](https://docs.renovatebot.com/presets-security/#securityminimumreleaseagenpm) that sets `minimumReleaseAge` to 3 days.
 
-[^4]: Renovate also provides a [preset specific to npm](https://docs.renovatebot.com/presets-security/#securityminimumreleaseagenpm) that sets `minimumReleaseAge` to 3 days.
+[^4]: `zizmor` has the [`dependabot-cooldown` audit rule](https://docs.zizmor.sh/audits/#dependabot-cooldown) that will flag this for you.
 
 [actionlint]: https://github.com/rhysd/actionlint
 [actionlint-checks]: https://github.com/rhysd/actionlint/blob/main/docs/checks.md
+[dependabot-cooldown]: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-
 [dependency-cooldowns]: https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
 [github-security-roadmap]: https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/
 [github-security-roadmap-discussion]: https://github.com/orgs/community/discussions/190621
@@ -257,6 +281,8 @@ Please let me know.
 [renovate-dependency-pinning]: https://docs.renovatebot.com/dependency-pinning/
 [renovate-docs]: https://docs.renovatebot.com/
 [renovate-minimumreleaseage]: https://docs.renovatebot.com/key-concepts/minimum-release-age/
+[renovate-preset-pinactions]: https://docs.renovatebot.com/presets-helpers/#helperspingithubactiondigeststosemver
+[renovate-preset-pinall]: https://docs.renovatebot.com/presets-default/#pinallexceptpeerdependencies
 [trusted-publishing]: https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html
 [zizmor]: https://zizmor.sh
 [zizmor-audits]: https://docs.zizmor.sh
