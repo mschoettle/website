@@ -118,7 +118,7 @@ The answer is: Dependency pinning.
 
 Dependency pinning is absolutely essential to get reproducible builds, development environments etc.
 Whenever you install dependencies or run a build, you know exactly which version of direct and transitive (via lock files) dependency versions you get.
-Renovate has a [guide on dependency pinning](https://docs.renovatebot.com/dependency-pinning/) that I recommend.
+Renovate has a [guide on dependency pinning][renovate-dependency-pinning] that I recommend.
 
 If you are still not convinced, look at what happened with the [`litellm` compromise](https://www.stepsecurity.io/blog/litellm-credential-stealer-hidden-in-pypi-wheel).
 Based on [analysis by futuresearch](https://futuresearch.ai/blog/litellm-hack-were-you-one-of-the-47000/), in the 46 minutes that the two malicious versions were available on PyPI, `litellm` was downloaded over 46000 times!
@@ -216,20 +216,25 @@ Please let me know.
 !!! note "Updates to this blog post"
 
     - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses)
-    - **31.03.2026:** Added a dedicated references section to show links of this article more prominently
+    - **31.03.2026:**
+        - Added a dedicated references section to show important links from this article more prominently
+        - Small improvements to flow
 
 ## References
 
-- Github Documentation: [Immutable releases][immutable-releases]
-- Post: [Package Managers Need to Cool Down][package-managers-cooldown]
-- Post: [We should all be using dependency cooldowns][dependency-cooldowns]
-- Renovate Documentation: [Minimum Release Age][renovate-minimumreleaseage]
 - Zizmor
     - [Website][zizmor]
     - [Audit Rules documentation][zizmor-audits]
 - Actionlint
     - [GitHub Repository][actionlint]
     - [Checks][actionlint-checks]
+- Renovate
+    - [Documentation][renovate-docs]
+    - [Should you Pin your JavaScript Dependencies][renovate-dependency-pinning]
+    - [Minimum Release Age][renovate-minimumreleaseage]
+- Github Documentation: [Immutable releases][immutable-releases]
+- Post: [Package Managers Need to Cool Down][package-managers-cooldown]
+- Post: [We should all be using dependency cooldowns][dependency-cooldowns]
 - Post: [Trusted Publishers for All Package Repositories][trusted-publishing]
 - GitHub Blog: [What’s coming to our GitHub Actions 2026 security roadmap][github-security-roadmap]
     - Provide feedback: [What’s coming to our GitHub Actions 2026 security roadmap - Feedback & Suggestions][github-security-roadmap-discussion]
@@ -249,6 +254,8 @@ Please let me know.
 [github-security-roadmap-discussion]: https://github.com/orgs/community/discussions/190621
 [immutable-releases]: https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases
 [package-managers-cooldown]: https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html
+[renovate-dependency-pinning]: https://docs.renovatebot.com/dependency-pinning/
+[renovate-docs]: https://docs.renovatebot.com/
 [renovate-minimumreleaseage]: https://docs.renovatebot.com/key-concepts/minimum-release-age/
 [trusted-publishing]: https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html
 [zizmor]: https://zizmor.sh
