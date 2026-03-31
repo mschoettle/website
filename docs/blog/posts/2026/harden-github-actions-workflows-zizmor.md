@@ -3,7 +3,7 @@ categories:
   - CI/CD
 date:
   created: 2026-03-28
-  updated: 2026-03-30
+  updated: 2026-03-31
 tags:
   - automation
   - code quality
@@ -19,15 +19,15 @@ I wanted to understand how they initially gained access to the secrets used in t
 
 Looking at the details of how the secrets were extracted I noticed that they all used similar techniques.
 And, unless I missed something, it is through template injection and unsafe `pull_request_target` triggers.
-This could be avoided because all of those vulnerabilities (and more) can be found by [`zizmor`](https://zizmor.sh), a static analysis tool for GitHub Actions!
+This could be avoided because all of those vulnerabilities (and more) can be found by [`zizmor`][zizmor], a static analysis tool for GitHub Actions!
 
 The problem is that, unfortunately, GitHub Actions is **NOT** secure by default[^1].
 One would think that when following the official documentation you end up with workflows that are secure and can not be exploited.
-Last year, I came across [`zizmor`](https://zizmor.sh) and upon checking my workflows it pointed out several problems that I was quite surprised to find out about.
+Last year, I came across [`zizmor`][zizmor] and upon checking my workflows it pointed out several problems that I was quite surprised to find out about.
 
 Of course, GitHub should make Actions more secure by default[^2].
 And it seems that the latest attacks have finally helped to make some progress in that direction.
-GitHub have published a [security roadmap for GitHub Actions](https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/) and are [looking for feedback from the community](https://github.com/orgs/community/discussions/190621).
+GitHub have published a [security roadmap for GitHub Actions][github-security-roadmap] and are [looking for feedback from the community][github-security-roadmap-discussion].
 
 Until that happens, what can you do right now to harden your GitHub Actions workflows?
 
@@ -72,8 +72,8 @@ At the same time, `zizmor` should run as a pre-commit hook and in CI as well so 
 
 !!! tip "Use `actionlint` in addition to `zizmor`"
 
-    At the same time, I also suggest to use [`actionlint`](https://github.com/rhysd/actionlint) with the `shellcheck` integration.
-    It provides a lot of [checks](https://github.com/rhysd/actionlint/blob/main/docs/checks.md) that complement `zizmor`.
+    At the same time, I also suggest to use [`actionlint`][actionlint] with the `shellcheck` integration.
+    It provides a lot of [checks][actionlint-checks] that complement `zizmor`.
     In particular, it has a [`shellcheck` integration](https://github.com/rhysd/actionlint/blob/main/docs/checks.md#check-shellcheck-integ).
 
     You can add it as a pre-commit hook as well, either using the container image, or via the Go module:
@@ -186,10 +186,10 @@ For all other dependencies, Renovate provides the [`:pinAllExceptPeerDependencie
 
 With all this, it is of course still possible to be quick and merge the dependency update PR to update to a new version right away.
 
-_William Woodruff_, the author of `zizmor`, [made the case for dependency cooldowns](https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns).
+_William Woodruff_, the author of `zizmor`, [made the case for dependency cooldowns][dependency-cooldowns].
 And _Andrew Nesbitt_ followed this up with a [post looking at support for cooldowns in package managers][package-managers-cooldown].
 
-Sticking with the Renovate example of this post[^3], we can make use of Renovate's [`minimumReleaseAge` feature](https://docs.renovatebot.com/key-concepts/minimum-release-age/)[^4]:
+Sticking with the Renovate example of this post[^3], we can make use of Renovate's [`minimumReleaseAge` feature][renovate-minimumreleaseage][^4]:
 
 ```json title="reonvate.json5"
 {
@@ -207,13 +207,32 @@ With the above configuration, every dependency needs to have been released at le
     To do it manually, refer to the comparison of [support for a cooldown across package managers][package-managers-cooldown].
 
 Doing all this will give you hardened workflows and prevent you from unwillingly installing malicious versions (or at least decrease the probability of this happening quite a bit).
-Finally, if you are a maintainer of a package, please enable [immutable releases][immutable-releases], and use [trusted publishing](https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html).
+Finally, if you are a maintainer of a package, please enable [immutable releases][immutable-releases], and use [trusted publishing][trusted-publishing].
 
 Hope this helps!
-Do you know if anything else that can be done?
+Do you know of anything else that can be done?
 Please let me know.
 
-[^1]: Look through the [audit rules of `zizmor`](https://docs.zizmor.sh/audits/) to get an idea.
+!!! note "Updates to this blog post"
+
+    - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses)
+    - **31.03.2026:** Added a dedicated references section to show links of this article more prominently
+
+## References
+
+- Github Documentation: [Immutable releases][immutable-releases]
+- Post: [Package Managers Need to Cool Down][package-managers-cooldown]
+- Post: [We should all be using dependency cooldowns][dependency-cooldowns]
+- Renovate Documentation: [Minimum Release Age][renovate-minimumreleaseage]
+- Zizmor
+    - [Website][zizmor]
+    - [Audit Rules documentation][zizmor-audits]
+- Actionlint: [GitHub Repository][actionlint]
+- Post: [Trusted Publishers for All Package Repositories][trusted-publishing]
+- GitHub Blog: [What’s coming to our GitHub Actions 2026 security roadmap][github-security-roadmap]
+    - Provide feedback: [What’s coming to our GitHub Actions 2026 security roadmap - Feedback & Suggestions][github-security-roadmap-discussion]
+
+[^1]: Look through the [audit rules of `zizmor`][zizmor-audits] to get an idea.
 
 [^2]: See a [LinkedIn post by Dan Lorenc](https://www.linkedin.com/feed/update/urn:li:activity:7441468565012054016/) (the CEO of [Chainguard](https://www.chainguard.dev)) on what GitHub would need to do to make actions more secure by default.
 
@@ -223,3 +242,12 @@ Please let me know.
 
 [immutable-releases]: https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases
 [package-managers-cooldown]: https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html
+[dependency-cooldowns]: https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
+[renovate-minimumreleaseage]: https://docs.renovatebot.com/key-concepts/minimum-release-age/
+[zizmor]: https://zizmor.sh
+[zizmor-audits]: https://docs.zizmor.sh
+[trusted-publishing]: https://repos.openssf.org/trusted-publishers-for-all-package-repositories.html
+[github-security-roadmap]: https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/
+[github-security-roadmap-discussion]: https://github.com/orgs/community/discussions/190621
+[actionlint]: https://github.com/rhysd/actionlint
+[actionlint-checks]: https://github.com/rhysd/actionlint/blob/main/docs/checks.md
