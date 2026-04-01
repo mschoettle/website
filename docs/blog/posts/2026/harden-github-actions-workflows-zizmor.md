@@ -76,7 +76,7 @@ See the [integrations documentation](https://docs.zizmor.sh/integrations/) for m
 !!! tip "Use `actionlint` in addition to `zizmor`"
 
     At the same time, I also suggest to use [`actionlint`][actionlint] with the `shellcheck` integration.
-    It provides a lot of [checks][actionlint-checks] that complement `zizmor`.
+    It provides a lot of [checks][actionlint-checks-test] that complement `zizmor`.
     In particular, it has a [`shellcheck` integration](https://github.com/rhysd/actionlint/blob/main/docs/checks.md#check-shellcheck-integ).
 
     You can add it as a pre-commit hook as well, either using the container image, or via the Go module:
@@ -246,7 +246,6 @@ Please let me know.
     - [Audit Rules documentation][zizmor-audits]
 - `actionlint`
     - [GitHub Repository][actionlint]
-    - [Checks][actionlint-checks]
 - Renovate
     - [Documentation][renovate-docs]
     - Deep Dive: [Should you Pin your JavaScript Dependencies][renovate-dependency-pinning]
@@ -271,7 +270,7 @@ Please let me know.
 [^4]: `zizmor` has the [`dependabot-cooldown` audit rule](https://docs.zizmor.sh/audits/#dependabot-cooldown) that will flag this for you.
 
 [actionlint]: https://github.com/rhysd/actionlint
-[actionlint-checks]: https://github.com/rhysd/actionlint/blob/main/docs/checks.md
+[actionlint-checks-test]: https://github.com/rhysd/actionlint/blob/main/docs/checks.md
 [dependabot-cooldown]: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-
 [dependency-cooldowns]: https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns
 [github-security-roadmap]: https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/
