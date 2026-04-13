@@ -36,7 +36,7 @@ repos:
       - id: uv-lock
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.44.0
+    rev: v1.45.0
     hooks:
       - id: typos
 
@@ -64,7 +64,7 @@ repos:
           - mdformat-footnote==0.1.3
           - mdformat-gfm-alerts==2.0.0
           - mdformat-ruff==0.1.3
-          - ruff==0.15.8
+          - ruff==0.15.9
           - mdformat-config==0.2.1
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
@@ -85,7 +85,7 @@ repos:
 
   # actionlint for verifying correct syntax in GitHub Actions workflows.
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.11
+    rev: v1.7.12
     hooks:
       - id: actionlint
         language: golang
