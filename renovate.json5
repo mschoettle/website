@@ -37,7 +37,7 @@
   "packageRules": [
     // Combine uv package, uv image, and uv-pre-commit
     {
-      "matchPackageNames": ["uv-pre-commit", "uv"],
+      "matchPackageNames": ["/uv-pre-commit/", "astral-sh/uv"],
       "groupName": "uv",
     },
     // Combine markdownlint-cli2 image and pre-commit
