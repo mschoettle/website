@@ -5,7 +5,7 @@ hide:
 
 # Hallo, Hi, Bonjour :wave:
 
-I am Matthias, a software engineer and architect based in Montréal, originally from Germany.
+I am Matthias[^1], a software engineer and architect based in Montréal, originally from Germany.
 I currently work at [Opal](projects/index.md#opal) on the open-source Opal solution, which helps patients access and manage their medical data.
 
 I approach engineering with a systems mindset and a strong bias for action.
@@ -22,3 +22,9 @@ On this site, I share practical technical write-ups: setup guides, debugging not
 Outside of tech: table tennis, squash, great coffee, and mastering sourdough bread.
 
 <!-- My goal here is simple: publish useful content that helps someone solve a problem faster. -->
+
+[^1]: **About my last name:** It is actually written _Schöttle_.
+    The alternative spelling for `ö` is `oe`.
+    An _umlaut_ seems to be difficult for North Americans to write for some reason and they tend to drop the umlaut and just write `o`.
+    That's incorrect!
+    For this reason I usually write _Schoettle_.

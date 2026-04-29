@@ -133,8 +133,7 @@ I also develop new features and troubleshoot.
 For example, I designed and implemented support for smart devices.
 This allows a patient to send vital signs to the hospital.
 
-Recently, I lead the effort to open source our code base.
-In March 2025, we [open sourced the Opal solution](https://github.com/opalmedapps).
+I lead the effort to open source our code base, and in in March 2025, we [open sourced the Opal solution](https://github.com/opalmedapps).
 
 **Information:**
 
