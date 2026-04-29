@@ -15,3 +15,8 @@ dependencies = [
 dev = [
     "prek==0.3.10",
 ]
+
+# https://docs.astral.sh/uv/reference/settings/#configuration
+[tool.uv]
+add-bounds = "exact"
+exclude-newer = "7 days"
