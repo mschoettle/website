@@ -13,7 +13,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "prek==0.4.0",
+    "prek==0.4.10",
 ]
 
 # https://docs.astral.sh/uv/reference/settings/#configuration
