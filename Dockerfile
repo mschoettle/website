@@ -1,5 +1,6 @@
-# TODO: update Python version with Renovate somehow
-FROM ghcr.io/astral-sh/uv:0.11.32-python3.14-alpine AS dependencies
+# renovate: datasource=pypi depName=uv
+ARG UV_VERSION=0.11.32
+FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python3.14-alpine AS dependencies
 
 RUN apk add --no-cache git pngquant cairo
 
