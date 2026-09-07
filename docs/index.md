@@ -54,7 +54,7 @@ When I am not working on tech, you can find me playing table tennis or squash, m
 </div>
 
 [^1]: **About my last name:** It is actually written _Schöttle_.
-    The alternative spelling for `ö` is `oe`.
-    An _umlaut_ seems to be difficult for North Americans to write for some reason and they tend to drop the umlaut and just write `o`.
+    An _umlaut_ seems to be difficult for North Americans to write for some reason and they tend to drop it and just write `o`.
     That's incorrect!
+    The alternative spelling for `ö` is `oe`.
     For this reason I usually write _Schoettle_.
