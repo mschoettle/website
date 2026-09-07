@@ -6,7 +6,7 @@ hide:
 # Hallo, Hi, Bonjour :wave:
 
 I am Matthias[^1], a software engineer and architect based in Montréal, originally from Germany.
-I currently work at [Opal](projects/index.md#opal) on the open-source Opal solution, which helps patients access and manage their medical data.
+I currently work at [5 Prime Sciences](projects/index.md#centromere) on the scientific data platform _Centromere_, which helps scientists in their work to support accelerating drug development to get medicines to patients faster.
 
 I approach engineering with a systems mindset and a strong bias for action.
 I am comfortable wearing many hats and stay product-focused from idea to delivery.
