@@ -121,7 +121,7 @@ jobs:
           cache-to: type=gha,mode=max
 
   deploy:
-    uses: ./.github/workflows/cd.yml
+    uses: $/.github/workflows/cd.yml
     if: success() && github.ref == 'refs/heads/main'
     needs:
       - lint
