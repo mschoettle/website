@@ -34,35 +34,3 @@ ul li .admonition.hidden {
 .md-typeset figure.hidden, .md-typeset .glightbox .hidden {
     display: none !important;
 }
-
-.md-content > article:has(#about) {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#about.grid.cards > ul > li {
-  border: 0;
-}
-
-#about.grid.cards > ul > li:hover {
-  box-shadow: none;
-}
-
-#about.grid.cards .twemoji {
-    display: block;
-    margin-bottom: .8rem;
-    text-align: center;
-    color: #f19319;
-    --md-icon-size: 2rem;
-}
-
-#about.grid.cards > ul > li > p:first-child {
-  text-align: center;
-  font-size: 1rem;
-}
-
-#about.grid.cards > ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
