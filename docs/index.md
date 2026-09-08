@@ -15,7 +15,7 @@ My work focuses on building reliable systems and turning real-world problems int
 I tend to be hands-on and systems-oriented, with a strong focus on automation, code quality, scalability, and long-term maintainability.
 
 Open source is a big part of how I work.
-I regularly contribute upstream, share what I learn, and document solutions so others—and my future self—can reuse them.
+I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
 
 On this site, I share practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from real projects.
 
