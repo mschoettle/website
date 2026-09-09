@@ -69,7 +69,7 @@ At the same time, `zizmor` should run as a pre-commit hook and in CI as well so 
 
     1. At the time of writing, this is the current version, please update it if there's a newer one and pin to the commit SHA.
 
-    Or, `zizmor` also provides a handy [GitHub Action](https://docs.zizmor.sh/integrations/#github-actions) that you can integrate into your workflow.
+    Alternatively, `zizmor` also provides a handy [GitHub Action](https://docs.zizmor.sh/integrations/#github-actions) that you can integrate into your workflow.
 
 See the [integrations documentation](https://docs.zizmor.sh/integrations/) for more ways to integrate `zizmor`.
 
@@ -77,7 +77,7 @@ See the [integrations documentation](https://docs.zizmor.sh/integrations/) for m
 
     At the same time, I also suggest to use [`actionlint`][actionlint] with the `shellcheck` integration.
     It provides a lot of [checks][actionlint-checks] that complement `zizmor`.
-    In particular, it has a [`shellcheck` integration](https://github.com/rhysd/actionlint/blob/main/docs/checks.md#check-shellcheck-integ).
+    In particular, it has a [`shellcheck` integration](https://github.com/rhysd/actionlint/blob/main/docs/checks.md#check-shellcheck-integ) to check your scripts.
 
     You can add it as a pre-commit hook as well, either using the container image, or via the Go module:
 
@@ -115,7 +115,7 @@ And this would have certainly helped `trivy` and others not to have their secret
 But what if you were _just_ a user of `trivy`.
 How could you have avoided (or delayed) getting the malicious version?
 
-The answer is: Dependency pinning.
+The answer is: **Dependency pinning**.
 
 ## Dependency Pinning
 
@@ -188,6 +188,12 @@ Besides the diff, you will also see the release notes/changelog right in your PR
 
 For all dependency managers, Renovate provides the [`:pinAllExceptPeerDependencies`][renovate-preset-pinall] preset.
 
+!!! tip "Convert existing action versions manually using `pinact`"
+
+    I recently came across the [`pinact`](https://github.com/suzuki-shunsuke/pinact) tool which you can use to manually convert all unpinned uses yourself.
+
+    It also has some other potentially helpful [features](https://github.com/suzuki-shunsuke/pinact#features), such as ensuring a [minimum release age](https://github.com/suzuki-shunsuke/pinact#minimum-release-age-cooldown---min-age---verify-min-age).
+
 ## Dependency cooldowns
 
 With all this, it is of course still possible to be quick and merge the dependency update PR to update to a new version right away.
@@ -221,7 +227,34 @@ With the above configuration, every dependency needs to have been released at le
 
     Renovate currently does not use `minimumReleaseAge` to restrict [transitive dependencies in lock files](https://docs.renovatebot.com/key-concepts/minimum-release-age/#what-happens-to-transitive-dependencies).
     However, there is an [open issue to use minimum release age for package managers](https://github.com/renovatebot/renovate/issues/41652).
-    To do it manually, refer to the comparison of [support for a cooldown across package managers][package-managers-cooldown].
+
+    For now, you can do it manually via the [cooldown support of your package manager][package-managers-cooldown].
+
+    !!! tip "Cooldown with `uv` and `npm`"
+
+        === "`uv`"
+
+            Add the following to your `pyproject.toml`:
+
+            ```toml
+            [tool.uv]
+            add-bounds = "exact"
+            exclude-newer = "7 days"
+            ```
+
+            When Renovate does lock file maintenance all updates to transitive dependencies will be at least 7 days old.
+
+        === "`npm`"
+
+            Add the following to your `.npmrc`:
+
+            ```ini
+            min-release-age=7 # days
+            ```
+
+        The only downside about this approach is that you can't just force an earlier update of a dependency.
+        The package manager will refuse to install a newer dependency.
+        You will need to add an exclusion when this is needed.
 
 Doing all this will give you hardened workflows and prevent you from unwillingly installing malicious versions (or at least decrease the probability of this happening quite a bit).
 Finally, if you are a maintainer of a package, please enable [immutable releases][immutable-releases], and use [trusted publishing][trusted-publishing].
@@ -238,6 +271,10 @@ Please let me know.
         - Small improvements to improve readability
         - Added example for enabling cooldown with Dependabot
         - Added reference to latest attack on `axios`
+    - **09.09.2026:**
+        - Small improvements to improve readability
+        - Added reference to `pinact`
+        - Added examples to keep a cooldown in lock files
 
 ## References
 
