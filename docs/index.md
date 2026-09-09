@@ -5,8 +5,8 @@ hide:
 
 # Hallo, Hi, Bonjour :wave:
 
-I am Matthias, a software engineer and architect based in Montréal, originally from Germany.
-I currently work at [Opal](projects/index.md#opal) on the open-source Opal solution, which helps patients access and manage their medical data.
+I am Matthias[^1], a software engineer and architect based in Montréal, originally from Germany.
+I currently work at [5 Prime Sciences](projects/index.md#centromere) on the scientific data platform _Centromere_, which helps scientists in their work to support accelerating drug development to get medicines to patients faster.
 
 I approach engineering with a systems mindset and a strong bias for action.
 I am comfortable wearing many hats and stay product-focused from idea to delivery.
@@ -15,10 +15,16 @@ My work focuses on building reliable systems and turning real-world problems int
 I tend to be hands-on and systems-oriented, with a strong focus on automation, code quality, scalability, and long-term maintainability.
 
 Open source is a big part of how I work.
-I regularly contribute upstream, share what I learn, and document solutions so others—and my future self—can reuse them.
+I regularly contribute upstream, share what I learn, and document solutions so others (and my future self) can reuse them.
 
 On this site, I share practical technical write-ups: setup guides, debugging notes, migration workflows, and lessons learned from real projects.
 
-Outside of tech: table tennis, squash, great coffee, and mastering sourdough bread.
+When I am not working on tech, you can find me playing table tennis or squash, making and drinking great coffee, and mastering sourdough bread.
 
 <!-- My goal here is simple: publish useful content that helps someone solve a problem faster. -->
+
+[^1]: **About my last name:** It is actually written _Schöttle_.
+    An _umlaut_ seems to be difficult for North Americans to write for some reason and they tend to drop it and just write `o`.
+    That's incorrect!
+    The alternative spelling (transliteration) for `ö` is `oe`.
+    For this reason I usually write _Schoettle_.

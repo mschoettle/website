@@ -7,6 +7,14 @@ They include both work projects and personal ones.
 
 <div class="grid cards" markdown>
 
+- :dna:{ .lg .middle } **Centromere**
+
+    ---
+
+    A scientific data platform.
+
+    [:octicons-arrow-right-24: Tell me more](#centromere)
+
 - :material-heart-pulse:{ .lg .middle } **Opal**
 
     ---
@@ -116,25 +124,36 @@ In case of an open source project it means that the corresponding repository is 
 
 ## Project Details
 
+### Centromere
+
+Since 2026 I am working as a Senior Software Engineer at the startup [5 Prime Sciences](https://www.5primesciences.com).
+5 Prime Sciences is helping pharma and biotech companies to de-risk their drug development using human genetics.
+
+I help build out _Centromere_, their scientific data platform, which helps the scientists in their work for client programs.
+
+**Information:**
+
+- **Website:** https://www.5primesciences.com
+- **LinkedIn:** https://www.linkedin.com/company/5primesciences/
+
 ### Opal
 
-Since 2021 I have been working with the [Opal Health Informatics Group](https://www.opalmedapps.com) on the Opal solution (1).
-As the _Software Architect_ I am overseeing the software architecture and future design of Opal.
+Between 2021 and 2026 I was working with the [Opal Health Informatics Group](https://www.opalmedapps.com) on the Opal solution (1).
+As the _Software Architect_ I was overseeing the software architecture and future design of Opal.
 I helped establish various best practices and improvements, such as using containerization, CI/CD, use of code quality tools, "everything as code", dependency management via [Renovate](https://docs.renovatebot.com/), and more.
 { .annotate }
 
 1. Opal is a patient portal designed to empower patients with their medical information.
     It consists of the patient portal, and a hospital-facing part to manage the medical data as well as enrich it to make it more useful for patients.
 
-A big part is the question of how many of the legacy components can be migrated to a new component.
+A big part was the question of how many of the legacy components can be migrated to a new component.
 I proposed the [Strangler Fig Migration Pattern](https://martinfowler.com/bliki/StranglerFigApplication.html) instead of doing a "big bang replacement".
 
-I also develop new features and troubleshoot.
+I also developed new features and did a lot of troubleshooting.
 For example, I designed and implemented support for smart devices.
 This allows a patient to send vital signs to the hospital.
 
-Recently, I lead the effort to open source our code base.
-In March 2025, we [open sourced the Opal solution](https://github.com/opalmedapps).
+I lead the effort to open source our code base which was [open sourced in March 2025](https://github.com/opalmedapps).
 
 **Information:**
 
