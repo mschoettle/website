@@ -5,6 +5,8 @@
     "github>mschoettle/renovate-presets//presets/best-practices.json5",
     // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
     "customManagers:githubActionsVersions",
+    // https://docs.renovatebot.com/presets-schedule/#scheduleweekly
+    "schedule:weekly",
     "github>mschoettle/renovate-presets//presets/packages/actions-docker.json5",
     "github>mschoettle/renovate-presets//presets/packages/actions-github.json5",
   ],
