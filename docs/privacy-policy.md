@@ -1,6 +1,9 @@
 ---
 hide:
   - feedback
+meta:
+  date:
+    updated: 2025-12-09
 ---
 
 # Privacy Policy
