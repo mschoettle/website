@@ -3,6 +3,8 @@ repos:
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
+        # let mdformat handle Markdown files
+        exclude: ^.+\.md$
       - id: end-of-file-fixer
       - id: check-builtin-literals
       - id: check-case-conflict
@@ -26,7 +28,7 @@ repos:
       - id: detect-private-key
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: 0.26
+    rev: "0.26"
     hooks:
       - id: validate-pyproject
 
