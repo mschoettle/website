@@ -1,5 +1,5 @@
 # renovate: datasource=pypi depName=uv
-ARG UV_VERSION=0.12.7
+ARG UV_VERSION=0.12.23
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python3.14-alpine AS dependencies
 
 RUN apk add --no-cache git pngquant cairo
