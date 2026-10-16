@@ -1,4 +1,6 @@
 ---
+date:
+  updated: 2025-12-08
 hide:
   - feedback
 ---

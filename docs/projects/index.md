@@ -1,3 +1,8 @@
+---
+date:
+  updated: 2026-09-09
+---
+
 # Projects
 
 A selected list of projects that I created or am/was involved in.
