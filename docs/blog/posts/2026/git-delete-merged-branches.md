@@ -1,4 +1,6 @@
 ---
+categories:
+  - Git
 date:
   created: 2026-10-16
 tags:
