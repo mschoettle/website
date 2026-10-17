@@ -22,7 +22,9 @@ Then of course, the current focus and concentration is lost.
 I wanted to turn the badge of, as this is generally supported on OSX.
 However, I found out that this is not the case with Thunderbird.
 
-NOTE: This functionality is supported natively with newer versions of Thunderbird.
+!!! note
+
+    This functionality is supported natively with newer versions of Thunderbird.
 
 I didn't give up easily and went to search the _Internet_.
 Unfortunately, no one had attempted this, complained about it or filed a bug report.

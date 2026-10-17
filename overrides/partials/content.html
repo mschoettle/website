@@ -54,7 +54,7 @@
 <!-- Page content -->
 {{ page.content }}
 
-{% if page.meta and page.meta.date and page.meta.date.updated %}
+{% if "blog/" not in page.url and page.meta and page.meta.date and page.meta.date.updated %}
 <aside class="md-source-file">
   <span class="md-source-file__fact">
     <span class="md-icon" title="Last updated">

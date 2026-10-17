@@ -64,8 +64,8 @@ EMF itself requires `org.eclipse.emf.ecore` and `org.eclipse.emf.ecore.xmi`.
 If you encounter a `java.lang.NoClassDefFoundError: org/eclipse/uml2/uml/Type` exception during runtime when calling `OCLinEcoreStandaloneSetup.doSetup()`, you need to add a dependency to `org.eclipse.uml2.uml.resources` as well.
 This is because starting with _Eclipse Luna_ [OCLInEcore does not re-export UML anymore](https://www.eclipse.org/forums/index.php/mv/msg/783873/1389274/#msg_1389274 "Eclipse Community Post").
 
-> UPDATES: **Updates to this blog post**
->
-> - **07.12.2012:** Added missing call to install the OCL standard library and dependencies.
-> - **28.06.2014:** Added missing UML dependency for Eclipse Luna.
-> - **Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).
+!!! update "Updates to this blog post"
+
+    - **07.12.2012:** Added missing call to install the OCL standard library and dependencies.
+    - **28.06.2014:** Added missing UML dependency for Eclipse Luna.
+    - **Update 18.08.2015:** Updated for Eclipe Mars (in [separate post](../2015/how-to-use-ocl-when-running-emf-standalone-with-eclipse-mars.md)).

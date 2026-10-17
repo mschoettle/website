@@ -362,7 +362,9 @@ A script is executed periodically by a cron job to retrieve new match results an
 
 ### Docker Monitor
 
-INFO: This project is archived (not actively maintained anymore).
+!!! info
+
+    This project is archived (not actively maintained anymore).
 
 Simple helper script that allows to monitor docker containers to ensure they are running and healthy.
 The script only outputs anything in the opposite case (non-running or unhealthy).

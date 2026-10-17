@@ -18,7 +18,9 @@ tags:
 I was always intrigued by [Django](https://www.djangoproject.com/).
 After all, it's slogan is
 
-QUOTE: The web framework for perfectionists with deadlines
+!!! quote
+
+    The web framework for perfectionists with deadlines
 
 Last year I started a project for a client who needed a web app to manage a digital printing workflow.
 I evaluated Django and did their [tutorial](https://docs.djangoproject.com/en/stable/intro/tutorial01/) (which is really well made by the way).
@@ -30,7 +32,9 @@ In this post I explain how I combined [`django_tables2`](https://github.com/jiet
 
 <!-- more -->
 
-NOTE: If I were to do something similar again now I would do this using server-side rendering only and add the interactivity using [HTMX](https://htmx.org/) or [unpoly](https://unpoly.com/).
+!!! note
+
+    If I were to do something similar again now I would do this using server-side rendering only and add the interactivity using [HTMX](https://htmx.org/) or [unpoly](https://unpoly.com/).
 
 ## Using `django_tables2` with custom model methods
 
@@ -209,6 +213,6 @@ Supporting [server-side searching](https://bootstrap-table.com/docs/api/table-op
 If you are already using the [django-rest-framework](https://www.django-rest-framework.org/) you could directly use the [`SearchFilter`](https://www.django-rest-framework.org/api-guide/filtering/#searchfilter) it provides.
 It is based on [Django admin's search functionality](https://docs.djangoproject.com/en/stable/ref/contrib/admin/#django.contrib.admin.ModelAdmin.search_fields)
 
-> UPDATES: **Updates to this blog post**
->
-> - **23.06.2023:** Added note about doing it using server-side rendering using `HTMX` or `unpoly`.
+!!! update "Updates to this blog post"
+
+    - **23.06.2023:** Added note about doing it using server-side rendering using `HTMX` or `unpoly`.
