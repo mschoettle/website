@@ -31,13 +31,13 @@ I have attended the following workshops:
 - **2018**
     - Participated in the [Unifying Software Reuse Workshop](https://www.bellairs2018.ece.mcgill.ca) at Bellairs Research Institute
 - **2017**
-    - Participated in the [Workshop on Reuse for Domain-Specific Language Development](https://www.cs.mcgill.ca/~joerg/SEL/Language_Reuse_Bellairs_2017.html) at Bellairs Research Institute (see resulting [paper](./index.md/#paper-18))
+    - Participated in the [Workshop on Reuse for Domain-Specific Language Development](https://www.cs.mcgill.ca/~joerg/SEL/Language_Reuse_Bellairs_2017.html) at Bellairs Research Institute (see resulting [paper](./index.md#paper-18))
     - Participated in the [8th Summer School on Domain Specific Modelling Theory and Practice (DSM-TP)](https://web.archive.org/web/20211204021727/https://msdl.cs.mcgill.ca/conferences/dsm-tp-2017/index_html)
 - **2015**
-    - Participated in the [Concern-Oriented Reuse Workshop](https://www.cs.mcgill.ca/~joerg/SEL/CORE_Bellairs_2015.html) at Bellairs Research Institute (see resulting [paper](./index.md/#paper-16))
+    - Participated in the [Concern-Oriented Reuse Workshop](https://www.cs.mcgill.ca/~joerg/SEL/CORE_Bellairs_2015.html) at Bellairs Research Institute (see resulting [paper](./index.md#paper-16))
     - Presented Concern-Oriented Reuse (CORE) at the [CSER Spring Meeting](https://web.archive.org/web/20201027005607/https://sites.google.com/site/cser2015spring/) (see [slides](https://mattsch.com/wp-content/papercite-data/pdf/cser-schoettle2015_slides.pdf))
 - **2014**
-    - Participated in the [Modelling Outside the Box (MOTB) Workshop](https://www.cs.mcgill.ca/~joerg/SEL/MOTB_Bellairs_2014.html) at Bellairs Research Institute (see resulting [paper](./index.md/#paper-7))
+    - Participated in the [Modelling Outside the Box (MOTB) Workshop](https://www.cs.mcgill.ca/~joerg/SEL/MOTB_Bellairs_2014.html) at Bellairs Research Institute (see resulting [paper](./index.md#paper-7))
 - **2013**
     - Participated in the 1st PLOW Workshop: Poster and Demo of TouchRAM
     - Participated in the [CSER Spring Meeting](https://users.encs.concordia.ca/~pcr/cser/index.html)

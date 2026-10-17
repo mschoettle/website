@@ -5,10 +5,7 @@ description = "Matthias Schoettle's personal website"
 readme = "README.md"
 requires-python = "==3.14.8"
 dependencies = [
-    "markdown-callouts==0.4.0",
-    "mkdocs-git-revision-date-localized-plugin==1.6.0",
-    "mkdocs-glightbox==0.5.2",
-    "mkdocs-material[imaging]==9.7.7",
+    "zensical==0.0.71",
 ]
 
 [dependency-groups]
@@ -20,3 +17,4 @@ dev = [
 [tool.uv]
 add-bounds = "exact"
 exclude-newer = "7 days"
+exclude-newer-package = { zensical = "1 day" }
