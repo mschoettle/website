@@ -195,12 +195,13 @@ markdown_extensions:
   - github-callouts
   - callouts
 
-# https://www.mkdocs.org/user-guide/configuration/#validation
+# https://zensical.org/docs/setup/validation/
 validation:
-  omitted_files: warn
-  absolute_links: warn
-  unrecognized_links: warn
-  anchors: warn
+  invalid_links: true
+  invalid_link_anchors: true
+  # the following are currently deprecated: https://zensical.org/docs/setup/validation/#deprecated-checks
+  # enabled those not covered by markdownlint
+  unresolved_footnotes: true
 
 watch:
   - overrides
