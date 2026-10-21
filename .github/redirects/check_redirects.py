@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "requests==2.34.2",
+# ]
+# ///
 import json
 import sys
 from http import HTTPStatus

@@ -2,8 +2,6 @@
 ARG UV_VERSION=0.12.23
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python3.14-alpine AS dependencies
 
-RUN apk add --no-cache git pngquant cairo
-
 WORKDIR /app
 
 RUN --mount=type=bind,source=uv.lock,target=uv.lock \
