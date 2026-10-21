@@ -32,7 +32,9 @@ RUN if [[ -z "${STATS_WEBSITE_ID}" ]]; then echo "STATS_WEBSITE_ID missing"; exi
 
 COPY . .
 
-RUN zensical build --strict
+# cache currently disabled
+# see: https://zensical.org/docs/publish-your-site/#with-github-actions
+RUN zensical build --clean --strict
 
 
 # production
@@ -40,4 +42,4 @@ FROM joseluisq/static-web-server:2.44.0@sha256:2c1a7c3e0feaea5859307403b74e1c575
 
 COPY deploy/sws.toml /sws.toml
 
-COPY --from=build /site /public
+COPY --from=build /app/site /public
