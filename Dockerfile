@@ -32,7 +32,7 @@ RUN if [[ -z "${STATS_WEBSITE_ID}" ]]; then echo "STATS_WEBSITE_ID missing"; exi
 
 COPY . .
 
-RUN zensical build --strict --site-dir /site
+RUN zensical build --strict
 
 
 # production
