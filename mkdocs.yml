@@ -60,6 +60,9 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+  icon:
+    admonition:
+      update: lucide/rotate-cw-clock
 
 extra_css:
   - assets/stylesheets/extra.css

@@ -34,3 +34,9 @@ ul li .admonition.hidden {
 .md-typeset figure.hidden, .md-typeset .glightbox .hidden {
     display: none !important;
 }
+
+/* Custom admonition icon for blog post updates */
+.md-typeset .admonition-title::before, .md-typeset summary::before {
+    --webkit-mask-image: var(--md-admonition-icon--update);
+    mask-image: var(--md-admonition-icon--update);
+}
