@@ -17,7 +17,7 @@ ENV PATH=/app/.venv/bin:$PATH
 # development server
 FROM dependencies AS development
 
-ENTRYPOINT [ "uv", "run", "mkdocs", "serve" ]
+ENTRYPOINT [ "uv", "run", "zensical", "serve" ]
 
 
 # build site
@@ -32,7 +32,7 @@ RUN if [[ -z "${STATS_WEBSITE_ID}" ]]; then echo "STATS_WEBSITE_ID missing"; exi
 
 COPY . .
 
-RUN python -m mkdocs build --strict --site-dir /site
+RUN zensical build --strict --site-dir /site
 
 
 # production

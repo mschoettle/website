@@ -11,11 +11,11 @@ My personal website.
 2. Install pre-commit hooks:
 
     ```shell
-    uv run pre-commit install
+    uv run prek install
     ```
 
-3. Serve site locally with `mkdocs`:
+3. Serve site locally with `zensical`:
 
     ```shell
-    uv run mkdocs serve
+    uv run zensical serve
     ```
