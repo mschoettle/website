@@ -263,7 +263,7 @@ Hope this helps!
 Do you know of anything else that can be done?
 Please let me know.
 
-!!! note "Updates to this blog post"
+!!! update "Updates to this blog post"
 
     - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses) :grinning_face:
     - **31.03.2026:**

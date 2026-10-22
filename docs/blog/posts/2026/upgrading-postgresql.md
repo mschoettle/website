@@ -101,7 +101,7 @@ When switching to `v18` you need to drop `/data` from the volume mapping of both
 
 This allows `pgautoupgrade` to move to the new directory structure.
 
-!!! info "What about cloud-hosted database instances?"
+!!! question "What about cloud-hosted database instances?"
 
     Cloud providers support this and make it somewhat easier for you.
     For example, in Google Cloud's CloudSQL you can upgrade your instance in-place following their [upgrade guide](https://docs.cloud.google.com/sql/docs/postgres/upgrade-major-db-version-inplace).

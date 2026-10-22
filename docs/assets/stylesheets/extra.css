@@ -36,7 +36,7 @@ ul li .admonition.hidden {
 }
 
 /* Custom admonition icon for blog post updates */
-.md-typeset .admonition-title::before, .md-typeset summary::before {
+.md-typeset .update .admonition-title::before, .md-typeset .update summary::before {
     --webkit-mask-image: var(--md-admonition-icon--update);
     mask-image: var(--md-admonition-icon--update);
 }

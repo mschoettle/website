@@ -121,6 +121,6 @@ password
 account default : server
 ```
 
-!!! note "Updates to this blog post"
+!!! update "Updates to this blog post"
 
     - **09.02.2026:** Improved wording and brought it up to date with latest version (based on Debian Trixie).
