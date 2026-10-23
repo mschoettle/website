@@ -42,6 +42,9 @@ theme:
   language: en
   name: material
   custom_dir: overrides
+  # prevent autoloading until the privacy plugin is supported
+  # https://zensical.org/docs/setup/fonts/#autoloading
+  font: false
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
