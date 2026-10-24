@@ -38,8 +38,10 @@ For some reason I thought that the static configuration is everything that's con
 That's only somewhat correct.
 You can also have a dynamic configuration in a file (using the file provider) and there are some options you need to (read: _have to_) define in the dynamic configuration.
 
-NOTE: In the below snippets I use `yaml` as opposed to `toml`.
-I find it less verbose and easier to read.
+!!! note
+
+    In the below snippets I use `yaml` as opposed to `toml`.
+    I find it less verbose and easier to read.
 
 In my static configuration (`traefik.yml`) I have some global options, `entryPoints`, `providers`, and `certificateResolvers`.
 There are `entryPoints` for `http` and `https` with `http-to-https` redirection and HTTPS TLS settings (for certificates):
@@ -144,7 +146,9 @@ certificatesResolvers:
       # caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
 ```
 
-TIP: I highly recommend to first try the staging server at the beginning to avoid rate limiting.
+!!! tip
+
+    I highly recommend to first try the staging server at the beginning to avoid rate limiting.
 
 With just this, traefik will however not try to request a certificate.
 This is where the dynamic configuration comes into play.
@@ -254,10 +258,12 @@ Execute `crontab -e` and add the following entry:
 
 If you want to see how this is all put together, check out [my repository on Github](https://github.com/mschoettle/docker/) where you can find all Docker and configuration files for Gitea, traefik, and Nextcloud.
 
-NOTE: This repository hasn't been updated in a while.
-I am planning to update this at some point.
+!!! note
 
-> UPDATES: **Updates to this blog post**
->
-> - **24.05.2020:** Updated for traefik `v2.2`, added `TLSv1.2` options
-> - **17.12.2022:** Added information on Nextcloud config file and new environment variable support
+    This repository hasn't been updated in a while.
+    I am planning to update this at some point.
+
+!!! update "Updates to this blog post"
+
+    - **24.05.2020:** Updated for traefik `v2.2`, added `TLSv1.2` options
+    - **17.12.2022:** Added information on Nextcloud config file and new environment variable support

@@ -135,6 +135,6 @@ customRules:
     See this [reusable `markdownlint` workflow](https://github.com/opalmedapps/.github/blob/main/.github/workflows/markdownlint.yaml) that creates the dedicated config file on the fly.
     You might want to use the [`markdownlint-cli2-action`](https://github.com/marketplace/actions/markdownlint-cli2-action) in your CI job which already contains a formatter that contains annotations.
 
-!!! note "Updates to this blog post
+!!! update "Updates to this blog post
 
     **27.02.2026:** Added details about using additional dependencies in `pre-commit` hooks.

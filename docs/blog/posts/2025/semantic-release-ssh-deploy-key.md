@@ -106,6 +106,6 @@ Add the SSH repository URL to your `semantic-release` configuration in the [`rep
     I [raised a PR](https://github.com/semantic-release/semantic-release/pull/3950) to improve the SSH key documentation.
     Hopefully it will get accepted.
 
-!!! note "Updates to this blog post"
+!!! update "Updates to this blog post"
 
     - **19.02.2026:** Added information about using environment secrets to protect the deploy key.

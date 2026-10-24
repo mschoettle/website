@@ -2,8 +2,6 @@
 ARG UV_VERSION=0.12.23
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python3.14-alpine AS dependencies
 
-RUN apk add --no-cache git pngquant cairo
-
 WORKDIR /app
 
 RUN --mount=type=bind,source=uv.lock,target=uv.lock \
@@ -17,7 +15,7 @@ ENV PATH=/app/.venv/bin:$PATH
 # development server
 FROM dependencies AS development
 
-ENTRYPOINT [ "uv", "run", "mkdocs", "serve" ]
+ENTRYPOINT [ "uv", "run", "zensical", "serve" ]
 
 
 # build site
@@ -32,7 +30,9 @@ RUN if [[ -z "${STATS_WEBSITE_ID}" ]]; then echo "STATS_WEBSITE_ID missing"; exi
 
 COPY . .
 
-RUN python -m mkdocs build --strict --site-dir /site
+# cache currently disabled
+# see: https://zensical.org/docs/publish-your-site/#with-github-actions
+RUN zensical build --clean --strict
 
 
 # production
@@ -40,4 +40,4 @@ FROM joseluisq/static-web-server:2.44.1@sha256:94618e3d17802265a21926217e6f9e783
 
 COPY deploy/sws.toml /sws.toml
 
-COPY --from=build /site /public
+COPY --from=build /app/site /public

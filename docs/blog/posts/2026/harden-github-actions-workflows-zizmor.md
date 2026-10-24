@@ -3,7 +3,7 @@ categories:
   - CI/CD
 date:
   created: 2026-03-28
-  updated: 2026-03-31
+  updated: 2026-09-09
 tags:
   - automation
   - code quality
@@ -263,19 +263,6 @@ Hope this helps!
 Do you know of anything else that can be done?
 Please let me know.
 
-!!! note "Updates to this blog post"
-
-    - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses) :grinning_face:
-    - **31.03.2026:**
-        - Added a dedicated references section to show important links from this article more prominently
-        - Small improvements to improve readability
-        - Added example for enabling cooldown with Dependabot
-        - Added reference to latest attack on `axios`
-    - **09.09.2026:**
-        - Small improvements to improve readability
-        - Added reference to `pinact`
-        - Added examples to keep a cooldown in lock files
-
 ## References
 
 - `zizmor`
@@ -298,6 +285,19 @@ Please let me know.
 - Post: [Trusted Publishers for All Package Repositories][trusted-publishing]
 - GitHub Blog: [What’s coming to our GitHub Actions 2026 security roadmap][github-security-roadmap]
     - Provide feedback: [What’s coming to our GitHub Actions 2026 security roadmap - Feedback & Suggestions][github-security-roadmap-discussion]
+
+!!! update "Updates to this blog post"
+
+    - **30.03.2026:** This post was featured on [episode 475 of the Python Bytes Podcast](https://pythonbytes.fm/episodes/show/475/haunted-warehouses) :grinning_face:
+    - **31.03.2026:**
+        - Added a dedicated references section to show important links from this article more prominently
+        - Small improvements to improve readability
+        - Added example for enabling cooldown with Dependabot
+        - Added reference to latest attack on `axios`
+    - **09.09.2026:**
+        - Small improvements to improve readability
+        - Added reference to `pinact`
+        - Added examples to keep a cooldown in lock files
 
 [^1]: Look through the [audit rules of `zizmor`][zizmor-audits] to get an idea.
 

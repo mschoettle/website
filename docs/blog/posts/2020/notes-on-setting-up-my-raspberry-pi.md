@@ -123,11 +123,12 @@ PARTUUID=<partUUID> /mnt/<dir>    ext4    defaults,auto,rw,nofail,noatime    0  
 Now, reboot the Raspberry Pi and the drive should already be mounted.
 The official Raspberry Pi Documentation also has a page about [external storage](https://www.raspberrypi.com/documentation/computers/configuration.html#external-storage).
 
-NOTE: **`fstab` entry options**
-At the beginning I also had `user` as an option to allow users to mount.
-However, this implies `noexec` which prevents binaries from being executed on this filesystem.
-This caused a problem with _Gitea_ because the [commit hooks of repositories couldn't be executed](https://github.com/go-gitea/gitea/issues/9365).
-You can of course add `exec` as well, but since I don't need users to mount I just removed `user` instead.
+!!! note "`fstab` entry options"
+
+    At the beginning I also had `user` as an option to allow users to mount.
+    However, this implies `noexec` which prevents binaries from being executed on this filesystem.
+    This caused a problem with _Gitea_ because the [commit hooks of repositories couldn't be executed](https://github.com/go-gitea/gitea/issues/9365).
+    You can of course add `exec` as well, but since I don't need users to mount I just removed `user` instead.
 
 ### Dealing with slow speeds and other USB storage related issues
 
@@ -192,9 +193,10 @@ Even if it did, there is no guarantee that it works for every system startup.
 
 To address this you can make the MariaDB service _depend_ on the mount service ([a service for the _fstab_ mounts is generated](https://unix.stackexchange.com/a/247547)).
 
-WARNING:
-The service file you see shown at the top of the output of `systemctl status` gets overwritten on package upgrades.
-Don't edit it directly.
+!!! warning
+
+    The service file you see shown at the top of the output of `systemctl status` gets overwritten on package upgrades.
+    Don't edit it directly.
 
 Create an override file for the _MariaDB_ service.
 The required directory probably does not exist yet:
@@ -206,8 +208,9 @@ sudo mkdir /etc/systemd/system/mariadb.service.d
 Create the file `mount.conf` in this directory with the `[Unit]` section.
 Add `RequiresMountsFor=/mnt/mydisk`.
 
-NOTE:
-The corresponding dependencies ([After](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Before=) and [Requires](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Requires=)) for [RequiresMountsFor](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#RequiresMountsFor=) will automatically be generated.
+!!! note
+
+    The corresponding dependencies ([After](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Before=) and [Requires](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Requires=)) for [RequiresMountsFor](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#RequiresMountsFor=) will automatically be generated.
 
 The resulting file should look like this:
 
@@ -246,13 +249,14 @@ If you want to change this, add the following line to `/etc/lighttpd/external.co
 server.port := 8080
 ```
 
-> OPTIONAL: **Changing the hostname**
-> If you also want to make Pi-Hole available under a different hostname (e.g., through the use of a reverse proxy), there is another change you need to do in order for the automatic redirect to the admin interface to work.
-> Add the following line to `external.conf`:
->
-> ```lighttpd
-> setenv.add-environment = ("virtual_host" => "pihole.domain.tld")
-> ```
+??? note "Changing the hostname"
+
+    If you also want to make Pi-Hole available under a different hostname (e.g., through the use of a reverse proxy), there is another change you need to do in order for the automatic redirect to the admin interface to work.
+    Add the following line to `external.conf`:
+
+    ```lighttpd
+    setenv.add-environment = ("virtual_host" => "pihole.domain.tld")
+    ```
 
 Then restart the `lighttpd` service using `systemctl`:
 
@@ -274,8 +278,8 @@ Add an entry there and execute `pihole restartdns`.
 
 Now a `dig custom.host.name` should return the IP address of your server.
 
-> UPDATES: **Updates to this blog post**
->
-> - **24.05.2020:** Updated Pi-hole sections with changes introduced in Pi-hole v5.
-> - **22.10.2024:** Improved section ensuring the _MariaDB_ service starts after the disk is mounted:
->     Custom unit file so that changes don't get overwritten on package upgrades.
+!!! update "Updates to this blog post"
+
+    - **24.05.2020:** Updated Pi-hole sections with changes introduced in Pi-hole v5.
+    - **22.10.2024:** Improved section ensuring the _MariaDB_ service starts after the disk is mounted:
+        Custom unit file so that changes don't get overwritten on package upgrades.

@@ -5,7 +5,7 @@ date:
 tags:
   - automation
   - code quality
-  - how to
+  - howto
   - open source
 ---
 

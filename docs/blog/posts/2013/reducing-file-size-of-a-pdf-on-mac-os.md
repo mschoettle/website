@@ -3,7 +3,7 @@ categories:
   - Mac OS
 date:
   created: 2013-04-25
-  updated: 2017-12-12
+  updated: 2024-10-27
 migrated: true
 slug: reducing-file-size-of-a-pdf-on-mac-os
 tags:
@@ -38,7 +38,7 @@ If the filters don't work perfectly for your use, you can adjust the settings wi
 
 The original creator of the filters to be credited seems to be Jerome Colas according to this [GitHub repository](https://github.com/joshcarr/Apple-Quartz-Filters).
 
-> UPDATES: **Updates to this blog post**
->
-> - **December 2017:** Uploaded the ZIP file to my own server, since the original link became unavailable.
-> - **27.10.2024:** Replaced ZIP file with link to GitHub repository to download filters
+!!! update "Updates to this blog post"
+
+    - **December 2017:** Uploaded the ZIP file to my own server, since the original link became unavailable.
+    - **27.10.2024:** Replaced ZIP file with link to GitHub repository to download filters

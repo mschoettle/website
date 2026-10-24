@@ -134,6 +134,6 @@ volumes:
 
 This way, irregardless of the host on which a container is run, the timezone matches the one of the host.
 
-> UPDATES: **Updates to this blog post**
->
-> - **23.10.2024:** Updated default network format in `compose` example to current format.
+!!! update "Updates to this blog post"
+
+    - **23.10.2024:** Updated default network format in `compose` example to current format.

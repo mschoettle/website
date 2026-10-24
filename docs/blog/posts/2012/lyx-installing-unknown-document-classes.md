@@ -44,7 +44,7 @@ Now that you know where to put it, follow these steps:
 
 On Windows (using _MikTeX_) this should work quite easy using the _MikTeX Package Manager_.
 
-> UPDATES: **Updates to this blog post**
->
-> - **28.03.2013:** Fixed path to LaTeX packages (Thanks, Mathias!)
-> - **05.04.2013:** Updated description with better location for custom document classes.
+!!! update "Updates to this blog post"
+
+    - **28.03.2013:** Fixed path to LaTeX packages (Thanks, Mathias!)
+    - **05.04.2013:** Updated description with better location for custom document classes.

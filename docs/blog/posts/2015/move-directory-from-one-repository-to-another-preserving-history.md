@@ -56,8 +56,10 @@ Here is how I did it, based on this [blog post](https://gbayer.com/development/m
 
     From the [git documentation](https://git-scm.com/docs/git-filter-branch):
 
-    QUOTE: Only look at the history which touches the given subdirectory.
-    The result will contain that directory (and only that) as its project root.
+    !!! quote
+
+        Only look at the history which touches the given subdirectory.
+        The result will contain that directory (and only that) as its project root.
 
     You might need to add `--prune-empty` to avoid empty commits, in my case it was not necessary.
 
@@ -131,10 +133,10 @@ You might need to perform the following optional steps:
 
 8. If everything works, remove `directoryToKeep` from `repositoryA`.
 
-> UPDATES: **Updates to this blog post**
->
-> - **19.01.2017:** Updated step 2.4 with additional option (Thanks, Paul!)
-> - **18.12.2018:** Updated step 1.5 with additional option to preserve tags (Thanks, Sandip!)
-> - **28.10.2019:** If you have files tracked by `git-lfs`, there are is an additional step you need to perform
->     After cloning the repository at the beginning, perform `git lfs fetch --all` ([source](https://stackoverflow.com/a/49366471)).
->     As Evan pointed out in the comments, if the directory that should be kept does not have any large files, he performed `git lfs uninstall --local` to get rid of them.
+!!! update "Updates to this blog post"
+
+    - **19.01.2017:** Updated step 2.4 with additional option (Thanks, Paul!)
+    - **18.12.2018:** Updated step 1.5 with additional option to preserve tags (Thanks, Sandip!)
+    - **28.10.2019:** If you have files tracked by `git-lfs`, there are is an additional step you need to perform
+        After cloning the repository at the beginning, perform `git lfs fetch --all` ([source](https://stackoverflow.com/a/49366471)).
+        As Evan pointed out in the comments, if the directory that should be kept does not have any large files, he performed `git lfs uninstall --local` to get rid of them.

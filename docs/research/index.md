@@ -1,3 +1,8 @@
+---
+date:
+  updated: 2025-04-02
+---
+
 # Research
 
 In 2019, I completed a PhD under the supervision of [Jörg Kienzle](https://djeminy.github.io/).

@@ -34,12 +34,17 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - navigation.top
+    - navigation.tracking
+    - search.highlight
     - toc.follow
     # - toc.integrate
   logo: assets/images/profile.jpg
   language: en
   name: material
   custom_dir: overrides
+  # prevent autoloading until the privacy plugin is supported
+  # https://zensical.org/docs/setup/fonts/#autoloading
+  font: false
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -58,6 +63,9 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+  icon:
+    admonition:
+      update: lucide/rotate-cw-clock
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -191,16 +199,14 @@ markdown_extensions:
       permalink: true
       title: On this page
       permalink_title: Permanent link
-  # https://oprypin.github.io/markdown-callouts/
-  - github-callouts
-  - callouts
 
-# https://www.mkdocs.org/user-guide/configuration/#validation
+# https://zensical.org/docs/setup/validation/
 validation:
-  omitted_files: warn
-  absolute_links: warn
-  unrecognized_links: warn
-  anchors: warn
+  invalid_links: true
+  invalid_link_anchors: true
+  # the following are currently deprecated: https://zensical.org/docs/setup/validation/#deprecated-checks
+  # enabled those not covered by markdownlint
+  unresolved_footnotes: true
 
 watch:
   - overrides

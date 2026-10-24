@@ -99,9 +99,10 @@ Now that you have your own user, let's harden the SSH daemon by changing the por
     sudo systemctl restart sshd
     ```
 
-WARNING: Be careful that you don't lock yourself out.
-Try to log in from another terminal first to ensure it is working as intended (use `ssh -p <newPort>` if you changed the port).
-This gives you the chance to fix the config if it doesn't work as intended.
+!!! warning "Be careful that you don't lock yourself out"
+
+    Try to log in from another terminal first to ensure it is working as intended (use `ssh -p <newPort>` if you changed the port).
+    This gives you the chance to fix the config if it doesn't work as intended.
 
 Now, install a firewall (here `ufw`) to only open the ports that you really need:
 
@@ -127,8 +128,9 @@ Now, install a firewall (here `ufw`) to only open the ports that you really need
 
 4. Enable `ufw`:
 
-    > [!CAUTION]
-    > Ensure that your rules are correct, otherwise you will lock yourself out in the next step.
+    !!! danger "Caution"
+
+        Ensure that your rules are correct, otherwise you will lock yourself out in the next step.
 
     ```shell
     ufw enable
