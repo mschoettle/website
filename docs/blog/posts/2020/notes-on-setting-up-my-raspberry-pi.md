@@ -249,7 +249,7 @@ If you want to change this, add the following line to `/etc/lighttpd/external.co
 server.port := 8080
 ```
 
-!!! note "Changing the hostname"
+??? note "Changing the hostname"
 
     If you also want to make Pi-Hole available under a different hostname (e.g., through the use of a reverse proxy), there is another change you need to do in order for the automatic redirect to the admin interface to work.
     Add the following line to `external.conf`:
