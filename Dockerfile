@@ -1,5 +1,5 @@
 # renovate: datasource=pypi depName=uv
-ARG UV_VERSION=0.12.23
+ARG UV_VERSION=0.13.1
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python3.14-alpine AS dependencies
 
 WORKDIR /app
