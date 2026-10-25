@@ -66,7 +66,7 @@ repos:
           - mdformat-footnote==0.1.3
           - mdformat-gfm-alerts==2.1.0
           - mdformat-ruff==0.1.3
-          - ruff==0.16.9
+          - ruff==0.17.1
           - mdformat-config==0.2.1
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
