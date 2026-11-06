@@ -31,7 +31,7 @@ jobs:
       - uses: j178/prek-action@1382ad72dea72f9d53832f2bcb65b3e87a947204 # v3.0.1
         with:
           # renovate: datasource=pypi dependency=prek
-          prek-version: "v0.5.5"
+          prek-version: "v0.5.9"
         env:
           SKIP: markdownlint-cli2
       - name: Run markdownlint
