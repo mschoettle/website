@@ -1,5 +1,5 @@
 # renovate: datasource=pypi depName=uv
-ARG UV_VERSION=0.13.7
+ARG UV_VERSION=0.13.9
 # renovate: datasource=python-version depName=python versioning=python
 ARG PYTHON_VERSION=3.15
 FROM ghcr.io/astral-sh/uv:${UV_VERSION}-python${PYTHON_VERSION}-alpine AS dependencies
